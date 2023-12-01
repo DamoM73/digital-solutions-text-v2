@@ -1,20 +1,32 @@
-import os
 from livereload import Server, shell
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import os
 
-class BuildHandler(FileSystemEventHandler):
+class BuildJupyterBookHandler(FileSystemEventHandler):
+    def __init__(self, command):
+        self.command = command
+
     def on_any_event(self, event):
-        os.system('jupyter-book build .')
+        os.system(self.command)
 
-if __name__ == '__main__':
-    # Set up the build handler
-    event_handler = BuildHandler()
+if __name__ == "__main__":
+    path = 'digital_solutions_text'  # Replace with the path to your Jupyter Book
+    build_command = 'jupyter-book build ' + path  # Command to build Jupyter Book
+
+    # Set up watchdog observer
+    event_handler = BuildJupyterBookHandler(build_command)
     observer = Observer()
-    observer.schedule(event_handler, '.', recursive=True)
+    observer.schedule(event_handler, path, recursive=True)
     observer.start()
 
-    # Set up the server
+    # Set up livereload server
     server = Server()
-    server.watch('.', shell('jupyter-book build .'))
-    server.serve(root='_build/html', open_url_delay=1)
+    server.watch(path, shell(build_command))
+    server.serve(root='digital_solutions_text\_build\html')  # Replace with the path to your built book
+
+    try:
+        observer.join()
+    except KeyboardInterrupt:
+        observer.stop()
+        observer.join()
