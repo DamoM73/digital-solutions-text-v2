@@ -1,4 +1,6 @@
+# book building
 jupyter-book
+pygments-lexer-pseudocode
 
 # rebuilding local server
 watchdog
