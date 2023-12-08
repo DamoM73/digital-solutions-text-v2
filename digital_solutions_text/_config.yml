@@ -19,7 +19,6 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
-# Remove copyright
 sphinx:
   config:
     bibtex_reference_style: author_year

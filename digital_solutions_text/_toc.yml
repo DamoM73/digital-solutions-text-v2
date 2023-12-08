@@ -8,3 +8,18 @@ parts:
     chapters:
     - file: content/1_introduction/1_how_to_use_this_text
     - file: content/1_introduction/2_tools_used
+  - caption: Concepts
+    chapters:
+    - file: content/2_concepts/1_introduction
+    - file: content/2_concepts/2_programming
+      sections:
+      - file: content/2_concepts/2-1_digital_problems
+    - file: content/2_concepts/3_user_experience
+      sections:
+      - file: content/2_concepts/3-1_user_experience
+    - file: content/2_concepts/4_dealing_with_data
+      sections:
+      - file: content/2_concepts/4-1_data_driven_problems
+  - caption: End material
+    chapters:
+    - file: content/bibliography
