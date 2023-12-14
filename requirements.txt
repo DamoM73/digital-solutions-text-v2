@@ -5,3 +5,6 @@ pygments-lexer-pseudocode
 # rebuilding local server
 watchdog
 livereload
+
+# update docutils to resolve citation problem
+docutils<0.18
