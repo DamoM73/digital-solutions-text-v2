@@ -35,6 +35,21 @@ parts:
       - file: content/2_concepts/5-2_networking 
       - file: content/2_concepts/5-3_privacy
 
+  - caption: Design Process
+    chapters:
+    - file: content/3_design_process/1_introduction
+
+    - file: content/3_design_process/2_explore
+      sections:
+      - file: content/3_design_process/2-1_needs_or_wants
+      - file: content/3_design_process/2-2_features
+      - file: content/3_design_process/2-3_constraints
+      - file: content/3_design_process/2-4_impacts
+
+    - file: content/3_design_process/3_develop
+    - file: content/3_design_process/4_generate
+    - file: content/3_design_process/5_evaluate
+
   - caption: End material
     chapters:
     - file: content/glossary
