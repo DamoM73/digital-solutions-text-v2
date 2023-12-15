@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Bibliography" href="bibliography.html" />
-    <link rel="prev" title="Privacy" href="2_concepts/5-3_privacy.html" />
+    <link rel="prev" title="Evaluate Phase" href="3_design_process/5_evaluate.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -199,6 +199,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="2_concepts/5-3_privacy.html">Privacy</a></li>
 </ul>
 </li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Design Process</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="3_design_process/1_introduction.html">The Design Process</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_design_process/2_explore.html">Explore Phase</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3_design_process/2-1_needs_or_wants.html">Needs or wants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_design_process/2-2_features.html">Digital Solutions bits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_design_process/2-3_constraints.html">Constraints and Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_design_process/2-4_impacts.html">Impacts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="3_design_process/3_develop.html">Develop Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_design_process/4_generate.html">Generate Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_design_process/5_evaluate.html">Evaluate Phase</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">End material</span></p>
 <ul class="current nav bd-sidenav">
@@ -403,106 +417,384 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="glossary">
 <h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this heading">#</a></h1>
-<dl class="simple glossary">
-<dt id="term-abstraction">abstraction<a class="headerlink" href="#term-abstraction" title="Permalink to this term">#</a></dt><dd><p>A process of reducing complexity to formulate generalised fundamental ideas or concepts removed from specific details or situation, e.g. the idea that a cricket ball is a sphere in the same way that a soccer ball is, or the concept that data can be organised in records made up of fields irrespective of whether the data are numbers, text, images or something else; abstraction involves hiding details of an idea, problem or solution that are not relevant to focus on a manageable number of aspects.</p>
+<dl class="glossary">
+<dt id="term-abstraction">abstraction<a class="headerlink" href="#term-abstraction" title="Permalink to this term">#</a></dt><dd><p>a process of reducing complexity to formulate generalised fundamental ideas or concepts removed from specific details or situation, e.g. the idea that a cricket ball is a sphere in the same way that a soccer ball is, or the concept that data can be organised in records made up of fields irrespective of whether the data are numbers, text, images or something else;</p>
+<p>abstraction involves hiding details of an idea, problem or solution that are not relevant to focus on a manageable number of aspects.</p>
 </dd>
-<dt id="term-accurate">accurate<a class="headerlink" href="#term-accurate" title="Permalink to this term">#</a></dt><dd><p>Precise and exact; to the point; consistent with or exactly conforming to a truth, standard, rule, model, convention or known facts; free from error or defect; meticulous; correct in all details.</p>
+<dt id="term-accurate">accurate<a class="headerlink" href="#term-accurate" title="Permalink to this term">#</a></dt><dd><p>precise and exact; to the point; consistent with or exactly conforming to a truth, standard, rule, model, convention or known facts; free from error or defect; meticulous; correct in all details.</p>
 </dd>
-<dt id="term-adept">adept<a class="headerlink" href="#term-adept" title="Permalink to this term">#</a></dt><dd><p>Very/highly skilled or proficient at something; expert.</p>
+<dt id="term-adept">adept<a class="headerlink" href="#term-adept" title="Permalink to this term">#</a></dt><dd><p>very/highly skilled or proficient at something; expert.</p>
 </dd>
-<dt id="term-adequate">adequate<a class="headerlink" href="#term-adequate" title="Permalink to this term">#</a></dt><dd><p>Satisfactory or acceptable in quality or quantity equal to the requirement or occasion.</p>
+<dt id="term-adequate">adequate<a class="headerlink" href="#term-adequate" title="Permalink to this term">#</a></dt><dd><p>satisfactory or acceptable in quality or quantity equal to the requirement or occasion.</p>
 </dd>
-<dt id="term-algorithm">algorithm<a class="headerlink" href="#term-algorithm" title="Permalink to this term">#</a></dt><dd><p>A step-by-step procedures required to solve a problem. An algorithm may be described in many ways; pseudocode is often useful in visualising an algorithm.</p>
+<dt id="term-algorithm">algorithm<a class="headerlink" href="#term-algorithm" title="Permalink to this term">#</a></dt><dd><p>step-by-step procedures required to solve a problem, e.g. to find the largest number in a list of positive numbers</p>
+<ul class="simple">
+<li><p>note the first number as the largest</p></li>
+<li><p>look through the remaining numbers in turn, and if a number is larger than the number found in the first step, note it as the largest</p></li>
+<li><p>repeat this process until complete; the last noted number is the largest in the list;</p></li>
+</ul>
+<p>an algorithm may be described in many ways; pseudocode is often useful in visualising an algorithm</p>
 </dd>
-<dt id="term-analyse">analyse<a class="headerlink" href="#term-analyse" title="Permalink to this term">#</a></dt><dd><p>Dissect to ascertain and examine constituent parts and/or their relationships; break down or examine in order to identify the essential elements, features, components or structure; determine the logic and reasonableness of information; examine or consider something in order to explain and interpret it, for the purpose of finding meaning or relationships and identifying patterns, similarities and differences.</p>
+<dt id="term-analyse">analyse<a class="headerlink" href="#term-analyse" title="Permalink to this term">#</a></dt><dd><p>dissect to ascertain and examine constituent parts and/or their relationships; break down or examine in order to identify the essential elements, features, components or structure; determine the logic and reasonableness of information;</p>
+<p>examine or consider something in order to explain and interpret it, for the purpose of finding meaning or relationships and identifying patterns, similarities and differences.</p>
 </dd>
-<dt id="term-annotated">annotated<a class="headerlink" href="#term-annotated" title="Permalink to this term">#</a></dt><dd><p>Made or furnished critical or explanatory notes, or comments to a picture, drawing, sketch or diagram.</p>
+<dt id="term-annotated">annotated<a class="headerlink" href="#term-annotated" title="Permalink to this term">#</a></dt><dd><p>made or furnished critical or explanatory notes, or comments to a picture, drawing, sketch or diagram.</p>
 </dd>
-<dt id="term-app">app<a class="headerlink" href="#term-app" title="Permalink to this term">#</a></dt><dd><p>A software application with a very specific or narrow purpose designed to run on mobile devices (such as smartphones or tablets), through a web browser or on a personal computer; the feature set of an application is limited when compared with a full-featured desktop application for a similar purpose, e.g. a photoediting application has a smaller set of features than an industrystandard photographic suite.</p>
+<dt id="term-app">app<a class="headerlink" href="#term-app" title="Permalink to this term">#</a></dt><dd><p>a software application with a very specific or narrow purpose designed to run on mobile devices (such as smartphones or tablets), through a web browser or on a personal computer;</p>
+<p>the feature set of an application is limited when compared with a full-featured desktop application for a similar purpose, e.g. a photoediting application has a smaller set of features than an industrystandard photographic suite.</p>
 </dd>
-<dt id="term-appropriate">appropriate<a class="headerlink" href="#term-appropriate" title="Permalink to this term">#</a></dt><dd><p>Acceptable; suitable or fitting for a particular purpose, circumstance, context, etc.</p>
+<dt id="term-appropriate">appropriate<a class="headerlink" href="#term-appropriate" title="Permalink to this term">#</a></dt><dd><p>acceptable; suitable or fitting for a particular purpose, circumstance, context, etc.</p>
 </dd>
-<dt id="term-aspect">aspect<a class="headerlink" href="#term-aspect" title="Permalink to this term">#</a></dt><dd><p>A particular part of a feature of something; a facet, phase or part of a whole.</p>
+<dt id="term-aspect">aspect<a class="headerlink" href="#term-aspect" title="Permalink to this term">#</a></dt><dd><p>a particular part of a feature of something; a facet, phase or part of a whole.</p>
 </dd>
-<dt id="term-assignment">assignment<a class="headerlink" href="#term-assignment" title="Permalink to this term">#</a></dt><dd><p>A basic construct of an algorithm used to store the value of an expression into a variable.</p>
+<dt id="term-assignment">assignment<a class="headerlink" href="#term-assignment" title="Permalink to this term">#</a></dt><dd><p>a basic construct of an algorithm used to store the value of an expression into a variable.</p>
 </dd>
-<dt id="term-astute">astute<a class="headerlink" href="#term-astute" title="Permalink to this term">#</a></dt><dd><p>Showing an ability to accurately assess situations or people; of keen discernment.</p>
+<dt id="term-astute">astute<a class="headerlink" href="#term-astute" title="Permalink to this term">#</a></dt><dd><p>showing an ability to accurately assess situations or people; of keen discernment.</p>
 </dd>
-<dt id="term-audience">audience<a class="headerlink" href="#term-audience" title="Permalink to this term">#</a></dt><dd><p>An individual or group for whom the response is designed and delivered.</p>
+<dt id="term-audience">audience<a class="headerlink" href="#term-audience" title="Permalink to this term">#</a></dt><dd><p>an individual or group for whom the response is designed and delivered.</p>
 </dd>
-<dt id="term-Australian-Privacy-Principles">Australian Privacy Principles<a class="headerlink" href="#term-Australian-Privacy-Principles" title="Permalink to this term">#</a></dt><dd><p>The Australian Privacy Principles (APPs), which are contained in schedule 1 of the Privacy Act 1988 (Privacy Act), outline how most Australian and Norfolk Island Government agencies, all private sector and not-for-profit organisations with an annual turnover of more than $3 million, all private health service providers and some small businesses (collectively called ‘APP entities’) must handle, use and manage personal information (Australian Government 2013).</p>
+<dt id="term-Australian-Privacy-Principles">Australian Privacy Principles<a class="headerlink" href="#term-Australian-Privacy-Principles" title="Permalink to this term">#</a></dt><dd><p>the Australian Privacy Principles (APPs), which are contained in schedule 1 of the Privacy Act 1988 (Privacy Act), outline how most Australian and Norfolk Island Government agencies, all private sector and not-for-profit organisations with an annual turnover of more than $3 million, all private health service providers and some small businesses (collectively called ‘APP entities’) must handle, use and manage personal information (Australian Government 2013).</p>
 </dd>
-<dt id="term-binary">binary<a class="headerlink" href="#term-binary" title="Permalink to this term">#</a></dt><dd><p>Two states or permissible values to represent data, such as ON and OFF positions of a light switch or transistors in a computer silicon chip that can be in either the electrical state of ON or OFF; binary data are typically represented as a series of single digits referred to as binary digits (or bits) due to each taking on the value of either 0 or 1.</p>
+<dt id="term-binary">binary<a class="headerlink" href="#term-binary" title="Permalink to this term">#</a></dt><dd><p>two states or permissible values to represent data, such as ON and OFF positions of a light switch or transistors in a computer silicon chip that can be in either the electrical state of ON or OFF;</p>
+<p>binary data are typically represented as a series of single digits referred to as binary digits (or bits) due to each taking on the value of either 0 or 1.</p>
 </dd>
-<dt id="term-branching">branching<a class="headerlink" href="#term-branching" title="Permalink to this term">#</a></dt><dd><p>Making a decision between two or more actions depending on sets of conditions and the data provided, e.g. in testing whether a light works.</p>
+<dt id="term-branching">branching<a class="headerlink" href="#term-branching" title="Permalink to this term">#</a></dt><dd><p>making a decision between two or more actions depending on sets of conditions and the data provided, e.g. in testing whether a light works.</p>
 </dd>
-<dt id="term-characteristics">characteristics<a class="headerlink" href="#term-characteristics" title="Permalink to this term">#</a></dt><dd><p>A set of distinguishing aspects (including attributes and behaviours) of an object, material, living thing, system or event; in Digital Solutions, e.g. the characteristics of a stored digital graphic may be the colour depth (maximum number of colours represented), the resolution (number of pixels per area, or height and width) and the compression used.</p>
+<dt id="term-characteristics">characteristics<a class="headerlink" href="#term-characteristics" title="Permalink to this term">#</a></dt><dd><p>a set of distinguishing aspects (including attributes and behaviours) of an object, material, living thing, system or event;</p>
+<p>in Digital Solutions, e.g. the characteristics of a stored digital graphic may be the colour depth (maximum number of colours represented), the resolution (number of pixels per area, or height and width) and the compression used.</p>
 </dd>
-<dt id="term-coding">coding <a class="headerlink" href="#term-coding" title="Permalink to this term">#</a></dt><dd><p>Translating programming logic into code, i.e. the implementation of a solution using tools, techniques and best practices.</p>
+<dt id="term-coding">coding <a class="headerlink" href="#term-coding" title="Permalink to this term">#</a></dt><dd><p>translating programming logic into code, i.e. the implementation of a solution using tools, techniques and best practices.</p>
 </dd>
-<dt id="term-coherent">coherent<a class="headerlink" href="#term-coherent" title="Permalink to this term">#</a></dt><dd><p>Having a natural or due agreement of parts; connected; consistent; logical, orderly; well-structured and makes sense; rational, with parts that are harmonious; having an internally consistent relation of parts.</p>
+<dt id="term-coherent">coherent<a class="headerlink" href="#term-coherent" title="Permalink to this term">#</a></dt><dd><p>having a natural or due agreement of parts; connected; consistent; logical, orderly; well-structured and makes sense; rational, with parts that are harmonious; having an internally consistent relation of parts.</p>
 </dd>
-<dt id="term-communicate">communicate<a class="headerlink" href="#term-communicate" title="Permalink to this term">#</a></dt><dd><p>Convey knowledge and/or understandings to others; make known; transmit.</p>
+<dt id="term-communicate">communicate<a class="headerlink" href="#term-communicate" title="Permalink to this term">#</a></dt><dd><p>convey knowledge and/or understandings to others; make known; transmit.</p>
 </dd>
-<dt id="term-competent">competent<a class="headerlink" href="#term-competent" title="Permalink to this term">#</a></dt><dd><p>Having suitable or sufficient skills, knowledge, experience, etc. for some purpose; adequate but not exceptional; capable; suitable or sufficient for the purpose; having the necessary ability, knowledge or skill to do something successfully; efficient and capable (of a person); acceptable and satisfactory, though not outstanding.</p>
+<dt id="term-competent">competent<a class="headerlink" href="#term-competent" title="Permalink to this term">#</a></dt><dd><p>having suitable or sufficient skills, knowledge, experience, etc. for some purpose; adequate but not exceptional; capable; suitable or sufficient for the purpose;</p>
+<p>having the necessary ability, knowledge or skill to do something successfully; efficient and capable (of a person); acceptable and satisfactory, though not outstanding.</p>
 </dd>
-<dt id="term-components">components<a class="headerlink" href="#term-components" title="Permalink to this term">#</a></dt><dd><p>Parts (made of two or more elements) that make up a whole object or system and perform specific functions, e.g. a digital solution usually includes three components: data, system/user interface and text-based source code that may be interpreted or compiled.</p>
+<dt id="term-components">components<a class="headerlink" href="#term-components" title="Permalink to this term">#</a></dt><dd><p>parts (made of two or more elements) that make up a whole object or system and perform specific functions, e.g. a digital solution usually includes three components: data, system/user interface and text-based source code that may be interpreted or compiled.</p>
 </dd>
-<dt id="term-compression">compression<a class="headerlink" href="#term-compression" title="Permalink to this term">#</a></dt><dd><p>A process of encoding information using fewer bits, i.e. 0 or 1, than an original representation, to reduce file size, typically using mathematical formulas to remove repeated data, combine related data or simplify data, e.g. a line segment can be represented by the position of the end points instead of every dot on it.</p>
+<dt id="term-compression">compression<a class="headerlink" href="#term-compression" title="Permalink to this term">#</a></dt><dd><p>a process of encoding information using fewer bits, i.e. 0 or 1, than an original representation, to reduce file size, typically using mathematical formulas to remove repeated data, combine related data or simplify data, e.g. a line segment can be represented by the position of the end points instead of every dot on it;</p>
+<p>common examples include:</p>
+<ul class="simple">
+<li><p>.zip files, which can contain one or more files or folders that have been compressed.</p></li>
+<li><p>.jpg files in digital photography are produced by processing complete (lossless) data from a camera’s sensor through compressing (looking for redundant/unnecessary data) into a smaller file size</p></li>
+<li><p>.mp3 files for audio, which compress an original audio source to reduce the file size significantly but still sound like an exact copy of the original</p></li>
+</ul>
 </dd>
-<dt id="term-computational-thinking">computational thinking<a class="headerlink" href="#term-computational-thinking" title="Permalink to this term">#</a></dt><dd><p>A problem-solving method that involves various techniques and strategies that can be implemented by digital systems; techniques and strategies may include organising data logically, breaking down problems into parts, defining abstract concepts, and designing and using algorithms, patterns and models.</p>
+<dt id="term-computational-thinking">computational thinking<a class="headerlink" href="#term-computational-thinking" title="Permalink to this term">#</a></dt><dd><p>a problem-solving method that involves various techniques and strategies that can be implemented by digital systems; techniques and strategies may include organising data logically, breaking down problems into parts, defining abstract concepts, and designing and using algorithms, patterns and models.</p>
 </dd>
-<dt id="term-condition">condition<a class="headerlink" href="#term-condition" title="Permalink to this term">#</a></dt><dd><p>A logical expression that evaluates to true or false; a pre-condition is a statement or set of statements that describes a condition or conditions that should be true when a specific operation is called; a post-condition is a statement or set of statements that describes a condition or conditions that should be true when the operation has completed its task.</p>
+<dt id="term-condition">condition<a class="headerlink" href="#term-condition" title="Permalink to this term">#</a></dt><dd><p>a logical expression that evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>; a pre-condition is a statement or set of statements that describes a condition or conditions that should be <code class="docutils literal notranslate"><span class="pre">true</span></code> when a specific operation is called; a post-condition is a statement or set of statements that describes a condition or conditions that should be <code class="docutils literal notranslate"><span class="pre">true</span></code> when the operation has completed its task.</p>
 </dd>
-<dt id="term-considered">considered<a class="headerlink" href="#term-considered" title="Permalink to this term">#</a></dt><dd><p>Formed after careful and deliberate thought.</p>
+<dt id="term-considered">considered<a class="headerlink" href="#term-considered" title="Permalink to this term">#</a></dt><dd><p>formed after careful and deliberate thought.</p>
 </dd>
-<dt id="term-constraints">constraints<a class="headerlink" href="#term-constraints" title="Permalink to this term">#</a></dt><dd><p>Limitations or restrictions that must be considered and accommodated when defining a problem, e.g. teacher-specified limitations, available time, physical realities, legalities.</p>
+<dt id="term-constraints">constraints<a class="headerlink" href="#term-constraints" title="Permalink to this term">#</a></dt><dd><p>limitations or restrictions that must be considered and accommodated when defining a problem, e.g. teacher-specified limitations, available time, physical realities, legalities.</p>
 </dd>
-<dt id="term-content">content<a class="headerlink" href="#term-content" title="Permalink to this term">#</a></dt><dd><p>The things that are held or included in something, includes context,concepts, principles, processes, purpose and scenarios.</p>
+<dt id="term-content">content<a class="headerlink" href="#term-content" title="Permalink to this term">#</a></dt><dd><p>the things that are held or included in something, includes context,concepts, principles, processes, purpose and scenarios.</p>
 </dd>
-<dt id="term-context">context<a class="headerlink" href="#term-context" title="Permalink to this term">#</a></dt><dd><p>The circumstances that form the setting for an event, statement or idea, and in terms of which it can be fully understood.</p>
+<dt id="term-context">context<a class="headerlink" href="#term-context" title="Permalink to this term">#</a></dt><dd><p>the circumstances that form the setting for an event, statement or idea, and in terms of which it can be fully understood.</p>
 </dd>
-<dt id="term-control-systems">control systems<a class="headerlink" href="#term-control-systems" title="Permalink to this term">#</a></dt><dd><p>A device or set of devices to manage, command, direct or regulate the behaviour of other devices or systems; a mechanical, optical or electronic system that is used to maintain a desired output.</p>
+<dt id="term-control-systems">control systems<a class="headerlink" href="#term-control-systems" title="Permalink to this term">#</a></dt><dd><p>a device or set of devices to manage, command, direct or regulate the behaviour of other devices or systems; a mechanical, optical or electronic system that is used to maintain a desired output.</p>
 </dd>
-<dt id="term-criteria">criteria<a class="headerlink" href="#term-criteria" title="Permalink to this term">#</a></dt><dd><p>Characteristics by which something is evaluated or appraised; the teacher or client (prescribed) or students (self-determined) develop criteria, e.g. specific needs, identified purpose, impacts quality or effectiveness of solution.</p>
+<dt id="term-criteria">criteria<a class="headerlink" href="#term-criteria" title="Permalink to this term">#</a></dt><dd><p>characteristics by which something is evaluated or appraised; the teacher or client (prescribed) or students (self-determined) develop criteria, e.g. specific needs, identified purpose, impacts quality or effectiveness of solution.</p>
 </dd>
-<dt id="term-critical">critical<a class="headerlink" href="#term-critical" title="Permalink to this term">#</a></dt><dd><p>Involving skilful judgment as to truth, merit, etc.; involving the objective analysis and evaluation of an issue in order to form a judgment; expressing or involving an analysis of the merits and faults of a work of literature, music, or art; incorporating a detailed and scholarly analysis and commentary (of a text); rationally appraising for logical consistency and merit.</p>
+<dt id="term-critical">critical<a class="headerlink" href="#term-critical" title="Permalink to this term">#</a></dt><dd><p>involving skilful judgment as to truth, merit, etc.; involving the objective analysis and evaluation of an issue in order to form a judgment; expressing or involving an analysis of the merits and faults of a work of literature, music, or art; incorporating a detailed and scholarly analysis and commentary (of a text); rationally appraising for logical consistency and merit.</p>
 </dd>
-<dt id="term-data">data<a class="headerlink" href="#term-data" title="Permalink to this term">#</a></dt><dd><p>In Digital Solutions, discrete representation of information using number codes; data may include characters (e.g. alphabetic letters, numbers and symbols), images, sounds and/or instructions that, when represented by number codes, can be manipulated, stored and communicated by digital systems, e.g. characters may be represented using ASCII code or images may be represented by a bitmap of numbers representing each ‘dot’ or pixel.</p>
+<dt id="term-data">data<a class="headerlink" href="#term-data" title="Permalink to this term">#</a></dt><dd><p>in Digital Solutions, discrete representation of information using number codes; data may include characters (e.g. alphabetic letters, numbers and symbols), images, sounds and/or instructions that, when represented by number codes, can be manipulated, stored and communicated by digital systems, e.g. characters may be represented using ASCII code or images may be represented by a bitmap of numbers representing each ‘dot’ or pixel.</p>
 </dd>
-<dt id="term-database">database<a class="headerlink" href="#term-database" title="Permalink to this term">#</a></dt><dd><p>A collection of data organised by records and fields that can be easily stored, accessed, managed and updated; each discrete piece of data to be stored is represented by a field (e.g. song title, song artist or bank account number, date of transaction) and values in the fields that are associated with an entity (e.g. a song, a bank transaction) are a record; interaction with a database usually takes place through a user interface designed specifically for the structure and use of the stored data</p>
+<dt id="term-database">database<a class="headerlink" href="#term-database" title="Permalink to this term">#</a></dt><dd><p>a collection of data organised by records and fields that can be easily stored, accessed, managed and updated; each discrete piece of data to be stored is represented by a field (e.g. song title, song artist or bank account number, date of transaction) and values in the fields that are associated with an entity (e.g. a song, a bank transaction) are a record; interaction with a database usually takes place through a user interface designed specifically for the structure and use of the stored data</p>
 </dd>
-<dt id="term-data-collection">data collection<a class="headerlink" href="#term-data-collection" title="Permalink to this term">#</a></dt><dd><p>Describes the numerical, categorical and textual facts measured, collected, e.g. from data loggers or harvested from local councils, Australian Bureau of Statistics or other websites, or calculated as the basis for creating information and its binary representation in digital systems.</p>
+<dt id="term-data-collection">data collection<a class="headerlink" href="#term-data-collection" title="Permalink to this term">#</a></dt><dd><p>describes the numerical, categorical and textual facts measured, collected, e.g. from data loggers or harvested from local councils, Australian Bureau of Statistics or other websites, or calculated as the basis for creating information and its binary representation in digital systems.</p>
 </dd>
-<dt id="term-data-flow-diagrams">data flow diagrams<a class="headerlink" href="#term-data-flow-diagrams" title="Permalink to this term">#</a></dt><dd><p>Visual representations describing the flow of data through a system</p>
+<dt id="term-data-flow-diagrams">data flow diagrams<a class="headerlink" href="#term-data-flow-diagrams" title="Permalink to this term">#</a></dt><dd><p>visual representations describing the flow of data through a system</p>
 </dd>
-<dt id="term-data-validation">data validation<a class="headerlink" href="#term-data-validation" title="Permalink to this term">#</a></dt><dd><p>In computer science, ensuring that data inserted into an application satisfies defined formats and other input criteria.</p>
+<dt id="term-data-validation">data validation<a class="headerlink" href="#term-data-validation" title="Permalink to this term">#</a></dt><dd><p>in computer science, ensuring that data inserted into an application satisfies defined formats and other input criteria.</p>
 </dd>
-<dt id="term-decomposition">decomposition<a class="headerlink" href="#term-decomposition" title="Permalink to this term">#</a></dt><dd><p>To separate a complex problem into parts to allow a problem to be more easily understood, e.g. to create an interactive story, one can decompose the problem to a list of characters and their characteristics (e.g. clothing), the actions of the characters, the backdrops and the sequence of scenes with reference to which characters, actions and backdrops are involved in each scene; decomposition may be represented in diagrams.</p>
+<dt id="term-decomposition">decomposition<a class="headerlink" href="#term-decomposition" title="Permalink to this term">#</a></dt><dd><p>to separate a complex problem into parts to allow a problem to be more easily understood, e.g. to create an interactive story, one can decompose the problem to a list of characters and their characteristics (e.g. clothing), the actions of the characters, the backdrops and the sequence of scenes with reference to which characters, actions and backdrops are involved in each scene; decomposition may be represented in diagrams.</p>
 </dd>
-<dt id="term-deconstructing">deconstructing<a class="headerlink" href="#term-deconstructing" title="Permalink to this term">#</a></dt><dd><p>A process of dismantling or pulling apart a product or system to systematically identify and analyse components and their relationships.</p>
+<dt id="term-deconstructing">deconstructing<a class="headerlink" href="#term-deconstructing" title="Permalink to this term">#</a></dt><dd><p>a process of dismantling or pulling apart a product or system to systematically identify and analyse components and their relationships.</p>
 </dd>
-<dt id="term-describe">describe<a class="headerlink" href="#term-describe" title="Permalink to this term">#</a></dt><dd><p>Give an account (written or spoken) of a situation, event, pattern or process, or of the characteristics or features of something.</p>
+<dt id="term-describe">describe<a class="headerlink" href="#term-describe" title="Permalink to this term">#</a></dt><dd><p>give an account (written or spoken) of a situation, event, pattern or process, or of the characteristics or features of something.</p>
 </dd>
-<dt id="term-design-thinking">design thinking<a class="headerlink" href="#term-design-thinking" title="Permalink to this term">#</a></dt><dd><p>Use of strategies for understanding design problems, visualising and generating creative ideas, and analysing and evaluating those ideas that best meet the criteria for success; students use both convergent and divergent thinking skills; divergent thinking supports creativity and the generation of a range of ideas, and convergent thinking supports the selection and generation of a preferred solution</p>
+<dt id="term-design-thinking">design thinking<a class="headerlink" href="#term-design-thinking" title="Permalink to this term">#</a></dt><dd><p>use of strategies for understanding design problems, visualising and generating creative ideas, and analysing and evaluating those ideas that best meet the criteria for success; students use both convergent and divergent thinking skills; divergent thinking supports creativity and the generation of a range of ideas, and convergent thinking supports the selection and generation of a preferred solution</p>
 </dd>
-<dt id="term-desk-checking">desk checking<a class="headerlink" href="#term-desk-checking" title="Permalink to this term">#</a></dt><dd><p>A method used by a human to check the logic of a computer program’s algorithm to reduce the likelihood of errors occurring; this may be done on paper, using a diagram or mentally trying a sample of typical inputs to see what the outputs would be; e.g. to desk check a branching statement {IF age &gt;65 THEN ‘retire’ ELSE ‘keep working’}, the values for age of 64, 65 and 66 could be tried to show that 64 and 65 would result in ‘keep working’ and 66 in ‘retire’ so that it could be decided if the statement worked as intended.</p>
+<dt id="term-desk-checking">desk checking<a class="headerlink" href="#term-desk-checking" title="Permalink to this term">#</a></dt><dd><p>a method used by a human to check the logic of a computer program’s algorithm to reduce the likelihood of errors occurring; this may be done on paper, using a diagram or mentally trying a sample of typical inputs to see what the outputs would be; e.g. to desk check a branching statement <code class="docutils literal notranslate"><span class="pre">IF</span> <span class="pre">age</span> <span class="pre">&gt;65</span> <span class="pre">THEN</span> <span class="pre">&quot;retire&quot;</span> <span class="pre">ELSE</span> <span class="pre">&quot;keep</span> <span class="pre">working&quot;</span></code>, the values for age of <code class="docutils literal notranslate"><span class="pre">64</span></code>, <code class="docutils literal notranslate"><span class="pre">65</span></code> and <code class="docutils literal notranslate"><span class="pre">66</span></code> could be tried to show that <code class="docutils literal notranslate"><span class="pre">64</span></code> and <code class="docutils literal notranslate"><span class="pre">65</span></code> would result in <code class="docutils literal notranslate"><span class="pre">&quot;keep</span> <span class="pre">working&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">66</span></code> in <code class="docutils literal notranslate"><span class="pre">&quot;retire&quot;</span></code> so that it could be decided if the statement worked as intended.</p>
 </dd>
-<dt id="term-determine">determine<a class="headerlink" href="#term-determine" title="Permalink to this term">#</a></dt><dd><p>Establish, conclude or ascertain after consideration, observation, investigation or calculation; decide or come to a resolution.</p>
+<dt id="term-determine">determine<a class="headerlink" href="#term-determine" title="Permalink to this term">#</a></dt><dd><p>establish, conclude or ascertain after consideration, observation, investigation or calculation; decide or come to a resolution.</p>
 </dd>
-<dt id="term-develop">develop<a class="headerlink" href="#term-develop" title="Permalink to this term">#</a></dt><dd><p>Elaborate, expand or enlarge in detail; add detail and fullness to; cause to become more complex or intricate</p>
+<dt id="term-develop">develop<a class="headerlink" href="#term-develop" title="Permalink to this term">#</a></dt><dd><p>elaborate, expand or enlarge in detail; add detail and fullness to; cause to become more complex or intricate</p>
 </dd>
-<dt id="term-digital-games">digital games<a class="headerlink" href="#term-digital-games" title="Permalink to this term">#</a></dt><dd><p>Interactive digital solutions that can be used for entertainment purposes.</p>
+<dt id="term-digital-games">digital games<a class="headerlink" href="#term-digital-games" title="Permalink to this term">#</a></dt><dd><p>interactive digital solutions that can be used for entertainment purposes.</p>
 </dd>
-<dt id="term-digital-information">digital information<a class="headerlink" href="#term-digital-information" title="Permalink to this term">#</a></dt><dd><p>The nature and forms of information stored digitally, and processes that transform digital data into information for various purposes and meanings, including structures, properties, features and conventions of particular forms of digital information and appropriate methods of storage, transmission and presentation of each form</p>
+<dt id="term-digital-information">digital information<a class="headerlink" href="#term-digital-information" title="Permalink to this term">#</a></dt><dd><p>the nature and forms of information stored digitally, and processes that transform digital data into information for various purposes and meanings, including structures, properties, features and conventions of particular forms of digital information and appropriate methods of storage, transmission and presentation of each form.</p>
 </dd>
-<dt id="term-digital-technologies">digital technologies<a class="headerlink" href="#term-digital-technologies" title="Permalink to this term">#</a></dt><dd><p>any technology controlled using digital instructions, including computer hardware and software, digital media and media devices, digital toys and accessories, and contemporary and emerging communication technologies; these technologies are based on instructions given, using binary (0 or 1) code, that invariably mean one or more processors are present to respond to these instructions; computers, smartphones, digital cameras, printers and robots are all examples of digital technologies</p>
+<dt id="term-digital-technologies">digital technologies<a class="headerlink" href="#term-digital-technologies" title="Permalink to this term">#</a></dt><dd><p>any technology controlled using digital instructions, including computer hardware and software, digital media and media devices, digital toys and accessories, and contemporary and emerging communication technologies; these technologies are based on instructions given, using binary (0 or 1) code, that invariably mean one or more processors are present to respond to these instructions; computers, smartphones, digital cameras, printers and robots are all examples of digital technologies.</p>
 </dd>
-<dt id="term-discerning">discerning<a class="headerlink" href="#term-discerning" title="Permalink to this term">#</a></dt><dd><p>discriminating; showing intellectual perception; showing good judgment; making thoughtful and astute choices; selected for value or relevance</p>
+<dt id="term-discerning">discerning<a class="headerlink" href="#term-discerning" title="Permalink to this term">#</a></dt><dd><p>discriminating; showing intellectual perception; showing good judgment; making thoughtful and astute choices; selected for value or relevance.</p>
 </dd>
-<dt id="term-discriminating">discriminating<a class="headerlink" href="#term-discriminating" title="Permalink to this term">#</a></dt><dd><p>differentiating; distinctive; perceiving differences or distinctions with nicety; possessing discrimination; perceptive and judicious; making judgments about quality; having or showing refined taste or good judgment</p>
+<dt id="term-discriminating">discriminating<a class="headerlink" href="#term-discriminating" title="Permalink to this term">#</a></dt><dd><p>differentiating; distinctive; perceiving differences or distinctions with nicety; possessing discrimination; perceptive and judicious; making judgments about quality; having or showing refined taste or good judgment.</p>
 </dd>
-<dt id="term-document">document<a class="headerlink" href="#term-document" title="Permalink to this term">#</a></dt><dd><p>support (e.g. an assertion, claim, statement) with evidence (e.g. decisive information, written references, citations)</p>
+<dt id="term-document">document<a class="headerlink" href="#term-document" title="Permalink to this term">#</a></dt><dd><p>support (e.g. an assertion, claim, statement) with evidence (e.g. decisive information, written references, citations).</p>
+</dd>
+<dt id="term-effective">effective<a class="headerlink" href="#term-effective" title="Permalink to this term">#</a></dt><dd><p>successful in producing the intended, desired or expected result; meeting the assigned purpose.</p>
+</dd>
+<dt id="term-efficient">efficient<a class="headerlink" href="#term-efficient" title="Permalink to this term">#</a></dt><dd><p>working in a well-organised and competent way; maximum productivity with minimal expenditure of effort; acting or producing effectively with a minimum of waste, expense or unnecessary effort.</p>
+</dd>
+<dt id="term-elements">elements<a class="headerlink" href="#term-elements" title="Permalink to this term">#</a></dt><dd><p>constituent parts of a more complex whole; a fundamental, essential or irreducible part of a composite entity; two or more elements make a component.</p>
+</dd>
+<dt id="term-encryption">encryption<a class="headerlink" href="#term-encryption" title="Permalink to this term">#</a></dt><dd><p>a process in cryptography of encoding (converting) data, using mathematical formulas, into a form that only an intended recipient can decode, often including a personal digital signature, e.g. when connecting to an online banking or shopping website, typically on login, a secure communication is set up based on encryption provided at the website, and this will be represented by a <a class="reference external" href="https://URL">https://URL</a> and a lock symbol on the user’s internet browser.</p>
+</dd>
+<dt id="term-essential">essential<a class="headerlink" href="#term-essential" title="Permalink to this term">#</a></dt><dd><p>absolutely necessary; indispensable; of critical importance for achieving something.</p>
+</dd>
+<dt id="term-evaluate">evaluate<a class="headerlink" href="#term-evaluate" title="Permalink to this term">#</a></dt><dd><p>make an appraisal by weighing up or assessing strengths, implications and limitations; make judgments about ideas, works, solutions or methods in relation to selected criteria; examine and determine the merit, value or significance of something, based on criteria.</p>
+</dd>
+<dt id="term-explore">explore<a class="headerlink" href="#term-explore" title="Permalink to this term">#</a></dt><dd><p>look into both closely and broadly; scrutinise; inquire into or discuss something in detail.</p>
+</dd>
+<dt id="term-feasible">feasible<a class="headerlink" href="#term-feasible" title="Permalink to this term">#</a></dt><dd><p>capable of being achieved, accomplished or put into effect; reasonable enough to be believed or accepted; probable; likely.</p>
+</dd>
+<dt id="term-features">features<a class="headerlink" href="#term-features" title="Permalink to this term">#</a></dt><dd><p>prominent or conspicuous elements, components or characteristics of a structured whole.</p>
+</dd>
+<dt id="term-fluent">fluent<a class="headerlink" href="#term-fluent" title="Permalink to this term">#</a></dt><dd><p>spoken or written with ease; able to speak or write smoothly, easily or readily; articulate; eloquent;</p>
+<p>in artistic performance, characteristic of a highly developed and excellently controlled technique; polished; flowing smoothly, easily and effortlessly.</p>
+</dd>
+<dt id="term-fundamental">fundamental<a class="headerlink" href="#term-fundamental" title="Permalink to this term">#</a></dt><dd><p>forming a necessary base or core; of central importance; affecting or relating to the essential nature of something; part of a foundation or basis.</p>
+</dd>
+<dt id="term-generate">generate<a class="headerlink" href="#term-generate" title="Permalink to this term">#</a></dt><dd><p>produce; create; bring into existence.</p>
+</dd>
+<dt id="term-ideas">ideas<a class="headerlink" href="#term-ideas" title="Permalink to this term">#</a></dt><dd><p>thoughts, notions or suggestions as to a possible course of action.</p>
+</dd>
+<dt id="term-identify">identify<a class="headerlink" href="#term-identify" title="Permalink to this term">#</a></dt><dd><p>distinguish; locate, recognise and name; establish or indicate who or what someone or something is; provide an answer from a number of possibilities; recognise and state a distinguishing factor or feature.</p>
+</dd>
+<dt id="term-IF">IF<a class="headerlink" href="#term-IF" title="Permalink to this term">#</a></dt><dd><p>a conditional decision statement used to control the flow of a program (see branching); the structure of an IF statement evaluates an expression (e.g. <code class="docutils literal notranslate"><span class="pre">hour</span> <span class="pre">&lt;</span> <span class="pre">12</span></code>) and performs a specified code block only if the condition is <code class="docutils literal notranslate"><span class="pre">true</span></code>; e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IF</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">:</span>
+    <span class="n">PRINT</span> <span class="p">(</span><span class="s2">&quot;Good morning!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Here, the program would only print the words ‘Good morning!’ if the hour of the day is less than 12</p>
+</dd>
+<dt id="term-impacts">impacts<a class="headerlink" href="#term-impacts" title="Permalink to this term">#</a></dt><dd><p>describes analysing and predicting the extent to which personal, social and economic needs are met through existing and emerging digital technologies; appreciating the transformative potential of digital technologies in people’s lives. It also involves consideration of the relationship between information systems and society and in particular the ethical and legal obligations of individuals and organisations regarding ownership, privacy of data and information.</p>
+</dd>
+<dt id="term-implementation">implementation <a class="headerlink" href="#term-implementation" title="Permalink to this term">#</a></dt><dd><p>the automation of an algorithm, typically by using appropriate software or writing a computer program.</p>
+</dd>
+<dt id="term-inconsistent">inconsistent<a class="headerlink" href="#term-inconsistent" title="Permalink to this term">#</a></dt><dd><p>lacking agreement, as one thing with another, or two or more things in relation to each other; at variance; not consistent; not in keeping; not in accordance; incompatible; incongruous.</p>
+</dd>
+<dt id="term-information">information <a class="headerlink" href="#term-information" title="Permalink to this term">#</a></dt><dd><p>knowledge, evidence.</p>
+</dd>
+<dt id="term-intelligent-systems">intelligent systems<a class="headerlink" href="#term-intelligent-systems" title="Permalink to this term">#</a></dt><dd><p>include hardware components with sensing and actuating technology and solutions that focus on automated systems designed for a user experience;</p>
+<p>these technologies allow students to explore how computational processes respond to given inputs (e.g. environmental information such as light or sound) to produce specified outputs; feedback occurs through tight loops, allowing for trial-and-error investigations.</p>
+</dd>
+<dt id="term-interactions">interactions<a class="headerlink" href="#term-interactions" title="Permalink to this term">#</a></dt><dd><p>reciprocal action or exchange or influence between humans or the environment and digital or information systems, especially relating to user interfaces, this encompasses communication and collaboration facilitated by digital systems.</p>
+</dd>
+<dt id="term-interactive">interactive<a class="headerlink" href="#term-interactive" title="Permalink to this term">#</a></dt><dd><p>a form of digital prototype that allows the two-way flow of information between a computer and user.</p>
+</dd>
+<dt id="term-interactive-media">interactive media<a class="headerlink" href="#term-interactive-media" title="Permalink to this term">#</a></dt><dd><p>generate visual or auditory outputs based on user input or enhance the productivity of the user; projects include computer-generated simulations, digital games, learning objects and productivity applications</p>
+</dd>
+<dt id="term-Internet-of-Things">Internet of Things<a class="headerlink" href="#term-Internet-of-Things" title="Permalink to this term">#</a></dt><dd><p>the Internet of Things vision is for a world full of networked physical objects; the Internet of Things is concerned with equipping objects with internet accessible identification and data sharing capabilities; ideally, these objects are augmented with sensing, processing and network capabilities, providing them with the ability to make sense of their local situation and interact within a given context.</p>
+</dd>
+<dt id="term-iteration">iteration<a class="headerlink" href="#term-iteration" title="Permalink to this term">#</a></dt><dd><p>a repetition of a process or set of instructions in computer programming where each repeated cycle builds on a previous (see <code class="docutils literal notranslate"><span class="pre">REPEAT</span></code> statement); typically this uses a <code class="docutils literal notranslate"><span class="pre">FOR</span></code> loop command with a counter such as the example below to add the numbers from 1 to 9;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FOR</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">9</span><span class="p">;</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">number</span>
+</pre></div>
+</div>
+</dd>
+<dt id="term-iterative">iterative <a class="headerlink" href="#term-iterative" title="Permalink to this term">#</a></dt><dd><p>recursive; revisiting earlier parts of a process to further clarify meaning or refine ideas and solutions.</p>
+</dd>
+<dt id="term-justified">justified<a class="headerlink" href="#term-justified" title="Permalink to this term">#</a></dt><dd><p>sound reasons or evidence are provided to support an argument, statement or conclusion.</p>
+</dd>
+<dt id="term-keys">keys<a class="headerlink" href="#term-keys" title="Permalink to this term">#</a></dt><dd><p>unique identifiers in a relational database used to ensure that a record in a table can be uniquely identified by one or a combination of fields within a table; three common types are:</p>
+<ul class="simple">
+<li><p>primary: a relational database has only one primary key; it is a unique identifier for each record used to help establish relationships with other tables, e.g. licence number, phone number, student ID</p></li>
+<li><p>secondary: a table may have more than one choice for the primary key; only one is chosen as the primary key; those not chosen are known as secondary keys, e.g. if student ID is chosen as the primary key, other choices including licence number and phone number are secondary keys</p></li>
+<li><p>foreign: a primary key from one table that appears as a field in another where the first table has a relationship to the second, e.g. if table A has a primary key X that linked to table B where X was a field in B, then X would be a foreign key in B.</p></li>
+</ul>
+</dd>
+<dt id="term-logical">logical<a class="headerlink" href="#term-logical" title="Permalink to this term">#</a></dt><dd><p>rational and valid; internally consistent; reasonable; reasoning in accordance with the principles/rules of logic or formal argument; characterised by or capable of clear, sound reasoning; (of an action, decision etc.) expected or sensible under the circumstances.</p>
+</dd>
+<dt id="term-low-fidelity-prototype">low-fidelity prototype<a class="headerlink" href="#term-low-fidelity-prototype" title="Permalink to this term">#</a></dt><dd><p>used throughout the problem-solving process to quickly and simply move ideas and concepts from abstract to reality to clarify understanding and inform further exploration and development; a simple, non-functional three-dimensional, digital interactive or digital sequential representation using basic processes, materials or software that may be unrelated to how a final solution is produced, e.g. stop-motion animation of a mobile application rather than a coded solution or clay models of a handheld item to confirm the application of ergonomic data about a user’s grip;algorithms to represent coding and sketches to represent user interface.</p>
+</dd>
+<dt id="term-make-decisions">make decisions<a class="headerlink" href="#term-make-decisions" title="Permalink to this term">#</a></dt><dd><p>select from available options; weigh up positives and negatives of each option and consider all the alternatives to arrive at a position.</p>
+</dd>
+<dt id="term-methodical">methodical<a class="headerlink" href="#term-methodical" title="Permalink to this term">#</a></dt><dd><p>performed, disposed or acting in a systematic way; orderly; characterised by method or order; performed or carried out systematically.</p>
+</dd>
+<dt id="term-mind-map">mind map<a class="headerlink" href="#term-mind-map" title="Permalink to this term">#</a></dt><dd><p>a purposeful diagram used to visually organise information; allows the abstract relationships between ideas to be explored and refined; visual representations may include images, words and parts of words; usually a central idea or concept is placed in the middle and associated ideas arranged around it.</p>
+</dd>
+<dt id="term-mobile-applications">mobile applications<a class="headerlink" href="#term-mobile-applications" title="Permalink to this term">#</a></dt><dd><p>types of software applications that use hardware functionality and run on a mobile device, such as a smartphone or tablet computer; often provide users with similar services to those accessed on desktop computers.</p>
+</dd>
+<dt id="term-models">models<a class="headerlink" href="#term-models" title="Permalink to this term">#</a></dt><dd><p>physical or digital representations of an idea or design concept that describe, simplify, clarify or provide an explanation of an idea or design concept.</p>
+</dd>
+<dt id="term-modularisation">modularisation<a class="headerlink" href="#term-modularisation" title="Permalink to this term">#</a></dt><dd><p>a concept used for reducing the complexity of a system; this system (e.g. IT application) is deconstructed into more or less independent units or modules; the modules should be able to exist independently from each other, but the system as a whole can only function as an integrated structure.</p>
+</dd>
+<dt id="term-normal-form">normal form<a class="headerlink" href="#term-normal-form" title="Permalink to this term">#</a></dt><dd><p>a defined standard structure for relational databases; the forms are progressive, meaning that to qualify for third normal form a table must first satisfy the rules for second normal form, and second normal form must adhere to those for first normal form; the first three normal forms are:</p>
+<ul class="simple">
+<li><p>first normal form — the information is stored in a relational table, each column contains atomic values, and there are not repeating groups of columns</p></li>
+<li><p>second normal form — the table is in first normal form and all the columns depend on the table’s primary key</p></li>
+<li><p>third normal form — the table is in second normal form and all of its columns are not transitively dependent on the primary key.</p></li>
+</ul>
+</dd>
+<dt id="term-normalisation">normalisation<a class="headerlink" href="#term-normalisation" title="Permalink to this term">#</a></dt><dd><p>the process of ensuring that a database conforms to a set of normal forms. Its primary purpose is to remove redundancies that create threats to data integrity such as update anomalies. It also plays a role in making querying more efficient.</p>
+</dd>
+<dt id="term-output">output<a class="headerlink" href="#term-output" title="Permalink to this term">#</a></dt><dd><p>a result of something (physical or virtual) such as power, energy, action, material or information produced by a person, machine or a system.</p>
+</dd>
+<dt id="term-partial">partial<a class="headerlink" href="#term-partial" title="Permalink to this term">#</a></dt><dd><p>not total or general; existing only in part; attempted, but incomplete.</p>
+</dd>
+<dt id="term-peripheral-devices">peripheral devices<a class="headerlink" href="#term-peripheral-devices" title="Permalink to this term">#</a></dt><dd><p>digital components that can be connected to a digital system but are not essential to the system, e.g. printer, scanner, digital camera.</p>
+</dd>
+<dt id="term-platforms">platforms<a class="headerlink" href="#term-platforms" title="Permalink to this term">#</a></dt><dd><p>computer operating systems.</p>
+</dd>
+<dt id="term-principles">principles<a class="headerlink" href="#term-principles" title="Permalink to this term">#</a></dt><dd><p>specific types of generalisations that deal with relationships; a proposition that serves as the foundation for a system of belief or behaviour or for a chain of reasoning.</p>
+</dd>
+<dt id="term-problem-solving-process">problem-solving process<a class="headerlink" href="#term-problem-solving-process" title="Permalink to this term">#</a></dt><dd><p>consists of subject specific problem-solving processes (explore, develop, generate and evaluate) used to iteratively find solutions to difficult or complex problems or situations.</p>
+</dd>
+<dt id="term-procedural-text-based-language">procedural text-based language<a class="headerlink" href="#term-procedural-text-based-language" title="Permalink to this term">#</a></dt><dd><p>a type of computer programming language that specifies a series of well-structured steps and procedures within its programming context to compose a program; it contains a systematic order of statements, functions and commands to complete a computational task or program; text-based refers to languages whose primary input and output are based on text rather than graphics or sound; this excludes GUI and non-procedural languages.</p>
+</dd>
+<dt id="term-processes">processes<a class="headerlink" href="#term-processes" title="Permalink to this term">#</a></dt><dd><p>a series of actions or steps taken in order to achieve a particular result.</p>
+</dd>
+<dt id="term-productivity-applications">productivity applications<a class="headerlink" href="#term-productivity-applications" title="Permalink to this term">#</a></dt><dd><p>simple programs that run on a standard desktop computing platform to increase the productivity of the user.</p>
+</dd>
+<dt id="term-programming">programming<a class="headerlink" href="#term-programming" title="Permalink to this term">#</a></dt><dd><p>the process of writing computer programs; creating the logic and making decisions to resolve problems.</p>
+</dd>
+<dt id="term-programming-tools">programming tools<a class="headerlink" href="#term-programming-tools" title="Permalink to this term">#</a></dt><dd><p>software programs or scripts used to assist a programmer to create, debug, maintain, develop or model software; this includes coded and graphical user interface components.</p>
+</dd>
+<dt id="term-propose">propose<a class="headerlink" href="#term-propose" title="Permalink to this term">#</a></dt><dd><p>put forward (e.g. a point of view, idea, argument, suggestion) for consideration or action.</p>
+</dd>
+<dt id="term-protocols">protocols<a class="headerlink" href="#term-protocols" title="Permalink to this term">#</a></dt><dd><p>a set of generally accepted standards or ‘rules’ that govern relationships and interactions between and within information systems.</p>
+</dd>
+<dt id="term-prototype">prototype<a class="headerlink" href="#term-prototype" title="Permalink to this term">#</a></dt><dd><p>a trial solution to test an idea to inform further development; demonstrates the interaction of the components of a product, service or environment; its purpose is to identify if and how well a solution functions and can be tested by stakeholders.</p>
+</dd>
+<dt id="term-pseudocode">pseudocode<a class="headerlink" href="#term-pseudocode" title="Permalink to this term">#</a></dt><dd><p>a type of descriptive algorithm that is a mixture of everyday language and programming languages.</p>
+</dd>
+<dt id="term-purposeful">purposeful<a class="headerlink" href="#term-purposeful" title="Permalink to this term">#</a></dt><dd><p>having an intended or desired result; having a useful purpose; determined; resolute; full of meaning; significant; intentional.</p>
+</dd>
+<dt id="term-reasonable">reasonable<a class="headerlink" href="#term-reasonable" title="Permalink to this term">#</a></dt><dd><p>endowed with reason; having sound judgment; fair and sensible; based on good sense; average; appropriate; moderate.</p>
+</dd>
+<dt id="term-reasoned">reasoned<a class="headerlink" href="#term-reasoned" title="Permalink to this term">#</a></dt><dd><p>logical and sound; based on logic or good sense; logically thought out and presented with justification; guided by reason; well-grounded; considered.</p>
+</dd>
+<dt id="term-recognise">recognise<a class="headerlink" href="#term-recognise" title="Permalink to this term">#</a></dt><dd><p>identify or recall particular features of information from knowledge; identify that an item, characteristic or quality exists; perceive as existing or true; be aware of or acknowledge.</p>
+</dd>
+<dt id="term-recommendation">recommendation<a class="headerlink" href="#term-recommendation" title="Permalink to this term">#</a></dt><dd><p>a suggestion or proposal as to the best course of action.</p>
+</dd>
+<dt id="term-refine">refine<a class="headerlink" href="#term-refine" title="Permalink to this term">#</a></dt><dd><p>to make partial or minor changes to something in order to improve it; modify in relation to selected criteria.</p>
+</dd>
+<dt id="term-related">related<a class="headerlink" href="#term-related" title="Permalink to this term">#</a></dt><dd><p>associated with or linked to</p>
+</dd>
+<dt id="term-relational-schema">relational schema<a class="headerlink" href="#term-relational-schema" title="Permalink to this term">#</a></dt><dd><p>the definition of a table, that is, the table’s name, column headings and type of data in each column.</p>
+</dd>
+<dt id="term-relevant">relevant<a class="headerlink" href="#term-relevant" title="Permalink to this term">#</a></dt><dd><p>bearing upon or connected with the matter at hand; to the purpose; applicable and pertinent; having a direct bearing on.</p>
+</dd>
+<dt id="term-requirements">requirements<a class="headerlink" href="#term-requirements" title="Permalink to this term">#</a></dt><dd><p>necessary conditions identified from stakeholders’ needs or wants; used to inform criteria against which to evaluate.</p>
+</dd>
+<dt id="term-REST">REST<a class="headerlink" href="#term-REST" title="Permalink to this term">#</a></dt><dd><p>the underlying architectural principle of the web, where requesting systems (clients, browsers) and servers can interact in complex ways without the client knowing anything beforehand about the server and the resources it hosts using a uniform and predefined set of stateless operations; this is a way of providing interoperability between computer systems on the internet; an API that adheres to the principles of REST does not require the client to know anything about the structure of the API; the server provides whatever information the client needs to interact with the service.</p>
+</dd>
+<dt id="term-robotics">robotics<a class="headerlink" href="#term-robotics" title="Permalink to this term">#</a></dt><dd><p>a branch of engineering that involves the conception, design, manufacture and operation of robots; this field overlaps with electronics, computer science, artificial intelligence, mechatronics, nanotechnology and bioengineering.</p>
+</dd>
+<dt id="term-rudimentary">rudimentary<a class="headerlink" href="#term-rudimentary" title="Permalink to this term">#</a></dt><dd><p>relating to rudiments or first principles; elementary; undeveloped; involving or limited to basic principles; relating to an immature, undeveloped or basic form.</p>
+</dd>
+<dt id="term-select">select<a class="headerlink" href="#term-select" title="Permalink to this term">#</a></dt><dd><p>choose in preference to another or others; pick out.</p>
+</dd>
+<dt id="term-SELECT">SELECT<a class="headerlink" href="#term-SELECT" title="Permalink to this term">#</a></dt><dd><p>a statement in structured query language (SQL) that retrieves information from a database; the structure of a <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement provides for optional clauses that allow for the filtering, grouping and sorting of data on retrieval; a simple <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement may look like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">People</span><span class="p">;</span> 
+</pre></div>
+</div>
+<p>where the resulting set would be all of the records in the People table;</p>
+<p>following is an example of a more complicated <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SELECT</span> <span class="o">*</span> <span class="n">FROM</span> <span class="n">People</span> <span class="n">WHERE</span> <span class="n">gender</span><span class="o">=</span><span class="s2">&quot;m&quot;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>this uses the optional WHERE clause to retrieve only the males (that is, that have a gender of “m”) from the database table.</p>
+</dd>
+<dt id="term-selection">selection<a class="headerlink" href="#term-selection" title="Permalink to this term">#</a></dt><dd><p>a basic construct of an algorithm indicating the next instruction to be executed depends on a ‘condition’; a condition is defined for these purposes as a logical expression that evaluates to <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd>
+<dt id="term-sequence">sequence<a class="headerlink" href="#term-sequence" title="Permalink to this term">#</a></dt><dd><p>place in a continuous or connected series; arrange in a particular order.</p>
+</dd>
+<dt id="term-simple">simple<a class="headerlink" href="#term-simple" title="Permalink to this term">#</a></dt><dd><p>easy to understand, deal with and use; not complex or complicated; plain; not elaborate or artificial;</p>
+<p>may concern a single or basic aspect; involving few elements, components or steps.</p>
+</dd>
+<dt id="term-sketches">sketches<a class="headerlink" href="#term-sketches" title="Permalink to this term">#</a></dt><dd><p>drawings or paintings in simple form, giving essential features but not necessarily with detail or accuracy;</p>
+<p>in Mathematics, represent by means of a diagram or graph; the sketch should give a general idea of the required shape or relationship and should include features;</p>
+<p>in Technologies, a two-dimensional informal visualisation method completed freehand, often instantly capturing an idea for later use and therefore lacking in presentation quality; sketches are usually produced manually, using pencil, ink and paper, but may be software-assisted.</p>
+</dd>
+<dt id="term-solution-digital">solution (digital)<a class="headerlink" href="#term-solution-digital" title="Permalink to this term">#</a></dt><dd><p>the end result of applying a problem-solving process to a problem that can be solved digitally; it usually includes three components: data, system/user interface and text-based source code that may be interpreted or compiled; in a digital solution the interface triggers the execution of code.</p>
+</dd>
+<dt id="term-specification">specification<a class="headerlink" href="#term-specification" title="Permalink to this term">#</a></dt><dd><p>the process of defining and communicating a problem precisely and clearly; e.g. explaining the need to direct a robot to move in a particular way; an algorithm is a precise description of the steps and decisions needed to solve a problem.</p>
+</dd>
+<dt id="term-structure">structure<a class="headerlink" href="#term-structure" title="Permalink to this term">#</a></dt><dd><p>an ordered assembly of elements, components and features that form an organised pattern or system.</p>
+</dd>
+<dt id="term-structured-data">structured data<a class="headerlink" href="#term-structured-data" title="Permalink to this term">#</a></dt><dd><p>information with a high degree of organisation, thus allowing seamless inclusion in a relational database and is readily searchable by simple, straightforward search engine algorithms or other search operations.</p>
+</dd>
+<dt id="term-structured-query-language-SQL">structured query language (SQL)<a class="headerlink" href="#term-structured-query-language-SQL" title="Permalink to this term">#</a></dt><dd><p>specialist programming language used to manage data and access data in relational database management systems.</p>
+</dd>
+<dt id="term-suitable">suitable<a class="headerlink" href="#term-suitable" title="Permalink to this term">#</a></dt><dd><p>appropriate; fitting; conforming or agreeing in nature, condition or action.</p>
+</dd>
+<dt id="term-superficial">superficial<a class="headerlink" href="#term-superficial" title="Permalink to this term">#</a></dt><dd><p>concerned with or comprehending only what is on the surface or obvious; shallow; not profound, thorough, deep or complete;</p>
+<p>existing or occurring at or on the surface; cursory; lacking depth of character or understanding; apparent and sometimes trivial.</p>
+</dd>
+<dt id="term-symbolise">symbolise<a class="headerlink" href="#term-symbolise" title="Permalink to this term">#</a></dt><dd><p>represent or identify by a symbol or symbols.</p>
+</dd>
+<dt id="term-syntax">syntax<a class="headerlink" href="#term-syntax" title="Permalink to this term">#</a></dt><dd><p>the structure of statements in a computer language</p>
+</dd>
+<dt id="term-synthesise">synthesise<a class="headerlink" href="#term-synthesise" title="Permalink to this term">#</a></dt><dd><p>combine different parts or elements (e.g. information, ideas, components) into a whole, in order to create new understanding.</p>
+</dd>
+<dt id="term-system">system<a class="headerlink" href="#term-system" title="Permalink to this term">#</a></dt><dd><p>a group of interacting objects, materials or processes that form an integrated whole; systems can be open or closed; a system has properties and/or functions that can be described differently from its component parts; systems can be identified as four types:</p>
+<ul class="simple">
+<li><p>natural systems, e.g. an ecosystem including plants and animals</p></li>
+<li><p>designed physical systems, e.g. buildings, road networks, aircraft, airports</p></li>
+<li><p>designed abstract systems, e.g. mathematic equations, computer algorithms</p></li>
+<li><p>human activity systems, e.g. a team task, flight crew, human–machine interface</p></li>
+</ul>
+</dd>
+<dt id="term-systems-thinking">systems thinking<a class="headerlink" href="#term-systems-thinking" title="Permalink to this term">#</a></dt><dd><p>a holistic approach to the identification and solving of problems, where parts and components of a system, their interactions and interrelationships are analysed individually to see how they influence the functioning of the whole system; this approach enables students to understand systems and work with complexity, uncertainty and risk;</p>
+<p>systems thinking also involves understanding the interdependence between systems and how a change or output from one system can affect another, and how this affects larger systems such as the economy and society.</p>
+</dd>
+<dt id="term-technical-feasibility">technical feasibility<a class="headerlink" href="#term-technical-feasibility" title="Permalink to this term">#</a></dt><dd><p>the process of proving that the concept is technically possible; the aim of a technical feasibility study is to confirm that the prototype or solution will perform as intended and to verify that there are no barriers in generating these;</p>
+<p>it should communicate the technical aspects of the development process, e.g. algorithms, selection and justification of development tools, sketches and diagrams of the user interface, user experience and other requirements for development.</p>
+</dd>
+<dt id="term-technical-proposal">technical proposal<a class="headerlink" href="#term-technical-proposal" title="Permalink to this term">#</a></dt><dd><p>a multimodal presentation to communicate the strengths, limitations, implications, and technical specifications and feasibility of a proposed digital solution; may be for a live or virtual audience</p>
+<p>or</p>
+<p>a document that lists and defines the technical specifications of a contract or project, includes three sections, identification — a brief statement which identifies the real-world related need for developing the digital solution and relevant background information, interactions — specifies information relating to interactions between humans and or the environment, and information systems, this may include proto-personas, and component specifications — specifications relating to data, user interface/experience and code.</p>
+</dd>
+<dt id="term-technologies">technologies<a class="headerlink" href="#term-technologies" title="Permalink to this term">#</a></dt><dd><p>materials, data, systems, components, tools and equipment used to create solutions for identified needs and opportunities, and the knowledge, understanding and skills used by people involved in the selection and use of these.</p>
+</dd>
+<dt id="term-technology">technology<a class="headerlink" href="#term-technology" title="Permalink to this term">#</a></dt><dd><p>the development of products, services and environments, using various types of knowledge, including computational, design, systems, social, ethical, economic, environmental, legal and sustainability knowledge to meet human needs and wants; ‘the know-how and creative process that may use tools, systems and resources to solve problems and enhance control over the natural and man-made environment in an endeavour to improve the human condition’</p>
+</dd>
+<dt id="term-test">test<a class="headerlink" href="#term-test" title="Permalink to this term">#</a></dt><dd><p>take measures to check the quality, performance or reliability of something</p>
+</dd>
+<dt id="term-unclear">unclear<a class="headerlink" href="#term-unclear" title="Permalink to this term">#</a></dt><dd><p>not clear or distinct; not easy to understand; obscure.</p>
+</dd>
+<dt id="term-useability-principles">useability principles<a class="headerlink" href="#term-useability-principles" title="Permalink to this term">#</a></dt><dd><p>principles used to improve the user experience, including</p>
+<ul class="simple">
+<li><p>accessibility: ability to be used by many different people, even people with disabilities</p></li>
+<li><p>effectiveness: ability of users to use the system to do the work they need to do, includes reliability</p></li>
+<li><p>safety: ability for users to make errors and recover from the mistake</p></li>
+<li><p>utility: ability of the system to provide all the functionality that users need</p></li>
+<li><p>learnability: how easy a system is to learn</p></li>
+</ul>
+</dd>
+<dt id="term-use">use<a class="headerlink" href="#term-use" title="Permalink to this term">#</a></dt><dd><p>operate or put into effect; apply knowledge or rules to put theory into practice</p>
+</dd>
+<dt id="term-user-experience">user experience<a class="headerlink" href="#term-user-experience" title="Permalink to this term">#</a></dt><dd><p>those aspects that affect how an end user interacts with digital systems such as visual, interface and navigation design, user needs, and functional and content requirements; this is determined by improving the solution’s useability based on the useability principles of accessibility, effectiveness, safety, utility and learnability.</p>
+</dd>
+<dt id="term-user-interface">user interface<a class="headerlink" href="#term-user-interface" title="Permalink to this term">#</a></dt><dd><p>characteristics of the boundary between users and a computer system, or the manner in which users interact with computer hardware or software;</p>
+<ul class="simple">
+<li><p>in software, this usually comprises fields for text and number entry, mouse pointers, buttons and other graphical elements;</p></li>
+<li><p>in hardware, sensors, switches, dials and light-emitting diodes (LEDs)</p></li>
+</ul>
+<p>provide information about the interactions between a user and a machine, a machine and another machine or a machine and the environment.</p>
+</dd>
+<dt id="term-vague">vague<a class="headerlink" href="#term-vague" title="Permalink to this term">#</a></dt><dd><p>not definite in statement or meaning; not explicit or precise; not definitely fixed, determined or known; of uncertain, indefinite or unclear character or meaning; not clear in thought or understanding;</p>
+<p>couched in general or indefinite terms; not definitely or precisely expressed; deficient in details or particulars;thinking or communicating in an unfocused or imprecise way.</p>
+</dd>
+<dt id="term-variable">variable<a class="headerlink" href="#term-variable" title="Permalink to this term">#</a></dt><dd><p><em>adjective</em></p>
+<p>apt or liable to vary or change; changeable; inconsistent; (readily) susceptible or capable of variation; fluctuating; uncertain;</p>
+<p><em>noun</em></p>
+<p>in mathematics, a symbol, or the quantity it signifies, that may represent any one of a given set of numbers and other objects.</p>
+</dd>
+<dt id="term-virtual">virtual<a class="headerlink" href="#term-virtual" title="Permalink to this term">#</a></dt><dd><p>representation of an object in a digital form.</p>
+</dd>
+<dt id="term-visual-communication">visual communication<a class="headerlink" href="#term-visual-communication" title="Permalink to this term">#</a></dt><dd><p>The elements form the basic components of visual communication; they are acted upon by principles that are ways of arranging or organising the elements; principles are something that can be repeatedly and dependably done with elements to produce some sort of visual effect.</p>
+</dd>
+<dt id="term-wearable-technologies">wearable technologies<a class="headerlink" href="#term-wearable-technologies" title="Permalink to this term">#</a></dt><dd><p>electronic devices able to be worn on the body as a purposeful fashion accessory or part of material used in clothing. A major feature of these devices is their ability to connect to the internet, allowing data to be exchanged between the device and a network.</p>
+</dd>
+<dt id="term-web-applications">web applications<a class="headerlink" href="#term-web-applications" title="Permalink to this term">#</a></dt><dd><p>client–server software applications in which the client–user interface runs in a web browser, e.g. webmail, online retail sales etc.</p>
 </dd>
 </dl>
 </section>
@@ -538,12 +830,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="2_concepts/5-3_privacy.html"
+       href="3_design_process/5_evaluate.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Privacy</p>
+        <p class="prev-next-title">Evaluate Phase</p>
       </div>
     </a>
     <a class="right-next"
