@@ -11,5 +11,6 @@
 - Analyse problems and information to determine and explore data sources to understand relational and flat file data structures
 - Determine possible personal, social and economic impacts
 - Recognise and describe user-interface components such as user hardware and peripheral devices used for input and output
+- Evaluate user interfaces from existing solutions using heuristic reviews for the useability principles
 {cite}`queenslandcurriculumassessmentauthority_2017_digital`
 ```

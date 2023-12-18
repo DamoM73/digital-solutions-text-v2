@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Solution Evaluation — Unit 1 &#8212; QCAA Digital Solutions Text</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/6_evaluate/3-1_solution_evaluation_unit_1';</script>
+    <link rel="shortcut icon" href="../../_static/logo_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Solution Evaluation — Unit 2" href="3-2_solution_evaluation_unit_2.html" />
+    <link rel="prev" title="Solution Evaluation" href="3_solution_evaluation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="QCAA Digital Solutions Text - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="QCAA Digital Solutions Text - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    QCAA Digital Solutions
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_introduction/1_how_to_use_this_text.html">How to use this text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_introduction/2_tools_used.html">Technologies Used</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-1_basic_features.html">Basic Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-2_good_practice.html">Good Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-3_paradigms.html">Programming Paradigms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-4_pseudocode.html">Pseudocode</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/3_user_experience.html">User Experience Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/3-1_useability_principles.html">Useability Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/3-2_visual_communication.html">Visual Communication</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/4_dealing_with_data.html">Data Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/4-1_structuring_data.html">Structuring Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/4-2_data_principles.html">Data Principles</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/5_data_transmission.html">Data Transmission</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/5-1_data_security.html">Data Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/5-2_networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../2_concepts/5-3_privacy.html">Privacy</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_explore/1_introduction.html">Explore Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/2_mind_map.html">Mind Map</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-1_mind_map_unit_1.html">Mind Map — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-2_mind_map_unit_2.html">Mind Map — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-3_mind_map_unit_3.html">Mind Map — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-4_mind_map_unit_4.html">Mind Map — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/3_user_insights.html">User Insights</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-1_user_insights_unit_1.html">User Insights — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-2_user_insights_unit_2.html">User Insights — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-3_user_insights_unit_3.html">User Insights — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-4_user_insights_unit_4.html">User Insights — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/4_use_case_diagram.html">Use Case Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-1_use_case_diagram_unit_1.html">Use Case Diagram — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-2_use_case_diagram_unit_2.html">Use Case Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-3_use_case_diagram_unit_3.html">Use Case Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-4_use_case_diagram_unit_4.html">Use Case Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/5_success_criteria.html">Success Criteria</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-1_success_criteria_unit_1.html">Success Criteria — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-2_success_criteria_unit_2.html">Success Criteria — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-3_success_criteria_unit_3.html">Success Criteria — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-4_success_criteria_unit_4.html">Success Criteria — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Develop</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_develop/1_introduction.html">Develop Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/2_ui_design.html">UI Design</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-1_ui_design_unit_1.html">UI Design — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-2_ui_design_unit_2.html">UI Design — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-3_ui_design_unit_3.html">UI Design — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-4_ui_design_unit_4.html">UI Design — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/3_class_diagram.html">Class Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-1_class_diagram_unit_1.html">Class Diagram — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-2_class_diagram_unit_2.html">Class Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-3_class_diagram_unit_3.html">Class Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-4_class_diagram_unit_4.html">Class Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/4_ipo_tables.html">IPO Tables</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-1_ipo_tables_unit_1.html">IPO Tables — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-2_ipo_tables_unit_2.html">IPO Tables — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-3_ipo_tables_unit_3.html">IPO Tables — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-4_ipo_tables_unit_4.html">IPO Tables — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/5_desk_check.html">Desk Check</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-1_desk_check_unit_1.html">Desk Check — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-2_desk_check_unit_2.html">Desk Check — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-3_desk_check_unit_3.html">Desk Check — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-4_desk_check_unit_4.html">Desk Check — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/6_data_requirements.html">Data Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-2_data_requirements_unit_2.html">Data Requirements → Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-3_data_requirements_unit_3.html">Data Requirements → Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-4_data_requirements_unit_4.html">Data Requirements → Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/7_data_flow_diagram.html">Data Flow Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-2_data_flow_diagram_unit_2.html">Data Flow Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-3_data_flow_diagram_unit_3.html">Data Flow Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-4_data_flow_diagram_unit_4.html">Data Flow Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/8_erd_rs.html">ERD and Relational Schema</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-2_erd_rs_unit_2.html">ERD and Relational Schema — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-3_erd_rs_unit_3.html">ERD and Relational Schema — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-4_erd_rs_unit_4.html">ERD and Relational Schema — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/9_data_dictionary.html">Data Dictionary</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-2_data_dictionary_unit_2.html">Data Dictionary — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-3_data_dictionary_unit_3.html">Data Dictionary — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-4_data_dictionary_unit_4.html">Data Dictionary — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/10_data_exchange_diagram.html">Data Exchange Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/10-4_data_exchange_diagram_unit_4.html">Data Exchange Diagram — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Generate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_generate/1_introduction.html">Generate Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_generate/2_coding.html">Coding</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-1_coding_unit_1.html">Coding — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-2_coding_unit_2.html">Coding — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-3_coding_unit_3.html">Coding — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-4_coding_unit_4.html">Coding — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_generate/3_testing_table.html">Testing Table</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-1_testing_table_unit_1.html">Testing Table — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-2_testing_table_unit_2.html">Testing Table — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-3_testing_table_unit_3.html">Testing Table — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-4_testing_table_unit_4.html">Testing Table — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Evaluate</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_introduction.html">Evaluate Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_component_evaluation.html">Component Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1_component_evaluation_unit_1.html">Component Evaluation — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-2_component_evaluation_unit_2.html">Component Evaluation — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-3_component_evaluation_unit_3.html">Component Evaluation — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-4_component_evaluation_unit_4.html">Component Evaluation — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="3_solution_evaluation.html">Solution Evaluation</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Solution Evaluation — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-2_solution_evaluation_unit_2.html">Solution Evaluation — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-3_solution_evaluation_unit_3.html">Solution Evaluation — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-4_solution_evaluation_unit_4.html">Solution Evaluation — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_impacts_assessment.html">Impacts Assessment</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4-1_impacts_assessment_unit_1.html">Impacts Assessment — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-2_impacts_assessment_unit_2.html">Impacts Assessment — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-3_impacts_assessment_unit_3.html">Impacts Assessment — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-4_impacts_assessment_unit_4.html">Impacts Assessment — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://damom73.github.io/digital-solutions-text-v2/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://damom73.github.io/digital-solutions-text-v2/intro.html/issues/new?title=Issue%20on%20page%20%2Fcontent/6_evaluate/3-1_solution_evaluation_unit_1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/6_evaluate/3-1_solution_evaluation_unit_1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Solution Evaluation — Unit 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="solution-evaluation-unit-1">
+<h1>Solution Evaluation — Unit 1<a class="headerlink" href="#solution-evaluation-unit-1" title="Permalink to this heading">#</a></h1>
+<div class="admonition-unit-1-subject-matter-covered admonition">
+<p class="admonition-title">Unit 1 subject matter covered:</p>
+<ul class="simple">
+<li><p>Evaluate and make recommendations about the implemented solution against prescribed criteria, maintainability and useability principles.
+<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+</ul>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/6_evaluate"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3_solution_evaluation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Solution Evaluation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-2_solution_evaluation_unit_2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Solution Evaluation — Unit 2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Damien Murtagh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
