@@ -171,6 +171,15 @@ parts:
       - file: content/6_evaluate/4-3_impacts_assessment_unit_3.md
       - file: content/6_evaluate/4-4_impacts_assessment_unit_4.md
 
+  - caption: Communication
+    chapters:
+    - file: content/7_communication/1_introduction.md
+    - file: content/7_communication/2_technical_language.md
+    - file: content/7_communication/3_conventions.md
+    - file: content/7_communication/4_diagrams.md
+    - file: content/7_communication/5_modes.md
+    - file: content/7_communication/6_presentations.md
+
   - caption: End material
     chapters:
     - file: content/glossary
