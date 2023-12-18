@@ -146,6 +146,31 @@ parts:
       - file: content/5_generate/3-3_testing_table_unit_3.md
       - file: content/5_generate/3-4_testing_table_unit_4.md
 
+  - caption: Evaluate
+    chapters:
+    - file: content/6_evaluate/1_introduction.md
+
+    - file: content/6_evaluate/2_component_evaluation.md
+      sections:
+      - file: content/6_evaluate/2-1_component_evaluation_unit_1.md
+      - file: content/6_evaluate/2-2_component_evaluation_unit_2.md
+      - file: content/6_evaluate/2-3_component_evaluation_unit_3.md
+      - file: content/6_evaluate/2-4_component_evaluation_unit_4.md
+
+    - file: content/6_evaluate/3_solution_evaluation.md
+      sections:
+      - file: content/6_evaluate/3-1_solution_evaluation_unit_1.md
+      - file: content/6_evaluate/3-2_solution_evaluation_unit_2.md
+      - file: content/6_evaluate/3-3_solution_evaluation_unit_3.md
+      - file: content/6_evaluate/3-4_solution_evaluation_unit_4.md
+
+    - file: content/6_evaluate/4_impacts_assessment.md
+      sections:
+      - file: content/6_evaluate/4-1_impacts_assessment_unit_1.md
+      - file: content/6_evaluate/4-2_impacts_assessment_unit_2.md
+      - file: content/6_evaluate/4-3_impacts_assessment_unit_3.md
+      - file: content/6_evaluate/4-4_impacts_assessment_unit_4.md
+
   - caption: End material
     chapters:
     - file: content/glossary
