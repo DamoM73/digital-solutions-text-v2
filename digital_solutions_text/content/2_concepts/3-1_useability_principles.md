@@ -2,14 +2,27 @@
 
 ## Accessibility
 
+### Accessibility Summary
+
+![accessibility summary poster](assets/accessability.png)
 
 ## Effectiveness
 
+### Effectiveness Summary
+
+![effectiveness summary poster](assets/effectiveness.png)
 
 ## Safety
 
+### Safety Summary
+
+![safety summary poster](assets/safety.png)
 
 ## Utility
+
+### Utility Summary
+
+![utility summary poster](assets/utility.png)
 
 
 ## Learnability
