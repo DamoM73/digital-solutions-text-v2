@@ -128,6 +128,24 @@ parts:
       sections:
       - file: content/4_develop/10-4_data_exchange_diagram_unit_4.md
 
+  - caption: Generate
+    chapters:
+    - file: content/5_generate/1_introduction.md
+
+    - file: content/5_generate/2_coding.md
+      sections:
+      - file: content/5_generate/2-1_coding_unit_1.md
+      - file: content/5_generate/2-2_coding_unit_2.md
+      - file: content/5_generate/2-3_coding_unit_3.md
+      - file: content/5_generate/2-4_coding_unit_4.md
+    
+    - file: content/5_generate/3_testing_table.md
+      sections:
+      - file: content/5_generate/3-1_testing_table_unit_1.md
+      - file: content/5_generate/3-2_testing_table_unit_2.md
+      - file: content/5_generate/3-3_testing_table_unit_3.md
+      - file: content/5_generate/3-4_testing_table_unit_4.md
+
   - caption: End material
     chapters:
     - file: content/glossary

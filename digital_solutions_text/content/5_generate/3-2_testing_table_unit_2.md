@@ -1,6 +1,4 @@
-# Desk Check &mdash; Unit 2
-
-
+# Testing Table &mdash; Unit 2
 
 ```{admonition} Unit 2 subject matter covered:
 - Test the SQL, algorithm and procedural code components of the prototype digital solution for reliability, maintainability and efficiency
