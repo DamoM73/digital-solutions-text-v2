@@ -18,6 +18,7 @@ parts:
       - file: content/2_concepts/2-1_basic_features
       - file: content/2_concepts/2-2_good_practice
       - file: content/2_concepts/2-3_paradigms
+      - file: content/2_concepts/2-4_pseudocode
 
     - file: content/2_concepts/3_user_experience
       sections:
@@ -66,6 +67,66 @@ parts:
       - file: content/3_explore/5-2_success_criteria_unit_2.md
       - file: content/3_explore/5-3_success_criteria_unit_3.md
       - file: content/3_explore/5-4_success_criteria_unit_4.md
+
+  - caption: Develop
+    chapters:
+    - file: content/4_develop/1_introduction.md
+
+    - file: content/4_develop/2_ui_design.md
+      sections:
+      - file: content/4_develop/2-1_ui_design_unit_1.md
+      - file: content/4_develop/2-2_ui_design_unit_2.md
+      - file: content/4_develop/2-3_ui_design_unit_3.md
+      - file: content/4_develop/2-4_ui_design_unit_4.md
+    
+    - file: content/4_develop/3_class_diagram.md
+      sections:
+      - file: content/4_develop/3-1_class_diagram_unit_1.md
+      - file: content/4_develop/3-2_class_diagram_unit_2.md
+      - file: content/4_develop/3-3_class_diagram_unit_3.md
+      - file: content/4_develop/3-4_class_diagram_unit_4.md
+    
+    - file: content/4_develop/4_ipo_tables.md
+      sections:
+      - file: content/4_develop/4-1_ipo_tables_unit_1.md
+      - file: content/4_develop/4-2_ipo_tables_unit_2.md
+      - file: content/4_develop/4-3_ipo_tables_unit_3.md
+      - file: content/4_develop/4-4_ipo_tables_unit_4.md
+
+    - file: content/4_develop/5_desk_check.md
+      sections:
+      - file: content/4_develop/5-1_desk_check_unit_1.md
+      - file: content/4_develop/5-2_desk_check_unit_2.md
+      - file: content/4_develop/5-3_desk_check_unit_3.md
+      - file: content/4_develop/5-4_desk_check_unit_4.md
+
+    - file: content/4_develop/6_data_requirements.md
+      sections:
+      - file: content/4_develop/6-2_data_requirements_unit_2.md
+      - file: content/4_develop/6-3_data_requirements_unit_3.md
+      - file: content/4_develop/6-4_data_requirements_unit_4.md
+
+    - file: content/4_develop/7_data_flow_diagram.md
+      sections:
+      - file: content/4_develop/7-2_data_flow_diagram_unit_2.md
+      - file: content/4_develop/7-3_data_flow_diagram_unit_3.md
+      - file: content/4_develop/7-4_data_flow_diagram_unit_4.md
+
+    - file: content/4_develop/8_erd_rs.md
+      sections:
+      - file: content/4_develop/8-2_erd_rs_unit_2.md
+      - file: content/4_develop/8-3_erd_rs_unit_3.md
+      - file: content/4_develop/8-4_erd_rs_unit_4.md
+
+    - file: content/4_develop/9_data_dictionary.md
+      sections:
+      - file: content/4_develop/9-2_data_dictionary_unit_2.md
+      - file: content/4_develop/9-3_data_dictionary_unit_3.md
+      - file: content/4_develop/9-4_data_dictionary_unit_4.md
+
+    - file: content/4_develop/10_data_exchange_diagram.md
+      sections:
+      - file: content/4_develop/10-4_data_exchange_diagram_unit_4.md
 
   - caption: End material
     chapters:
