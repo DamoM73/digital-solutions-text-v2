@@ -1,5 +1,9 @@
 # Pseudocode
 
+## Summary
+
+![pseudocode summary poster](assets/pseudocode.png)
+
 ```{admonition} Unit 1 subject matter covered:
 - Represent algorithms using pseudocode by identifying and describing the steps and their behaviour in the algorithm
 - Represent algorithms using pseudocode by identifying and explaining the algorithmic steps required for a programmed solution
