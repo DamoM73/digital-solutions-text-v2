@@ -2,6 +2,7 @@
 
 ## Acquisition
 
+![Acquisition summary poster](assets/dp_acquisition.png)
 
 ## Organisation
 
@@ -11,15 +12,15 @@
 
 ## Integrity
 
+![Integrity summary poster](assets/dp_integrity.png)
 
-## Anomalies
+## Anomalies & Redundancy
 
-
-## Redundancy
-
+![Anomalies summary poster](assets/dp_anomolies.png)
 
 ## Security
 
+![Security summary poster](assets/dp_security.png)
 
 ```{admonition} Unit 2 subject matter covered:
 - Explain the difference between data validation and data verification
