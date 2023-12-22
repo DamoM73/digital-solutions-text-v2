@@ -2,30 +2,24 @@
 
 ## Accessibility
 
-### Accessibility Summary
-
-![accessibility summary poster](assets/accessability.png)
+![accessibility summary poster](assets/up_accessability.png)
 
 ## Effectiveness
 
-### Effectiveness Summary
-
-![effectiveness summary poster](assets/effectiveness.png)
+![effectiveness summary poster](assets/up_effectiveness.png)
 
 ## Safety
 
-### Safety Summary
-
-![safety summary poster](assets/safety.png)
+![safety summary poster](assets/up_safety.png)
 
 ## Utility
 
-### Utility Summary
-
-![utility summary poster](assets/utility.png)
+![utility summary poster](assets/up_utility.png)
 
 
 ## Learnability
+
+![learnability summary poster](assets/up_learnability.png)
 
 
 ```{admonition} Unit 1 subject matter covered:

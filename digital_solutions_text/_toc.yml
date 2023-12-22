@@ -29,6 +29,7 @@ parts:
       sections:
       - file: content/2_concepts/4-1_structuring_data
       - file: content/2_concepts/4-2_data_principles
+      - file: content/2_concepts/4-3_manipulating_data
 
     - file: content/2_concepts/5_data_transmission
       sections:
@@ -38,147 +39,147 @@ parts:
 
   - caption: Explore
     chapters:
-    - file: content/3_explore/1_introduction.md
+    - file: content/3_explore/1_introduction
 
-    - file: content/3_explore/2_mind_map.md
+    - file: content/3_explore/2_mind_map
       sections:
-      - file: content/3_explore/2-1_mind_map_unit_1.md
-      - file: content/3_explore/2-2_mind_map_unit_2.md
-      - file: content/3_explore/2-3_mind_map_unit_3.md
-      - file: content/3_explore/2-4_mind_map_unit_4.md
+      - file: content/3_explore/2-1_mind_map_unit_1
+      - file: content/3_explore/2-2_mind_map_unit_2
+      - file: content/3_explore/2-3_mind_map_unit_3
+      - file: content/3_explore/2-4_mind_map_unit_4
 
-    - file: content/3_explore/3_user_insights.md
+    - file: content/3_explore/3_user_insights
       sections:
-      - file: content/3_explore/3-1_user_insights_unit_1.md
-      - file: content/3_explore/3-2_user_insights_unit_2.md
-      - file: content/3_explore/3-3_user_insights_unit_3.md
-      - file: content/3_explore/3-4_user_insights_unit_4.md
+      - file: content/3_explore/3-1_user_insights_unit_1
+      - file: content/3_explore/3-2_user_insights_unit_2
+      - file: content/3_explore/3-3_user_insights_unit_3
+      - file: content/3_explore/3-4_user_insights_unit_4
 
-    - file: content/3_explore/4_use_case_diagram.md
+    - file: content/3_explore/4_use_case_diagram
       sections:
-      - file: content/3_explore/4-1_use_case_diagram_unit_1.md
-      - file: content/3_explore/4-2_use_case_diagram_unit_2.md
-      - file: content/3_explore/4-3_use_case_diagram_unit_3.md
-      - file: content/3_explore/4-4_use_case_diagram_unit_4.md
+      - file: content/3_explore/4-1_use_case_diagram_unit_1
+      - file: content/3_explore/4-2_use_case_diagram_unit_2
+      - file: content/3_explore/4-3_use_case_diagram_unit_3
+      - file: content/3_explore/4-4_use_case_diagram_unit_4
     
-    - file: content/3_explore/5_success_criteria.md
+    - file: content/3_explore/5_success_criteria
       sections:
-      - file: content/3_explore/5-1_success_criteria_unit_1.md
-      - file: content/3_explore/5-2_success_criteria_unit_2.md
-      - file: content/3_explore/5-3_success_criteria_unit_3.md
-      - file: content/3_explore/5-4_success_criteria_unit_4.md
+      - file: content/3_explore/5-1_success_criteria_unit_1
+      - file: content/3_explore/5-2_success_criteria_unit_2
+      - file: content/3_explore/5-3_success_criteria_unit_3
+      - file: content/3_explore/5-4_success_criteria_unit_4
 
   - caption: Develop
     chapters:
-    - file: content/4_develop/1_introduction.md
+    - file: content/4_develop/1_introduction
 
-    - file: content/4_develop/2_ui_design.md
+    - file: content/4_develop/2_ui_design
       sections:
-      - file: content/4_develop/2-1_ui_design_unit_1.md
-      - file: content/4_develop/2-2_ui_design_unit_2.md
-      - file: content/4_develop/2-3_ui_design_unit_3.md
-      - file: content/4_develop/2-4_ui_design_unit_4.md
+      - file: content/4_develop/2-1_ui_design_unit_1
+      - file: content/4_develop/2-2_ui_design_unit_2
+      - file: content/4_develop/2-3_ui_design_unit_3
+      - file: content/4_develop/2-4_ui_design_unit_4
     
-    - file: content/4_develop/3_class_diagram.md
+    - file: content/4_develop/3_class_diagram
       sections:
-      - file: content/4_develop/3-1_class_diagram_unit_1.md
-      - file: content/4_develop/3-2_class_diagram_unit_2.md
-      - file: content/4_develop/3-3_class_diagram_unit_3.md
-      - file: content/4_develop/3-4_class_diagram_unit_4.md
+      - file: content/4_develop/3-1_class_diagram_unit_1
+      - file: content/4_develop/3-2_class_diagram_unit_2
+      - file: content/4_develop/3-3_class_diagram_unit_3
+      - file: content/4_develop/3-4_class_diagram_unit_4
     
-    - file: content/4_develop/4_ipo_tables.md
+    - file: content/4_develop/4_ipo_tables
       sections:
-      - file: content/4_develop/4-1_ipo_tables_unit_1.md
-      - file: content/4_develop/4-2_ipo_tables_unit_2.md
-      - file: content/4_develop/4-3_ipo_tables_unit_3.md
-      - file: content/4_develop/4-4_ipo_tables_unit_4.md
+      - file: content/4_develop/4-1_ipo_tables_unit_1
+      - file: content/4_develop/4-2_ipo_tables_unit_2
+      - file: content/4_develop/4-3_ipo_tables_unit_3
+      - file: content/4_develop/4-4_ipo_tables_unit_4
 
-    - file: content/4_develop/5_desk_check.md
+    - file: content/4_develop/5_desk_check
       sections:
-      - file: content/4_develop/5-1_desk_check_unit_1.md
-      - file: content/4_develop/5-2_desk_check_unit_2.md
-      - file: content/4_develop/5-3_desk_check_unit_3.md
-      - file: content/4_develop/5-4_desk_check_unit_4.md
+      - file: content/4_develop/5-1_desk_check_unit_1
+      - file: content/4_develop/5-2_desk_check_unit_2
+      - file: content/4_develop/5-3_desk_check_unit_3
+      - file: content/4_develop/5-4_desk_check_unit_4
 
-    - file: content/4_develop/6_data_requirements.md
+    - file: content/4_develop/6_data_requirements
       sections:
-      - file: content/4_develop/6-2_data_requirements_unit_2.md
-      - file: content/4_develop/6-3_data_requirements_unit_3.md
-      - file: content/4_develop/6-4_data_requirements_unit_4.md
+      - file: content/4_develop/6-2_data_requirements_unit_2
+      - file: content/4_develop/6-3_data_requirements_unit_3
+      - file: content/4_develop/6-4_data_requirements_unit_4
 
-    - file: content/4_develop/7_data_flow_diagram.md
+    - file: content/4_develop/7_data_flow_diagram
       sections:
-      - file: content/4_develop/7-2_data_flow_diagram_unit_2.md
-      - file: content/4_develop/7-3_data_flow_diagram_unit_3.md
-      - file: content/4_develop/7-4_data_flow_diagram_unit_4.md
+      - file: content/4_develop/7-2_data_flow_diagram_unit_2
+      - file: content/4_develop/7-3_data_flow_diagram_unit_3
+      - file: content/4_develop/7-4_data_flow_diagram_unit_4
 
-    - file: content/4_develop/8_erd_rs.md
+    - file: content/4_develop/8_erd_rs
       sections:
-      - file: content/4_develop/8-2_erd_rs_unit_2.md
-      - file: content/4_develop/8-3_erd_rs_unit_3.md
-      - file: content/4_develop/8-4_erd_rs_unit_4.md
+      - file: content/4_develop/8-2_erd_rs_unit_2
+      - file: content/4_develop/8-3_erd_rs_unit_3
+      - file: content/4_develop/8-4_erd_rs_unit_4
 
-    - file: content/4_develop/9_data_dictionary.md
+    - file: content/4_develop/9_data_dictionary
       sections:
-      - file: content/4_develop/9-2_data_dictionary_unit_2.md
-      - file: content/4_develop/9-3_data_dictionary_unit_3.md
-      - file: content/4_develop/9-4_data_dictionary_unit_4.md
+      - file: content/4_develop/9-2_data_dictionary_unit_2
+      - file: content/4_develop/9-3_data_dictionary_unit_3
+      - file: content/4_develop/9-4_data_dictionary_unit_4
 
-    - file: content/4_develop/10_data_exchange_diagram.md
+    - file: content/4_develop/10_data_exchange_diagram
       sections:
-      - file: content/4_develop/10-4_data_exchange_diagram_unit_4.md
+      - file: content/4_develop/10-4_data_exchange_diagram_unit_4
 
   - caption: Generate
     chapters:
-    - file: content/5_generate/1_introduction.md
+    - file: content/5_generate/1_introduction
 
-    - file: content/5_generate/2_coding.md
+    - file: content/5_generate/2_coding
       sections:
-      - file: content/5_generate/2-1_coding_unit_1.md
-      - file: content/5_generate/2-2_coding_unit_2.md
-      - file: content/5_generate/2-3_coding_unit_3.md
-      - file: content/5_generate/2-4_coding_unit_4.md
+      - file: content/5_generate/2-1_coding_unit_1
+      - file: content/5_generate/2-2_coding_unit_2
+      - file: content/5_generate/2-3_coding_unit_3
+      - file: content/5_generate/2-4_coding_unit_4
     
-    - file: content/5_generate/3_testing_table.md
+    - file: content/5_generate/3_testing_table
       sections:
-      - file: content/5_generate/3-1_testing_table_unit_1.md
-      - file: content/5_generate/3-2_testing_table_unit_2.md
-      - file: content/5_generate/3-3_testing_table_unit_3.md
-      - file: content/5_generate/3-4_testing_table_unit_4.md
+      - file: content/5_generate/3-1_testing_table_unit_1
+      - file: content/5_generate/3-2_testing_table_unit_2
+      - file: content/5_generate/3-3_testing_table_unit_3
+      - file: content/5_generate/3-4_testing_table_unit_4
 
   - caption: Evaluate
     chapters:
-    - file: content/6_evaluate/1_introduction.md
+    - file: content/6_evaluate/1_introduction
 
-    - file: content/6_evaluate/2_component_evaluation.md
+    - file: content/6_evaluate/2_component_evaluation
       sections:
-      - file: content/6_evaluate/2-1_component_evaluation_unit_1.md
-      - file: content/6_evaluate/2-2_component_evaluation_unit_2.md
-      - file: content/6_evaluate/2-3_component_evaluation_unit_3.md
-      - file: content/6_evaluate/2-4_component_evaluation_unit_4.md
+      - file: content/6_evaluate/2-1_component_evaluation_unit_1
+      - file: content/6_evaluate/2-2_component_evaluation_unit_2
+      - file: content/6_evaluate/2-3_component_evaluation_unit_3
+      - file: content/6_evaluate/2-4_component_evaluation_unit_4
 
-    - file: content/6_evaluate/3_solution_evaluation.md
+    - file: content/6_evaluate/3_solution_evaluation
       sections:
-      - file: content/6_evaluate/3-1_solution_evaluation_unit_1.md
-      - file: content/6_evaluate/3-2_solution_evaluation_unit_2.md
-      - file: content/6_evaluate/3-3_solution_evaluation_unit_3.md
-      - file: content/6_evaluate/3-4_solution_evaluation_unit_4.md
+      - file: content/6_evaluate/3-1_solution_evaluation_unit_1
+      - file: content/6_evaluate/3-2_solution_evaluation_unit_2
+      - file: content/6_evaluate/3-3_solution_evaluation_unit_3
+      - file: content/6_evaluate/3-4_solution_evaluation_unit_4
 
-    - file: content/6_evaluate/4_impacts_assessment.md
+    - file: content/6_evaluate/4_impacts_assessment
       sections:
-      - file: content/6_evaluate/4-1_impacts_assessment_unit_1.md
-      - file: content/6_evaluate/4-2_impacts_assessment_unit_2.md
-      - file: content/6_evaluate/4-3_impacts_assessment_unit_3.md
-      - file: content/6_evaluate/4-4_impacts_assessment_unit_4.md
+      - file: content/6_evaluate/4-1_impacts_assessment_unit_1
+      - file: content/6_evaluate/4-2_impacts_assessment_unit_2
+      - file: content/6_evaluate/4-3_impacts_assessment_unit_3
+      - file: content/6_evaluate/4-4_impacts_assessment_unit_4
 
   - caption: Communication
     chapters:
-    - file: content/7_communication/1_introduction.md
-    - file: content/7_communication/2_technical_language.md
-    - file: content/7_communication/3_conventions.md
-    - file: content/7_communication/4_diagrams.md
-    - file: content/7_communication/5_modes.md
-    - file: content/7_communication/6_presentations.md
+    - file: content/7_communication/1_introduction
+    - file: content/7_communication/2_technical_language
+    - file: content/7_communication/3_conventions
+    - file: content/7_communication/4_diagrams
+    - file: content/7_communication/5_modes
+    - file: content/7_communication/6_presentations
 
   - caption: End material
     chapters:
