@@ -545,7 +545,28 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcaa-pseudocode-rules">QCAA Pseudocode Rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations">Calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#font">Font</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modularisation">Modularisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterations">Iterations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post-test-loops">Post-test loops</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-test-loop">Pre-test loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#counted-loop">Counted loop</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">IF statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-statement">IF…ELSE statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else-statement">IF…ELIF…ELSE statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#match-statement">MATCH statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -559,8 +580,170 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="pseudocode">
 <h1>Pseudocode<a class="headerlink" href="#pseudocode" title="Permalink to this heading">#</a></h1>
-<section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<p>Pseudocode is a technique used to describe the distinct steps of an algorithm in a manner that is easy to understand for anyone with basic programming knowledge.</p>
+<p>Although pseudocode is a syntax-free description of an algorithm, it must provide a full description of the algorithm’s logic so that moving from it to implementation should be merely a task of translating each line into code using the syntax of any programming language.</p>
+<p>Advantages of pseudocode:</p>
+<ul class="simple">
+<li><p><strong>Better readability</strong> - Often, programmers work alongside people from other domains, such as mathematicians, business partners, managers, and so on. Using pseudocode to explain the mechanics of the code will make the communication between the different backgrounds easier and more efficient.</p></li>
+<li><p><strong>Ease up code construction</strong> - When the programmer goes through the process of developing and generating pseudocode, the process of converting that into real code written in any programming language will become much easier and faster as well.</p></li>
+<li><p><strong>A good middle point between flowchart and code</strong> - Moving directly from the idea to the flowchart to the code is not always a smooth ride. That’s where pseudocode presents a way to make the transition between the different stages somewhat smoother.</p></li>
+<li><p><strong>Act as a start point for documentation</strong> - Documentation is an essential aspect of building a good project. Often, starting documentation is the most difficult part. However, pseudocode can represent a good starting point for what the documentation should include. Sometimes, programmers include the pseudocode as a docstring at the beginning of the code file.</p></li>
+<li><p><strong>Easier bug detection and fixing</strong> - Since pseudocode is written in a human-readable format, it is easier to edit and discover bugs before actually writing a single line of code. Editing pseudocode can be done more efficiently than testing, debugging, and fixing actual code.</p></li>
+</ul>
+<section id="qcaa-pseudocode-rules">
+<h2>QCAA Pseudocode Rules<a class="headerlink" href="#qcaa-pseudocode-rules" title="Permalink to this heading">#</a></h2>
+<p>In Digital Solutions, pseudocode has an additional purpose. The Digital Solutions Syllabus allows for a range of programming languages to be used. With different languages being used in schools across Queensland, pseudocode is used as the formal method of representing algorithms in Digital Solutions. In that capacity, QCAA has established very specific rules around for its use.</p>
+<section id="keywords">
+<h3>Keywords<a class="headerlink" href="#keywords" title="Permalink to this heading">#</a></h3>
+<p><strong>KEYWORDS</strong> should be written bold and capitalized.</p>
+<p>Keywords do not have to be valid programming language words as long as they clearly convey the intent of the line of pseudocode.</p>
+</section>
+<section id="calculations">
+<h3>Calculations<a class="headerlink" href="#calculations" title="Permalink to this heading">#</a></h3>
+<p>Pseudocode should clearly indicate what is happening at each step, including formulas of calculations.</p>
+<p>For example:
+<code class="docutils literal notranslate"><span class="pre">CALCULATE</span> <span class="pre">net</span></code> is not as clear as <code class="docutils literal notranslate"><span class="pre">CALCULATE</span> <span class="pre">net</span> <span class="pre">=</span> <span class="pre">gross</span> <span class="pre">−</span> <span class="pre">tax</span></code></p>
+</section>
+<section id="naming-conventions">
+<h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this heading">#</a></h3>
+<p>Use snake case naming convention for variable names with multiple words, subroutines, methods and functions.</p>
+<p>Snake case is a convention where all words are in lowercase and spaces between words is replaces with an <code class="docutils literal notranslate"><span class="pre">_</span></code></p>
+<p>For example:
+<code class="docutils literal notranslate"><span class="pre">VAR</span> <span class="pre">file_name</span></code></p>
+</section>
+<section id="font">
+<h3>Font<a class="headerlink" href="#font" title="Permalink to this heading">#</a></h3>
+<p>Use a mono-space typeface when writing algorithms on computer:</p>
+<p>Windows mono-space fonts:</p>
+<ul class="simple">
+<li><p>Courier New</p></li>
+<li><p>Consolas</p></li>
+<li><p>Cascadia Code</p></li>
+<li><p>Cascadia Mono</p></li>
+</ul>
+<p>Mac mono-spaced fonts:</p>
+<ul class="simple">
+<li><p>Andalé Mono</p></li>
+<li><p>Consolas</p></li>
+<li><p>Courier</p></li>
+<li><p>Courier New</p></li>
+</ul>
+</section>
+<section id="variables">
+<h3>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h3>
+<p>To input or output values, common words can be used as keywords.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">INPUT</span> <span class="pre">mark</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">WRITE</span> <span class="pre">&quot;the</span> <span class="pre">total</span> <span class="pre">is&quot;</span> <span class="pre">count</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PRINT</span> <span class="pre">x,</span> <span class="pre">y</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DISPLAY</span> <span class="pre">name,</span> <span class="pre">result</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">READ</span> <span class="pre">name</span> <span class="pre">from</span> <span class="pre">list.txt</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">OUTPUT</span> <span class="pre">average</span></code></p></li>
+</ul>
+<p>Pseudocode uses the assignment operator, <code class="docutils literal notranslate"><span class="pre">=</span></code> to assign values.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">CALCULATE</span> <span class="pre">net</span> <span class="pre">=</span> <span class="pre">gross</span> <span class="pre">-</span> <span class="pre">tax</span></code></p></li>
+</ul>
+</section>
+<section id="modularisation">
+<h3>Modularisation<a class="headerlink" href="#modularisation" title="Permalink to this heading">#</a></h3>
+<p>All pseudocode modules start and ends with the <code class="docutils literal notranslate"><span class="pre">BEGIN</span></code> and <code class="docutils literal notranslate"><span class="pre">END</span></code> keywords.</p>
+<p>Main algorithm:</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>BEGIN
+    statements
+END
+</pre></div>
+</div>
+<p>Defining procedures, subroutines, methods or functions</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>BEGIN function_name
+    statements
+END
+</pre></div>
+</div>
+<p>Calling procedures, subroutines, methods or functions</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>statements
+function_name
+statements
+</pre></div>
+</div>
+</section>
+<section id="iterations">
+<h3>Iterations<a class="headerlink" href="#iterations" title="Permalink to this heading">#</a></h3>
+<p>There are three main types of loops — each has a clear start and end, with the statements within the loop indented.</p>
+<section id="post-test-loops">
+<h4>Post-test loops<a class="headerlink" href="#post-test-loops" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>REPEAT
+    statements
+UNTIL
+</pre></div>
+</div>
+<p><strong>Note:</strong> Python does not have a Post-test loop, so we will not be using this for units 1-3. But you need to know about this concept for Unit 4, particularly for the external exam.</p>
+</section>
+<section id="pre-test-loop">
+<h4>Pre-test loop<a class="headerlink" href="#pre-test-loop" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>WHILE
+    statements
+ENDWHILE
+</pre></div>
+</div>
+</section>
+<section id="counted-loop">
+<h4>Counted loop<a class="headerlink" href="#counted-loop" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>FOR count = start_val TO end_val
+    statements
+NEXT count
+ENDFOR
+</pre></div>
+</div>
+</section>
+</section>
+<section id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this heading">#</a></h3>
+<p>A control structure used for decisions or branching and choosing alternate paths. The beginning and end of these structures are indicated with keywords.</p>
+<section id="if-statement">
+<h4>IF statement<a class="headerlink" href="#if-statement" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>IF condition THEN
+    statements
+ENDIF
+</pre></div>
+</div>
+</section>
+<section id="if-else-statement">
+<h4>IF…ELSE statement<a class="headerlink" href="#if-else-statement" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>IF condition THEN
+    statements
+ELSE
+    statements
+ENDIF
+</pre></div>
+</div>
+</section>
+<section id="if-elif-else-statement">
+<h4>IF…ELIF…ELSE statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this heading">#</a></h4>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>IF condition THEN
+    statements
+ELSE IF condition THEN
+    statements
+ELSE
+    statements
+ENDIF
+</pre></div>
+</div>
+</section>
+<section id="match-statement">
+<h4>MATCH statement<a class="headerlink" href="#match-statement" title="Permalink to this heading">#</a></h4>
+<p>In most other languages these are called switches</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>SWITCH test_variable
+    CASE option
+        statements
+    CASE option
+        statements
+    CASE statements
+ENDSWITCH
+</pre></div>
+</div>
 <p><img alt="pseudocode summary poster" src="../../_images/pseudocode.png" /></p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
@@ -595,6 +778,8 @@ document.write(`
 <span id="id4">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
+</section>
 </section>
 </section>
 
@@ -661,7 +846,28 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#qcaa-pseudocode-rules">QCAA Pseudocode Rules</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#keywords">Keywords</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations">Calculations</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#font">Font</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modularisation">Modularisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iterations">Iterations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#post-test-loops">Post-test loops</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pre-test-loop">Pre-test loop</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#counted-loop">Counted loop</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-statement">IF statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-else-statement">IF…ELSE statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#if-elif-else-statement">IF…ELIF…ELSE statement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#match-statement">MATCH statement</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

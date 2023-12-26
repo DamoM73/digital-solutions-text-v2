@@ -522,7 +522,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -538,6 +540,41 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-language">Programming Language</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-users">Windows users</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-store">Microsoft store</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#official-website">Official website</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-users">Mac Users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual Environments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environment">Integrated Development Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">Extensions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version Control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-management-system">Database Management System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-tools">Other Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xmind">XMind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams-dot-net">Diagrams dot net</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adobe-xd">Adobe XD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qt-designer">Qt Designer</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -549,6 +586,153 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="technologies-used">
 <h1>Technologies Used<a class="headerlink" href="#technologies-used" title="Permalink to this heading">#</a></h1>
+<p>The following technologies are used throughout this text.</p>
+<section id="programming-language">
+<h2>Programming Language<a class="headerlink" href="#programming-language" title="Permalink to this heading">#</a></h2>
+<p>We will be using Python as our programming language for this course. Specifically we will be using Python 3.12 or later (3.1X).</p>
+<div class="attention admonition">
+<p class="admonition-title">I already have Python</p>
+<p>You may laready have Python installed on your computer. This may be from a previous course, or macOS sometimes comes packaged with Python 2.7 (don’t not use this or remove it, it is part of your operating system).</p>
+<p>Irrespective, is it best that you install and use the latest version of Python. This will provide you with access to all the features described in this course and ensure that you are using the fastest and most secure version of the language.</p>
+</div>
+<section id="windows-users">
+<h3>Windows users<a class="headerlink" href="#windows-users" title="Permalink to this heading">#</a></h3>
+<p>Windows users can install Python via the official Python website or via the Microsoft Store.</p>
+<section id="microsoft-store">
+<h4>Microsoft store<a class="headerlink" href="#microsoft-store" title="Permalink to this heading">#</a></h4>
+<p>The Microsoft Store offers two advantages:</p>
+<ol class="arabic simple">
+<li><p>Python will automatically be added to the <strong><a href="https://www.maketecheasier.com/what-is-the-windows-path/" target="_blank">PATH variable</a></strong>.</p></li>
+<li><p>Windows will automatically update minor release of Python. For example</p>
+<ul class="simple">
+<li><p>it will update 3.12.0 → 3.12.1</p></li>
+<li><p>it <strong>won’t</strong> update 3.12.0 → 3.13</p></li>
+</ul>
+</li>
+</ol>
+<p>To install via the Microsoft Store:</p>
+<ol class="arabic simple">
+<li><p>Open the Microsoft Store on Windows</p></li>
+<li><p>Search for Python 3.12 and select it</p></li>
+<li><p>Click the <strong>Get</strong> button in the top right-hand corner</p></li>
+</ol>
+</section>
+<section id="official-website">
+<h4>Official website<a class="headerlink" href="#official-website" title="Permalink to this heading">#</a></h4>
+<p>To install Python go to the <strong><a href="https://www.python.org/downloads/" target="_blank">downloads section of the Python website</a></strong> and choose the installer for your OS.</p>
+<div class="danger admonition">
+<p class="admonition-title">Important step for Windows users</p>
+<p><font color=red><strong>Really important for Windows users (hence the red):</strong> You need to make sure that you check the box beside <strong>Add Python 3.1X to PATH</strong>. Failure to do this will hamper the use of Python on Windows, and when you have a problem, I will just tell you to reinstall it using the instructions that you should have used the first time.</font></p>
+<p><font color=red>Follow the steps below:</font></p>
+<p><img alt="python installer" src="../../_images/pytyon_installer.png" /></p>
+</div>
+</section>
+</section>
+<section id="mac-users">
+<h3>Mac Users<a class="headerlink" href="#mac-users" title="Permalink to this heading">#</a></h3>
+<p>To install Python go to the <strong><a href="https://www.python.org/downloads/" target="_blank">downloads section of the Python website</a></strong> and choose the installer for your OS.</p>
+</section>
+<section id="packages">
+<h3>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h3>
+<p>Python comes installed with a range of packages. This is called <strong><a href="https://docs.python.org/3/library/" target="_blank">The Python Standard Library</a></strong>. Although these might seem like a huge number of packages, it is actually a very small selection of packages available. These cover Python’s basic operations, and limiting the install to these packages reduces the size of Python.</p>
+<p>To extend the functionality of Python, you need to install additional packages. These packages can be found at the <strong><a href="https://pypi.org/" target="_blank">Python Package Index</a></strong>. Some of the packages we will use are:</p>
+<ul class="simple">
+<li><p><strong><a href="https://pypi.org/project/PyQt6/" target="_blank">PyQt6</a></strong></p></li>
+<li><p><strong><a href="https://pypi.org/project/requests/" target="_blank">Requests</a></strong></p></li>
+</ul>
+<p>To install the packages, we will be using Python’s built-in package installer <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+</section>
+<section id="virtual-environments">
+<h3>Virtual Environments<a class="headerlink" href="#virtual-environments" title="Permalink to this heading">#</a></h3>
+<p>The modular nature of Pythons means that different projects will require different packages. Over time this can lead to dependency conflicts and your Python install will become bloated. To prevent this we use <strong>virtual environments</strong>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Dependancy Conflict</p>
+<p>Modules in Python are built using other modules, these are called <strong>dependencies</strong>. It is not unusual for two different modules share a dependancy, but this can present a problem when the two modules require different versions of the shared dependancy. Which version of the shared dependancy should be installed? This is called a dependancy conflict.</p>
+</div>
+<p>At its core, the main purpose of Python virtual environments is to create an isolated version of Python for a specific project. This means that each project can have its own packages, regardless of what packages every other project has. The great thing about this is that there are no limits to the number of environments you can have since they’re just directories containing a different scripts.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="integrated-development-environment">
+<h2>Integrated Development Environment<a class="headerlink" href="#integrated-development-environment" title="Permalink to this heading">#</a></h2>
+<p>Since Python script files are just text files, you can write Python code in Windows Notepad, or TextEdit on macOS, and this might work for small projects. Once your project starts involving several modules, each with hundreds of lines, it starts becoming unwieldy. This is where an IDE (Integrated Development Environment) or a Code Editor are useful.</p>
+<p>An IDE (or Integrated Development Environment) is a program dedicated to software development. As the name implies, IDEs integrate several tools specifically designed for software development. These tools usually include:</p>
+<ul class="simple">
+<li><p>An editor designed to handle code (with, for example, syntax highlighting and auto-completion)</p></li>
+<li><p>Build, execution, and debugging tools</p></li>
+<li><p>Some form of source control</p></li>
+</ul>
+<p>In contrast, a dedicated code editor can be as simple as a text editor with syntax highlighting and code formatting capabilities. Most good code editors can execute code and control a debugger. The very best ones interact with source control systems as well. Compared to an IDE, a good dedicated code editor is usually smaller and quicker, but often less feature rich.</p>
+<p>We will be using Visual Studio Code (VS Code) (<strong><a href="https://code.visualstudio.com/" target="_blank">download from here</a></strong>) which is a code editor, although, we will use a range extensions to expand its capability so that is it equivalent to  an IDE.</p>
+<p>Importantly, the extended VS Code will allows us to:</p>
+<ul class="simple">
+<li><p><strong>Save and reload code files</strong> - allows you to save your work and reopen everything later, in the same state it was in when you left.</p></li>
+<li><p><strong>Run code from within the environment</strong> - you can run Python code without having to drop out of the editor.</p></li>
+<li><p><strong>Debugging support</strong> - allow you to step through your code as it runs, displaying variable values etc.</p></li>
+<li><p><strong>Syntax highlighting</strong> - uses font colours to help you quickly spot keywords, variables, and symbols in your code. This makes reading and understanding code much easier.</p></li>
+<li><p><strong>Automatic code formatting</strong> - little things like recognizing the colon at the end of a while or for statement, and indenting the next line, makes life easier.</p></li>
+</ul>
+<section id="extensions">
+<h3>Extensions<a class="headerlink" href="#extensions" title="Permalink to this heading">#</a></h3>
+<p>We will be using the below extensions in VS Code to expand it’s capabilities:</p>
+<ul class="simple">
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" target="_blank">Python</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance" target="_blank">Pylance</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode" target="_blank">Visual Studio IntelliCode</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=seanwu.vscode-qt-for-python" target="_blank">Qt for Python</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=sourcery.sourcery" target="_blank">Sourcery</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter" target="_blank">Black Formatter</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite" target="_blank">SQLite</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv" target="_blank">Rainbow CSV</a></strong></p></li>
+</ul>
+<p>You can also install various icon and colour themes. For this course I will be using the extensions below, but you can use whatever you like.</p>
+<ul class="simple">
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=ghgofort.neon-vommit" target="_blank">Neon Vomit Colour Theme</a></strong></p></li>
+<li><p><strong><a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank">Material Icon Theme</a></strong></p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="version-control">
+<h2>Version Control<a class="headerlink" href="#version-control" title="Permalink to this heading">#</a></h2>
+<p>Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.</p>
+<section id="git">
+<h3>Git<a class="headerlink" href="#git" title="Permalink to this heading">#</a></h3>
+<p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. Git is naturally incorporated into VS Code, but you will need to <strong><a href="https://git-scm.com/downloads" target="_blank">download and install the Git client</a></strong> for it to work properly.</p>
+</section>
+<section id="github">
+<h3>Github<a class="headerlink" href="#github" title="Permalink to this heading">#</a></h3>
+<p><strong><a href="https://github.com/" target="_blank">GitHub</a></strong> is a provider of internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration and wikis for every project. It is commonly used to host open-source projects. As of November 2021, GitHub reports having over 73 million developers and more than 200 million repositories (including at least 28 million public repositories).</p>
+<p>We will be using GitHub to host your code for this course. If you don’t already have an account, got to <strong><a href="https://github.com/" target="_blank">GitHub</a></strong> and register. Use your College email to register. You can change the email if you wish to use the account after school to access your code from this course.</p>
+<p>To make working with GitHub easier, we will also be using <strong><a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a></strong> which is a GUI interface for working with GitHub. It makes using GitHub significantly easier.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="database-management-system">
+<h2>Database Management System<a class="headerlink" href="#database-management-system" title="Permalink to this heading">#</a></h2>
+<p>Database Management Systems (DBMS) are software systems used to store, retrieve, and run queries on data. A DBMS serves as an interface between an end-user and a database, allowing users to create, read, update, and delete data in the database.</p>
+<p>In Unit 2 we will working with databases using SQL (Structured Query Language), in particular a version caller SQLite. Ultimately in Unit 3 we will designing and developing our own DBMS, but for Unit 2 we will use a lightweight DBMS called <strong><a href="https://sqlitebrowser.org/" target="_blank">DB Browser for SQLite</a></strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="other-tools">
+<h2>Other Tools<a class="headerlink" href="#other-tools" title="Permalink to this heading">#</a></h2>
+<section id="xmind">
+<h3>XMind<a class="headerlink" href="#xmind" title="Permalink to this heading">#</a></h3>
+<p>An important step in analysing and planning in Digital Solutions is using mind maps. There are many mind mapping tools available, both desktop and online, but I recommend that we use <strong><a href="https://xmind.app/" target="_blank">Xmind</a></strong>. The free version has all the features we need. When it asks you to create an account, choose the skip option.</p>
+</section>
+<section id="diagrams-dot-net">
+<h3>Diagrams dot net<a class="headerlink" href="#diagrams-dot-net" title="Permalink to this heading">#</a></h3>
+<p>Throughout the course you will need to create a range of diagrams. To do this we will use diagrams dot net. You can use the <strong><a href="https://www.diagrams.net/" target="_blank">online version</a></strong>, or you can download the <strong><a href="http://get.diagrams.net/" target="_blank">desktop version</a></strong>. I personally use the desktop version to save my diagrams straight to my project folders.</p>
+</section>
+<section id="adobe-xd">
+<h3>Adobe XD<a class="headerlink" href="#adobe-xd" title="Permalink to this heading">#</a></h3>
+<p>We will be using Adobe XD to create wireframes, mockups, prototypes, and application interface flowcharts. To install Adobe XD you need to <strong><a href="https://creativecloud.adobe.com/en/apps/download/creative-cloud" target="_blank">download and install Creative Cloud</a></strong>, log in using your school account and then choose to install Adobe XD.</p>
+</section>
+<section id="qt-designer">
+<h3>Qt Designer<a class="headerlink" href="#qt-designer" title="Permalink to this heading">#</a></h3>
+<p><strong><a href="https://build-system.fman.io/qt-designer-download" target="_blank">Qt Designer</a></strong> is a tool for quickly building graphical user interfaces with widgets from the Qt GUI framework. It gives you a simple drag-and-drop interface for laying out components such as buttons, text fields, combo boxes and more. We will be using it throughout the course.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -605,6 +789,47 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-language">Programming Language</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#windows-users">Windows users</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#microsoft-store">Microsoft store</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#official-website">Official website</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mac-users">Mac Users</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#packages">Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environments">Virtual Environments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrated-development-environment">Integrated Development Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#extensions">Extensions</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-control">Version Control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#git">Git</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#github">Github</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#database-management-system">Database Management System</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#other-tools">Other Tools</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xmind">XMind</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrams-dot-net">Diagrams dot net</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adobe-xd">Adobe XD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qt-designer">Qt Designer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
