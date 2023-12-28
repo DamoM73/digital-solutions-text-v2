@@ -547,13 +547,38 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types">Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-local-and-global-variables">Scope: Local and Global Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-legb-rule-for-python-scope">Using the LEGB Rule for Python Scope</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-limitations-on-actions">Scope limitations on actions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential">Sequential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-python">In Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">Data Structures</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-and-classes">Libraries and Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-triggers">Event Triggers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">Identity Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">Membership Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">Bitwise Operators</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -567,26 +592,591 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="basic-features">
 <h1>Basic Features<a class="headerlink" href="#basic-features" title="Permalink to this heading">#</a></h1>
+<p>Algorithms are the commands that make up our programs.</p>
+<p>There are 6 basic building blocks that an algorithm consists of. Each of them serve a particular purpose.</p>
+<ul class="simple">
+<li><p><strong>Sequence:</strong> a number of instructions that are processed one after the other.</p></li>
+<li><p><strong>Assignment:</strong> used to store the value of an expression into a <strong>variable</strong>.</p></li>
+<li><p><strong>Condition:</strong> the way that a computer asks a question which can only generate two possible responses: <code class="docutils literal notranslate"><span class="pre">True</span></code> (yes) or <code class="docutils literal notranslate"><span class="pre">False</span></code> (no).</p></li>
+<li><p><strong>Selection:</strong> a statement that uses a condition to select, or determine, whether the next line of the program is to be executed.</p></li>
+<li><p><strong>Iteration:</strong> the repetition of a number of instructions. These are generally referred to as loops and refer to a section of code that is repeated.</p></li>
+<li><p><strong>Modularisation:</strong> refers to the process of breaking a large, unwieldy programming task into separate, smaller, more manageable subtasks or modules. Individual modules can then be cobbled together like building blocks to create a larger application.</p></li>
+</ul>
+<p>In designing your algorithm, you will need to decide how to arrange these building block to achieve you outcome. To do this it is wise to follow good programming practices.</p>
+<hr class="docutils" />
 <section id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">#</a></h2>
+<p>Variables are the names you give to computer memory locations which are used to store values in a computer program. Variables can store data of different types, and different variable types can do different things.</p>
 <section id="types">
 <h3>Types<a class="headerlink" href="#types" title="Permalink to this heading">#</a></h3>
+<p>Variable can be of different <strong>types</strong>. The type of a variable indicates the what kind of data is stored at that memory location.</p>
+<p>In programming languages, there are two different type variable systems:</p>
+<ul class="simple">
+<li><p><strong>dynamic:</strong> type checking only occurs as the code runs, and the type of a variable is allowed to change over its lifetime.</p></li>
+<li><p><strong>static:</strong> type checks are performed without running the program. In most statically typed languages this is done as your program is compiled. The type of a variable is not allowed to change over its lifetime.</p></li>
+</ul>
+<p>Python is a dynamically typed language. This means that you can store any type of data in a variable, irrespective of the type of data that is already stored there.</p>
+<p>The Python data types that we will be using are:</p>
+<ul class="simple">
+<li><p><strong>Strings:</strong></p>
+<ul>
+<li><p>strings are sequences of character data</p></li>
+<li><p>the string type in Python is called <code class="docutils literal notranslate"><span class="pre">str</span></code></p></li>
+<li><p>string literals may be delimited using either single or double quotes</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_strings.asp" target="_blank">Strings refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Integers:</strong></p>
+<ul>
+<li><p>integers are whole numbers</p></li>
+<li><p>the integer type in Python is called <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p>there is effectively no limit to how long an integer value can be, but it is constrained by the amount of memory your system has.</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_numbers.asp" target="_blank">Integer refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Floating-Point Numbers:</strong></p>
+<ul>
+<li><p>float values are numbers specified with a decimal point</p></li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">float</span></code> type in Python designates a floating-point number</p></li>
+<li><p>optionally, the character e or E followed by a positive or negative integer may be appended to specify scientific notation</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_numbers.asp" target="_blank">Float refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Boolean Type:</strong></p>
+<ul>
+<li><p>objects of Boolean type may have one of two values, <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p>the Boolean type in Python is called <code class="docutils literal notranslate"><span class="pre">bool</span></code></p></li>
+<li><p>a value that is true in Boolean context is sometimes said to be “truthy” and one that is false in Boolean context is said to be “falsy”</p></li>
+<li><p>the “truthiness” of an object of Boolean type is self-evident: Boolean objects that are equal to <code class="docutils literal notranslate"><span class="pre">True</span></code> are truthy (true), and those equal to <code class="docutils literal notranslate"><span class="pre">False</span></code> are falsy (false)</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_booleans.asp" target="_blank">Boolean refresher</a></strong></p></li>
+</ul>
+</li>
+</ul>
 </section>
-<section id="scope">
-<h3>Scope<a class="headerlink" href="#scope" title="Permalink to this heading">#</a></h3>
+<section id="scope-local-and-global-variables">
+<h3>Scope: Local and Global Variables<a class="headerlink" href="#scope-local-and-global-variables" title="Permalink to this heading">#</a></h3>
+<p>In programming, the scope of a name defines the area of a program in which you can unambiguously access that name, such as variables, functions, objects, and so on. A name will only be visible to and accessible by the code in its scope. Several programming languages take advantage of scope for avoiding name collisions and unpredictable behaviours. Most commonly, you’ll distinguish two general scopes:</p>
+<ul class="simple">
+<li><p><strong>Global scope:</strong> The names that you define in this scope are available to all your code.</p></li>
+<li><p><strong>Local scope:</strong> The names that you define in this scope are only available or visible to the code within the scope.</p></li>
+</ul>
+<p>Scope came about because early programming languages (like BASIC) only had global names. With this kind of name, any part of the program could modify any variable at any time, so maintaining and debugging large programs could become a real nightmare. To work with global names, you’d need to keep all the code in mind at the same time to know what the value of a given name is at any time. This was an important side-effect of not having scopes.</p>
+<p>Some languages like Python use scope to avoid this kind of problem. When you use a language that implements scope, there’s no way for you to access all the variables in a program at all locations in that program. In this case, your ability to access a given name will depend on where you’ve defined that name.</p>
+<section id="using-the-legb-rule-for-python-scope">
+<h4>Using the LEGB Rule for Python Scope<a class="headerlink" href="#using-the-legb-rule-for-python-scope" title="Permalink to this heading">#</a></h4>
+<p>Python resolves names using the so-called LEGB rule, which is named after the Python scope for names. The letters in LEGB stand for Local, Enclosing, Global, and Built-in. Here’s a quick overview of what these terms mean:</p>
+<ul class="simple">
+<li><p><strong>Local (or function) scope:</strong> the code block or body of any Python function or lambda expression. This Python scope contains the names that you define inside the function. These names will only be visible from the code of the function. It’s created at function call, not at function definition, so you’ll have as many different local scopes as function calls. This is true even if you call the same function multiple times, or recursively. Each call will result in a new local scope being created.</p></li>
+<li><p><strong>Enclosing (or nonlocal) scope:</strong> a special scope that only exists for nested functions. If the local scope is an inner or nested function, then the enclosing scope is the scope of the outer or enclosing function. This scope contains the names that you define in the enclosing function. The names in the enclosing scope are visible from the code of the inner and enclosing functions.</p></li>
+<li><p><strong>Global (or module) scope:</strong> the top-most scope in a Python program, script, or module. This Python scope contains all of the names that you define at the top level of a program or a module. Names in this Python scope are visible from everywhere in your code.</p></li>
+<li><p><strong>Built-in scope:</strong> a special Python scope that’s created or loaded whenever you run a script or open an interactive session. This scope contains names such as keywords, functions, exceptions, and other attributes that are built into Python. Names in this Python scope are also available from everywhere in your code. It’s automatically loaded by Python when you run a program or script.</p></li>
+</ul>
+<p>The LEGB rule is a kind of name lookup procedure, which determines the order in which Python looks up names. For example, if you reference a given name, then Python will look that name up sequentially in the local, enclosing, global, and built-in scope. If the name exists, then you’ll get the first occurrence of it. Otherwise, you’ll get an error.</p>
+</section>
+<section id="scope-limitations-on-actions">
+<h4>Scope limitations on actions<a class="headerlink" href="#scope-limitations-on-actions" title="Permalink to this heading">#</a></h4>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Action</p></th>
+<th class="head"><p>Global Code</p></th>
+<th class="head"><p>Local Code</p></th>
+<th class="head"><p>Nested Function Code</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Access or reference names that live in the global scope</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Modify or update names that live in the global scope</p></td>
+<td><p>Yes</p></td>
+<td><p>No (unless declared global)</p></td>
+<td><p>No (unless declared global)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Access or reference names that live in a local scope</p></td>
+<td><p>No</p></td>
+<td><p>Yes (its own local scope),No (other local scope)</p></td>
+<td><p>Yes (its own local scope), No (other local scope)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Override names in the built-in scope</p></td>
+<td><p>Yes</p></td>
+<td><p>Yes (during function execution)</p></td>
+<td><p>Yes (during function execution)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Access or reference names that live in their enclosing scope</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Modify or update names that live in their enclosing scope</p></td>
+<td><p>N/A</p></td>
+<td><p>N/A</p></td>
+<td><p>No (unless declared nonlocal)</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
+</section>
+<hr class="docutils" />
 <section id="control-structures">
 <h2>Control Structures<a class="headerlink" href="#control-structures" title="Permalink to this heading">#</a></h2>
+<p>Flow of control through any given function is implemented with three basic types of control structures:</p>
+<section id="sequential">
+<h3>Sequential<a class="headerlink" href="#sequential" title="Permalink to this heading">#</a></h3>
+<p>In sequential code, the program executes the first line, then the next line, then the next. This continues until there are no lines of code left.</p>
 </section>
+<section id="conditions">
+<h3>Conditions<a class="headerlink" href="#conditions" title="Permalink to this heading">#</a></h3>
+<p>A condition is the way that a computer asks a question. Computers can only generate two possible  responses to questions. Yes and No, or more precisely, True and False. A more formal definition is that a condition is a logical expression that evaluates to true or false.</p>
+<section id="in-python">
+<h4>In Python<a class="headerlink" href="#in-python" title="Permalink to this heading">#</a></h4>
+<p>Conditions are part of <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> statements. They have the syntax of <code class="docutils literal notranslate"><span class="pre">value</span></code> <code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">value</span></code> with six possible operators:</p>
+<ul class="simple">
+<li><p>Equals: a == b</p></li>
+<li><p>Not Equals: a != b</p></li>
+<li><p>Less than: a &lt; b</p></li>
+<li><p>Less than or equal to: a &lt;= b</p></li>
+<li><p>Greater than: a &gt; b</p></li>
+<li><p>Greater than or equal to: a &gt;= b</p></li>
+</ul>
+</section>
+</section>
+<section id="selection">
+<h3>Selection<a class="headerlink" href="#selection" title="Permalink to this heading">#</a></h3>
+<p>The selection control structure is where the program splits into alternative paths depending on condition results. In a selection block, program can only take one of the paths offered, it will skip the other paths. Once the selection block is complete, the program will continue with the first line of code immediately after the selection block. This is also called branching, because it has a similar forking process of a tree or a river.</p>
+<p>In Python there are two main type of branching:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">...</span> <span class="pre">elif</span> <span class="pre">...</span> <span class="pre">else</span></code></strong> statements:”</p>
+<ul>
+<li><p>The structure of a full <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">…</span> <span class="pre">elif</span> <span class="pre">…</span> <span class="pre">else</span></code> statement is:</p>
+<ul>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">if</span></code> component</p>
+<ul>
+<li><p>always at the beginning of an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">…</span> <span class="pre">elif</span> <span class="pre">…</span> <span class="pre">else</span></code> statement</p></li>
+<li><p>the only compulsory component</p></li>
+<li><p>there can only be one <code class="docutils literal notranslate"><span class="pre">if</span></code> per <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">…</span> <span class="pre">elif</span> <span class="pre">…</span> <span class="pre">else</span></code> statement</p></li>
+</ul>
+</li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">elif</span></code> component</p></li>
+<li><p>must come after the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and before the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement</p></li>
+<li><p>is optional</p></li>
+<li><p>there can be as many <code class="docutils literal notranslate"><span class="pre">elif</span></code> components as needed</p></li>
+<li><p>it is only used when all the conditions before it are <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+</ul>
+</li>
+<li><p>the <code class="docutils literal notranslate"><span class="pre">else</span></code> component</p>
+<ul>
+<li><p>must be at the end of an an <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">…</span> <span class="pre">elif</span> <span class="pre">…</span> <span class="pre">else</span></code> statement</p></li>
+<li><p>it is optional</p></li>
+<li><p>there can only be one per <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">…</span> <span class="pre">elif</span> <span class="pre">…</span> <span class="pre">else</span></code> statement</p></li>
+<li><p>it is only used when all the conditions before it are <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+</ul>
+</li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_conditions.asp" target="_blank">if … elif … else refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">match</span> <span class="pre">case</span></code></strong> statement:</p>
+<ul>
+<li><p>takes a variable and attempts to match it to various options.</p></li>
+<li><p>similar to the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statements in other languages\</p></li>
+<li><p>introduced in Python 3.10</p></li>
+<li><p><strong><a href="https://learnpython.com/blog/python-match-case-statement/" target="_blank">to learn more go here</a></strong></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="iteration">
+<h3>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">#</a></h3>
+<p>Iteration control structures, also called loops, repeat a block of code, with a minor change each time. There are three types of iteration control structures:</p>
+<ul class="simple">
+<li><p>indefinite iteration — used when you don’t know how many times the loop will need to run</p>
+<ul>
+<li><p><strong>pre-test loops</strong> (WHILE loops) will check if a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> before executing the loop’s code block</p></li>
+<li><p><strong>post-test loop</strong> (REPEAT loops) will execute the loop’s code block and then check is a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
+</ul>
+</li>
+<li><p>definite iteration — used when you do know how many times the loop will need to run.</p>
+<ul>
+<li><p><strong>counted loop</strong> (FOR loops) will execute a loop a specific number of times.</p></li>
+</ul>
+</li>
+</ul>
+<p>Python does not have a post-test loop structure. The iteration control structures are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p>
+<ul>
+<li><p>start with a condition test</p></li>
+<li><p>repeats the code block until the condition test is <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_while_loops.asp" target="_blank">while loop refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
+<ul>
+<li><p>is provided with a Python iterable</p></li>
+<li><p>will take the first item from the iterable and use it to execute the code block</p></li>
+<li><p>will then move onto the next item in the iterable, until there are no items left.</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_for_loops.asp" target="_blank">for loop refresher</a></strong></p></li>
+</ul>
+</li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">What is an iterable</p>
+<p>In Python, an iterable is a container that holds things. You can go through each thing inside one at a time, like flipping through the pages of a book. The Python iterables available available by default are lists, tuples, strings, dictionaries, and sets.</p>
+</div>
+</section>
+</section>
+<hr class="docutils" />
 <section id="data-structures">
 <h2>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Data structures are used to store data in an organized form. No matter what problem are you solving, in one way or another you have to deal with data — whether it’s an employee’s salary, stock prices, a grocery list, or even a simple telephone directory. <span id="id1">[<a class="reference internal" href="../bibliography.html#id22" title="Fahim ul Haq. The top data structures you should know for your next coding interview. 07 2018. URL: https://www.freecodecamp.org/news/the-top-data-structures-you-should-know-for-your-next-coding-interview-36af0831f5e3/ (visited on 2022-06-14).">ul Haq, 2018</a>]</span></p>
+</div></blockquote>
+<p>The best way to understand of data structures is to think of them as collections of related data. For example, a collection of shopping items, or a collection of contacts with phone numbers.</p>
+<p>In Python we will deal with four data structures:</p>
+<ul class="simple">
+<li><p><strong>Lists:</strong></p>
+<ul>
+<li><p>lists are defined as an ordered collection of items</p></li>
+<li><p>they are one of Python’s essential data structures</p></li>
+<li><p>list are defined using square brackets <code class="docutils literal notranslate"><span class="pre">[</span></code> <code class="docutils literal notranslate"><span class="pre">]</span></code> to enclose the elements, which are separated by commas</p></li>
+<li><p>For example, <code class="docutils literal notranslate"><span class="pre">[1,2,3,4]</span></code>.</p></li>
+<li><p>each element in the list is referred to by its index (position number), starting at 0.</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_lists.asp" target="_blank">Lists refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Tuples:</strong></p>
+<ul>
+<li><p>Tuples are also an ordered collection of objects, but unlike lists, they come with limited functionality.</p></li>
+<li><p>The primary differing characteristic between lists and tuples is that lists are mutable, whereas tuples are immutable. This means tuples cannot be modified, added, or deleted once they’ve been created.</p></li>
+<li><p>tuples are defined by using parentheses <code class="docutils literal notranslate"><span class="pre">(</span></code> <code class="docutils literal notranslate"><span class="pre">)</span></code> to enclose the elements, which are separated by commas</p>
+<ul>
+<li><p>For example, <code class="docutils literal notranslate"><span class="pre">(1,2,3,4)</span></code>.</p></li>
+</ul>
+</li>
+<li><p>each element in the tuple is referred to by its index (position number), starting at 0.</p></li>
+<li><p>reasons for using tuples instead of lists:</p>
+<ul>
+<li><p>when the developer does not want the data to be modified</p></li>
+<li><p>when speed is important as tuples use less memory, and they make program execution faster</p></li>
+</ul>
+</li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_tuples.asp" target="_blank">Tuples refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Sets:</strong></p>
+<ul>
+<li><p>sets are a collection of unique elements that do not follow a specific order.</p></li>
+<li><p>they are mutable – they can be modified, added, replaced, or removed</p></li>
+<li><p>sets are defined by using curly brackets <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code> to enclose the elements, which are separated by commas</p>
+<ul>
+<li><p>For example, <code class="docutils literal notranslate"><span class="pre">{1,2,3,4}</span></code>.</p></li>
+</ul>
+</li>
+<li><p>they are used when the existence of an object in a collection of objects is more important than the number of times it appears or the order of the objects.</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_sets.asp" target="_blank">Sets refresher</a></strong></p></li>
+</ul>
+</li>
+<li><p><strong>Dictionaries:</strong></p>
+<ul>
+<li><p>dictionaries are an ordered collection of key-value pairs. Each key-value pair maps the key to its associated value</p></li>
+<li><p>they are mutable – they can be modified, added, replaced, or removed.</p></li>
+<li><p>dictionaries are defined by using curly brackets <code class="docutils literal notranslate"><span class="pre">{</span></code> <code class="docutils literal notranslate"><span class="pre">}</span></code> to enclose the elements, with a colon <code class="docutils literal notranslate"><span class="pre">:</span></code> separating a key and its value, and each key-pair separated by commas</p>
+<ul>
+<li><p>For example, <code class="docutils literal notranslate"><span class="pre">{&quot;Doh&quot;:&quot;Doherty&quot;,&quot;Dun&quot;:&quot;Dunlop&quot;,&quot;Fly&quot;:&quot;Flynn&quot;,&quot;Nic&quot;:&quot;Nichols&quot;}</span></code></p></li>
+</ul>
+</li>
+<li><p>they should be used when the data  has a unique reference that can be associated with the value.</p></li>
+<li><p><strong><a href="https://www.w3schools.com/python/python_dictionaries.asp" target="_blank">Dictionary refresher</a></strong></p></li>
+</ul>
+</li>
+</ul>
 </section>
+<hr class="docutils" />
 <section id="syntax">
 <h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this heading">#</a></h2>
+<p>The syntax of a computer language is the set of rules that defines the combinations of symbols that are considered to be correctly structured statements or expressions in that language.</p>
+<p><strong><a href="https://www.w3schools.com/python/python_syntax.asp" target="_blank">Python syntax refresher</a></strong></p>
 </section>
-<section id="libraries-and-classes">
-<h2>Libraries and Classes<a class="headerlink" href="#libraries-and-classes" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h2>
+<p>A software library refers to a collection of files, programs, routines, scripts, or functions referenced in the programming code. Python comes with a standard library which provides basic functionality. Python allows you to install additional libraries, as well as create your own.</p>
+</section>
+<hr class="docutils" />
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
+<p>Classes and object are basic building blocks in object-oriented programming languages. A class is written by a programmer in a defined structure to create an object in an object-oriented programming language. It defines a set of properties and methods that are common to all objects of one type.</p>
+<p>For example, a class could be a car, which could have a colour field, four tire fields, and a drive method.</p>
+<p>Another related class could be a truck, which would have similar fields, but not be exactly the same as a car. Both a car and a truck could be a kind of a third class which could be called a vehicle class. In this way, the programmer could create the parts of the program that are the same for both the car and the truck in programming the vehicle class, yet the programmer would be free to program how a car is different from a truck without duplicating all of the programming.</p>
+<p>Although there is only one class called “car”, there could be many objects that are created from the class called “car”. And, although there is only one class that is called “truck”, many objects of type truck could be created from this class. The class, vehicle, is actually general and there would probably not be any objects that were only of the class “vehicle”.</p>
+<p>Inside of classes are two kinds of things:</p>
+<ul class="simple">
+<li><p><strong>methods:</strong> can store the code for doing actions; in this example you could have a drive method and a brake method, and maybe a turnRight and turnLeft method.</p></li>
+<li><p><strong>attributes:</strong> store data; you could have a colour field, a speed field and a size field.</p></li>
+</ul>
+<p>You can call methods by first making an object of the Car or Truck class, and call it for example <code class="docutils literal notranslate"><span class="pre">ferrari</span></code>, and doing <code class="docutils literal notranslate"><span class="pre">ferrari.methodName()</span></code>. In this case, if we wanted to make the vehicle move, we could do <code class="docutils literal notranslate"><span class="pre">ferrari.drive(distance)</span></code>.</p>
+</section>
+<hr class="docutils" />
+<section id="event-triggers">
+<h2>Event Triggers<a class="headerlink" href="#event-triggers" title="Permalink to this heading">#</a></h2>
+<p>Events are “things” that happen as a result of something occurring. On a webpage, an event can be something that the browser does or something that the user does.</p>
+<p>These can include things like the web page finishing loading, text being typed into an input box or a button being clicked.</p>
+<p>Many languages call certain code be executed as a result of a certain event occurring. Webpages allow event handler attributes, with JavaScript code, to be added to HTML elements</p>
+</section>
+<hr class="docutils" />
+<section id="operations">
+<h2>Operations<a class="headerlink" href="#operations" title="Permalink to this heading">#</a></h2>
+<p>Operators are used to perform operations on variables and values.</p>
+<p>Python divides the operators in the following groups:</p>
+<ul class="simple">
+<li><p>Arithmetic operators</p></li>
+<li><p>Assignment operators</p></li>
+<li><p>Comparison operators</p></li>
+<li><p>Logical operators</p></li>
+<li><p>Identity operators</p></li>
+<li><p>Membership operators</p></li>
+<li><p>Bitwise operators</p></li>
+</ul>
+<p><strong><a href="https://www.w3schools.com/python/python_operators.asp" target="_blank">Operations refresher</a></strong></p>
+<section id="arithmetic-operators">
+<h3>Arithmetic Operators<a class="headerlink" href="#arithmetic-operators" title="Permalink to this heading">#</a></h3>
+<p>Arithmetic operators are used with numeric values to perform common mathematical operations.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td class="text-left"><p>Addition</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">-</span></code></p></td>
+<td class="text-left"><p>Subtraction</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td class="text-left"><p>Multiplication</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">/</span></code></p></td>
+<td class="text-left"><p>Division</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">%</span></code></p></td>
+<td class="text-left"><p>Modulus</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">**</span></code></p></td>
+<td class="text-left"><p>Exponentiation</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">//</span></code></p></td>
+<td class="text-left"><p>Floor division</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//</span> <span class="pre">y</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>In Python addition, subtraction, and multiplication are all strait forward and do exactly like you would expect. Note: that brackets <code class="docutils literal notranslate"><span class="pre">(</span></code> and <code class="docutils literal notranslate"><span class="pre">)</span></code> work the same as they would in mathematical equations.</p>
+<p>It is worth checking out how division, modulus, floor division and exponentiation work.</p>
+</section>
+<section id="assignment-operators">
+<h3>Assignment Operators<a class="headerlink" href="#assignment-operators" title="Permalink to this heading">#</a></h3>
+<p>The standard assignment operator <code class="docutils literal notranslate"><span class="pre">=</span></code> is used to assign values to a variable.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Example</p></th>
+<th class="head text-left"><p>Same As</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">5</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">+=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">+=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">-=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">-=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">*=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">*=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">/=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">/=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">/</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">%=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">%</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">//=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">//=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">//</span> <span class="pre">3</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">**=</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">**=</span> <span class="pre">3</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">**</span> <span class="pre">3</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>The other assignment operators <code class="docutils literal notranslate"><span class="pre">+=</span></code>, <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, etc. adjust a variable by operation sign and the value provided.</p>
+</section>
+<section id="comparison-operators">
+<h3>Comparison Operators<a class="headerlink" href="#comparison-operators" title="Permalink to this heading">#</a></h3>
+<p>Comparison operators are used to compare two values, and will return a value of <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">==</span></code></p></td>
+<td class="text-left"><p>Equal</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">!=</span></code></p></td>
+<td class="text-left"><p>Not equal</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;</span></code></p></td>
+<td class="text-left"><p>Greater than</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code></p></td>
+<td class="text-left"><p>Less than</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&gt;=</span></code></p></td>
+<td class="text-left"><p>Greater than or equal to</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code></p></td>
+<td class="text-left"><p>Less than or equal to</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>Comparisons can be between values, variables, calculations or even the results of a function call.</p>
+</section>
+<section id="logical-operators">
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this heading">#</a></h3>
+<p>Logical operators are used to combine conditional statements. The truthiness of the conditions is tested, and then operator combines the resulting Boolean values to produce either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Description</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if all statements are <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">5</span> <span class="pre">and</span>&#160; <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if one of the statements is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">5</span> <span class="pre">or</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">4</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+<td class="text-left"><p>Reverse the result, returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if the result is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">not(x</span> <span class="pre">&lt;</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10)</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="identity-operators">
+<h3>Identity Operators<a class="headerlink" href="#identity-operators" title="Permalink to this heading">#</a></h3>
+<p>Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Description</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">is</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if both variables are the same object</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">is</span> <span class="pre">not</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if both variables are not the same object</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">y</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="membership-operators">
+<h3>Membership Operators<a class="headerlink" href="#membership-operators" title="Permalink to this heading">#</a></h3>
+<p>Membership operators are used to test if a sequence is presented in an object (list, tuple or string).</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Description</p></th>
+<th class="head text-left"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">in</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if a sequence with the specified value is present in the object</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">in</span> <span class="pre">y</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code></p></td>
+<td class="text-left"><p>Returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if a sequence with the specified value is not present in the object</p></td>
+<td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">not</span> <span class="pre">in</span> <span class="pre">y</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bitwise-operators">
+<h3>Bitwise Operators<a class="headerlink" href="#bitwise-operators" title="Permalink to this heading">#</a></h3>
+<p>Bitwise operators are used to compare (binary) numbers. Realistically we are not going to use these, but it worth knowing they exist in case you come across them in some code.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Operator</p></th>
+<th class="head text-left"><p>Name</p></th>
+<th class="head text-left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>&amp;</p></td>
+<td class="text-left"><p>AND</p></td>
+<td class="text-left"><p>Sets each bit to 1 if both bits are 1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>/</p></td>
+<td class="text-left"><p></p></td>
+<td class="text-left"><p>OR</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>^</p></td>
+<td class="text-left"><p>XOR</p></td>
+<td class="text-left"><p>Sets each bit to 1 if only one of two bits is 1</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>~</p></td>
+<td class="text-left"><p>NOT</p></td>
+<td class="text-left"><p>Inverts all the bits</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>&lt;&lt;</p></td>
+<td class="text-left"><p>Zero fill left shift</p></td>
+<td class="text-left"><p>Shift left by pushing zeros in from the right and let the leftmost bits fall off</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>&gt;&gt;</p></td>
+<td class="text-left"><p>Signed right shift</p></td>
+<td class="text-left"><p>Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
@@ -594,9 +1184,10 @@ document.write(`
 <li><p>Understand the five basic features of programming – variables, control structures, data structures, syntax and libraries and classes.</p></li>
 <li><p>Identify and describe the purpose of code syntax and rules.</p></li>
 <li><p>Identify and describe the scope and use of local and global variables
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
 </section>
 </section>
 
@@ -665,13 +1256,38 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variables">Variables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types">Types</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-local-and-global-variables">Scope: Local and Global Variables</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#using-the-legb-rule-for-python-scope">Using the LEGB Rule for Python Scope</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#scope-limitations-on-actions">Scope limitations on actions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential">Sequential</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-python">In Python</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-structures">Data Structures</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax">Syntax</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries-and-classes">Libraries and Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#libraries">Libraries</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">Classes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-triggers">Event Triggers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operations">Operations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arithmetic-operators">Arithmetic Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#assignment-operators">Assignment Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comparison-operators">Comparison Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-operators">Logical Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#identity-operators">Identity Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#membership-operators">Membership Operators</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bitwise-operators">Bitwise Operators</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
