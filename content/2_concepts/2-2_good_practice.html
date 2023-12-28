@@ -545,16 +545,29 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependability">Dependability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependability">Dependability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintainability">Maintainability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reliability">Reliability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmic-efficiency">Algorithmic Efficiency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-efficiency">Code Efficiency</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effectiveness">Effectiveness</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-correction">Error Correction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-correction">Error Correction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-errors">Syntax errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-errors">Logic errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-errors">Runtime errors</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-conventions">Coding Conventions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting">Commenting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-simplicity">Code Simplicity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting">Commenting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-portability">Code Portability</a></li>
 </ul>
 </li>
@@ -575,23 +588,68 @@ document.write(`
 <section id="dependability">
 <h2>Dependability<a class="headerlink" href="#dependability" title="Permalink to this heading">#</a></h2>
 <p>In systems engineering, dependability is a measure of a system’s reliability, maintainability.</p>
+<section id="maintainability">
+<h3>Maintainability<a class="headerlink" href="#maintainability" title="Permalink to this heading">#</a></h3>
+<p><img alt="code quality XKCD" src="../../_images/code_quality.png" /></p>
+<p>Within developer circles, it is frequently said that code is read more often than it is written. This is especially true when there are multiple programmers working on the same code. But it is also relevant in our situation where the other programmer may be a classmate or teacher lending assistance, or even the ‘future’ you trying to work out what ‘present’ has done.</p>
+<p>Maintainability is about writing code that is easy-to-read and dissect. It reduces other programmers cognitive load by limiting the amount of information they need to memorise in order to understand your code. This way, other programmers can easily modify parts related to a required change, without risking a chain reaction of errors in dependant modules.</p>
+<div class="tip admonition">
+<p class="admonition-title">What is cognative load</p>
+<p>Cognitive load refers to the mental effort and capacity required for processing information and completing tasks. It can be caused by complex or poorly organized information, which can overwhelm a person’s cognitive abilities.</p>
+<p>Reducing cognitive load is essential because it helps improve learning, problem-solving, and overall task performance. To reduce cognitive load, you can simplify information presentation, use clear and concise language, provide step-by-step instructions, and minimize distractions to make tasks more manageable and less mentally taxing.</p>
+</div>
+<p>There are some simple steps that you can take to improve your code’s maintainability:</p>
 <ul class="simple">
-<li><p><strong>maintainability:</strong> easy-to-read code that is easy to dissect, so that parts relating to a required change are easy to modify without risking a chain reaction of errors in dependant modules.</p></li>
-<li><p><strong>reliability:</strong> the probability of a program producing an error or failing to process a task;</p>
+<li><p><strong>follow the style guide</strong></p>
 <ul>
-<li><p>In Digital Solutions, testing and useability considerations contribute to reliability.</p></li>
-<li><p>For example, predicting where errors are likely to occur (whether user or systems related) can inform mindful use programming constructs.</p></li>
+<li><p>provides consistency from one set of code to another (eg. indentation is always 4 spaces)</p></li>
+<li><p>Python has a clear guide about how you should layout your code, it is called <strong><a href="https://peps.python.org/pep-0008/" target="_blank">PEP 8</a></strong></p></li>
+<li><p>fortunately, many style issues will be identified and highlighted by Python Extension in VSCode</p></li>
+<li><p>additionally we will use the <strong>Black</strong> formatter to ensure our code is PEP 8 compliant</p></li>
+</ul>
+</li>
+<li><p><strong>naming conventions</strong></p>
+<ul>
+<li><p>these are normally found in the style guide, but are important enough to require there own mention</p></li>
+<li><p>naming conventions can provide a great deal of information, for example, the type of object being named</p></li>
+<li><p>there are more details further down this page.</p></li>
+</ul>
+</li>
+<li><p><strong>function size</strong></p>
+<ul>
+<li><p>appropriate modularisation of your code has a significant impact on its maintainability</p></li>
+<li><p>simple rule of thumb → each function should only do one thing.</p></li>
+<li><p>we will be using <strong>Sourcery</strong> to assess our functions and indicate if they are too unwieldly</p></li>
+</ul>
+</li>
+<li><p><strong>comments</strong></p>
+<ul>
+<li><p>code comments are useful for explaining what your code does</p></li>
+<li><p>there are more details about comments further down this page</p></li>
 </ul>
 </li>
 </ul>
 </section>
+<section id="reliability">
+<h3>Reliability<a class="headerlink" href="#reliability" title="Permalink to this heading">#</a></h3>
+<p>Reliability is the probability of a program producing an error or failing to process a task;</p>
+<ul class="simple">
+<li><p>In Digital Solutions, testing and useability considerations contribute to reliability.</p></li>
+<li><p>For example, predicting where errors are likely to occur (whether user or systems related) can inform mindful use programming constructs.</p></li>
+</ul>
+</section>
+</section>
 <section id="efficiency">
 <h2>Efficiency<a class="headerlink" href="#efficiency" title="Permalink to this heading">#</a></h2>
 <p>A situation in which a system or machine uses minimal resources such as time and processing power while still achieving its goals; there are two types of efficiency:</p>
-<ul class="simple">
-<li><p><strong>algorithmic efficiency:</strong> refers to the reliability, speed and programming methodology for developing succinct structures within an application</p></li>
-<li><p><strong>code efficiency:</strong> is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance; its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.</p></li>
-</ul>
+<section id="algorithmic-efficiency">
+<h3>Algorithmic Efficiency<a class="headerlink" href="#algorithmic-efficiency" title="Permalink to this heading">#</a></h3>
+<p>Algorithmic efficiency refers to the reliability, speed and programming methodology for developing succinct structures within an application</p>
+</section>
+<section id="code-efficiency">
+<h3>Code Efficiency<a class="headerlink" href="#code-efficiency" title="Permalink to this heading">#</a></h3>
+<p>Code efficiency is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance; its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.</p>
+</section>
 </section>
 <section id="effectiveness">
 <h2>Effectiveness<a class="headerlink" href="#effectiveness" title="Permalink to this heading">#</a></h2>
@@ -599,26 +657,105 @@ document.write(`
 </section>
 <section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h2>
+<p>Testing is the process of systematically verifying that your code works correctly. There are three types of testing which occur during the development and generation of code:</p>
+<ul class="simple">
+<li><p><strong>exploratory testing:</strong> a form of testing that is done without a plan. In an exploratory test, you’re just exploring the application. For example, checking and experimenting with the features when you run your application for the first time?</p></li>
+<li><p><strong>unit testing</strong> testing that single components operate in the right way.</p></li>
+<li><p><strong>integrated testing:</strong> testing multiple components at the same time.</p></li>
+</ul>
 </section>
 <section id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h2>
+<p>In computer programming and software development, debugging is the process of finding and resolving bugs (defects or problems that prevent correct operation) within computer programs, software, or systems. Many programming languages and software development tools also offer programs to aid in debugging, known as debuggers.</p>
 </section>
 <section id="error-correction">
 <h2>Error Correction<a class="headerlink" href="#error-correction" title="Permalink to this heading">#</a></h2>
+<p>Dealing with errors is an integral part of any development process, to the point where seasoned coders eventually become experts at navigating and fixing the errors they create.</p>
+<p>When developing programs there are three types of error that can occur.</p>
+<section id="syntax-errors">
+<h3>Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this heading">#</a></h3>
+<p>Syntax errors occur when the code given does not follow the syntax rules of the programming language. A program cannot run if it has syntax errors. Any such errors must be fixed first. A good integrated development environment (IDE) usually points out any syntax errors to the programmer.</p>
+<p>Examples include:</p>
+<ul class="simple">
+<li><p>misspelling a statement, eg. writing pint instead of print</p></li>
+<li><p>using a variable before it has been declared</p></li>
+<li><p>missing brackets, eg. opening a bracket, but not closing it</p></li>
+</ul>
+</section>
+<section id="logic-errors">
+<h3>Logic errors<a class="headerlink" href="#logic-errors" title="Permalink to this heading">#</a></h3>
+<p>A logic errors is an error in the way a program works. The program can run but does not do what it is expected to do. Unlike a syntax error, a logic error does not usually stop a program from running. The program will run, but not function as expected.</p>
+<p>Logic errors can be caused by the programmer:</p>
+<ul class="simple">
+<li><p>incorrectly using logical operators, eg. expecting a program to stop when the value of a variable reaches <code class="docutils literal notranslate"><span class="pre">5</span></code>, but you use <code class="docutils literal notranslate"><span class="pre">&lt;</span> <span class="pre">5</span></code> instead of <code class="docutils literal notranslate"><span class="pre">&lt;=</span> <span class="pre">5</span></code></p></li>
+<li><p>incorrectly using Boolean operators</p></li>
+<li><p>unintentionally creating a situation where an infinite loop may occur</p></li>
+<li><p>incorrectly using brackets in calculations</p></li>
+<li><p>unintentionally using the same variable name at different points in the program for different purposes</p></li>
+<li><p>using incorrect program design</p></li>
+</ul>
+</section>
+<section id="runtime-errors">
+<h3>Runtime errors<a class="headerlink" href="#runtime-errors" title="Permalink to this heading">#</a></h3>
+<p>A runtime errors is an error that takes place during the running of a program. For example, writing a program that tries to access the sixth item in a list that only contains five items. A runtime error is likely to crash the program.</p>
+</section>
 </section>
 <section id="coding-conventions">
 <h2>Coding Conventions<a class="headerlink" href="#coding-conventions" title="Permalink to this heading">#</a></h2>
-<section id="commenting">
-<h3>Commenting<a class="headerlink" href="#commenting" title="Permalink to this heading">#</a></h3>
+<section id="code-simplicity">
+<h3>Code Simplicity<a class="headerlink" href="#code-simplicity" title="Permalink to this heading">#</a></h3>
+<p>Code simplicity refers to the practice of writing computer programs in a clear, understandable, and straightforward manner. It involves using straightforward logic, clear and meaningful variable names, and minimizing unnecessary complexity. Simple code is easier to read, debug, and maintain, which makes it more efficient and less error-prone.</p>
 </section>
 <section id="naming-conventions">
 <h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this heading">#</a></h3>
+<p>Python has naming rules and naming conventions.</p>
+<p>Naming rules will cause an error if they are not followed.</p>
+<p><strong>Naming rules:</strong></p>
+<ul class="simple">
+<li><p>names can only contain letters, numbers and the <code class="docutils literal notranslate"><span class="pre">_</span></code> character</p></li>
+<li><p>names cannot contain spaces</p></li>
+<li><p>names cannot start with a number</p></li>
+<li><p>names are case sensitive (eg. <code class="docutils literal notranslate"><span class="pre">age</span></code> is not the same as <code class="docutils literal notranslate"><span class="pre">Age</span></code>)</p></li>
+</ul>
+<p>Naming conventions are about conveying extra information to the reader. Not following naming conventionss will not stop the programming from running, but the loss of the extra information will reduce the maintainability of the code.</p>
+<p><strong>Naming conventions:</strong></p>
+<ul class="simple">
+<li><p>use descriptive names that explain the value stored in them:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">30</span></code> → bad</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">degrees</span> <span class="pre">=</span> <span class="pre">30</span></code> → better</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">degrees_celsius</span></code> = 30 → best</p></li>
+</ul>
+</li>
+<li><p>normally use snake case for multiple word names:</p>
+<ul>
+<li><p>replace the spaces with the <code class="docutils literal notranslate"><span class="pre">_</span></code> character</p></li>
+<li><p>only use lower case letters</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">this_is_snake_case</span></code></p></li>
+</ul>
+</li>
+<li><p>Capitalize all letter for names of constants (variables whose value will not change)</p></li>
+<li><p>use camel case for class name</p>
+<ul>
+<li><p>Capitalise the first letter of each word</p></li>
+<li><p>remove all spaces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ThisIsCamelCase</span></code></p></li>
+</ul>
+</li>
+<li><p>Do not use the names of keywords (eg. <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span></code>, <code class="docutils literal notranslate"><span class="pre">while</span></code> and so on)</p></li>
+</ul>
 </section>
-<section id="code-simplicity">
-<h3>Code Simplicity<a class="headerlink" href="#code-simplicity" title="Permalink to this heading">#</a></h3>
+<section id="commenting">
+<h3>Commenting<a class="headerlink" href="#commenting" title="Permalink to this heading">#</a></h3>
+<p>If your follow the naming convention of using meaningful names, most of your code should make sense without comments. Never-the-less, there are two places where comments are still needed:</p>
+<ul class="simple">
+<li><p><strong>doc strings</strong> — these are the comment that comes straight after a function definition. It explains a functions inputs, processes and outputs.</p></li>
+<li><p><strong>block comments</strong> — these are used when your code is tricky and how it works is not obvious to another person.</p></li>
+</ul>
 </section>
 <section id="code-portability">
 <h3>Code Portability<a class="headerlink" href="#code-portability" title="Permalink to this heading">#</a></h3>
+<p>Code portability is writing code that can run on different platforms and systems without modification. This enhances its usefulness. We will be using Python, a language that can be run on Windows, macOS, Linux and well as embedded systems, iOS, Android and the web.</p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
@@ -693,16 +830,29 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependability">Dependability</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dependability">Dependability</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#maintainability">Maintainability</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#reliability">Reliability</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#efficiency">Efficiency</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmic-efficiency">Algorithmic Efficiency</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-efficiency">Code Efficiency</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effectiveness">Effectiveness</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#testing">Testing</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-correction">Error Correction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#error-correction">Error Correction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#syntax-errors">Syntax errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#logic-errors">Logic errors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-errors">Runtime errors</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#coding-conventions">Coding Conventions</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting">Commenting</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-simplicity">Code Simplicity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#naming-conventions">Naming Conventions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#commenting">Commenting</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#code-portability">Code Portability</a></li>
 </ul>
 </li>
