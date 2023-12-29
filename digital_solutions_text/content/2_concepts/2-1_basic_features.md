@@ -251,16 +251,6 @@ You can call methods by first making an object of the Car or Truck class, and ca
 
 ---
 
-## Event Triggers
-
-Events are “things” that happen as a result of something occurring. On a webpage, an event can be something that the browser does or something that the user does.
-
-These can include things like the web page finishing loading, text being typed into an input box or a button being clicked.
-
-Many languages call certain code be executed as a result of a certain event occurring. Webpages allow event handler attributes, with JavaScript code, to be added to HTML elements
-
----
-
 ## Operations
 
 Operators are used to perform operations on variables and values.

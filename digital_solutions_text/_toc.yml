@@ -185,3 +185,4 @@ parts:
     chapters:
     - file: content/glossary
     - file: content/bibliography
+    - file: genindex
