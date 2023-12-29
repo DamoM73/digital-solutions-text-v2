@@ -350,6 +350,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
 </ul>
 
     </div>
@@ -547,9 +548,9 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effectiveness">Effectiveness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">Learnability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety">Safety</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility">Utility</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">Learnability</a></li>
 </ul>
             </nav>
         </div>
@@ -563,37 +564,156 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="useability-principles">
 <h1>Useability Principles<a class="headerlink" href="#useability-principles" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>Usability is a measure of how well a specific user in a specific context can use a product/design to achieve a defined goal effectively, efficiently and satisfactorily. Designers usually measure a design’s usability throughout the development process — from wireframes to the final deliverable. <span id="id1">[<a class="reference internal" href="../bibliography.html#id14" title="Interaction Design Foundation. What is usability? 2014. URL: https://www.interaction-design.org/literature/topics/usability (visited on 2022-06-06).">Foundation, 2014</a>]</span></p>
+</div></blockquote>
+<p>A design’s usability depends on how well its features accommodate users’ needs and contexts.</p>
+<p>In Digital Solutions we will focus on five usability principles:</p>
+<ul class="simple">
+<li><p>accessibility</p></li>
+<li><p>effectiveness</p></li>
+<li><p>safety</p></li>
+<li><p>utility</p></li>
+<li><p>learnability</p></li>
+</ul>
 <section id="accessibility">
 <h2>Accessibility<a class="headerlink" href="#accessibility" title="Permalink to this heading">#</a></h2>
+<p>Accessibility is the ability to be used by many different people, even people with disabilities.</p>
+<p>Accessibility guidelines are based on four principles (often referred to as POUR):</p>
+<ul class="simple">
+<li><p><strong>Perceivable:</strong> Information and user interface components must be presented to users in ways that they can perceive. For example, it’s important to present information that can be perceived in different ways, where a user can adjust colour contrast or font size, or view captions for videos.</p>
+<ul>
+<li><p>For the purposes of this course, we will use the <strong><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">Colour Contrast Analyser (CCA)</a></strong> to assess the perceivability of the fonts of our UI.</p></li>
+</ul>
+</li>
+<li><p><strong>Operable:</strong> User interface components and navigation must be operable to users in ways they can operate. For example, required interactions can be performed using keyboard or voice commands.</p></li>
+<li><p><strong>Understandable:</strong> Information and user interface operation must be understandable. For example, information and instructions are clear and navigation methods are easy to understand and use.</p></li>
+<li><p><strong>Robust:</strong> Content must be robust enough so that it can be interpreted reliably by a wide variety of users and types of assistive technologies. As technologies evolve, code and content should remain accessible for users of common and current assistive devices and tools.</p></li>
+</ul>
 <p><img alt="accessibility summary poster" src="../../_images/up_accessability.png" /></p>
 </section>
 <section id="effectiveness">
 <h2>Effectiveness<a class="headerlink" href="#effectiveness" title="Permalink to this heading">#</a></h2>
+<p>Effectiveness is the ability of users to use the system to do the work they need to do.</p>
+<p>Users need to be able to interact with a digital solution quickly and easily; and outputs need to be presented clearly in a way that can be easily interpreted by the user. Effectiveness includes <strong>reliability</strong>, which means the solution needs to be <strong>constant</strong>, <strong>dependable</strong>, <strong>consistent</strong> and <strong>repeatable</strong>. When you evaluate effectiveness you are looking for things that work or do not work as expected.</p>
+<p>Effectiveness interacts closely with utility. It is possible for a solution to have high utility, but be ineffective. For example, a solution may have all the functionality necessary, but be unreliable, overly complex or time-consuming, therefore rendering it ineffective.</p>
+<p>You can improve the effectiveness of your solution by addressing:</p>
+<ul class="simple">
+<li><p><strong>Goal Achievement</strong>: the ability to complete intended tasks</p></li>
+<li><p><strong>Accuracy</strong>: the ability to perform tasks with minimal errors</p></li>
+<li><p><strong>Efficiency</strong>: the ability to perform tasks in a timely manner</p></li>
+<li><p><strong>Quality of Outcome</strong>: the ability of the output to meet the user’s expectations</p></li>
+</ul>
 <p><img alt="effectiveness summary poster" src="../../_images/up_effectiveness.png" /></p>
+</section>
+<section id="learnability">
+<h2>Learnability<a class="headerlink" href="#learnability" title="Permalink to this heading">#</a></h2>
+<p>Learnability is concerned with how easy a system is to learn.</p>
+<p>How intuitive or memorable is the digital solution? Does it match pre-existing patterns in other digital products? For example, does it function like a store if it is a store? Does the game use standardised controls like arrow keys of WASD?</p>
+<p>Here are some strategies to enhance UI learnability:</p>
+<ul class="simple">
+<li><p><strong>Clear and Consistent Design</strong>:</p>
+<ul>
+<li><p>Use a clean and uncluttered interface with clear visual hierarchy.</p></li>
+<li><p>Maintain consistency in layout, colours, fonts, and icons throughout the UI.</p></li>
+<li><p>Avoid using jargon or complex terminology; instead, use simple and familiar language.</p></li>
+</ul>
+</li>
+<li><p><strong>Intuitive Navigation</strong>:</p>
+<ul>
+<li><p>Provide easily identifiable and labelled navigation elements, such as menus or buttons.</p></li>
+<li><p>Use familiar icons and symbols that the user can quickly associate with specific actions.</p></li>
+<li><p>Incorporate visual cues, like arrows or highlighted areas, to guide users through different sections or steps.</p></li>
+</ul>
+</li>
+<li><p><strong>Interactive Tutorials and Onboarding</strong>:</p>
+<ul>
+<li><p>Include interactive tutorials or onboarding processes to introduce the UI and its features gradually.</p></li>
+<li><p>Break down complex tasks into smaller, manageable steps with clear instructions and visual cues.</p></li>
+<li><p>Provide interactive elements like tooltips or pop-up messages to offer additional guidance when needed.</p></li>
+</ul>
+</li>
+<li><p><strong>Visual Feedback</strong>:</p>
+<ul>
+<li><p>Ensure the UI provides immediate visual feedback when the user interact with elements.</p></li>
+<li><p>Use animation or colour changes to indicate the success or failure of an action.</p></li>
+<li><p>Highlight selected or active elements to help users understand their current state.</p></li>
+</ul>
+</li>
+<li><p><strong>Progress Tracking and Rewards</strong>:</p>
+<ul>
+<li><p>Incorporate progress indicators, such as progress bars or completion percentages, to help users track their advancement.</p></li>
+<li><p>Consider implementing rewards or achievements for completing tasks or reaching milestones to motivate users</p></li>
+</ul>
+</li>
+<li><p><strong>Responsive Design</strong>:</p>
+<ul>
+<li><p>Optimize the UI for different screen sizes and devices to ensure a seamless experience across platforms.</p></li>
+<li><p>Adapt the UI layout dynamically to fit smaller screens.</p></li>
+</ul>
+</li>
+<li><p><strong>User Testing and Feedback</strong>:</p>
+<ul>
+<li><p>Conduct user testing to gather their feedback on the UI’s usability and comprehension.</p></li>
+<li><p>Actively listen to their suggestions, concerns, and difficulties to make necessary improvements.</p></li>
+<li><p>Iterate and refine the UI based on the feedback received, continuously striving for better learnability.</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="learnability summary poster" src="../../_images/up_learnability.png" /></p>
 </section>
 <section id="safety">
 <h2>Safety<a class="headerlink" href="#safety" title="Permalink to this heading">#</a></h2>
+<p>Safety is the ability for users to make errors and recover from the mistake.</p>
+<p>Safety considers the questions:</p>
+<ul class="simple">
+<li><p>How many errors do users make?</p></li>
+<li><p>How severe are these errors?</p></li>
+<li><p>How easily can the user recover from the errors?</p></li>
+</ul>
+<p>Safety is a rarely considered usability goal. Safety is protecting the users from dangerous errors, for example losing all the user’s data or protecting the user’s confidential information.</p>
+<p>Examples of designing safely could include:</p>
+<ul class="simple">
+<li><p>Not putting the delete button next to the save button.</p></li>
+<li><p>Providing users various ways to recover from errors, both by reverting to a priority state or progressing the system to the correct state. For example in a word processor, the writer can use control-z to correct, back button, or retype to correct mistakes.</p></li>
+<li><p>Making sure that input text field are wide enough to hold all the required data.</p></li>
+<li><p>Limiting possible user responses with UI components like combo boxes, check boxes and radio buttons.</p></li>
+</ul>
+<p>It is always better to design interfaces that prevent errors from happening in the first place.</p>
+<p>Evaluating for safety is really about considering all the things that users could do wrong and finding ways to prevent them from making the error. This will be different for every interface or digital solution.</p>
+<p>When addressing the safety of a digital solution you need to consider:</p>
+<ul class="simple">
+<li><p><strong>Error Prevention</strong>: making it difficult to make mistakes</p></li>
+<li><p><strong>Error Recovery</strong>: providing simple, understandable mechanisms to recover from a mistake</p></li>
+<li><p><strong>Warning Systems</strong>: warning users of potential dangers or errors before they occur</p></li>
+<li><p><strong>Well-being</strong>: preventing both physical and psychological harm</p></li>
+</ul>
 <p><img alt="safety summary poster" src="../../_images/up_safety.png" /></p>
 </section>
 <section id="utility">
 <h2>Utility<a class="headerlink" href="#utility" title="Permalink to this heading">#</a></h2>
+<p>Utility is the ability of the system to provide all the functionality that users need. Does the solution have all the components needed to complete the task.</p>
+<p>It matters little that something is easy if it’s not what you want. There are many ways that a solution can be useful, and will be strongly influenced by users’ needs and the desired impacts of the solution.</p>
+<p>Consider the following when addressing the utility of your digital solution:</p>
+<ul class="simple">
+<li><p><strong>Relevance</strong>: ensure to provide the all the relevant features and functions and only the relevant features and functions.</p></li>
+<li><p><strong>Completeness</strong>: ensure the user can complete tasks without resorting to alternative methods</p></li>
+<li><p><strong>Availability</strong>: ensure the necessary functions and features are available when needed</p></li>
+<li><p><strong>Understandability</strong>: ensure the users can understand how to use a feature or function.</p></li>
+</ul>
 <p><img alt="utility summary poster" src="../../_images/up_utility.png" /></p>
-</section>
-<section id="learnability">
-<h2>Learnability<a class="headerlink" href="#learnability" title="Permalink to this heading">#</a></h2>
-<p><img alt="learnability summary poster" src="../../_images/up_learnability.png" /></p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
 <li><p>Recognise and describe useability principles including accessibility, effectiveness, safety, utility and learnability
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 <div class="admonition-unit-2-subject-matter-covered admonition">
 <p class="admonition-title">Unit 2 subject matter covered:</p>
 <ul class="simple">
 <li><p>Recognise and describe useability principles including accessibility, effectiveness, safety, utility and learnability
-<span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id3">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 </section>
@@ -664,9 +784,9 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#accessibility">Accessibility</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#effectiveness">Effectiveness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">Learnability</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety">Safety</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#utility">Utility</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learnability">Learnability</a></li>
 </ul>
   </nav></div>
 
