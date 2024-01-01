@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Structuring Data" href="4-1_structuring_data.html" />
-    <link rel="prev" title="Visual Communication" href="3-2_visual_communication.html" />
+    <link rel="prev" title="Digital Solution’s Impacts" href="3-3_impacts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3_user_experience.html">User Experience Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3-1_useability_principles.html">Useability Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-2_visual_communication.html">Visual Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-3_impacts.html">Digital Solution’s Impacts</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Data Concepts</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -546,7 +547,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-data-driven-problems">What are Data Driven Problems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-data-driven-problems">What are Data-Driven Problems?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dikw-pyramid">The DIKW Pyramid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-driven-programming">What is data-driven programming</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-data">Working with data</a></li>
 </ul>
             </nav>
         </div>
@@ -561,14 +567,94 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="data-concepts">
 <h1>Data Concepts<a class="headerlink" href="#data-concepts" title="Permalink to this heading">#</a></h1>
 <section id="what-are-data-driven-problems">
-<h2>What are Data Driven Problems?<a class="headerlink" href="#what-are-data-driven-problems" title="Permalink to this heading">#</a></h2>
+<h2>What are Data-Driven Problems?<a class="headerlink" href="#what-are-data-driven-problems" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Data can be enormously helpful with formulating policies, providing services and performing government tasks. This is something that we will tackle systematically. Taking a data-driven approach refers to the systematic collection, management, analysis, interpretation and application of data. <span id="id1">[<a class="reference internal" href="../bibliography.html#id27" title="NL DIGIbeter. Problem solving with a data-driven approach. 04 2019. URL: https://www.nldigitalgovernment.nl/overview/new-technologies-data-and-ethics/data-agenda-government/problem-solving-with-a-data-driven-approach/.">DIGIbeter, 2019</a>]</span></p>
+</div></blockquote>
+<p>Data driven solutions have the following characteristics:</p>
+<ul class="simple">
+<li><p>They access data that has been collected</p>
+<ul>
+<li><p>This data may be collect by the solution or retrieved from a third-party</p></li>
+<li><p>Quality of the data is important than the quantity</p></li>
+</ul>
+</li>
+<li><p>They query the data</p>
+<ul>
+<li><p>The storage of the data must enable the querying of the data</p></li>
+</ul>
+</li>
+<li><p>They interpret the data</p>
+<ul>
+<li><p>Analysis of the retrieved data to provide insight.</p></li>
+</ul>
+</li>
+</ul>
+<section id="the-dikw-pyramid">
+<h3>The DIKW Pyramid<a class="headerlink" href="#the-dikw-pyramid" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>The DIKW Pyramid is introduced is use to understand the way data is converted to wisdom, which is the one overall goal of data. <span id="id2">[<a class="reference internal" href="../bibliography.html#id28" title="Data Literacy. 1.1 an overview of the dikw pyramid | data literacy. 06 2020. URL: https://dataliteracy.com/topic/an-overview-of-the-dikw-pyramid/ (visited on 2022-07-12).">Literacy, 2020</a>]</span></p>
+</div></blockquote>
+<p>Data needs to be transformed to become meaningful and meet the needs of the user. This process is represented by the DIKW Pyramid.</p>
+<p><img alt="DIWK Pyramid" src="../../_images/DIKWPyramid.png" /></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/u9DoQ9gY4z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>In summary:</p>
+<ul class="simple">
+<li><p><strong>data:</strong> clear and definitive facts</p></li>
+<li><p><strong>information:</strong> data + the context that data is found in</p></li>
+<li><p><strong>knowledge:</strong> information + experience that relates to this kind of information</p></li>
+<li><p><strong>wisdom:</strong> knowledge + action in response to the new knowledge</p></li>
+</ul>
+<p>Consider this example for the DIWK Pyramid in action</p>
+<ul class="simple">
+<li><p><strong>data:</strong> 3000mm</p></li>
+<li><p><strong>information:</strong> 3000mm is the length of a timber board I am buying</p></li>
+<li><p><strong>knowledge:</strong> previously I could not fit a 2600mm timber board in my car</p></li>
+<li><p><strong>action:</strong> I will have to get the board delivered</p></li>
+</ul>
+</section>
+<section id="what-is-data-driven-programming">
+<h3>What is data-driven programming<a class="headerlink" href="#what-is-data-driven-programming" title="Permalink to this heading">#</a></h3>
+<p>For the purposes of this course, data-driven programming filters, transforms and aggregates structured data.</p>
+</section>
+</section>
+<section id="working-with-data">
+<h2>Working with data<a class="headerlink" href="#working-with-data" title="Permalink to this heading">#</a></h2>
+<p>A data driven application can be though as having three different viewing layers:</p>
+<ul class="simple">
+<li><p><strong>External layer:</strong></p>
+<ul>
+<li><p>what the end user will see (UI)</p></li>
+<li><p>ensure the data is represented in a way that enhances understanding</p></li>
+</ul>
+</li>
+<li><p><strong>Internal layer:</strong></p>
+<ul>
+<li><p>relates to the underlying operational and physical storage such a file systems, management systems etc.</p></li>
+<li><p>modern computer technologies automate this process.</p></li>
+</ul>
+</li>
+<li><p><strong>Logical layer:</strong></p>
+<ul>
+<li><p>conceptually sits between external layer and internal layer</p></li>
+<li><p>relates to how data is stored that ensures:</p>
+<ul>
+<li><p><strong>data integrity:</strong> data is maintained to to continue to have meaning and value</p></li>
+<li><p><strong>data reliability:</strong> the ability to trust that data accurately reflects the facts descriptions or actions it is representing</p></li>
+<li><p><strong>data validity:</strong> the data meets defined formats, rules and criteria or order to maintain integrity and reliability</p></li>
+</ul>
+</li>
+<li><p>usually symbolic or structured representations that show links between data</p></li>
+</ul>
+</li>
+</ul>
 <div class="admonition-unit-2-subject-matter-covered admonition">
 <p class="admonition-title">Unit 2 subject matter covered:</p>
 <ul class="simple">
 <li><p>Understand the nature of data-driven problems</p></li>
 <li><p>Understand the difference between data, information and wisdom</p></li>
 <li><p>Understand that data-driven programming is typically applied to streams of structured data for filtering, transforming, aggregating (such as computing statistics), or calling other programs
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id3">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 </section>
@@ -607,12 +693,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3-2_visual_communication.html"
+       href="3-3_impacts.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Visual Communication</p>
+        <p class="prev-next-title">Digital Solution’s Impacts</p>
       </div>
     </a>
     <a class="right-next"
@@ -639,7 +725,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-data-driven-problems">What are Data Driven Problems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-data-driven-problems">What are Data-Driven Problems?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-dikw-pyramid">The DIKW Pyramid</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-data-driven-programming">What is data-driven programming</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-data">Working with data</a></li>
 </ul>
   </nav></div>
 

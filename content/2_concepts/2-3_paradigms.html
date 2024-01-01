@@ -187,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 has-children"><a class="reference internal" href="3_user_experience.html">User Experience Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="3-1_useability_principles.html">Useability Principles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="3-2_visual_communication.html">Visual Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-3_impacts.html">Digital Solution’s Impacts</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="4_dealing_with_data.html">Data Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -548,6 +549,13 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-orientated-programming">Object Orientated Programming</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-driven-programming">Event Driven Programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mvc-architecture-pattern">MVC Architecture Pattern</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-mvc">Why use MVC?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data">Model (Data)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#views-ui">Views (UI)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-brain">Controller (Brain)</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -575,6 +583,7 @@ document.write(`
 <p>Python is one of the leading OOP languages currently in use.</p>
 <p>We have covered OOP in the <strong><a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon course</a></strong>. If you need a refresher, start with the <strong><a href="https://damom73.github.io/python-oop-with-deepest-dungeon/oop_introduction.html" target="_blank">OOP Primer</a></strong>.</p>
 </section>
+<hr class="docutils" />
 <section id="event-driven-programming">
 <h2>Event Driven Programming<a class="headerlink" href="#event-driven-programming" title="Permalink to this heading">#</a></h2>
 <p>Event-driven programming is a programming paradigm where the flow of a computer program is determined by events, which can be user actions (like clicking a button), sensor inputs, or messages from other parts of the program. In event-driven programming, the program responds to these events by executing specific code (event handlers) associated with each event.</p>
@@ -584,7 +593,38 @@ document.write(`
 <li><p><strong>Event Handlers:</strong> Event handlers are functions or methods that are executed in response to specific events. They define what happens when an event occurs.</p></li>
 <li><p><strong>Event Loop:</strong> An event loop is a central part of event-driven programs. It continuously listens for events and dispatches them to the appropriate event handlers.</p></li>
 </ol>
-<p>Event-driven programming is commonly used in graphical user interfaces (GUIs), web development (e.g., handling user interactions on a web page), game development, and many other applications where the program’s behavior needs to respond to various external stimuli. Popular programming languages for event-driven programming include JavaScript (for web development), Python (with libraries like Tkinter for GUIs), and languages that support event-driven frameworks like C# with Windows Forms.</p>
+<p>Event-driven programming is commonly used in graphical user interfaces (GUIs), web development (e.g., handling user interactions on a web page), game development, and many other applications where the program’s behaviour needs to respond to various external stimuli. Popular programming languages for event-driven programming include JavaScript (for web development), Python (with libraries like Tkinter for GUIs), and languages that support event-driven frameworks like C# with Windows Forms.</p>
+</section>
+<hr class="docutils" />
+<section id="mvc-architecture-pattern">
+<h2>MVC Architecture Pattern<a class="headerlink" href="#mvc-architecture-pattern" title="Permalink to this heading">#</a></h2>
+<p>The MVC architecture pattern turns complex application development into a much more manageable process. It is example of modularization and decomposition.</p>
+<p>MVC stands for model-view-controller. Here’s what each of those components mean:</p>
+<ul class="simple">
+<li><p><strong>Model:</strong> The backend that contains all the data logic</p></li>
+<li><p><strong>View:</strong> The frontend or user interface (UI)</p></li>
+<li><p><strong>Controller:</strong> The brains of the application that controls how data is displayed</p></li>
+</ul>
+<p><img alt="MVC architecture" src="../../_images/mvc.png" /></p>
+<section id="why-use-mvc">
+<h3>Why use MVC?<a class="headerlink" href="#why-use-mvc" title="Permalink to this heading">#</a></h3>
+<p>We use MVC to establish <strong>separation of concerns(SoC)</strong>.</p>
+<p>The MVC pattern helps you break up the frontend and backend code into separate components. This way, it’s much easier to manage and make changes to either side without them interfering with each other.</p>
+<p>But this is easier said than done, especially when several developers need to update, modify, or debug a full-blown application simultaneously.</p>
+</section>
+<section id="model-data">
+<h3>Model (Data)<a class="headerlink" href="#model-data" title="Permalink to this heading">#</a></h3>
+<p>The model’s job is to simply manage the data. Whether the data is from a database, API, JSON object or local file, the model is responsible for managing it.</p>
+</section>
+<section id="views-ui">
+<h3>Views (UI)<a class="headerlink" href="#views-ui" title="Permalink to this heading">#</a></h3>
+<p>The view’s job is to decide what the user will see on their screen, and how.</p>
+</section>
+<section id="controller-brain">
+<h3>Controller (Brain)<a class="headerlink" href="#controller-brain" title="Permalink to this heading">#</a></h3>
+<p>The controller’s responsibility is to pull, modify, and provide data to the user. Essentially, the controller is the link between the view and model.</p>
+<p>Through <strong>getter</strong> and <strong>setter</strong> functions, the controller pulls data from the model and initializes the views.</p>
+<p>If there are any updates from the views, it modifies the data with a setter function.</p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
@@ -592,6 +632,7 @@ document.write(`
 <span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
 </section>
 </section>
 
@@ -660,6 +701,13 @@ document.write(`
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#object-orientated-programming">Object Orientated Programming</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#event-driven-programming">Event Driven Programming</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mvc-architecture-pattern">MVC Architecture Pattern</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-use-mvc">Why use MVC?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-data">Model (Data)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#views-ui">Views (UI)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-brain">Controller (Brain)</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
