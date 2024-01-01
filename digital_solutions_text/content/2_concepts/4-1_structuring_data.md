@@ -139,6 +139,7 @@ The tables below represent the same data in 3NF
 - Interpret the structure of a database represented by a relational schema (RS) to determine the relationship between data
 - Explain referential integrity, normalisation and third normal form, relational database management system
 - Explain the difference between primary key and foreign key
+- Explain data principles including organisation, i.e. using appropriate naming conventions, data formats and structures
 - Explain relations (tables) including rows; columns; primary, secondary and foreign keys; nulls; and views within a database management system
 {cite}`queenslandcurriculumassessmentauthority_2017_digital`
 ```

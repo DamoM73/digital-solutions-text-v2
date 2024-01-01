@@ -1,5 +1,7 @@
 # Managing and Manipulating Data
 
+CRUD
+
 ![SQL Read summary poster](assets/sql_read.png)
 
 ![SQL Manipulate summary poster](assets/sql_manipulate.png)
