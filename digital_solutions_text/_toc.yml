@@ -24,6 +24,7 @@ parts:
       sections:
       - file: content/2_concepts/3-1_useability_principles
       - file: content/2_concepts/3-2_visual_communication
+      - file: content/2_concepts/3-3_impacts.md
 
     - file: content/2_concepts/4_dealing_with_data
       sections:
