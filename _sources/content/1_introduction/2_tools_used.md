@@ -11,6 +11,8 @@ We will be using Python as our programming language for this course. Specificall
 You may laready have Python installed on your computer. This may be from a previous course, or macOS sometimes comes packaged with Python 2.7 (don't not use this or remove it, it is part of your operating system).
 
 Irrespective, is it best that you install and use the latest version of Python. This will provide you with access to all the features described in this course and ensure that you are using the fastest and most secure version of the language.
+
+You can have more than one version on Python on you computer, so follow the instructions below to ensure you have the latest version.
 ```
 
 ### Windows users
