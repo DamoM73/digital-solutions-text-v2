@@ -1,6 +1,19 @@
 # Data Principles
 
-## Acquisition
+## Data Management
+
+Delivering a data-driven digital solution requires a detailed understanding of the data involved. Therefore it is vital to consider the data that underpins the application and issues related to managing that data.
+
+These issues fall under four main categories:
+
+- Data acquisition
+- Data integrity
+- Data anomalies
+- Security and protection
+
+### Acquisition
+
+Data acquisition is the process of collecting and capturing data from various sources and converting it into a usable digital format for further analysis and processing. In acquiring the data that will be the foundation of your solution you need to consider both the timeliness of the data acquisition and the ownership of the data.
 
 ![Acquisition summary poster](assets/dp_acquisition.png)
 
