@@ -62,6 +62,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'content/2_concepts/4-2_data_principles';</script>
     <link rel="shortcut icon" href="../../_static/logo_favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -548,14 +550,25 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition">Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition">Acquisition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness">Timeliness</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ownership">Ownership</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">Organisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrity">Integrity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies-redundancy">Anomalies &amp; Redundancy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security">Security</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrity">Integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies-redundancy">Anomalies &amp; Redundancy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-and-protection">Security and Protection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#threats">Threats</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-representation">Text representation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-data-representations">Other Data representations</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -582,26 +595,178 @@ document.write(`
 <section id="acquisition">
 <h3>Acquisition<a class="headerlink" href="#acquisition" title="Permalink to this heading">#</a></h3>
 <p>Data acquisition is the process of collecting and capturing data from various sources and converting it into a usable digital format for further analysis and processing. In acquiring the data that will be the foundation of your solution you need to consider both the timeliness of the data acquisition and the ownership of the data.</p>
+<section id="timeliness">
+<h4>Timeliness<a class="headerlink" href="#timeliness" title="Permalink to this heading">#</a></h4>
+<p>Data is a point-in-time measurement, which means there is always a delay between between data creation and dated entry. The impact of data timeliness data depends upon its purpose. A database that records daily temperature has a different timeliness demand than a database that records the core temperature of a nuclear powerplant. Despite both databases recording temperature, a delay of a minute would be of no concern for recording the daily temperature, but could be catastrophic for the nuclear powerplant.</p>
+<p>In exploring the data needs of your solution, consider what delay there may be in your data acquisition, as well as, how much delay can be tolerated.</p>
+</section>
+<section id="ownership">
+<h4>Ownership<a class="headerlink" href="#ownership" title="Permalink to this heading">#</a></h4>
+<p>There are three types of data ownership:</p>
+<ol class="arabic simple">
+<li><p><strong>Personal data ownership</strong>: refers to an individual’s ownership of their personal data, such as their name, address, and contact information.</p></li>
+<li><p><strong>Corporate data ownership</strong>: refers to the ownership of data generated and collected by an organization or company, such as customer data, sales data, and financial data.</p></li>
+<li><p><strong>Public data ownership</strong>: refers to data that is owned by the public or government, such as census data, public records, and government statistics.</p></li>
+</ol>
+<p>It is possible for the data in a database to contain a mix of ownerships. Each type of data ownership has different handling requirements. These will be addressed in Unit 4. For Unit 2 purposes it is adequate to identify the ownership of the data we are working with.</p>
 <p><img alt="Acquisition summary poster" src="../../_images/dp_acquisition.png" /></p>
 </section>
 </section>
-<section id="organisation">
-<h2>Organisation<a class="headerlink" href="#organisation" title="Permalink to this heading">#</a></h2>
-</section>
-<section id="representation">
-<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this heading">#</a></h2>
-</section>
 <section id="integrity">
-<h2>Integrity<a class="headerlink" href="#integrity" title="Permalink to this heading">#</a></h2>
+<h3>Integrity<a class="headerlink" href="#integrity" title="Permalink to this heading">#</a></h3>
+<p>Data integrity means that data is accurate, complete, and consistent throughout its lifecycle, from creation and storage to processing and distribution, ensuring that it is trustworthy and not susceptible to unauthorized modification, deletion, or corruption, and is vital in maintaining data quality and reliability in fields such as healthcare, finance, and research.</p>
+<p>In analysing the data for your solution you should consider both the current data integrity as well as step you need to take to ensure the integrity of the data once it is entered into your system.</p>
+<p>Data integrity depends on the data being:</p>
+<ul class="simple">
+<li><p><strong>complete</strong>: all data elements are entered correctly and not elements are missing</p></li>
+<li><p><strong>accurate</strong>: the data represents the truth and can be relied upon</p></li>
+<li><p><strong>kept up to date</strong>: all changes to data occurs in a timely manner</p></li>
+<li><p><strong>consistent</strong>: the manipulation of data is completed in a consistent manner</p></li>
+<li><p><strong>secure</strong>: the data is protected from others who may intentionally corrupt it</p></li>
+<li><p><strong>relevant</strong>: the data has meaning and use in the context of your solution</p></li>
+</ul>
 <p><img alt="Integrity summary poster" src="../../_images/dp_integrity.png" /></p>
 </section>
 <section id="anomalies-redundancy">
-<h2>Anomalies &amp; Redundancy<a class="headerlink" href="#anomalies-redundancy" title="Permalink to this heading">#</a></h2>
+<h3>Anomalies &amp; Redundancy<a class="headerlink" href="#anomalies-redundancy" title="Permalink to this heading">#</a></h3>
+<p>Data anomalies refer to inconsistencies or errors that arise when storing or manipulating data in a database. These anomalies can occur in various forms, such as:</p>
+<ul class="simple">
+<li><p><strong>Insertion anomalies</strong>: occur when it is not possible to insert data into a database table without also adding additional, unnecessary data.</p></li>
+<li><p><strong>Deletion anomalies</strong>: occur when deleting data from a table inadvertently causes the loss of other related data that should have been retained.</p></li>
+<li><p><strong>Update anomalies</strong>: occur when updating data in a table results in inconsistencies between related data items.</p></li>
+</ul>
+<p>Identifying and resolving these data anomalies is critical for maintaining data integrity in databases and ensuring that the data is accurate, complete, and consistent.</p>
+<p>Proper database design, normalization techniques, and data validation processes can help minimize the occurrence of data anomalies. We will learn about these techniques later in this Unit. For the purposes of the Explore phase, the prevention of such anomalies would form a requirement for your digital solution.</p>
 <p><img alt="Anomalies summary poster" src="../../_images/dp_anomolies.png" /></p>
 </section>
-<section id="security">
-<h2>Security<a class="headerlink" href="#security" title="Permalink to this heading">#</a></h2>
+<section id="security-and-protection">
+<h3>Security and Protection<a class="headerlink" href="#security-and-protection" title="Permalink to this heading">#</a></h3>
+<p>Security is essential to the success of any information system and the valuable data stored in it.</p>
+<section id="threats">
+<h4>Threats<a class="headerlink" href="#threats" title="Permalink to this heading">#</a></h4>
+<p>The potential threats to your digital solution include:</p>
+<ul class="simple">
+<li><p><strong>malware</strong>: software with malicious intent that can infect systems that serve a data-driven application. Malware examples include:</p>
+<ul>
+<li><p>viruses: replicates itself by infecting other files and programs, causing damage to the system and potentially spreading to other devices.</p></li>
+<li><p>worms: replicates itself and spreads across networks, consuming bandwidth and causing system slowdowns or crashes.</p></li>
+<li><p>Trojans horses: disguises itself as legitimate software, tricking users into downloading and installing it, and then allowing unauthorized access to the system.</p></li>
+<li><p>ransomware: encrypts files and demands payment in exchange for restoring access to them.</p></li>
+<li><p>spyware: secretly monitors user activity and collects personal information, such as login credentials, credit card numbers, and browsing history.</p></li>
+<li><p>adware: displays unwanted advertisements, often in the form of pop-ups or banners, and may redirect users to malicious websites.</p></li>
+<li><p>rootkits: allows attackers to gain privileged access to a system, often remaining undetected and persistent even after system reboots or antivirus scans.</p></li>
+</ul>
+</li>
+<li><p><strong>data theft and identity theft</strong>: major concerns in relation to information systems and data-driven applications. Systems whose security measures become compromised can be mined for values, sensitive and private data.</p></li>
+<li><p><strong>invasion of privacy</strong>: the security of data access and transmission can lead to invasion of privacy as information may be leaked, gathered, and used for blackmail or unsolicited marketing.</p></li>
+</ul>
+</section>
+<section id="solutions">
+<h4>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h4>
+<p>Steps can be taken to minimise the risks presented by the potential threats. These include:</p>
+<ul class="simple">
+<li><p><strong>user-level access control</strong>: a security mechanism that limits the access of users to specific resources or functionalities within a database based on their roles or permissions. User-level access control can protect a database in several ways:</p>
+<ul>
+<li><p>limiting access to sensitive data or functionalities to only those users who have a legitimate need to access them, thus reducing the risk of unauthorized access or data breaches</p></li>
+<li><p>enforcing policies such as password requirements, access restrictions, or data retention policies, which can help to ensure compliance with regulatory requirements or internal guidelines</p></li>
+<li><p>monitoring and auditing user activities within the database, such as logins, data queries, or modifications, which can help to detect and investigate potential security breaches or policy violations.</p></li>
+</ul>
+</li>
+<li><p><strong>encryption</strong>: a process of changing data from human-readable text into text that is indecipherable, and is an important measure to protect sensitive data such as passwords, financial details, personal information, and intellectual property. There are two methods for encryption:</p>
+<ul>
+<li><p>encryption: a two way process where a key is used to scramble and unscramble data. This is used when the data needs to be returned to its original form</p></li>
+<li><p>hashing: a one way process where a key is used to scramble data. The data cannot be unscrambles, but hashing the same data will always produce the same result. This is generally used with passwords where a password is hashed before being stored. When a user logs in, their entered password is also hashed and the two hashed passwords are compared.</p></li>
+</ul>
+</li>
+<li><p><strong>backup and disaster recover</strong>: disasters are always made worse by not planning for them. Good database management practices:</p>
+<ul>
+<li><p>regularly backup the database so that it can be restored if it fails.</p></li>
+<li><p>log data transactions so that committed data changes can be rolled back</p></li>
+</ul>
+</li>
+</ul>
 <p><img alt="Security summary poster" src="../../_images/dp_security.png" /></p>
+</section>
+</section>
+</section>
+<section id="representation">
+<h2>Representation<a class="headerlink" href="#representation" title="Permalink to this heading">#</a></h2>
+<p>When we talk about <strong>representation</strong>, it’s about how we turn different things, like numbers or text, into a language that computers understand, which usually involves using combinations of 0s and 1s for numbers and specific codes for letters and symbols. The way we do this is crucial because it affects how fast and accurately computers can work with data.</p>
+<section id="text-representation">
+<h3>Text representation<a class="headerlink" href="#text-representation" title="Permalink to this heading">#</a></h3>
+<p>Representing text is a significant issue when considering data. There are two main ways of representing text, ASCII and Unicode.</p>
+<p><strong>ASCII</strong> is like a simple language that computers first used, where each letter, number, or symbol is represented by a specific number. For example, the letter ‘A’ is represented by the number 65. This made it easy for early computers to work with text, but it had limitations because it could only represent a small set of characters, mainly English letters and symbols.</p>
+<p><strong>Unicode</strong>, on the other hand, is like a more advanced and universal language for computers. It can represent characters from almost all the world’s languages, emojis, and special symbols. Instead of just using numbers like ASCII, it assigns a unique number to every single character in all these languages. So, whether you’re typing in English, Chinese, Arabic, or even using emojis, Unicode ensures that computers understand and display it correctly.</p>
+<p>Make sure you know which method you data uses.</p>
+</section>
+<section id="other-data-representations">
+<h3>Other Data representations<a class="headerlink" href="#other-data-representations" title="Permalink to this heading">#</a></h3>
+<p>The storage of data needs to be consistent. That means the way that one data point is stored is the same from record to record. For example 100,000 and <span class="math notranslate nohighlight">\(10^5\)</span> are the same number, but they are represented differently. Before designing a database and storing data, the accepted format of this data needs to be decided.</p>
+<p>Some common data formats that need to be established:</p>
+<ul class="simple">
+<li><p><strong>Dates:</strong></p>
+<ul>
+<li><p>dates have the widest range of accepted range of formats</p></li>
+<li><p>date formatting is represented by:</p>
+<ul>
+<li><p>d: day</p></li>
+<li><p>m: month</p></li>
+<li><p>y: year</p></li>
+</ul>
+</li>
+<li><p>common date formats (example is 13th August 1984):</p>
+<ul>
+<li><p>dd/mm/yyyy    13/08/1984</p></li>
+<li><p>dd/mm/yy      13/08/84</p></li>
+<li><p>d/m/yy        13/8/84</p></li>
+<li><p>mm/dd/yyyy    08/13/1984 (US date style)</p></li>
+<li><p>yyyy-mm-dd      19840813 (this is the <strong><a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">international ISO 8601 standard</a></strong>)</p></li>
+</ul>
+</li>
+<li></li>
+</ul>
+</li>
+<li><p><strong>Time:</strong></p>
+<ul>
+<li><p>time of day also has a range of accepted formats</p></li>
+<li><p>time of day formatting is represented by:</p>
+<ul>
+<li><p>H: 24hr hour</p></li>
+<li><p>h: 12hr hour</p></li>
+<li><p>m: minute</p></li>
+<li><p>s: second</p></li>
+<li><p>A: AM or PM</p></li>
+</ul>
+</li>
+<li><p>common time of day formats (example is 1:15pm)</p>
+<ul>
+<li><p>HH:mm     13:15</p></li>
+<li><p>hh:mmA    01:15pm</p></li>
+<li><p>h:mmA     1:15pm</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Numbers:</strong></p>
+<ul>
+<li><p>numbers and are often formatted in a specific way (eg. phone numbers and currency) or may be expected to have specific number of places after the decimal point.</p></li>
+<li><p>numbers formatting is represented by:</p>
+<ul>
+<li><p>0: required digit between 0 and 9</p></li>
+<li><p>9: optional number between 0 and 9</p></li>
+</ul>
+</li>
+<li><p>common number formats:</p>
+<ul>
+<li><p>mobile number:    0000 000 000</p></li>
+<li><p>landline number:  (00) 0000 0000</p></li>
+<li><p>postcode:         0000</p></li>
+<li><p>currency:         $ 90.00</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <div class="admonition-unit-2-subject-matter-covered admonition">
 <p class="admonition-title">Unit 2 subject matter covered:</p>
 <ul class="simple">
@@ -616,6 +781,7 @@ document.write(`
 <span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
 </section>
 </section>
 
@@ -683,14 +849,25 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition">Acquisition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquisition">Acquisition</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness">Timeliness</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ownership">Ownership</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">Organisation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integrity">Integrity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies-redundancy">Anomalies &amp; Redundancy</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security">Security</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#integrity">Integrity</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#anomalies-redundancy">Anomalies &amp; Redundancy</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#security-and-protection">Security and Protection</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#threats">Threats</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#solutions">Solutions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#representation">Representation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#text-representation">Text representation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#other-data-representations">Other Data representations</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
