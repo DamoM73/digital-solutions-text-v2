@@ -34,9 +34,10 @@ parts:
 
     - file: content/2_concepts/5_data_transmission
       sections:
-      - file: content/2_concepts/5-1_data_security
-      - file: content/2_concepts/5-2_networking 
-      - file: content/2_concepts/5-3_privacy
+      - file: content/2_concepts/5-1_privacy
+      - file: content/2_concepts/5-2_networking
+      - file: content/2_concepts/5-3_data_security
+      
 
   - caption: Explore
     chapters:
