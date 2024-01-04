@@ -524,7 +524,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -540,6 +542,17 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-query-language">Structured Query Language</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqlite">SQLite</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -551,18 +564,48 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="managing-and-manipulating-data">
 <h1>Managing and Manipulating Data<a class="headerlink" href="#managing-and-manipulating-data" title="Permalink to this heading">#</a></h1>
-<p>CRUD</p>
+<p>The set of operations that allows you to manage data in a computer system is referred to by the acronym CRUD. CRUD stands for Create, Read, Update, and Delete. It is a fundamental concept in the world of databases and computer systems.</p>
+<ul class="simple">
+<li><p><strong>Create:</strong> This is where you make new entries or records. Think of it like writing a new post on a social media platform. You’re creating new data.</p></li>
+<li><p><strong>Read:</strong> This is about retrieving or looking at the data you’ve created or stored. It’s like reading a post or checking your messages on that same social media platform.</p></li>
+<li><p><strong>Update:</strong> Sometimes, you might need to change something in the data you’ve created. For instance, if you made a typo in a post, you can update it to correct the mistake.</p></li>
+<li><p><strong>Delete:</strong> This is straightforward—it means removing data. If you decide you don’t want that post on social media anymore, you can delete it.</p></li>
+</ul>
+<section id="structured-query-language">
+<h2>Structured Query Language<a class="headerlink" href="#structured-query-language" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>SQL is a standard language for storing, manipulating and retrieving data in databases <span id="id1">[<a class="reference internal" href="../bibliography.html#id36" title="W3Schools. Sql tutorial. 2019. URL: https://www.w3schools.com/sql/default.asp (visited on 2022-09-24).">W3Schools, 2019</a>]</span>.</p>
+</div></blockquote>
+<p>SQL is the the most popular language for working with databases despite being over 50 years old. It is everywhere and every major IT platform uses it. Why? Because it is powerful and effective.</p>
+<p>We have covered some SQL in previous subjects, <strong><a href="https://w3schools.com/sql/default.asp" target="_blank">check here for a refresher</a></strong>.</p>
+<p>SQL has #### basic operations:</p>
+<ul class="simple">
+<li><p><strong>SELECT</strong>: performs queries on the database to extract tables of data</p></li>
+<li><p><strong>CREATE DATABASE</strong>: initially establishes a database</p></li>
+<li><p><strong>CREATE TABLE</strong>: makes a table in an existing database, including establishing relationships between tables</p></li>
+<li><p><strong>DROP DATABASE</strong>: completely delete an existing database, resulting in the loss of all data stored in the database</p></li>
+<li><p><strong>DROP TABLE</strong>: completely delete an existing table, resulting in the loss of all data stored in the table</p></li>
+<li><p><strong>ALTER TABLE</strong>: changes the structure of an existing table, including adding, deleting or modifying columns and modifying relationships</p></li>
+<li><p><strong>INSERT</strong>: add a row to an existing table</p></li>
+<li><p><strong>UPDATE</strong>: modify the data in a row of an existing table</p></li>
+<li><p><strong>DELETE</strong>: remove a row from an existing table</p></li>
+</ul>
 <p><img alt="SQL Read summary poster" src="../../_images/sql_read.png" /></p>
 <p><img alt="SQL Manipulate summary poster" src="../../_images/sql_manipulate.png" /></p>
 <p><img alt="SQL CUD summary poster" src="../../_images/sql_cud.png" /></p>
+<section id="sqlite">
+<h3>SQLite<a class="headerlink" href="#sqlite" title="Permalink to this heading">#</a></h3>
+<p>There are many different flavours of SQL. Most of these work by setting up an SQL server separate from the computer running the program. We will be using SQLite as our SQL database. It is a lightweight and fast database management system, which can run off a file stored on your local machine. For example, both Android and iOS use SQLite databases extensive to store app data on phones.</p>
 <div class="admonition-unit-2-subject-matter-covered admonition">
 <p class="admonition-title">Unit 2 subject matter covered:</p>
 <ul class="simple">
 <li><p>Recognise the elements needed for a data-driven solution, including programming requirements, e.g. SQL and algorithms</p></li>
 <li><p>understand SQL syntax and use SQL statements to solve a problem
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -619,6 +662,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structured-query-language">Structured Query Language</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sqlite">SQLite</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
