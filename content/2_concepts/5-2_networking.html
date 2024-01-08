@@ -550,26 +550,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-transmission-principles">Network Transmission Principles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latency">Latency</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jitter">Jitter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guarantee-of-delivery">Guarantee of delivery</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-of-service-qos-guarantee">Quality of Service (QoS) Guarantee</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness-of-delivery">Timeliness of delivery</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transmission">Data Transmission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protocols">Protocols</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-https">HTTP / HTTPS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp-ftps">FTP / FTPS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#streaming-and-broadcasting-packets">Streaming and broadcasting packets</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processes">Processes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checksums">Checksums</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-mehtods">Data Exchange Mehtods</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest">REST</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
@@ -590,48 +575,49 @@ document.write(`
 <h1>Networking<a class="headerlink" href="#networking" title="Permalink to this heading">#</a></h1>
 <section id="network-transmission-principles">
 <h2>Network Transmission Principles<a class="headerlink" href="#network-transmission-principles" title="Permalink to this heading">#</a></h2>
+<p>Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures. Here’s an explanation of key network transmission principles:</p>
+<p>In summary, latency and jitter impact the speed and consistency of data transmission in networks, while guarantee and timeliness of delivery ensure that data reaches its destination reliably and within an acceptable timeframe. These principles are critical for maintaining the performance and quality of networked applications and services.</p>
 <section id="latency">
 <h3>Latency<a class="headerlink" href="#latency" title="Permalink to this heading">#</a></h3>
+<p>Latency refers to the delay or lag that occurs when data is transmitted from one point to another in a network. It can be caused by various factors:</p>
+<ul class="simple">
+<li><p><strong>Serialisation</strong> -</p></li>
+<li><p><strong>Propagation</strong></p></li>
+<li><p><strong>Switching</strong></p></li>
+<li><p><strong>Queuing</strong></p></li>
+</ul>
+<p>Low latency is crucial for real-time applications like video conferencing and online gaming, where delays can lead to a poor user experience.</p>
+<div class="tip admonition">
+<p class="admonition-title">Gaming Ping and Latency</p>
+<p>Gaming ping is directly affected by latency. Ping is a measurement of the round-trip time it takes for a small packet of data (called a ping packet) to travel from your computer to a game server and back. Latency, often referred to as “ping” in gaming, represents the time delay between sending a command in the game and seeing its effect on the screen.</p>
+</div>
 </section>
 <section id="jitter">
 <h3>Jitter<a class="headerlink" href="#jitter" title="Permalink to this heading">#</a></h3>
+<p>Jitter is the variation in the delay of received packets in a network. It represents the inconsistency in the timing of packet arrivals. It can result from network congestion, varying path lengths for different packets, or differences in the processing time at network devices.</p>
+<p>In applications like Voice over IP (VoIP) and streaming media, jitter can lead to disruptions and poor audio or video quality. Minimizing jitter is essential for smooth communication.</p>
+<div class="tip admonition">
+<p class="admonition-title">Jitter in video streaming</p>
+<p>In video streaming, jitter appears as irregular and unexpected variations in the timing of frame delivery. It’s typically manifested as noticeable fluctuations in the smoothness of video playback. Here’s what jitter looks like in video streaming:</p>
+<ol class="arabic simple">
+<li><p><strong>Stuttering or Freezing</strong>: One common symptom of jitter is when the video playback briefly stutters or freezes. You might see the video pause for a moment and then catch up suddenly.</p></li>
+<li><p><strong>Uneven Playback Speed</strong>: Jitter can cause the video to play back at uneven speeds. It may briefly speed up or slow down, making the motion appear unnatural.</p></li>
+<li><p><strong>Frame Drops</strong>: Jitter can result in frames being dropped during playback. This can lead to missing content or jerky movements in the video.</p></li>
+<li><p><strong>Audio-Video Desynchronization</strong>: Jitter can also affect the synchronization between the audio and video components of a stream. You might notice that the audio lags behind or leads the video.</p></li>
+<li><p><strong>Pixelation and Artifacts</strong>: In severe cases, jitter can cause pixelation or compression artifacts in the video, making the image quality deteriorate momentarily.</p></li>
+<li><p><strong>Buffering Delays</strong>: To compensate for jitter, video streaming services may introduce buffering delays. This means you have to wait longer for the video to start playing, which can be frustrating for viewers.</p></li>
+</ol>
+</div>
 </section>
-<section id="guarantee-of-delivery">
-<h3>Guarantee of delivery<a class="headerlink" href="#guarantee-of-delivery" title="Permalink to this heading">#</a></h3>
+<section id="quality-of-service-qos-guarantee">
+<h3>Quality of Service (QoS) Guarantee<a class="headerlink" href="#quality-of-service-qos-guarantee" title="Permalink to this heading">#</a></h3>
 </section>
 <section id="timeliness-of-delivery">
 <h3>Timeliness of delivery<a class="headerlink" href="#timeliness-of-delivery" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
-<section id="data-transmission">
-<h2>Data Transmission<a class="headerlink" href="#data-transmission" title="Permalink to this heading">#</a></h2>
-<section id="protocols">
-<h3>Protocols<a class="headerlink" href="#protocols" title="Permalink to this heading">#</a></h3>
-<section id="http-https">
-<h4>HTTP / HTTPS<a class="headerlink" href="#http-https" title="Permalink to this heading">#</a></h4>
-</section>
-<section id="ftp-ftps">
-<h4>FTP / FTPS<a class="headerlink" href="#ftp-ftps" title="Permalink to this heading">#</a></h4>
-</section>
-<section id="vpn">
-<h4>VPN<a class="headerlink" href="#vpn" title="Permalink to this heading">#</a></h4>
-</section>
-<section id="streaming-and-broadcasting-packets">
-<h4>Streaming and broadcasting packets<a class="headerlink" href="#streaming-and-broadcasting-packets" title="Permalink to this heading">#</a></h4>
-</section>
-</section>
-<section id="processes">
-<h3>Processes<a class="headerlink" href="#processes" title="Permalink to this heading">#</a></h3>
-<section id="hashing">
-<h4>Hashing<a class="headerlink" href="#hashing" title="Permalink to this heading">#</a></h4>
-</section>
-<section id="checksums">
-<h4>Checksums<a class="headerlink" href="#checksums" title="Permalink to this heading">#</a></h4>
-</section>
-</section>
-</section>
-<section id="data-exchange-mehtods">
-<h2>Data Exchange Mehtods<a class="headerlink" href="#data-exchange-mehtods" title="Permalink to this heading">#</a></h2>
+<section id="data-exchange-methods">
+<h2>Data Exchange Methods<a class="headerlink" href="#data-exchange-methods" title="Permalink to this heading">#</a></h2>
 <section id="rest">
 <h3>REST<a class="headerlink" href="#rest" title="Permalink to this heading">#</a></h3>
 </section>
@@ -719,26 +705,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#network-transmission-principles">Network Transmission Principles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#latency">Latency</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jitter">Jitter</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#guarantee-of-delivery">Guarantee of delivery</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-of-service-qos-guarantee">Quality of Service (QoS) Guarantee</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness-of-delivery">Timeliness of delivery</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transmission">Data Transmission</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protocols">Protocols</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-https">HTTP / HTTPS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp-ftps">FTP / FTPS</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vpn">VPN</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#streaming-and-broadcasting-packets">Streaming and broadcasting packets</a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#processes">Processes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#checksums">Checksums</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-mehtods">Data Exchange Mehtods</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest">REST</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
