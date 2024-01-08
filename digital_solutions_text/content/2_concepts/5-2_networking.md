@@ -2,23 +2,27 @@
 
 ## Network Transmission Principles
 
-Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures. Here's an explanation of key network transmission principles:
-
-
-
-
-
-
-In summary, latency and jitter impact the speed and consistency of data transmission in networks, while guarantee and timeliness of delivery ensure that data reaches its destination reliably and within an acceptable timeframe. These principles are critical for maintaining the performance and quality of networked applications and services.
+Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures.
 
 ### Latency
 
-Latency refers to the delay or lag that occurs when data is transmitted from one point to another in a network. It can be caused by various factors:
+Latency refers to the delay or lag that occurs when data is transmitted from one point to another in a network. It can be caused by various factors.
 
-- **Serialisation** - 
-- **Propagation**
-- **Switching**
-- **Queuing**
+#### Serialization and deserialization
+
+Serialization is the process of converting data into a format that can be transmitted over a network. Deserialization is the reverse process. The serialization and deserialization steps introduce overhead, contributing to latency. The more complex the data and the longer the serialization process takes.
+
+#### Propagation
+
+Propagation delay in networks refers to the time it takes for data to travel from its source to its destination over a physical medium, such as a network cable or a fibre optic line. In networks, this delay is influenced by the physical distance between devices and the speed at which signals can travel through the medium.
+
+#### Switching
+
+When data is sent across a network, it's broken into smaller packets, and these packets need to find their way to the right destination. Switches make this happen efficiently. They determine the best path for each packet, helping them avoid traffic jams and collisions. To direct packets, switches need to inspect each packet. Each inspection accrues overhead, therefore latency is impacted by both the number of switches each packet passes through, and the speed of those switches.
+
+#### Queuing
+
+When lots of data packets arrive at a network device like a router, they might have to wait their turn before they can continue on their journey. This waiting time is called queuing delay. Low queuing delay means faster data transmission, inversely, high queuing delay can slow down data delivery. 
 
 Low latency is crucial for real-time applications like video conferencing and online gaming, where delays can lead to a poor user experience.
 
@@ -51,6 +55,10 @@ In video streaming, jitter appears as irregular and unexpected variations in the
 ```
 
 ### Quality of Service (QoS) Guarantee
+
+Network Quality of Service (QoS) guarantee refers to the assurance that a network can provide specific levels of service and performance to different types of traffic or applications. QoS is critical in ensuring that data, voice, video, and other applications receive the necessary bandwidth, low latency, and minimal packet loss to function effectively.
+
+To guarantee QoS, networks often employ various mechanisms, such as traffic prioritization, bandwidth reservation, and congestion management. For example, in a VoIP (Voice over Internet Protocol) call, QoS guarantee ensures that voice packets are prioritized over less time-sensitive data packets, reducing the chances of voice call degradation due to network congestion.
 
 
 
