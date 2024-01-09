@@ -1,5 +1,7 @@
 # Networking
 
+## How do networks work?
+
 ## Network Transmission Principles
 
 Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures.
