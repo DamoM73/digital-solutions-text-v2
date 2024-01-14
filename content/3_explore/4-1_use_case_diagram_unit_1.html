@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Core Concepts</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-1_basic_features.html">Basic Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-2_good_practice.html">Good Practice</a></li>
@@ -524,7 +524,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -540,6 +542,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-a-use-case-diagram">Steps to create a Use Case Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-diagram-symbols">Use Case Diagram Symbols</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -551,6 +562,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="use-case-diagram-unit-1">
 <h1>Use Case Diagram — Unit 1<a class="headerlink" href="#use-case-diagram-unit-1" title="Permalink to this heading">#</a></h1>
+<p><img alt="Use Case Diagram Summary" src="../../_images/use_case_diagram.png" /></p>
+<section id="steps-to-create-a-use-case-diagram">
+<h2>Steps to create a Use Case Diagram<a class="headerlink" href="#steps-to-create-a-use-case-diagram" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>What is the system being created?</p></li>
+<li><p>Who are the actors using the system? (People, Organisations, Other systems, External devices)</p></li>
+<li><p>Is each actor a primary actor or a secondary actor?</p></li>
+<li><p>What actions will the primary actors want to do with the system?</p></li>
+<li><p>How will each actor interact with the use cases?</p></li>
+<li><p>Are the any new actions automatically connected to current use cases?</p></li>
+<li><p>Are there any additional, optional actions connected to current use cases?</p></li>
+<li><p>Do any use cases or actors have sub categories?</p></li>
+</ol>
+</section>
+<section id="use-case-diagram-symbols">
+<h2>Use Case Diagram Symbols<a class="headerlink" href="#use-case-diagram-symbols" title="Permalink to this heading">#</a></h2>
+<p><img alt="Use Case Diagram Symbols" src="../../_images/use_case_symbols.png" /></p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
@@ -558,6 +586,7 @@ document.write(`
 <li><p>Recognise the elements needed for a data-driven solution, including boundary or scope</p></li>
 </ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -614,6 +643,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-a-use-case-diagram">Steps to create a Use Case Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-diagram-symbols">Use Case Diagram Symbols</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

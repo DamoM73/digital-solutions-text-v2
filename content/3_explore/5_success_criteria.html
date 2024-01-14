@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Core Concepts</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-1_basic_features.html">Basic Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-2_good_practice.html">Good Practice</a></li>
@@ -547,12 +547,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table">Requirements Table</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table-summary">Requirements Table Summary</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table">Requirements Table</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria-table">Criteria Table</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria-table-summary">Criteria Table Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescribed-criteria">Prescribed Criteria</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#self-determined-criteria">Self Determined Criteria</a></li>
 </ul>
 </li>
 </ul>
@@ -568,18 +566,32 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="success-criteria">
 <h1>Success Criteria<a class="headerlink" href="#success-criteria" title="Permalink to this heading">#</a></h1>
+<p>You have now fully explored the problem and identified all the requirements. The next step is to prioritise the requirements and established the method you will use to determine if they have been achieved.</p>
 <section id="requirements-table">
 <h2>Requirements Table<a class="headerlink" href="#requirements-table" title="Permalink to this heading">#</a></h2>
-<section id="requirements-table-summary">
-<h3>Requirements Table Summary<a class="headerlink" href="#requirements-table-summary" title="Permalink to this heading">#</a></h3>
-<p><img alt="Requirements Table Summary" src="../../_images/requirements_table.png" /></p>
-</section>
+<p><img alt="Requirements Table" src="../../_images/MuSCoW.png" /></p>
+<p>The requirements table is used to prioritise the identified requirements. Categorise the requirements in your exploration documents (mind map, empathy map, personas, and use case diagram) into on of the four columns:</p>
+<ul class="simple">
+<li><p><strong>Must</strong> — all the requirements that are explicitly expressed in the criteria sheet, stimulus material or from client interactions.</p></li>
+<li><p><strong>Should:</strong> — requirements that you think are important. It might include functional and non-functional requirements not mentioned in the criteria sheet or stimulus (eg. the Usability Principle of Safety).</p></li>
+<li><p><strong>Could:</strong> — really good ideas that you do not have the time, skills or resources to implement (eg. integrating with social media).</p></li>
+<li><p><strong>Won’t</strong> — ideas that other might like, but you are not interested in (eg. integrating with social media). <strong>Don’t simply put the negative of a requirement</strong> (eg. if you have mentioned the Usability Principle of Effectiveness, don’t add “Won’t crash” to this column).</p></li>
+</ul>
 </section>
 <section id="criteria-table">
 <h2>Criteria Table<a class="headerlink" href="#criteria-table" title="Permalink to this heading">#</a></h2>
-<section id="criteria-table-summary">
-<h3>Criteria Table Summary<a class="headerlink" href="#criteria-table-summary" title="Permalink to this heading">#</a></h3>
-<p><img alt="Criteria Table Summary" src="../../_images/criteria_table.png" /></p>
+<p>Criteria are the characteristics by which a project is evaluated or judged. They should be written in a way that states what actions will be taken to check that the requirement is met. For example, for a requirement of having accessible on-screen text, the criteria would be — passes AAA text contrast test. In Digital Solutions, there are two types of criteria, prescribed and self-determined.</p>
+<section id="prescribed-criteria">
+<h3>Prescribed Criteria<a class="headerlink" href="#prescribed-criteria" title="Permalink to this heading">#</a></h3>
+<p>Prescribed criteria are those criteria that are provided or placed on a project by the client. In an educational context like Digital Solutions, these can also be provided by the teacher or detailed in an assignment.</p>
+<p>In our workflow, we have already identified our prescribed requirements in the <strong>Must</strong> column of the Requirements table. Create a Prescribed-criteria table (see below) and transfer <strong>all</strong> the requirements from the Must column into the Requirements column.</p>
+<p><img alt="criteria table" src="../../_images/criteria.png" /></p>
+</section>
+<section id="self-determined-criteria">
+<h3>Self Determined Criteria<a class="headerlink" href="#self-determined-criteria" title="Permalink to this heading">#</a></h3>
+<p>Self-determined criteria are any criteria that, rather than being prescribed, have been identified throughout the Explore phase.</p>
+<p>In our workflow, we have also identified our self-determined requirements. They are in the <strong>Should</strong> column of the Requirements table. Create a Self-determined criteria table and transfer <strong>all</strong> the requirements from the Should column into the Requirements column.</p>
+<p><img alt="criteria table" src="../../_images/criteria.png" /></p>
 </section>
 </section>
 <div class="toctree-wrapper compound">
@@ -649,12 +661,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table">Requirements Table</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table-summary">Requirements Table Summary</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-table">Requirements Table</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria-table">Criteria Table</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criteria-table-summary">Criteria Table Summary</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prescribed-criteria">Prescribed Criteria</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#self-determined-criteria">Self Determined Criteria</a></li>
 </ul>
 </li>
 </ul>

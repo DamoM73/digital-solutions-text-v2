@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Core Concepts</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-1_basic_features.html">Basic Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-2_good_practice.html">Good Practice</a></li>
@@ -547,10 +547,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#needs-and-wants">Needs and wants</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-components-and-features">Elements Components and Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constraints">Constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeline">Timeline</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impacts">Impacts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-requirements">Functional requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-functional-requirements">Non-functional requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-environment">Development Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#template">Template</a></li>
 </ul>
             </nav>
         </div>
@@ -564,17 +575,149 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="mind-map-unit-1">
 <h1>Mind Map — Unit 1<a class="headerlink" href="#mind-map-unit-1" title="Permalink to this heading">#</a></h1>
-<section id="needs-and-wants">
-<h2>Needs and wants<a class="headerlink" href="#needs-and-wants" title="Permalink to this heading">#</a></h2>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Project scope is a way to set boundaries on your project and define exactly what goals, deadlines, and project deliverables you’ll be working towards. By clarifying your project scope, you can ensure you hit your project goals and objectives without delay or overwork <span id="id1">[<a class="reference internal" href="../bibliography.html#id41" title="Julia Martins. How to write a project scope in 8 easy steps • asana. 12 2022. URL: https://asana.com/resources/project-scope (visited on 2024-01-14).">Martins, 2022</a>]</span>.</p>
+</div></blockquote>
+<p>The scope of the project provides detail about how the solution will address the problem and what types of things will be produced or delivered. The scope defines the boundaries of the system (or problem) that is being addressed.</p>
+<p>The scope includes:</p>
+<ul class="simple">
+<li><p><strong>Problem Statement:</strong> The problem statement is an overall descriptive statement about what needs to be solved. It includes a justification for the project (explains why is it being undertaken in the first place).</p></li>
+<li><p><strong>Objectives:</strong> These are the overall project goals that will meet the needs of your customers.</p></li>
+<li><p><strong>Deliverables:</strong> The deliverables are the objects are that need to be produced.</p></li>
+<li><p><strong>Constraints and Limitations:</strong> What are the barriers or things that must be adhered to? These are the requirement specifications for the project.</p></li>
+<li><p><strong>Timeline:</strong> How long the project will run for and any specific milestones or checkpoints along the way.</p></li>
+</ul>
+<div class="attention admonition">
+<p class="admonition-title">The Developer RPG</p>
+<p>In all you projects are role-playing a software developer. When you are thinking about your project, you need to think as a developer, not a student. For example, when describing your project, don’t mention submitting your assignment to plagarism checkers, or the submission requirements, as these are features of an assignment. You <em>should</em> refer to the delivery date, rather than the due date.</p>
+</div>
+<section id="problem-statement">
+<h3>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>A problem statement is a concise and unbiased description of the problem or issues a process improvement project seeks to address. <span id="id2">[<a class="reference internal" href="../bibliography.html#id2" title="Indeed Editorial Team. What is a problem statement: definition and example. 04 2021. URL: https://au.indeed.com/career-advice/career-development/problem-statement (visited on 2022-06-03).">Team, 2021</a>]</span></p>
+</div></blockquote>
+<p>Use this step-by-step guide to craft your problem statement:</p>
+<ul class="simple">
+<li><p><strong>Identify the problem:</strong> Before you write your problem statement, you must first identify the problem.</p></li>
+<li><p><strong>Begin your statement with your ideal situation:</strong> Next, your problem statement should identify the ideal environment if the problem didn’t exist.</p></li>
+<li><p><strong>Describe the current gaps:</strong> Concisely identify what the current environment looks like and then focus on the 5Ws and H:</p>
+<ul>
+<li><p><strong>who</strong> does the problem affect?</p></li>
+<li><p><strong>what</strong> is causing the problem?</p></li>
+<li><p><strong>where</strong> does the problem occur? Is it location specific?</p></li>
+<li><p><strong>when</strong> does the problem occurs? <strong>When</strong> did it became a problem? Is it time specific?</p></li>
+<li><p><strong>why</strong> is it a problem? <strong>Why</strong> must it be resolve?</p></li>
+<li><p><strong>how</strong> much of an impact does the problem have on individuals or groups?</p></li>
+</ul>
+</li>
+<li><p><strong>State the consequences of the problem:</strong> Highlight and quantify the consequences of the problem.</p></li>
+<li><p><strong>Propose addressing the problem:</strong> Identify how you will make progress towards reaching the desired goal.</p></li>
+</ul>
 </section>
-<section id="elements-components-and-features">
-<h2>Elements Components and Features<a class="headerlink" href="#elements-components-and-features" title="Permalink to this heading">#</a></h2>
+<section id="objectives">
+<h3>Objectives<a class="headerlink" href="#objectives" title="Permalink to this heading">#</a></h3>
+<p>What are the project’s overall goals that will meet the needs of your customers. These describe the primary impacts that your solution will have on the users. For example, is your objective to entertain the user, to make them more efficient or to improve their heath?</p>
 </section>
-<section id="constraints">
-<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this heading">#</a></h2>
+<section id="deliverables">
+<h3>Deliverables<a class="headerlink" href="#deliverables" title="Permalink to this heading">#</a></h3>
+<p>What are the objects are that you need to produced? This may be the final product, or it may be a milestone towards this product.</p>
+<p>In Unit 1 you will have two different deliverables:</p>
+<ul class="simple">
+<li><p><strong>FIA1</strong> — technical proposal</p></li>
+<li><p><strong>FIA2</strong> — low-fidelity prototype</p></li>
+</ul>
+</section>
+<section id="timeline">
+<h3>Timeline<a class="headerlink" href="#timeline" title="Permalink to this heading">#</a></h3>
+<p>How long the project will run for? What are the specific milestones or checkpoints along the way? The criteria sheet will contain explicit checkpoints.</p>
+</section>
 </section>
 <section id="impacts">
 <h2>Impacts<a class="headerlink" href="#impacts" title="Permalink to this heading">#</a></h2>
+<p>From our <a class="reference internal" href="../2_concepts/3-3_impacts.html"><span class="doc std std-doc">Digital Solutions Impacts</span></a> choose three or four impacts that you think would naturally align with your solution. In your mind map create a node for each impact and then identify the impact’s:</p>
+<ul class="simple">
+<li><p><strong>Title</strong> — what will you name this impact (replaces Impact 1, Impact 2 etc.)</p></li>
+<li><p><strong>Category</strong> — personal, social, economic or environmental</p></li>
+<li><p><strong>Description</strong> — brief description of your impact</p></li>
+<li><p><strong>Indicator of success</strong> — describe succinctly how you will know if you will achieve the impact.</p></li>
+</ul>
+</section>
+<section id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">#</a></h2>
+<p>The solution requirements specify the capabilities that are critically required for the solution to effectively meet the needs of the users and deliver value.</p>
+<p>At this stage of the investigation, it is important to note that we are identifying the requirements that have been asked of us, <em>we are not identifying everything we want to do</em>. These requirements might be explicitly listed under a requirements heading, or they may be implied throughout the criteria sheet and stimulus.</p>
+<p>Solution requirements can generally be broken down into two different categories: functional requirements and non-functional requirements.</p>
+<section id="functional-requirements">
+<h3>Functional requirements<a class="headerlink" href="#functional-requirements" title="Permalink to this heading">#</a></h3>
+<p>These are concerned with what the system needs to do.</p>
+<p>These can include:</p>
+<ul class="simple">
+<li><p><strong>User interface</strong> criteria concerning:</p>
+<ul>
+<li><p>User’s input hardware (eg. mouse and keyboard)</p></li>
+<li><p>User’s output hardware (eg. screen, speakers)</p></li>
+<li><p>The way a user will interact with the system including the specific <strong><a href="https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html" target="_blank">UI components</a></strong> that they might use (eg. a date picker)</p></li>
+</ul>
+</li>
+<li><p><strong>Coded components</strong> presented as a list of specific code modules that need to be developed in order to:</p>
+<ul>
+<li><p>Process user input</p></li>
+<li><p>Calculate results using data</p></li>
+<li><p>Store or display data</p></li>
+<li><p>Also address the quality of the code through <strong><a class="reference internal" href="../2_concepts/2-2_good_practice.html"><span class="doc std std-doc">good practice</span></a></strong>:</p>
+<ul>
+<li><p>Effective - can solve the identified problem</p></li>
+<li><p>Efficient - uses minimal resources to solve identified problem</p></li>
+<li><p>Maintainable - code that is easy to read and modify</p></li>
+<li><p>Reliable - operate without producing errors or fail at a task</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Data</strong> criteria concerning:</p>
+<ul>
+<li><p>Data to be used (eg. any data that will be supplied or entered)</p></li>
+<li><p>File formats to be used (eg. files saved as .txt files)</p></li>
+<li><p><strong><a class="reference internal" href="../2_concepts/2-1_basic_features.html#data-structures"><span class="std std-ref">Data Structures</span></a></strong> to be used</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="non-functional-requirements">
+<h3>Non-functional requirements<a class="headerlink" href="#non-functional-requirements" title="Permalink to this heading">#</a></h3>
+<p>Non-functional requirements specify the manner or the environment in which a solution is intended to operate.</p>
+<p>They are concern with such matters as:</p>
+<ul class="simple">
+<li><p><strong><a class="reference internal" href="../2_concepts/3-1_useability_principles.html"><span class="doc std std-doc">Usability principles</span></a>:</strong></p>
+<ul>
+<li><p>Accessibility — the ability to be used by many different people, even people with disabilities.</p></li>
+<li><p>Effectiveness — the ability of users to use the system to do the work they need to do. Effectiveness includes reliability, which means the solution needs to be constant, dependable, consistent and repeatable.</p></li>
+<li><p>Safety — the ability for users to make errors and recover from the mistake.</p></li>
+<li><p>Utility — the ability of the system to provide all the functionality that users need.</p></li>
+<li><p>Learnability — how easy the system is to learn</p></li>
+</ul>
+</li>
+<li><p><strong>Performance:</strong> How quickly and efficiently the solution works and how it responds to commands and requests for action</p></li>
+<li><p><strong>Security:</strong> The level of protection the system and its data are expected to have in place</p></li>
+<li><p><strong>Design:</strong> The visual elements expected from the solution</p></li>
+<li><p><strong>Documentation:</strong> The type and extent of written documentation expected or needed (eg. help manuals)</p></li>
+<li><p><strong>Economic:</strong> The financial component of the project. Is there a budget? Can it have a running cost?</p></li>
+<li><p><strong>Legal:</strong> The legal frameworks that the project must work within. The most common are privacy and intellectual property laws.</p></li>
+</ul>
+<p><strong>Note:</strong> it is possible, depending on the project, that some of the nodes could be empty.</p>
+</section>
+</section>
+<section id="development-environment">
+<h2>Development Environment<a class="headerlink" href="#development-environment" title="Permalink to this heading">#</a></h2>
+<p>This talks about the tools (software and hardware) you, as the developer, will use. This node will be completed before you start the generation phase, but most of the tools can be found on the <strong><a class="reference internal" href="../1_introduction/2_tools_used.html"><span class="doc std std-doc">Tools Used</span></a></strong> page.</p>
+<p>At this stage, add the tools you think you will use. You can add more later.</p>
+</section>
+<section id="template">
+<h2>Template<a class="headerlink" href="#template" title="Permalink to this heading">#</a></h2>
+<p>Below is a starting template for your mind maps</p>
+<p><img alt="mind map starting template" src="../../_images/mm_template_unit_1.png" /></p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
@@ -588,7 +731,7 @@ document.write(`
 <li><p>Understand and describe personal, social and economic impacts</p></li>
 <li><p>Explore existing user interfaces to identify pitfalls and useful solutions</p></li>
 <li><p>Explore existing user interfaces to determine how user characteristics influence the user-interface requirements and user experience for problems and solutions in relation to the useability principles
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id3">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 </section>
@@ -657,10 +800,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#needs-and-wants">Needs and wants</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#elements-components-and-features">Elements Components and Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#constraints">Constraints</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scope">Scope</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives">Objectives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deliverables">Deliverables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeline">Timeline</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#impacts">Impacts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements">Requirements</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-requirements">Functional requirements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-functional-requirements">Non-functional requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#development-environment">Development Environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#template">Template</a></li>
 </ul>
   </nav></div>
 

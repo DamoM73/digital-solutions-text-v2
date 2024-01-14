@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../2_concepts/1_introduction.html">Core Concepts</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../2_concepts/2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-1_basic_features.html">Basic Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../2_concepts/2-2_good_practice.html">Good Practice</a></li>
@@ -524,7 +524,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -540,6 +542,22 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mind-map">What is a mind map?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-we-using-mind-maps">How are we using mind maps?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-xmind">Using XMind</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-nodes">Editing Nodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-nodes">Adding new nodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-features">Additional Features</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -551,6 +569,58 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="mind-map">
 <h1>Mind Map<a class="headerlink" href="#mind-map" title="Permalink to this heading">#</a></h1>
+<section id="what-is-a-mind-map">
+<h2>What is a mind map?<a class="headerlink" href="#what-is-a-mind-map" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>A Mind Map is an easy way to brainstorm thoughts organically without worrying about order and structure. It allows you to visually structure your ideas to help with analysis and recall <span id="id1">[<a class="reference internal" href="../bibliography.html#id40" title="mindmapping. What is a mind map? 2022. URL: https://www.mindmapping.com/mind-map (visited on 2024-01-12).">mindmapping, 2022</a>]</span>.</p>
+</div></blockquote>
+<p>The flexibility of mind maps has seen them adopted by industry, education, government, NGOs, the arts and more. They are used for diverse purposes including brain storming, note-taking, and structing content. They’re a useful method of externalising your thoughts, depicting the idea along with its connections to other ideas.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/g1uLyMoSji8?si=-NnMecWWXWQhHvZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="how-are-we-using-mind-maps">
+<h2>How are we using mind maps?<a class="headerlink" href="#how-are-we-using-mind-maps" title="Permalink to this heading">#</a></h2>
+<p>In Digital Solutions we will be using mind maps for a very specific purpose. It will be our starting point for every project. Each Digital Solutions project will have a wide range of issues that you will need to consider. The mind map will represent your consideration of these issues.</p>
+<p>The nodes in the mind map <strong>should not be detailed</strong>. They should represent the issues that you will address in detail during the rest of the project. In this wat, it forms a to do list for you project.</p>
+<p>Since the EDGE process is not completely linear, you will continue to add to the mind map as your project progresses. Each time you think of a new issue that you need to resolve, add it to your mind map. This will act as a reminder to complete the task, as well as demonstrate your thinking throughout the process.</p>
+</section>
+<section id="using-xmind">
+<h2>Using XMind<a class="headerlink" href="#using-xmind" title="Permalink to this heading">#</a></h2>
+<p>We will be using <a class="reference internal" href="../1_introduction/2_tools_used.html#xmind-install"><span class="std std-ref">XMind</span></a> to create our mind maps. If you are familiar with other software, you are welcome to use it, but all examples and instructions will relate to XMind.</p>
+<section id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this heading">#</a></h3>
+<p>The names of the various nodes are taken from a family structure. Refer to the image below:</p>
+<ul class="simple">
+<li><p><strong>Parent Node</strong> — nodes that have other node spawning off them</p></li>
+<li><p><strong>Child Node</strong> — nodes that spawn off other (parent) nodes</p>
+<ul>
+<li><p>Note: it is possible for a node to be both a parent and a child node. This is the same as real life where a parent is a parent to their child, as well as a child to their parent.</p></li>
+</ul>
+</li>
+<li><p><strong>Sibling Nodes</strong> — nodes that spawn from the same parent node</p></li>
+<li><p><strong>Active Node</strong> — the currently editable node</p></li>
+</ul>
+<p><img alt="mind map nodes example" src="../../_images/mind_map.png" /></p>
+</section>
+<section id="editing-nodes">
+<h3>Editing Nodes<a class="headerlink" href="#editing-nodes" title="Permalink to this heading">#</a></h3>
+<p>XMind always starts with a Central Topic node with four Main Idea (child) nodes.</p>
+<p>To edit the content of a node, simply click on that node and type. Use the Enter key to save the change</p>
+</section>
+<section id="adding-new-nodes">
+<h3>Adding new nodes<a class="headerlink" href="#adding-new-nodes" title="Permalink to this heading">#</a></h3>
+<p>The addition of new nodes is in relation to the active node.</p>
+<p>You can use the XMind toolbar of keyboard shortcuts to add Topics and Subtopics.</p>
+<p><img alt="xmind toolbar" src="../../_images/xmind_toolbar.png" /></p>
+<ul class="simple">
+<li><p><strong>Topic</strong> — (<code class="docutils literal notranslate"><span class="pre">enter</span></code> key) will add a topic as a sibling to the active topic.</p></li>
+<li><p><strong>Subtopic</strong> — (<code class="docutils literal notranslate"><span class="pre">tab</span></code> key) will add a topic as a child to the active topic.</p></li>
+</ul>
+</section>
+<section id="additional-features">
+<h3>Additional Features<a class="headerlink" href="#additional-features" title="Permalink to this heading">#</a></h3>
+<p>If you would like to explore the additional features of XMind, they provide a range of <strong><a href="https://xmind.app/video-guide/" target="_blank">video tutorials</a></strong>.</p>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -609,6 +679,28 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-mind-map">What is a mind map?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-are-we-using-mind-maps">How are we using mind maps?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#using-xmind">Using XMind</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#editing-nodes">Editing Nodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adding-new-nodes">Adding new nodes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-features">Additional Features</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

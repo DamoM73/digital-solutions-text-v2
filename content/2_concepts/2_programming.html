@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Basic Features" href="2-1_basic_features.html" />
-    <link rel="prev" title="Introduction" href="1_introduction.html" />
+    <link rel="prev" title="Core Concepts" href="1_introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -176,7 +176,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1_introduction.html">Core Concepts</a></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Programming Concepts</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="2-1_basic_features.html">Basic Features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="2-2_good_practice.html">Good Practice</a></li>
@@ -548,6 +548,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-digital-problems">What are Digital Problems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-thinking">Computational thinking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition">Decomposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-recognition">Pattern Recognition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstraction">Abstraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmic-thinking">Algorithmic Thinking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-thinking">Systems thinking</a></li>
 </ul>
             </nav>
         </div>
@@ -593,12 +601,85 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</section>
+<section id="computational-thinking">
+<h2>Computational thinking<a class="headerlink" href="#computational-thinking" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Computational thinking describes the processes and approaches we draw on when thinking about how a computer can help us to solve complex problems and create systems. We often draw on logical reasoning, algorithms, decomposition, abstraction, and patterns and generalisation when thinking computationally. <span id="id3">[<a class="reference internal" href="../bibliography.html#id9" title="Digital Technologies Hub. Topics: computational thinking. 2021. URL: https://www.digitaltechnologieshub.edu.au/teach-and-assess/classroom-resources/topics/computational-thinking/ (visited on 2022-06-03).">Hub, 2021</a>]</span></p>
+</div></blockquote>
+<section id="decomposition">
+<h3>Decomposition<a class="headerlink" href="#decomposition" title="Permalink to this heading">#</a></h3>
+<p>Decomposition is the process of breaking down complex problems into smaller, more manageable parts. With decomposition, problems that
+seem overwhelming at first become much more manageable. Problems we encounter are ultimately comprised of smaller problems we can more easily address. This process of breaking down problems enables us to analyze the different aspects of them, ground our thinking, and guide ourselves to an end point.</p>
+<p><img alt="decomposition" src="../../_images/decomposition.png" /></p>
+<p>When decomposing, ask:</p>
+<ul class="simple">
+<li><p>What are the different parts of the problem you are trying to solve?</p></li>
+<li><p>What are the different tasks that I need to do to solve this problem?</p></li>
+<li><p>Can I easily complete each of tasks? If not, how can they be broken down further?</p></li>
+<li><p>If I complete all the sub-tasks, will the problem be solved?</p></li>
+</ul>
+</section>
+<section id="pattern-recognition">
+<h3>Pattern Recognition<a class="headerlink" href="#pattern-recognition" title="Permalink to this heading">#</a></h3>
+<p>As it sounds, pattern recognition is all about recognizing patterns. Specifically, with computational thinking, pattern recognition occurs
+as people study the different decomposed problems.</p>
+<p>Through analysis, students recognize patterns or connections among the different pieces of the larger problem. These patterns can be
+both shared similarities and shared differences. This concept is essential to building understanding amid dense information and goes
+well beyond recognizing patterns amongst sequences of numbers, characters, or symbols.</p>
+<p><img alt="pattern_recognition" src="../../_images/patter_recognition.png" /></p>
+<p>When recognising patterns, ask:</p>
+<ul class="simple">
+<li><p>Are there any patterns that you observe?</p></li>
+<li><p>Do you notice any similarities between this problem and something else you have already solved?</p></li>
+<li><p>Do any of the parts of this problem share qualities?</p></li>
+<li><p>Does anything repeat?</p></li>
+</ul>
+</section>
+<section id="abstraction">
+<h3>Abstraction<a class="headerlink" href="#abstraction" title="Permalink to this heading">#</a></h3>
+<p>Also called, pattern generalization, abstraction enables us to navigate complexity and find relevance and clarity at scale. Decomposition and pattern recognition broke down the complex, and abstraction figures out how to work with the different parts efficiently and accurately. This process occurs through filtering out the extraneous and irrelevant in order to identify what’s most important and connect each decomposed problem.</p>
+<p>Abstraction is similar to the selective filtering function in our brains that gates the neural signals with which we are constantly
+bombarded so we can make sense of our world and focus on what’s essential to us.</p>
+<p><img alt="abstraction" src="../../_images/abstraction.png" /></p>
+<p>When abstracting, ask:</p>
+<ul class="simple">
+<li><p>What are you trying to solve?</p></li>
+<li><p>Which details are important in solving this problem?</p></li>
+<li><p>What can you leave out? What information is unnecessary?</p></li>
+<li><p>Can you describe this problem as something more basic?</p></li>
+</ul>
+</section>
+<section id="algorithmic-thinking">
+<h3>Algorithmic Thinking<a class="headerlink" href="#algorithmic-thinking" title="Permalink to this heading">#</a></h3>
+<p>An algorithm is a process or formula for calculating answers, sorting data, and automating tasks; and algorithmic thinking is the process for developing an algorithm.</p>
+<p>With algorithmic thinking, students endeavor to construct a step-by-step process for solving a problem so that the work is replicable by humans or computers. Algorithmic thinking is a derivative of computer science and the process to develop code and program applications. This approach automates the problem-solving process by creating a series of systematic, logical steps that intake a defined set of inputs and produce a defined set of outputs based on these.</p>
+<p>In other words, algorithmic thinking is not solving for a specific answer; instead, it solves how to build a sequential, complete, and
+replicable process that has an end point – an algorithm. Designing an algorithm helps students to both communicate and interpret clear
+instructions for a predictable, reliable output. As was said earlier, this is the crux of computational thinking.</p>
+<p><img alt="algorithm" src="../../_images/algorithm.png" /></p>
+<p>Then creating algorithms, ask:</p>
+<ul class="simple">
+<li><p>What’s the first step you can take to solve this problem?</p></li>
+<li><p>What are the steps that you need to do to solve this problem?</p></li>
+<li><p>In what order should you complete those steps?</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="systems-thinking">
+<h2>Systems thinking<a class="headerlink" href="#systems-thinking" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>A system is a set of interrelated elements that make a unified whole. Systems are everywhere — for example, the interdisciplinary team involve in supporting someone, the Human Resources in your organization, the circulatory system in your body, the predator/prey relationships in nature, the ignition system in your car, and so on. Ecological systems and human social systems are living systems; human-made systems such as cars and washing machines are nonliving (sic) systems. <span id="id4">[<a class="reference internal" href="../bibliography.html#id3" title="Person Direct Clinical Service. System thinking simple definition &amp; overview. 2017. URL: https://www.pdcsllc.org/PDCS/media/PDCS-Resouces/PDF-System-Thinking-Overview-Implications.pdf (visited on 2022-06-03).">Service, 2017</a>]</span></p>
+</div></blockquote>
+<p>Systems thinking means looking at a problem in a way that considers the whole picture. It’s about understanding how different parts of a system work together and affect each other. This approach helps you see how each part contributes to the system’s overall function. By doing this, you can better handle complex problems and deal with uncertainty and risk. It’s important to see how solutions, systems, and society are all connected.</p>
+<p>In systems thinking, you need to identify and explore how different parts of a system interact. This involves understanding that everything in a system depends on each other. For example, if something changes in one part of a system, it can impact other parts, and this can even affect bigger systems like the economy or society as a whole.</p>
 <div class="admonition-unit-1-subject-matter-covered admonition">
 <p class="admonition-title">Unit 1 subject matter covered:</p>
 <ul class="simple">
 <li><p>Understand the constituents of a digital problem</p></li>
 <li><p>Understand that simple algorithms consist of input, process and output at various stages
-<span id="id3">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id5">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 </section>
@@ -642,7 +723,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Introduction</p>
+        <p class="prev-next-title">Core Concepts</p>
       </div>
     </a>
     <a class="right-next"
@@ -670,6 +751,14 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-digital-problems">What are Digital Problems?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#computational-thinking">Computational thinking</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decomposition">Decomposition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pattern-recognition">Pattern Recognition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#abstraction">Abstraction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmic-thinking">Algorithmic Thinking</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#systems-thinking">Systems thinking</a></li>
 </ul>
   </nav></div>
 
