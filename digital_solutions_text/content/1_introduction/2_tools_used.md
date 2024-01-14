@@ -7,7 +7,7 @@ The following technologies are used throughout this text.
 We will be using Python as our programming language for this course. Specifically we will be using Python 3.12 or later (3.1X).
 
 ```{admonition} I already have Python
-:class: attention
+:class: caution
 You may laready have Python installed on your computer. This may be from a previous course, or macOS sometimes comes packaged with Python 2.7 (don't not use this or remove it, it is part of your operating system).
 
 Irrespective, is it best that you install and use the latest version of Python. This will provide you with access to all the features described in this course and ensure that you are using the fastest and most secure version of the language.
@@ -144,9 +144,10 @@ In Unit 2 we will working with databases using SQL (Structured Query Language), 
 
 ## Other Tools
 
+(xmind_install)=
 ### XMind
 
-An important step in analysing and planning in Digital Solutions is using mind maps. There are many mind mapping tools available, both desktop and online, but I recommend that we use **<a href="https://xmind.app/" target="_blank">Xmind</a>**. The free version has all the features we need. When it asks you to create an account, choose the skip option.
+An important step in analysing and planning in Digital Solutions is using mind maps. There are many mind mapping tools available, both desktop and online, but I recommend that we use **<a href="https://xmind.app/" target="_blank">Xmind</a>**. The free version has all the features we need. **When it asks you to create an account, choose the skip option**.
 
 ### Diagrams dot net
 

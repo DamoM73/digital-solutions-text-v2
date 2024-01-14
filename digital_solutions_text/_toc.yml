@@ -38,7 +38,6 @@ parts:
       - file: content/2_concepts/5-2_networking
       - file: content/2_concepts/5-3_data_security
       
-
   - caption: Explore
     chapters:
     - file: content/3_explore/1_introduction

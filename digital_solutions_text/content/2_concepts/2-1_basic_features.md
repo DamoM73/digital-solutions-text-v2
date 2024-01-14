@@ -176,6 +176,7 @@ In Python, an iterable is a container that holds things. You can go through each
 
 ---
 
+(data_structures)=
 ## Data Structures
 
 > Data structures are used to store data in an organized form. No matter what problem are you solving, in one way or another you have to deal with data — whether it's an employee's salary, stock prices, a grocery list, or even a simple telephone directory. {cite}`ulhaq_2018_the`
