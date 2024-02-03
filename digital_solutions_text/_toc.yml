@@ -19,6 +19,7 @@ parts:
       - file: content/2_concepts/2-2_good_practice
       - file: content/2_concepts/2-3_paradigms
       - file: content/2_concepts/2-4_pseudocode
+      - file: content/2_concepts/2-5_dev_env
 
     - file: content/2_concepts/3_user_experience
       sections:
