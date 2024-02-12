@@ -4,22 +4,31 @@ The are many good practices to following when programming. These need to be appl
 
 ## Dependability
 
-In systems engineering, dependability is a measure of a system's reliability, maintainability.
+In systems engineering, dependability is a measure of a system's maintainability and reliability.
 
 ### Maintainability
 
 ![code quality XKCD](assets/code_quality.png)
 
-Within developer circles, it is frequently said that code is read more often than it is written. This is especially true when there are multiple programmers working on the same code. But it is also relevant in our situation where the other programmer may be a classmate or teacher lending assistance, or even the 'future' you trying to work out what 'present' has done.
+Within developer circles, it is frequently said that code is read more often than it is written. This is especially true when there are multiple programmers working on the same code. But it is also relevant in our situation where the other programmer may be a classmate or teacher lending assistance, or even the 'future' you trying to work out what 'present' you has done.
 
-Maintainability is about writing code that is easy-to-read and dissect. It reduces other programmers cognitive load by limiting the amount of information they need to memorise in order to understand your code. This way, other programmers can easily modify parts related to a required change, without risking a chain reaction of errors in dependant modules.
-
-```{admonition} What is cognative load
+```{admonition} What is cognative load?
 :class: tip
 Cognitive load refers to the mental effort and capacity required for processing information and completing tasks. It can be caused by complex or poorly organized information, which can overwhelm a person's cognitive abilities. 
 
 Reducing cognitive load is essential because it helps improve learning, problem-solving, and overall task performance. To reduce cognitive load, you can simplify information presentation, use clear and concise language, provide step-by-step instructions, and minimize distractions to make tasks more manageable and less mentally taxing.
 ```
+
+Maintainability is about writing code that is easy-to-read and dissect. It reduces other programmers cognitive load by limiting the amount of information they need to memorise in order to understand your code. This way, other programmers can easily modify the parts related to a required change, without risking a chain reaction of errors in dependant modules.
+
+```{admonition} What dependant modules?
+:class: tip
+If your code import and uses another module, your code is dependant on this module. This means any changes to the functioning of the imported module *can* break your code. This can be future complicated by the fact that the module you imported is most likely dependant on other modules, and these modules may also be dependant on other modules.
+
+The series of libraries or modules where each one relies on the functionality provided by the previous one is call a **dependancy chain**.
+```
+
+![dependency XKCD](assets/dependency.png)
 
 There are some simple steps that you can take to improve your code's maintainability:
 
@@ -47,6 +56,8 @@ Reliability is the probability of a program producing an error or failing to pro
 - In Digital Solutions, testing and useability considerations contribute to reliability.
 - For example, predicting where errors are likely to occur (whether user or systems related) can inform mindful use programming constructs.
 
+---
+
 ## Efficiency
 
 A situation in which a system or machine uses minimal resources such as time and processing power while still achieving its goals; there are two types of efficiency:
@@ -57,11 +68,15 @@ Algorithmic efficiency refers to the reliability, speed and programming methodol
 
 ### Code Efficiency
 
-Code efficiency is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance; its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.
+Code efficiency is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance. Its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.
+
+---
 
 ## Effectiveness
 
 A measure of the success of the algorithm to solve an identified problem; depending on the complexity of the problem, this could be tested with a desk check, but generally, the effectiveness of an algorithm can only be determined after the code has been generated and then tested within the appropriate context;
+
+---
 
 ## Testing
 
@@ -71,10 +86,13 @@ Testing is the process of systematically verifying that your code works correctl
 - **unit testing** testing that single components operate in the right way.
 - **integrated testing:** testing multiple components at the same time.
 
+---
 
 ## Debugging
 
 In computer programming and software development, debugging is the process of finding and resolving bugs (defects or problems that prevent correct operation) within computer programs, software, or systems. Many programming languages and software development tools also offer programs to aid in debugging, known as debuggers.
+
+---
 
 ## Error Correction
 
@@ -109,6 +127,8 @@ Logic errors can be caused by the programmer:
 
 A runtime errors is an error that takes place during the running of a program. For example, writing a program that tries to access the sixth item in a list that only contains five items. A runtime error is likely to crash the program.
 
+---
+
 ## Coding Conventions
 
 ### Code Simplicity
@@ -119,18 +139,18 @@ Code simplicity refers to the practice of writing computer programs in a clear, 
 
 Python has naming rules and naming conventions.
 
-Naming rules will cause an error if they are not followed.
+**Naming rules** will cause an error if they are not followed.
 
-**Naming rules:**
+Naming rules:
   
 - names can only contain letters, numbers and the `_` character
 - names cannot contain spaces
 - names cannot start with a number
 - names are case sensitive (eg. `age` is not the same as `Age`)
 
-Naming conventions are about conveying extra information to the reader. Not following naming conventionss will not stop the programming from running, but the loss of the extra information will reduce the maintainability of the code.
+**Naming conventions** are about conveying extra information to the reader. Not following naming conventions will not stop the programming from running, but the loss of the extra information will reduce the maintainability of the code.
 
-**Naming conventions:**
+Naming conventions:
 
 - use descriptive names that explain the value stored in them:
   - `d = 30` &rarr; bad
@@ -151,8 +171,8 @@ Naming conventions are about conveying extra information to the reader. Not foll
 
 If your follow the naming convention of using meaningful names, most of your code should make sense without comments. Never-the-less, there are two places where comments are still needed:
 
-- **doc strings** &mdash; these are the comment that comes straight after a function definition. It explains a functions inputs, processes and outputs.
-- **block comments** &mdash; these are used when your code is tricky and how it works is not obvious to another person. 
+- **doc strings** &mdash; the comment that comes straight after a function definition. It explains a function's inputs, processes and outputs.
+- **block comments** &mdash; these are used when your code is tricky and it is not obvious how it works.
 
 ### Code Portability
 

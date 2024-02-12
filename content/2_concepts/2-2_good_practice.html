@@ -590,17 +590,23 @@ document.write(`
 <p>The are many good practices to following when programming. These need to be applied right from when the algorithms are first being developed.</p>
 <section id="dependability">
 <h2>Dependability<a class="headerlink" href="#dependability" title="Permalink to this heading">#</a></h2>
-<p>In systems engineering, dependability is a measure of a system’s reliability, maintainability.</p>
+<p>In systems engineering, dependability is a measure of a system’s maintainability and reliability.</p>
 <section id="maintainability">
 <h3>Maintainability<a class="headerlink" href="#maintainability" title="Permalink to this heading">#</a></h3>
 <p><img alt="code quality XKCD" src="../../_images/code_quality.png" /></p>
-<p>Within developer circles, it is frequently said that code is read more often than it is written. This is especially true when there are multiple programmers working on the same code. But it is also relevant in our situation where the other programmer may be a classmate or teacher lending assistance, or even the ‘future’ you trying to work out what ‘present’ has done.</p>
-<p>Maintainability is about writing code that is easy-to-read and dissect. It reduces other programmers cognitive load by limiting the amount of information they need to memorise in order to understand your code. This way, other programmers can easily modify parts related to a required change, without risking a chain reaction of errors in dependant modules.</p>
+<p>Within developer circles, it is frequently said that code is read more often than it is written. This is especially true when there are multiple programmers working on the same code. But it is also relevant in our situation where the other programmer may be a classmate or teacher lending assistance, or even the ‘future’ you trying to work out what ‘present’ you has done.</p>
 <div class="tip admonition">
-<p class="admonition-title">What is cognative load</p>
+<p class="admonition-title">What is cognative load?</p>
 <p>Cognitive load refers to the mental effort and capacity required for processing information and completing tasks. It can be caused by complex or poorly organized information, which can overwhelm a person’s cognitive abilities.</p>
 <p>Reducing cognitive load is essential because it helps improve learning, problem-solving, and overall task performance. To reduce cognitive load, you can simplify information presentation, use clear and concise language, provide step-by-step instructions, and minimize distractions to make tasks more manageable and less mentally taxing.</p>
 </div>
+<p>Maintainability is about writing code that is easy-to-read and dissect. It reduces other programmers cognitive load by limiting the amount of information they need to memorise in order to understand your code. This way, other programmers can easily modify the parts related to a required change, without risking a chain reaction of errors in dependant modules.</p>
+<div class="tip admonition">
+<p class="admonition-title">What dependant modules?</p>
+<p>If your code import and uses another module, your code is dependant on this module. This means any changes to the functioning of the imported module <em>can</em> break your code. This can be future complicated by the fact that the module you imported is most likely dependant on other modules, and these modules may also be dependant on other modules.</p>
+<p>The series of libraries or modules where each one relies on the functionality provided by the previous one is call a <strong>dependancy chain</strong>.</p>
+</div>
+<p><img alt="dependency XKCD" src="../../_images/dependency.png" /></p>
 <p>There are some simple steps that you can take to improve your code’s maintainability:</p>
 <ul class="simple">
 <li><p><strong>follow the style guide</strong></p>
@@ -642,6 +648,7 @@ document.write(`
 </ul>
 </section>
 </section>
+<hr class="docutils" />
 <section id="efficiency">
 <h2>Efficiency<a class="headerlink" href="#efficiency" title="Permalink to this heading">#</a></h2>
 <p>A situation in which a system or machine uses minimal resources such as time and processing power while still achieving its goals; there are two types of efficiency:</p>
@@ -651,13 +658,15 @@ document.write(`
 </section>
 <section id="code-efficiency">
 <h3>Code Efficiency<a class="headerlink" href="#code-efficiency" title="Permalink to this heading">#</a></h3>
-<p>Code efficiency is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance; its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.</p>
+<p>Code efficiency is directly linked with algorithmic efficiency and the speed of runtime execution for software, and is the key element in ensuring high performance. Its goal is to reduce resource consumption and completion time as much as possible with minimum risk to the business or operating environment, e.g. using a FOR loop instead of repetitive IF, THEN and ELSE statements where appropriate.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="effectiveness">
 <h2>Effectiveness<a class="headerlink" href="#effectiveness" title="Permalink to this heading">#</a></h2>
 <p>A measure of the success of the algorithm to solve an identified problem; depending on the complexity of the problem, this could be tested with a desk check, but generally, the effectiveness of an algorithm can only be determined after the code has been generated and then tested within the appropriate context;</p>
 </section>
+<hr class="docutils" />
 <section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">#</a></h2>
 <p>Testing is the process of systematically verifying that your code works correctly. There are three types of testing which occur during the development and generation of code:</p>
@@ -667,10 +676,12 @@ document.write(`
 <li><p><strong>integrated testing:</strong> testing multiple components at the same time.</p></li>
 </ul>
 </section>
+<hr class="docutils" />
 <section id="debugging">
 <h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">#</a></h2>
 <p>In computer programming and software development, debugging is the process of finding and resolving bugs (defects or problems that prevent correct operation) within computer programs, software, or systems. Many programming languages and software development tools also offer programs to aid in debugging, known as debuggers.</p>
 </section>
+<hr class="docutils" />
 <section id="error-correction">
 <h2>Error Correction<a class="headerlink" href="#error-correction" title="Permalink to this heading">#</a></h2>
 <p>Dealing with errors is an integral part of any development process, to the point where seasoned coders eventually become experts at navigating and fixing the errors they create.</p>
@@ -703,6 +714,7 @@ document.write(`
 <p>A runtime errors is an error that takes place during the running of a program. For example, writing a program that tries to access the sixth item in a list that only contains five items. A runtime error is likely to crash the program.</p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="coding-conventions">
 <h2>Coding Conventions<a class="headerlink" href="#coding-conventions" title="Permalink to this heading">#</a></h2>
 <section id="code-simplicity">
@@ -712,16 +724,16 @@ document.write(`
 <section id="naming-conventions">
 <h3>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this heading">#</a></h3>
 <p>Python has naming rules and naming conventions.</p>
-<p>Naming rules will cause an error if they are not followed.</p>
-<p><strong>Naming rules:</strong></p>
+<p><strong>Naming rules</strong> will cause an error if they are not followed.</p>
+<p>Naming rules:</p>
 <ul class="simple">
 <li><p>names can only contain letters, numbers and the <code class="docutils literal notranslate"><span class="pre">_</span></code> character</p></li>
 <li><p>names cannot contain spaces</p></li>
 <li><p>names cannot start with a number</p></li>
 <li><p>names are case sensitive (eg. <code class="docutils literal notranslate"><span class="pre">age</span></code> is not the same as <code class="docutils literal notranslate"><span class="pre">Age</span></code>)</p></li>
 </ul>
-<p>Naming conventions are about conveying extra information to the reader. Not following naming conventionss will not stop the programming from running, but the loss of the extra information will reduce the maintainability of the code.</p>
-<p><strong>Naming conventions:</strong></p>
+<p><strong>Naming conventions</strong> are about conveying extra information to the reader. Not following naming conventions will not stop the programming from running, but the loss of the extra information will reduce the maintainability of the code.</p>
+<p>Naming conventions:</p>
 <ul class="simple">
 <li><p>use descriptive names that explain the value stored in them:</p>
 <ul>
@@ -752,8 +764,8 @@ document.write(`
 <h3>Commenting<a class="headerlink" href="#commenting" title="Permalink to this heading">#</a></h3>
 <p>If your follow the naming convention of using meaningful names, most of your code should make sense without comments. Never-the-less, there are two places where comments are still needed:</p>
 <ul class="simple">
-<li><p><strong>doc strings</strong> — these are the comment that comes straight after a function definition. It explains a functions inputs, processes and outputs.</p></li>
-<li><p><strong>block comments</strong> — these are used when your code is tricky and how it works is not obvious to another person.</p></li>
+<li><p><strong>doc strings</strong> — the comment that comes straight after a function definition. It explains a function’s inputs, processes and outputs.</p></li>
+<li><p><strong>block comments</strong> — these are used when your code is tricky and it is not obvious how it works.</p></li>
 </ul>
 </section>
 <section id="code-portability">
