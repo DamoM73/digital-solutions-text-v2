@@ -107,9 +107,7 @@ In sequential code, the program executes the first line, then the next line, the
 
 A condition is the way that a computer asks a question. Computers can only generate two possible  responses to questions. Yes and No, or more precisely, True and False. A more formal definition is that a condition is a logical expression that evaluates to true or false. 
 
-#### In Python
-
-Conditions are part of `if` and `while` statements. They have the syntax of `value` `operator` `value` with six possible operators:
+In Python conditions are part of `if` and `while` statements. They have the syntax of `value` `operator` `value` with six possible operators:
 
 - Equals: a == b
 - Not Equals: a != b
@@ -142,8 +140,8 @@ In Python there are two main type of branching:
     - it is only used when all the conditions before it are `False`
   - **<a href="https://www.w3schools.com/python/python_conditions.asp" target="_blank">if ... elif ... else refresher</a>**
 - **`match case`** statement:
-  - takes a variable and attempts to match it to various options.
-  - similar to the `switch` statements in other languages\
+  - takes a variable and attempts to match it to various options
+  - similar to the `switch` statements in other languages
   - introduced in Python 3.10
   - **<a href="https://learnpython.com/blog/python-match-case-statement/" target="_blank">to learn more go here</a>**
 
@@ -151,19 +149,19 @@ In Python there are two main type of branching:
 
 Iteration control structures, also called loops, repeat a block of code, with a minor change each time. There are three types of iteration control structures:
 
-- indefinite iteration &mdash; used when you don’t know how many times the loop will need to run
+- **indefinite iteration** &mdash; used when you don’t know how many times the loop will need to run
   - **pre-test loops** (WHILE loops) will check if a condition is `True` before executing the loop's code block
   - **post-test loop** (REPEAT loops) will execute the loop's code block and then check is a condition is `True`
-- definite iteration &mdash; used when you do know how many times the loop will need to run.
+- **definite iteration** &mdash; used when you do know how many times the loop will need to run.
   - **counted loop** (FOR loops) will execute a loop a specific number of times.
 
-Python does not have a post-test loop structure. The iteration control structures are:
+Python does not have a post-test loop structure. The iteration control structures in Python are:
 
-- `while` loop
+- **`while`** loop
   - start with a condition test
   - repeats the code block until the condition test is `False`
   - **<a href="https://www.w3schools.com/python/python_while_loops.asp" target="_blank">while loop refresher</a>**
-- `for` loop
+- **`for`** loop
   - is provided with a Python iterable
   - will take the first item from the iterable and use it to execute the code block
   - will then move onto the next item in the iterable, until there are no items left.
@@ -229,33 +227,36 @@ The syntax of a computer language is the set of rules that defines the combinati
 
 ## Libraries
 
-A software library refers to a collection of files, programs, routines, scripts, or functions referenced in the programming code. Python comes with a standard library which provides basic functionality. Python allows you to install additional libraries, as well as create your own.
+A software library refers to a collection of files, programs, routines, scripts, or functions referenced in the programming code. Python comes with a standard library which provides basic functionality. Python allows you to install additional libraries, as well as create your own. We are installing additional libraries when we use `pip`.
 
 ---
 
 ## Classes
 
-Classes and object are basic building blocks in object-oriented programming languages. A class is written by a programmer in a defined structure to create an object in an object-oriented programming language. It defines a set of properties and methods that are common to all objects of one type.
+Classes and object are basic building blocks in object-oriented programming languages. A class is written by a programmer in a defined structure to create an object in an object-oriented programming language. It defines a set of attributes and methods that are common to all objects of one type.
 
-For example, a class could be a car, which could have a colour field, four tire fields, and a drive method. 
+For example, a class could be a car, which could have a colour attribute, four tire attributes, and a drive method. 
 
-Another related class could be a truck, which would have similar fields, but not be exactly the same as a car. Both a car and a truck could be a kind of a third class which could be called a vehicle class. In this way, the programmer could create the parts of the program that are the same for both the car and the truck in programming the vehicle class, yet the programmer would be free to program how a car is different from a truck without duplicating all of the programming.
+Another related class could be a truck, which would have similar attributes, but not be exactly the same as a car. 
+
+Both a car and a truck could be a kind of a third class which could be called a vehicle class. In this way, the programmer could create the parts of the program that are the same for both the car and the truck in programming the vehicle class, yet the programmer would be free to program how a car is different from a truck without duplicating all of the programming.
 
 Although there is only one class called "car", there could be many objects that are created from the class called "car". And, although there is only one class that is called "truck", many objects of type truck could be created from this class. The class, vehicle, is actually general and there would probably not be any objects that were only of the class "vehicle". 
 
 Inside of classes are two kinds of things: 
 
-- **methods:** can store the code for doing actions; in this example you could have a drive method and a brake method, and maybe a turnRight and turnLeft method. 
-- **attributes:** store data; you could have a colour field, a speed field and a size field. 
+- **attributes:** store data; you could have a colour attribute, a speed attribute and a size attribute.
+- **methods:** can store the code for doing actions; in this example you could have a drive method and a brake method, and maybe a turn_right and turn_left method. 
 
-You can call methods by first making an object of the Car or Truck class, and call it for example `ferrari`, and doing `ferrari.methodName()`. In this case, if we wanted to make the vehicle move, we could do `ferrari.drive(distance)`.
+You can call methods by first making an object of the Car or Truck class, and call it for example `ferrari`, and doing `ferrari.method_name()`. In this case, if we wanted to make the vehicle move, we could do `ferrari.drive(distance)`.
+
+We learnt about classes and object orientated programming in the **<a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon course</a>**.
 
 ---
 
 ## Operations
 
 Operators are used to perform operations on variables and values.
-
 
 Python divides the operators in the following groups:
 
