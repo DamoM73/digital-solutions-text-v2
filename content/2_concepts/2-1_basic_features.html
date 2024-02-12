@@ -559,10 +559,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential">Sequential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-python">In Python</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a></li>
 </ul>
@@ -732,9 +729,7 @@ document.write(`
 <section id="conditions">
 <h3>Conditions<a class="headerlink" href="#conditions" title="Permalink to this heading">#</a></h3>
 <p>A condition is the way that a computer asks a question. Computers can only generate two possible  responses to questions. Yes and No, or more precisely, True and False. A more formal definition is that a condition is a logical expression that evaluates to true or false.</p>
-<section id="in-python">
-<h4>In Python<a class="headerlink" href="#in-python" title="Permalink to this heading">#</a></h4>
-<p>Conditions are part of <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> statements. They have the syntax of <code class="docutils literal notranslate"><span class="pre">value</span></code> <code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">value</span></code> with six possible operators:</p>
+<p>In Python conditions are part of <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">while</span></code> statements. They have the syntax of <code class="docutils literal notranslate"><span class="pre">value</span></code> <code class="docutils literal notranslate"><span class="pre">operator</span></code> <code class="docutils literal notranslate"><span class="pre">value</span></code> with six possible operators:</p>
 <ul class="simple">
 <li><p>Equals: a == b</p></li>
 <li><p>Not Equals: a != b</p></li>
@@ -743,7 +738,6 @@ document.write(`
 <li><p>Greater than: a &gt; b</p></li>
 <li><p>Greater than or equal to: a &gt;= b</p></li>
 </ul>
-</section>
 </section>
 <section id="selection">
 <h3>Selection<a class="headerlink" href="#selection" title="Permalink to this heading">#</a></h3>
@@ -781,8 +775,8 @@ document.write(`
 </li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">match</span> <span class="pre">case</span></code></strong> statement:</p>
 <ul>
-<li><p>takes a variable and attempts to match it to various options.</p></li>
-<li><p>similar to the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statements in other languages\</p></li>
+<li><p>takes a variable and attempts to match it to various options</p></li>
+<li><p>similar to the <code class="docutils literal notranslate"><span class="pre">switch</span></code> statements in other languages</p></li>
 <li><p>introduced in Python 3.10</p></li>
 <li><p><strong><a href="https://learnpython.com/blog/python-match-case-statement/" target="_blank">to learn more go here</a></strong></p></li>
 </ul>
@@ -793,28 +787,28 @@ document.write(`
 <h3>Iteration<a class="headerlink" href="#iteration" title="Permalink to this heading">#</a></h3>
 <p>Iteration control structures, also called loops, repeat a block of code, with a minor change each time. There are three types of iteration control structures:</p>
 <ul class="simple">
-<li><p>indefinite iteration — used when you don’t know how many times the loop will need to run</p>
+<li><p><strong>indefinite iteration</strong> — used when you don’t know how many times the loop will need to run</p>
 <ul>
 <li><p><strong>pre-test loops</strong> (WHILE loops) will check if a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code> before executing the loop’s code block</p></li>
 <li><p><strong>post-test loop</strong> (REPEAT loops) will execute the loop’s code block and then check is a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code></p></li>
 </ul>
 </li>
-<li><p>definite iteration — used when you do know how many times the loop will need to run.</p>
+<li><p><strong>definite iteration</strong> — used when you do know how many times the loop will need to run.</p>
 <ul>
 <li><p><strong>counted loop</strong> (FOR loops) will execute a loop a specific number of times.</p></li>
 </ul>
 </li>
 </ul>
-<p>Python does not have a post-test loop structure. The iteration control structures are:</p>
+<p>Python does not have a post-test loop structure. The iteration control structures in Python are:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">while</span></code> loop</p>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">while</span></code></strong> loop</p>
 <ul>
 <li><p>start with a condition test</p></li>
 <li><p>repeats the code block until the condition test is <code class="docutils literal notranslate"><span class="pre">False</span></code></p></li>
 <li><p><strong><a href="https://www.w3schools.com/python/python_while_loops.asp" target="_blank">while loop refresher</a></strong></p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">for</span></code> loop</p>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">for</span></code></strong> loop</p>
 <ul>
 <li><p>is provided with a Python iterable</p></li>
 <li><p>will take the first item from the iterable and use it to execute the code block</p></li>
@@ -904,21 +898,23 @@ document.write(`
 <hr class="docutils" />
 <section id="libraries">
 <h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading">#</a></h2>
-<p>A software library refers to a collection of files, programs, routines, scripts, or functions referenced in the programming code. Python comes with a standard library which provides basic functionality. Python allows you to install additional libraries, as well as create your own.</p>
+<p>A software library refers to a collection of files, programs, routines, scripts, or functions referenced in the programming code. Python comes with a standard library which provides basic functionality. Python allows you to install additional libraries, as well as create your own. We are installing additional libraries when we use <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
 </section>
 <hr class="docutils" />
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
-<p>Classes and object are basic building blocks in object-oriented programming languages. A class is written by a programmer in a defined structure to create an object in an object-oriented programming language. It defines a set of properties and methods that are common to all objects of one type.</p>
-<p>For example, a class could be a car, which could have a colour field, four tire fields, and a drive method.</p>
-<p>Another related class could be a truck, which would have similar fields, but not be exactly the same as a car. Both a car and a truck could be a kind of a third class which could be called a vehicle class. In this way, the programmer could create the parts of the program that are the same for both the car and the truck in programming the vehicle class, yet the programmer would be free to program how a car is different from a truck without duplicating all of the programming.</p>
+<p>Classes and object are basic building blocks in object-oriented programming languages. A class is written by a programmer in a defined structure to create an object in an object-oriented programming language. It defines a set of attributes and methods that are common to all objects of one type.</p>
+<p>For example, a class could be a car, which could have a colour attribute, four tire attributes, and a drive method.</p>
+<p>Another related class could be a truck, which would have similar attributes, but not be exactly the same as a car.</p>
+<p>Both a car and a truck could be a kind of a third class which could be called a vehicle class. In this way, the programmer could create the parts of the program that are the same for both the car and the truck in programming the vehicle class, yet the programmer would be free to program how a car is different from a truck without duplicating all of the programming.</p>
 <p>Although there is only one class called “car”, there could be many objects that are created from the class called “car”. And, although there is only one class that is called “truck”, many objects of type truck could be created from this class. The class, vehicle, is actually general and there would probably not be any objects that were only of the class “vehicle”.</p>
 <p>Inside of classes are two kinds of things:</p>
 <ul class="simple">
-<li><p><strong>methods:</strong> can store the code for doing actions; in this example you could have a drive method and a brake method, and maybe a turnRight and turnLeft method.</p></li>
-<li><p><strong>attributes:</strong> store data; you could have a colour field, a speed field and a size field.</p></li>
+<li><p><strong>attributes:</strong> store data; you could have a colour attribute, a speed attribute and a size attribute.</p></li>
+<li><p><strong>methods:</strong> can store the code for doing actions; in this example you could have a drive method and a brake method, and maybe a turn_right and turn_left method.</p></li>
 </ul>
-<p>You can call methods by first making an object of the Car or Truck class, and call it for example <code class="docutils literal notranslate"><span class="pre">ferrari</span></code>, and doing <code class="docutils literal notranslate"><span class="pre">ferrari.methodName()</span></code>. In this case, if we wanted to make the vehicle move, we could do <code class="docutils literal notranslate"><span class="pre">ferrari.drive(distance)</span></code>.</p>
+<p>You can call methods by first making an object of the Car or Truck class, and call it for example <code class="docutils literal notranslate"><span class="pre">ferrari</span></code>, and doing <code class="docutils literal notranslate"><span class="pre">ferrari.method_name()</span></code>. In this case, if we wanted to make the vehicle move, we could do <code class="docutils literal notranslate"><span class="pre">ferrari.drive(distance)</span></code>.</p>
+<p>We learnt about classes and object orientated programming in the <strong><a href="https://damom73.github.io/python-oop-with-deepest-dungeon/" target="_blank">Deepest Dungeon course</a></strong>.</p>
 </section>
 <hr class="docutils" />
 <section id="operations">
@@ -1260,10 +1256,7 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#control-structures">Control Structures</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sequential">Sequential</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#in-python">In Python</a></li>
-</ul>
-</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions">Conditions</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selection">Selection</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration">Iteration</a></li>
 </ul>
