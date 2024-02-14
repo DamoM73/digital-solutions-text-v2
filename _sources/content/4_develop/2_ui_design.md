@@ -1,12 +1,12 @@
 # UI Design
 
-The UI Design is the most important way to demonstrate your application of the **[useability principles](../2_concepts/3-1_useability_principles.md)**. There are many different ways to symbolise a UI. In our course, you will only need to use wireframes mock-ups, but it is useful to know and understand what the other methods are used for.
+The UI Design is the most important way to demonstrate your application of the **[useability principles](../2_concepts/3-1_useability_principles.md)** and **[visual communication principles](../2_concepts/3-2_visual_communication.md)**. There are many different ways to symbolise a UI. In our course, you will only need to use wireframes mock-ups, but it is useful to know and understand what the other methods are used for.
 
 ## Sketching
 
 User Interface sketching refers to sketching out the basics of a user interface, most often using pen and paper. It occurs before getting into wireframing, prototyping and coding. Sketches are quick and dirty. Don't worry about the specifics of design or functionality in a UI sketch. A UI sketch should simply serve to help you eliminate bad ideas and brainstorm good ideas about how to bring your proposed product to the screen. The sketch should help you translate idea to interface in the minimum possible time. At the end of the UI sketching process you should know that you've figured out the absolute best way to bring your product to the screen.
 
-![ui sketched](./assets/ui_sketch.jpg)
+![UI sketched](./assets/ui_sketch.jpg)
 
 ## Wireframe
 
@@ -18,7 +18,7 @@ A wireframe gives you a rough idea of the input, how it is processed, how the sc
 
 In other words, a wireframe describes the basic structure, functions, and content of the page.
 
-![ui wireframe](./assets/wireframe-example.png)
+![UI wireframe](./assets/wireframe-example.png)
 
 ### Wireframe Summary
 
@@ -33,7 +33,7 @@ We will be using two different tools for creating mock-ups:
 - **FIA1:** Adobe XD
 - **FIA2:** QT Designer
 
-![ui mock-up](./assets/mockup-example.png)
+![UI mock-up](./assets/mockup-example.png)
 
 ### Mock-up Summary
 
@@ -47,7 +47,7 @@ A prototype is a final visual image of the app. The prototype acts just like the
 
 An application interface flowchart connects the screens of an application together to indicate the flow from one screen to another as a result of user interactions. Interactions are sometime written on the flowlines.
 
-![ui flowchart](./assets/ui_flowchart.jpg)
+![UI flowchart](./assets/ui_flowchart.jpg)
 
 ## Annotating
 
