@@ -12,6 +12,7 @@ In Digital Solutions we will focus on five usability principles:
 - utility
 - learnability
 
+(accessibility)=
 ## Accessibility
 
 Accessibility is the ability to be used by many different people, even people with disabilities.
@@ -26,6 +27,7 @@ Accessibility guidelines are based on four principles (often referred to as POUR
 
 ![accessibility summary poster](assets/up_accessability.png)
 
+(effectiveness)=
 ## Effectiveness
 
 Effectiveness is the ability of users to use the system to do the work they need to do.
@@ -43,6 +45,7 @@ You can improve the effectiveness of your solution by addressing:
 
 ![effectiveness summary poster](assets/up_effectiveness.png)
 
+(learnability)=
 ## Learnability
 
 Learnability is concerned with how easy a system is to learn.
@@ -80,6 +83,7 @@ Here are some strategies to enhance UI learnability:
 
 ![learnability summary poster](assets/up_learnability.png)
 
+(safety)=
 ## Safety
 
 Safety is the ability for users to make errors and recover from the mistake.
@@ -112,6 +116,7 @@ When addressing the safety of a digital solution you need to consider:
 
 ![safety summary poster](assets/up_safety.png)
 
+(utility)=
 ## Utility
 
 Utility is the ability of the system to provide all the functionality that users need. Does the solution have all the components needed to complete the task.
