@@ -38,6 +38,7 @@ Event-driven programming is commonly used in graphical user interfaces (GUIs), w
 
 ---
 
+(mvc)=
 ## MVC Architecture Pattern
 
 The MVC architecture pattern turns complex application development into a much more manageable process. It is example of modularization and decomposition.
