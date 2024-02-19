@@ -525,7 +525,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -541,6 +543,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branching-example">Branching Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-example">Iteration Example</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -552,6 +563,96 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="desk-check">
 <h1>Desk Check<a class="headerlink" href="#desk-check" title="Permalink to this heading">#</a></h1>
+<p>Desk checking is a manual (non computerised) technique for checking the logic of an algorithm. The person performing the desk check effectively acts as the computer, using pen and paper to record results. The desk checker carefully follows the algorithm being careful to rigidly adhere to the logic specified. The desk check can expose problems with the algorithm.</p>
+<p>Desk checks are useful to check an algorithm (before coding) thereby confirming that the algorithm works as expected and reduces the likelihood of creating programs with logic errors. Another benefit of a desk check is that it confirms to the programmer/designer that the algorithm performs as intended.</p>
+<div class="tip admonition">
+<p class="admonition-title">Types of programming errors</p>
+<p>There are three categories of computer errors:</p>
+<ul class="simple">
+<li><p><strong>Syntax errors</strong>:</p>
+<ul>
+<li><p>occur due to violations of language grammar rules, eg. failing to put quotes around a string.</p></li>
+<li><p>typically identified and corrected using development environment feedback</p></li>
+</ul>
+</li>
+<li><p><strong>Runtime errors</strong></p>
+<ul>
+<li><p>arise during program execution due to unexpected conditions, eg. the user entering a string instead of a integer.</p></li>
+<li><p>require condition checks and error handling mechanisms for resolution</p></li>
+</ul>
+</li>
+<li><p><strong>Logic errors</strong>:</p>
+<ul>
+<li><p>result in incorrect outcomes due to flaws in the program’s design or logic, eg. a condition using <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> instrad of <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>.</p></li>
+<li><p>requires thorough testing and debugging to understand and correct the program’s behaviour.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>A desk check is normally done as a table with columns for:</p>
+<ul class="simple">
+<li><p>Pseudo code line number - Pseudo code doesn’t normally have lines numbers, but these are necessary in a desk check to specify the line(s) being executed</p></li>
+<li><p>One column per variable used.</p>
+<ul>
+<li><p>The columns should be in alphabetical order on variable name with the variable name at the top of the column.</p></li>
+<li><p>As the algorithm is executed, the new values of the variables are put in the appropriate column.</p></li>
+<li><p>Show working for calculations.</p></li>
+<li><p>If variable names consist of a number of words it is permissible to put a space between each word in the name so that the name fits better in the column by wrapping to the next line. e.g. the variable column heading discount Price could be used rather than the actual variable name discountPrice.</p></li>
+</ul>
+</li>
+<li><p>condition column.</p>
+<ul>
+<li><p>The result of the condition will be true (T) or false (F).</p></li>
+<li><p>As the algorithm is executed, conditions are evaluated and the details are recorded in the column.</p></li>
+<li><p>Show working when evaluating the conditions.</p></li>
+<li><p>This is used whenever a condition is evaluated - IF WHILE or FOR statements all have explicit or implicit conditions.</p></li>
+</ul>
+</li>
+<li><p>Input/Output</p>
+<ul>
+<li><p>used to show what is input by the user and displayed by the program.</p></li>
+<li><p>Show inputs with: the variable name, a “?” and the value input e.g. price ? 200.</p></li>
+<li><p>Show outputs with the variable name, an =, and the value displayed (or just the value displayed) e.g. discountPrice= 180 .</p></li>
+</ul>
+</li>
+</ul>
+<section id="branching-example">
+<h2>Branching Example<a class="headerlink" href="#branching-example" title="Permalink to this heading">#</a></h2>
+<p>Consider the following pseudocode:</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>1 BEGIN calcPrice()
+2    INPUT price
+3    IF price &gt; 100 THEN
+4        discount = price * 15 / 100
+5        price = price - discount
+6    ENDIF
+7    DISPLAY price
+8 END
+</pre></div>
+</div>
+<p>Since it has branching logic, you will need to run a test for each of the branches (in this case two).</p>
+<p>Inputs: price = $200<br />
+Correct results: price = $170
+<img alt="desk check 1" src="../../_images/desk_check_1.png" /></p>
+<p>Inputs: price = $50<br />
+Correct results: price = $50.
+<img alt="desk check 2" src="../../_images/desk_check_2.png" /></p>
+</section>
+<section id="iteration-example">
+<h2>Iteration Example<a class="headerlink" href="#iteration-example" title="Permalink to this heading">#</a></h2>
+<p>Consider the following pseudocode:</p>
+<div class="highlight-pseudocode notranslate"><div class="highlight"><pre><span></span>1 BEGIN calcSquares()
+2    DISPLAY &quot;X&quot;, &quot;X Squared&quot;
+3    FOR x = 1 TO 3
+4        xSquared = x * x
+5        DISPLAY x, xSquared
+6    NEXT x
+7    ENDFOR
+8    DISPLAY &quot;-----------&quot;
+9 END
+</pre></div>
+</div>
+<p><img alt="desk check 3" src="../../_images/desk_check_3.png" /></p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -610,6 +711,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#branching-example">Branching Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iteration-example">Iteration Example</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
