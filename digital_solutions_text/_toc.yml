@@ -105,6 +105,7 @@ parts:
 
     - file: content/4_develop/6_data_requirements
       sections:
+      - file: content/4_develop/6-1_data_requirements_unit_1
       - file: content/4_develop/6-2_data_requirements_unit_2
       - file: content/4_develop/6-3_data_requirements_unit_3
       - file: content/4_develop/6-4_data_requirements_unit_4

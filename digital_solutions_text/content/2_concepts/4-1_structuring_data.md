@@ -41,6 +41,7 @@ The key features of relational databases include:
 
 Relational databases are widely used in various applications, from business systems to web applications, due to their ability to handle structured data and complex relationships efficiently. Popular relational database management systems (RDBMS) include MySQL, PostgreSQL, Oracle, SQL Server, and SQLite.
 
+(normalisation=)
 ### Normalisation
 
 > Normalization is a database design technique that reduces data redundancy and eliminates undesirable characteristics like Insertion, Update and Deletion Anomalies. Normalization rules divides larger tables into smaller tables and links them using relationships. The purpose of Normalisation ... is to eliminate redundant (repetitive) data and ensure data is stored logically. {cite}`richardpeterson_2019_what`
