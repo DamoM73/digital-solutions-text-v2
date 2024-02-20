@@ -268,6 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6_data_requirements.html">Data Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6-1_data_requirements_unit_1.html">Data Requirements → Unit 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-2_data_requirements_unit_2.html">Data Requirements → Unit 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-3_data_requirements_unit_3.html">Data Requirements → Unit 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-4_data_requirements_unit_4.html">Data Requirements → Unit 4</a></li>
@@ -548,6 +549,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dfd">Creating a DFD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-identify-the-external-entities">Step 1: Identify the External Entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-identify-processes">Step 2: Identify Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-identify-data-stores">Step 3: Identify Data Stores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-identify-data-flows">Step 4: Identify Data Flows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-decompose-to-next-level">Step 5: Decompose to next level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-in-project">Record in project</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
             </nav>
@@ -562,6 +572,121 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-flow-diagram">
 <h1>Data Flow Diagram<a class="headerlink" href="#data-flow-diagram" title="Permalink to this heading">#</a></h1>
+<blockquote>
+<div><p>A data flow diagram (DFD) maps out the flow of information for any process or system. It uses defined symbols like rectangles, circles and arrows, plus short text labels, to show data inputs, outputs, storage points and the routes between each destination. <span id="id1">[<a class="reference internal" href="../bibliography.html#id32" title="Lucidchart. What is a data flow diagram | lucidchart. 2017. URL: https://www.lucidchart.com/pages/data-flow-diagram (visited on 2022-07-29).">Lucidchart, 2017</a>]</span></p>
+</div></blockquote>
+<div class="important admonition">
+<p class="admonition-title">Database Design Scenario</p>
+<p>The first step in designing a database is developing an understanding of the scenario. For learning about designing databases we will use the following example:</p>
+<p>Student Subject Database</p>
+<ul class="simple">
+<li><p>Students can log into to access:</p>
+<ul>
+<li><p>their current enrolment</p></li>
+<li><p>subject grades when entered</p></li>
+</ul>
+</li>
+<li><p>Teachers can log into to:</p>
+<ul>
+<li><p>Enter student grades</p></li>
+</ul>
+</li>
+<li><p>Each subject is only offered once, with one teacher</p></li>
+<li><p>Each student can enrol in each subject only once.</p></li>
+</ul>
+</div>
+<p>A Data Flow Diagram is made up from four components:</p>
+<ul class="simple">
+<li><p>external entities</p></li>
+<li><p>process</p></li>
+<li><p>data stores</p></li>
+<li><p>data flows</p></li>
+</ul>
+<p>We will use the following symbols to represent the components of DFD</p>
+<p><img alt="DFD Components" src="../../_images/dfd_symbols.png" /></p>
+<section id="creating-a-dfd">
+<h2>Creating a DFD<a class="headerlink" href="#creating-a-dfd" title="Permalink to this heading">#</a></h2>
+<section id="step-1-identify-the-external-entities">
+<h3>Step 1: Identify the External Entities<a class="headerlink" href="#step-1-identify-the-external-entities" title="Permalink to this heading">#</a></h3>
+<p>External entities are:</p>
+<ul class="simple">
+<li><p>an outside system that sends or receives data, communicating with the system being diagrammed</p></li>
+<li><p>the sources and destinations of information entering or leaving the system</p></li>
+<li><p>may be an outside organization or person, a computer system or a business system</p></li>
+<li><p>should be labelled using a noun.</p></li>
+</ul>
+<p>To design your DFD, consider the scenario you are addressing. What are the external sources and the destinations of data? That is, from outside of the application you are developing, who or what provides data or receives data?</p>
+<p>Data can be provided in various ways:</p>
+<ul class="simple">
+<li><p>user typing into an interface</p></li>
+<li><p>user clicking on a button</p></li>
+<li><p>another system providing a file</p></li>
+<li><p>sensor readings</p></li>
+</ul>
+<p>Data can be received in various ways:</p>
+<ul class="simple">
+<li><p>displayed on a screen</p></li>
+<li><p>printed to paper</p></li>
+<li><p>sent a file</p></li>
+<li><p>lights and metre readings</p></li>
+</ul>
+<p>When considering the <strong>Student Subject Database</strong> all data is sourced from and destined for two external entities:</p>
+<p><img alt="DFD Step 1" src="../../_images/dfd_step_1.png" /></p>
+</section>
+<section id="step-2-identify-processes">
+<h3>Step 2: Identify Processes<a class="headerlink" href="#step-2-identify-processes" title="Permalink to this heading">#</a></h3>
+<p>Processes are:</p>
+<ul class="simple">
+<li><p>any process that changes the data, producing an output</p></li>
+<li><p>may perform computations, or sort data based on logic, or direct the data flow based on business rules</p></li>
+<li><p>a short label is used to describe the process, such as “Submit payment”, and should be a verb or verb phrase</p></li>
+</ul>
+<p>Once again consider the scenario you are designing a database for. What things within the systems do some kind of work on the data passing through it. Referring back to your Use Case Diagram, can help in identifying these.</p>
+<p>In our <strong>Student Subject Database</strong> there are three processes can occur:</p>
+<p><img alt="DFD Step 2" src="../../_images/dfd_step_2.png" /></p>
+</section>
+<section id="step-3-identify-data-stores">
+<h3>Step 3: Identify Data Stores<a class="headerlink" href="#step-3-identify-data-stores" title="Permalink to this heading">#</a></h3>
+<p>Data stores are</p>
+<ul class="simple">
+<li><p>files or repositories that hold information for later use, such as a database table or a membership form</p></li>
+<li><p>each data store receives a simple label, such as “Orders”, along with a designation (D: digital, M: manual, T: temporary)</p></li>
+</ul>
+<p>To identify your data stores, look for groupings of associated information. In our course we will generally have one datastore, unless the prescribed requirements indicate otherwise.</p>
+<p>We only have one data store (a digital one) in our <strong>Student Subject Database</strong> example</p>
+<p><img alt="DFD Step 3" src="../../_images/dfd_step_3.png" /></p>
+</section>
+<section id="step-4-identify-data-flows">
+<h3>Step 4: Identify Data Flows<a class="headerlink" href="#step-4-identify-data-flows" title="Permalink to this heading">#</a></h3>
+<p>Data flows represent:</p>
+<ul class="simple">
+<li><p>the route that data takes between the external entities, processes and data stores</p></li>
+<li><p>portrays the interface between the other components and is shown with arrows</p></li>
+<li><p>typically labelled with a short data name, like “Billing details”, which is a noun.</p></li>
+</ul>
+<p>Important rules when adding data flows:</p>
+<ul class="simple">
+<li><p>each process should have at least one data flow in and at least one data flow out</p></li>
+<li><p>every data flow must connect to at least one process</p></li>
+<li><p>each entity should have at least one data flow to or from a process</p></li>
+</ul>
+<p>Here is the <strong>Student Subject Database</strong> example with all data flows added</p>
+<p><img alt="DFD Step 4" src="../../_images/dfd_step_4.png" /></p>
+</section>
+<section id="step-5-decompose-to-next-level">
+<h3>Step 5: Decompose to next level<a class="headerlink" href="#step-5-decompose-to-next-level" title="Permalink to this heading">#</a></h3>
+<p>To keep DFDs to a manageable size, each process can be decomposed into more detail.</p>
+<p>The top level DFD is called <strong>Level 0</strong> and should only involve around seven processes. If you have more than seven, then you need to combine processes that logically fit together.</p>
+<p>Once the Level 0 DFD is created identify any processes that require more detail. Each of these processes are then decomposed into another DFD. The first deposition is called <strong>Level 1</strong> and subsequent decompositions, Level 2, Level 3 etc.</p>
+<p>The processes in the subsequent decompositions inherent their numbering from their parent process.</p>
+<p>We will decompose the Log in process in the <strong>Student Subject Database</strong> example.</p>
+<p><img alt="DFD Step 5" src="../../_images/dfd_step_5.png" /></p>
+</section>
+<section id="record-in-project">
+<h3>Record in project<a class="headerlink" href="#record-in-project" title="Permalink to this heading">#</a></h3>
+<p>All levels of your final DFD will be included in your project documentation.</p>
+</section>
+</section>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p><img alt="DFD summary poster" src="../../_images/data_flow_diagram.png" /></p>
@@ -633,6 +758,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-a-dfd">Creating a DFD</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-identify-the-external-entities">Step 1: Identify the External Entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-identify-processes">Step 2: Identify Processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-identify-data-stores">Step 3: Identify Data Stores</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-identify-data-flows">Step 4: Identify Data Flows</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-decompose-to-next-level">Step 5: Decompose to next level</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-in-project">Record in project</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
 </ul>
   </nav></div>

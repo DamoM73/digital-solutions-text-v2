@@ -268,6 +268,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="6_data_requirements.html">Data Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="6-1_data_requirements_unit_1.html">Data Requirements → Unit 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-2_data_requirements_unit_2.html">Data Requirements → Unit 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-3_data_requirements_unit_3.html">Data Requirements → Unit 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="6-4_data_requirements_unit_4.html">Data Requirements → Unit 4</a></li>
@@ -549,6 +550,11 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-entity-relationship-diagram">EDR — Entity Relationship Diagram</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-identify-the-entities">Step 1: Identify the entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-attributes">Step 2: Add attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-establish-relationships-and-cardinality">Step 3: Establish relationships and cardinality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-resolve-many-to-many-relationships">Step 4: Resolve many-to-many relationships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-identify-the-foreign-keys">Step 5: Identify the foreign keys</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-summary">EDR Summary</a></li>
 </ul>
 </li>
@@ -566,10 +572,127 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="erd-and-relational-schema">
 <h1>ERD and Relational Schema<a class="headerlink" href="#erd-and-relational-schema" title="Permalink to this heading">#</a></h1>
+<p>The purpose of the ERD and Relational Schemas are to design and represent the database that forms your application’s datastore (model).</p>
+<div class="important admonition">
+<p class="admonition-title">Database Design Scenario</p>
+<p>The first step in designing a database is developing an understanding of the scenario. For learning about designing databases we will use the following example:</p>
+<p>Student Subject Database</p>
+<ul class="simple">
+<li><p>Students can log into to access:</p>
+<ul>
+<li><p>their current enrolment</p></li>
+<li><p>subject grades when entered</p></li>
+</ul>
+</li>
+<li><p>Teachers can log into to:</p>
+<ul>
+<li><p>Enter student grades</p></li>
+</ul>
+</li>
+<li><p>Each subject is only offered once, with one teacher</p></li>
+<li><p>Each student can enrol in each subject only once.</p></li>
+</ul>
+</div>
 <section id="edr-entity-relationship-diagram">
 <h2>EDR — Entity Relationship Diagram<a class="headerlink" href="#edr-entity-relationship-diagram" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>An Entity Relationship Diagram (ERD) is a type of flowchart that illustrates how “entities” such as people, objects or concepts relate to each other within a system. <span id="id1">[<a class="reference internal" href="../bibliography.html#id33" title="LucidChart. Er diagram tutorial. 2017. URL: https://www.lucidchart.com/pages/er-diagrams (visited on 2022-07-30).">LucidChart, 2017</a>]</span></p>
+</div></blockquote>
+<p>In following the process of creating a ERD, you will create a relational database that complies with <strong><a class="reference internal" href="../glossary.html#term-normalisation"><span class="xref myst std std-term"></span></a></strong> rules to the level of Third Normal Form.</p>
+<p>Watch the videos below to understand designing an ERD.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QpdhBUYk7Kk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-CuY5ADwn24" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>We will use the following steps to create our Entity Relationship Diagrams, using the <strong>Student Subject Database</strong> as an example:</p>
+<section id="step-1-identify-the-entities">
+<h3>Step 1: Identify the entities<a class="headerlink" href="#step-1-identify-the-entities" title="Permalink to this heading">#</a></h3>
+<p>Look at the scenario and the data needs and identify all the entities that the database needs to store. Entities can be people, places, things or processes.</p>
+<p>In the <strong>Student Subject Database</strong> we have the following entities.</p>
+<p><img alt="ERD Step 1" src="../../_images/erd_step_1.png" /></p>
+</section>
+<section id="step-2-add-attributes">
+<h3>Step 2: Add attributes<a class="headerlink" href="#step-2-add-attributes" title="Permalink to this heading">#</a></h3>
+<p>Refer back to your data needs and requirements and add the relevant attributes to each entity.</p>
+<p>The <strong>Student Subject Database</strong> ERD after stage 2:</p>
+<p><img alt="ERD Step 2" src="../../_images/erd_step_2.png" /></p>
+</section>
+<section id="step-3-establish-relationships-and-cardinality">
+<h3>Step 3: Establish relationships and cardinality<a class="headerlink" href="#step-3-establish-relationships-and-cardinality" title="Permalink to this heading">#</a></h3>
+<p>The next step is to create the connection between the entities. First connect the related entities using lines. Then establish the cardinality by working out the range of connections each entity can have to the second entity.</p>
+<p>For example in the <strong>Student Subject Database</strong>:</p>
+<ul class="simple">
+<li><p>teacher subject relationship</p>
+<ul>
+<li><p>each teacher can teach zero to many subjects (assuming you can have teachers who do not teach for this time period)</p></li>
+<li><p>each subject has one and only one teacher who teaches it</p></li>
+</ul>
+</li>
+<li><p>student subject relationship</p>
+<ul>
+<li><p>each student can study zero to many subject (assuming a student can be enrolled but not studying)</p></li>
+<li><p>each subject can have zero to many students studying it (assuming a subject can exist without students studying it)</p></li>
+</ul>
+</li>
+</ul>
+<p>You will end up with the following ERD</p>
+<p><img alt="ERD Step 3" src="../../_images/erd_step_3.png" /></p>
+</section>
+<section id="step-4-resolve-many-to-many-relationships">
+<h3>Step 4: Resolve many-to-many relationships<a class="headerlink" href="#step-4-resolve-many-to-many-relationships" title="Permalink to this heading">#</a></h3>
+<p>In this course we will use bridging entities to deal with many-to-many relationships.</p>
+<p>To do this:</p>
+<ul class="simple">
+<li><p>find a many-to-many relationship</p></li>
+<li><p>place a bridging entity between the two</p>
+<ul>
+<li><p>the bridging entity will have a composite key, so use the correct table</p></li>
+</ul>
+</li>
+<li><p>reconnect the relationships</p></li>
+<li><p>establish the new cardinality</p>
+<ul>
+<li><p>the cardinality will be a many on the bridging entity’s side, and a one on the original entities’ sides</p></li>
+</ul>
+</li>
+<li><p>enter the primary keys from the original entities as the two parts of the composite key for the bridging entity</p></li>
+<li><p>add any other relevant attributes</p></li>
+</ul>
+<p>For our <strong>Student Subject Database</strong>:</p>
+<ul class="simple">
+<li><p>the subject / student relationship is a many-to-many</p></li>
+<li><p>add a bridging entity between the two, and named ‘Enrolments’</p>
+<ul>
+<li><p>if you can’t think of an appropriate name, just combine the name of the two original entities</p></li>
+</ul>
+</li>
+<li><p>connect the relationships from the Enrolments entity to the Subject entity and the Student entities</p></li>
+<li><p>the new cardinalities will be many on the Enrolments entity end, and one on both the Subject entity and the Student entity</p></li>
+<li><p>SubjectID and StudentID are entered as the two parts of Enrolments’ composite key</p></li>
+<li><p>the attribute of Results is added to Enrolments</p></li>
+</ul>
+<p>At the end of step 4 our ERD looks like this:</p>
+<p><img alt="ERD Step 4" src="../../_images/erd_step_4.png" /></p>
+</section>
+<section id="step-5-identify-the-foreign-keys">
+<h3>Step 5: Identify the foreign keys<a class="headerlink" href="#step-5-identify-the-foreign-keys" title="Permalink to this heading">#</a></h3>
+<p>Identifying the foreign keys establishes how the different entities are connected together. If there is a relationship drawn between entities, then there must be a primary key / foreign key connection.</p>
+<p>Steps to establish foreign keys</p>
+<ul class="simple">
+<li><p>choose a relationship</p></li>
+<li><p>check the table on the many end for an attribute that naturally connects to the other entity</p>
+<ul>
+<li><p>ensure that the name of the foreign key reflects the primary key.</p></li>
+<li><p>if you can’t find one, you should add an attribute and name it after the primary key of the other entity</p></li>
+</ul>
+</li>
+<li><p>place a FK in front of the foreign key attribute</p></li>
+<li><p>move the relationship so that it connects the foreign key to it respective primary key</p></li>
+</ul>
+<p>Our <strong>Student Subject Database</strong> example at the end of step 5:</p>
+<p><img alt="ERD Step 5" src="../../_images/erd_step_5.png" /></p>
+</section>
 <section id="edr-summary">
 <h3>EDR Summary<a class="headerlink" href="#edr-summary" title="Permalink to this heading">#</a></h3>
+<p><img alt="EDR Summary poster" src="../../_images/entity_relationship_diagram.png" /></p>
 </section>
 </section>
 <section id="relational-schema">
@@ -643,6 +766,11 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-entity-relationship-diagram">EDR — Entity Relationship Diagram</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-identify-the-entities">Step 1: Identify the entities</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-add-attributes">Step 2: Add attributes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-establish-relationships-and-cardinality">Step 3: Establish relationships and cardinality</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-resolve-many-to-many-relationships">Step 4: Resolve many-to-many relationships</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-identify-the-foreign-keys">Step 5: Identify the foreign keys</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-summary">EDR Summary</a></li>
 </ul>
 </li>
