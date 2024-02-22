@@ -555,6 +555,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-establish-relationships-and-cardinality">Step 3: Establish relationships and cardinality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-resolve-many-to-many-relationships">Step 4: Resolve many-to-many relationships</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-identify-the-foreign-keys">Step 5: Identify the foreign keys</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-tables">Sample Tables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-summary">EDR Summary</a></li>
 </ul>
 </li>
@@ -690,6 +693,16 @@ document.write(`
 <p>Our <strong>Student Subject Database</strong> example at the end of step 5:</p>
 <p><img alt="ERD Step 5" src="../../_images/erd_step_5.png" /></p>
 </section>
+</section>
+<section id="sample-tables">
+<h2>Sample Tables<a class="headerlink" href="#sample-tables" title="Permalink to this heading">#</a></h2>
+<p>Sample tables are used to ensure that the database structure that the ERD produced can effectively store the required data adequately.</p>
+<p>You should create tables that reflects the entities identified and attributes identified by the ERD. Then fill the table with sample data. This data may be given to you, or you may produce mock data that is representative of data that will be stored in the database. A good resource for creating mock data is <strong><a href="https://www.mockaroo.com/" target="_blank">mockaroo</a></strong>.</p>
+<p>Below are the sample tables for the <strong>Student Subject Database</strong>.</p>
+<p><img alt="Teacher table" src="../../_images/sample_table_1.png" /></p>
+<p><img alt="Student table" src="../../_images/sample_table_2.png" /></p>
+<p><img alt="Subject table" src="../../_images/sample_table_3.png" /></p>
+<p><img alt="Enrolments table" src="../../_images/sample_table_4.png" /></p>
 <section id="edr-summary">
 <h3>EDR Summary<a class="headerlink" href="#edr-summary" title="Permalink to this heading">#</a></h3>
 <p><img alt="EDR Summary poster" src="../../_images/entity_relationship_diagram.png" /></p>
@@ -697,6 +710,17 @@ document.write(`
 </section>
 <section id="relational-schema">
 <h2>Relational Schema<a class="headerlink" href="#relational-schema" title="Permalink to this heading">#</a></h2>
+<p>To convert your final, adjusted ERD to a Relational Schema (RS) you will need to identify the datatype of each field.</p>
+<p>We will be using SQLite which provides the following data type options:</p>
+<ul class="simple">
+<li><p>INTEGER: signed integers</p></li>
+<li><p>REAL: floating point values</p></li>
+<li><p>TEXT: text strings</p></li>
+<li><p>BLOB: a blob of data, stored exactly as it was input</p></li>
+</ul>
+<p>Since <a class="reference external" href="http://Diagram.net">Diagram.net</a> does not provide a three column entity table, we will separate the attribute name and data type using the <code class="docutils literal notranslate"><span class="pre">|</span></code> symbol.</p>
+<p>The RS for the <strong>Student Subject Database</strong> will look like:</p>
+<p><img alt="ERD Step 6" src="../../_images/erd_step_6.png" /></p>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -771,6 +795,9 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-establish-relationships-and-cardinality">Step 3: Establish relationships and cardinality</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-resolve-many-to-many-relationships">Step 4: Resolve many-to-many relationships</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-identify-the-foreign-keys">Step 5: Identify the foreign keys</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-tables">Sample Tables</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#edr-summary">EDR Summary</a></li>
 </ul>
 </li>

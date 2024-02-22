@@ -110,9 +110,39 @@ Our **Student Subject Database** example at the end of step 5:
 
 ![ERD Step 5](./assets/erd_step_5.png)
 
+## Sample Tables
+
+Sample tables are used to ensure that the database structure that the ERD produced can effectively store the required data adequately.
+
+You should create tables that reflects the entities identified and attributes identified by the ERD. Then fill the table with sample data. This data may be given to you, or you may produce mock data that is representative of data that will be stored in the database. A good resource for creating mock data is **<a href="https://www.mockaroo.com/" target="_blank">mockaroo</a>**.
+
+Below are the sample tables for the **Student Subject Database**.
+
+![Teacher table](./assets/sample_table_1.png)
+
+![Student table](./assets/sample_table_2.png)
+
+![Subject table](./assets/sample_table_3.png)
+
+![Enrolments table](./assets/sample_table_4.png)
 
 ### EDR Summary
 
 ![EDR Summary poster](./assets/entity_relationship_diagram.png)
 
 ## Relational Schema
+
+To convert your final, adjusted ERD to a Relational Schema (RS) you will need to identify the datatype of each field.
+
+We will be using SQLite which provides the following data type options:
+
+- INTEGER: signed integers
+- REAL: floating point values
+- TEXT: text strings
+- BLOB: a blob of data, stored exactly as it was input
+
+Since Diagram.net does not provide a three column entity table, we will separate the attribute name and data type using the `|` symbol.
+
+The RS for the **Student Subject Database** will look like:
+
+![ERD Step 6](./assets/erd_step_6.png)
