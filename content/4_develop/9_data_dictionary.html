@@ -563,6 +563,33 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-dictionary">
 <h1>Data Dictionary<a class="headerlink" href="#data-dictionary" title="Permalink to this heading">#</a></h1>
+<p>A data dictionary is a reference guide that lists information about the data in a database or system, such as its name, type, and rules for use. It helps ensure accurate and consistent use of the data.</p>
+<p>The following video explains data dictionaries</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aOVN0v-HWcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>Your data dictionaries should include the following details:</p>
+<ul class="simple">
+<li><p><strong>Name of Field:</strong> make sure you follow you naming conventions</p></li>
+<li><p><strong>Definition of the Field:</strong> these details should naturally flow from the ERD</p></li>
+<li><p><strong>Data type:</strong> in SQLite we have Text, Integer, Real, and Blob</p></li>
+<li><p><strong>Possible values:</strong> taken from sample data</p></li>
+<li><p><strong>Validation rules:</strong> ensures only correct values can be entered</p>
+<ul>
+<li><p>SQLite has built in <a href="https://www.tutorialspoint.com/sqlite/sqlite_constraints.htm" target="_blank">validation rules</a>:</p>
+<ul>
+<li><p>NOT NULL - Ensures that a column cannot have NULL value</p></li>
+<li><p>DEFAULT Constraint − Provides a default value for a column when none is specified</p></li>
+<li><p>UNIQUE Constraint − Ensures that all values in a column are different</p></li>
+<li><p>PRIMARY Key − Uniquely identifies each row/record in a database table</p></li>
+<li><p>CHECK Constraint − Ensures that all values in a column satisfies certain conditions.</p></li>
+</ul>
+</li>
+<li><p>Data can also be validated in Python before Inserting it into the database.</p></li>
+</ul>
+</li>
+<li><p><strong>Formatting:</strong> data can either be stored formatted or can be formatted once retrieved.</p></li>
+</ul>
+<p>Below is an example of a data dictionary. Note that you should create a data dictionary for each table is your database.</p>
+<p><img alt="Example data dictionary" src="../../_images/data_dictionary_example.png" /></p>
 <section id="summary">
 <h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
 <p><img alt="data dictionary summary poster" src="../../_images/data_dictionary.png" /></p>
