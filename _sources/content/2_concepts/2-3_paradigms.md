@@ -1,5 +1,6 @@
 # Programming Paradigms
 
+(oop)=
 ## Object Orientated Programming
 
 Object-Oriented Programming (OOP) is a programming paradigm that organizes and models software as a collection of objects, each representing a real-world entity or concept. In OOP, an **object** is an **instance** of a **class**, which serves as a blueprint for creating objects. Objects can have **attributes** (data) and **methods** (functions) that define their behaviour.
@@ -22,6 +23,7 @@ We have covered OOP in the **<a href="https://damom73.github.io/python-oop-with-
 
 ---
 
+(event_driven)=
 ## Event Driven Programming
 
 Event-driven programming is a programming paradigm where the flow of a computer program is determined by events, which can be user actions (like clicking a button), sensor inputs, or messages from other parts of the program. In event-driven programming, the program responds to these events by executing specific code (event handlers) associated with each event. 

@@ -1,5 +1,7 @@
 # Good Practice
 
+![xkcd goto](./assets/goto.png)
+
 The are many good practices to following when programming. These need to be applied right from when the algorithms are first being developed.
 
 ## Dependability
@@ -96,6 +98,8 @@ In computer programming and software development, debugging is the process of fi
 
 ## Error Correction
 
+![xkcd error fixing](./assets/fixing_problems.png)
+
 Dealing with errors is an integral part of any development process, to the point where seasoned coders eventually become experts at navigating and fixing the errors they create. 
 
 When developing programs there are three types of error that can occur.
@@ -168,6 +172,8 @@ Naming conventions:
 - Do not use the names of keywords (eg. `print`, `for`, `while` and so on)
 
 ### Commenting
+
+![commenting comic](./assets/future_self.png)
 
 If your follow the naming convention of using meaningful names, most of your code should make sense without comments. Never-the-less, there are two places where comments are still needed:
 
