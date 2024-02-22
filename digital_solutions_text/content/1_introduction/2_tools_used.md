@@ -4,6 +4,8 @@ The following technologies are used throughout this text.
 
 ## Programming Language
 
+![xkcd python](./assets/python.png)
+
 We will be using Python as our programming language for this course. Specifically we will be using Python 3.12 or later (3.1X).
 
 ```{admonition} I already have Python

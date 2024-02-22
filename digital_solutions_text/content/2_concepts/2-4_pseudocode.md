@@ -1,5 +1,7 @@
 # Pseudocode
 
+![xkcd algorithms](./assets/algorithms.png)
+
 Pseudocode is a technique used to describe the distinct steps of an algorithm in a manner that is easy to understand for anyone with basic programming knowledge.
 
 Although pseudocode is a syntax-free description of an algorithm, it must provide a full description of the algorithm’s logic so that moving from it to implementation should be merely a task of translating each line into code using the syntax of any programming language.
