@@ -118,6 +118,7 @@ You can also install various icon and colour themes. For this course I will be u
 - **<a href="https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme" target="_blank">Material Icon Theme</a>**
 
 ---
+
 ## Version Control
 
 Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
@@ -159,6 +160,7 @@ Throughout the course you will need to create a range of diagrams. To do this we
 
 We will be using Adobe XD to create wireframes, mockups, prototypes, and application interface flowcharts. To install Adobe XD you need to **<a href="https://creativecloud.adobe.com/en/apps/download/creative-cloud" target="_blank">download and install Creative Cloud</a>**, log in using your school account and then choose to install Adobe XD.
 
+(qt_designer)=
 ### Qt Designer
 
 **<a href="https://build-system.fman.io/qt-designer-download" target="_blank">Qt Designer</a>** is a tool for quickly building graphical user interfaces with widgets from the Qt GUI framework. It gives you a simple drag-and-drop interface for laying out components such as buttons, text fields, combo boxes and more. We will be using it throughout the course.
