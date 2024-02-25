@@ -1,5 +1,19 @@
 # Coding &mdash; Unit 1
 
+The videos below will introduce the concepts behind developing a **[](mvc)** program using PyQt.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WZsdUKVdVsQ?si=4BgXfiwUj4aJ39hD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T66K5Wasgww?si=LfN2_tmMosonsu7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dMItEGj9cxg?si=l3c5wPty0M8Jf3dh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/MICrltBXE7E?si=Vrp9iCgzD0REdN6L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LL-8G63Wkik?si=KPdQFOFleJN8HNQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XKxy1b2x6ZU?si=RRqVTTLyR-A5lrkW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ```{admonition} Unit 1 subject matter covered:
 - Generate user interfaces by investigating and applying useability principles
 - Understand and use assignment: used to store the value of an expression into a variable
