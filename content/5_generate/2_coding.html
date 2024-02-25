@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,27 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view">View</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menu-bar-and-status">Menu Bar and Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dialogue-box-message-bos">Dialogue Box / Message Bos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-images">Working with Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taking-input">Taking Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-and-slots">Signals and Slots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-management">Layout Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#date-widget">Date Widget</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar-widget-progress-bar">Calendar Widget &amp; Progress Bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radio-buttons-and-checkbox">Radio Buttons and Checkbox</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-signals-and-slots">Controller — Signals and Slots</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,11 +576,65 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coding">
 <h1>Coding<a class="headerlink" href="#coding" title="Permalink to this heading">#</a></h1>
-<p>In coding you will be taking the algorithms from the develop phase and converting them into Python code.</p>
-<p>You will need to develop your UI using <a class="reference internal" href="../1_introduction/2_tools_used.html#qt-designer"><span class="std std-ref">Qt Designer</span></a>. This will be saved to a <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file which you will have to convert to Python script using the command.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyuic6</span> <span class="n">your_file_name</span><span class="o">.</span><span class="n">ui</span> <span class="o">-</span><span class="n">o</span> <span class="n">your_file_name</span><span class="o">.</span><span class="n">py</span>
+<p>In coding you will be taking the algorithms from the develop phase and converting them into Python code. Remember you will be creating a program that is using <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#mvc"><span class="std std-ref">MVC Architecture Pattern</span></a></strong>.</p>
+<section id="view">
+<h2>View<a class="headerlink" href="#view" title="Permalink to this heading">#</a></h2>
+<p>You will need to develop your UI (view) using <strong><a class="reference internal" href="../1_introduction/2_tools_used.html#qt-designer"><span class="std std-ref">Qt Designer</span></a></strong>. The videos below will show you how to use QT Designer and covers most of the concepts.</p>
+<section id="introduction">
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7HwGQQXuxnI?si=xpqtqQGDBHvGrDvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="menu-bar-and-status">
+<h3>Menu Bar and Status<a class="headerlink" href="#menu-bar-and-status" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Mu9I8qmykSA?si=lJ39oDlkWLbo45-O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="dialogue-box-message-bos">
+<h3>Dialogue Box / Message Bos<a class="headerlink" href="#dialogue-box-message-bos" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vIqw411xoj0?si=9X2IkLEOxgeLpusz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="working-with-images">
+<h3>Working with Images<a class="headerlink" href="#working-with-images" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/CAin_TFP_T0?si=_qs8B9gJLvqO3EpH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="taking-input">
+<h3>Taking Input<a class="headerlink" href="#taking-input" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/REQsOjJBwbQ?si=nUrvSgBLxHAdGQ4n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="signals-and-slots">
+<h3>Signals and Slots<a class="headerlink" href="#signals-and-slots" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3t8KhIdSGYQ?si=j-uOpJGiKA1mdfOG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="layout-management">
+<h3>Layout Management<a class="headerlink" href="#layout-management" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZyaZvrbZxFA?si=aPC-s_kHCQWLnyGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="date-widget">
+<h3>Date Widget<a class="headerlink" href="#date-widget" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gqilDuCUBmY?si=04AacJ4XPF6YtLrG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="calendar-widget-progress-bar">
+<h3>Calendar Widget &amp; Progress Bar<a class="headerlink" href="#calendar-widget-progress-bar" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EeEtSDnE5jY?si=o_cEmLHcCq-Vsmw_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</section>
+<section id="radio-buttons-and-checkbox">
+<h3>Radio Buttons and Checkbox<a class="headerlink" href="#radio-buttons-and-checkbox" title="Permalink to this heading">#</a></h3>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4PTFNVM8Naw?si=AFRG0cc_MUbbds-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<p>This will be saved to a <code class="docutils literal notranslate"><span class="pre">.ui</span></code> file which you will have to convert to Python script using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pyuic6</span> <span class="o">&lt;</span><span class="n">your_file_name</span><span class="o">&gt;.</span><span class="n">ui</span> <span class="o">-</span><span class="n">o</span> <span class="o">&lt;</span><span class="n">your_file_name</span><span class="o">&gt;.</span><span class="n">py</span>
 </pre></div>
 </div>
+</section>
+</section>
+<section id="controller-signals-and-slots">
+<h2>Controller — Signals and Slots<a class="headerlink" href="#controller-signals-and-slots" title="Permalink to this heading">#</a></h2>
+<p>Once you have created the UI you now need to create the controller. This is where all the program logic should be located. The <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#mvc"><span class="std std-ref">MVC Architecture Pattern</span></a></strong> has clear demarcation of responsibilities:</p>
+<ul class="simple">
+<li><p>Model — this should only deal with saving and retrieving data to and from the hard drive.</p></li>
+<li><p>Viewer — this should only deal with displaying output and collecting input.</p></li>
+<li><p>Controller — this should include all the processing of data.</p></li>
+</ul>
+<p>By it’s very nature a UI program is a <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#event-driven"><span class="std std-ref">Event Driven Programming</span></a></strong>. This is where the concept of signals and slots comes in. The UI elements creates signals when the user interacts with them, eg. clicking a button. The Controller has code that will detect when a signal is created. It then directs the program towards the appropriate slot (method) for that specific signal.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -616,6 +693,33 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#view">View</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menu-bar-and-status">Menu Bar and Status</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dialogue-box-message-bos">Dialogue Box / Message Bos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-images">Working with Images</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#taking-input">Taking Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#signals-and-slots">Signals and Slots</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout-management">Layout Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#date-widget">Date Widget</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calendar-widget-progress-bar">Calendar Widget &amp; Progress Bar</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radio-buttons-and-checkbox">Radio Buttons and Checkbox</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-signals-and-slots">Controller — Signals and Slots</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
