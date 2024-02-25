@@ -1,5 +1,7 @@
 # Coding &mdash; Unit 1
 
+## Creating MVC Programs
+
 The videos below will introduce the concepts behind developing a **[](mvc)** program using PyQt.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WZsdUKVdVsQ?si=4BgXfiwUj4aJ39hD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -13,6 +15,20 @@ The videos below will introduce the concepts behind developing a **[](mvc)** pro
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/LL-8G63Wkik?si=KPdQFOFleJN8HNQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XKxy1b2x6ZU?si=RRqVTTLyR-A5lrkW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Programming Habits
+
+The videos below show good Python programming practice.
+
+### 5 Good Python Habits
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/I72uD8ED73U?si=IjnKHJQekKQnqlq0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### 5 Useful F-String Tricks In Python
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EoNOWVYKyo0?si=zDl1_TdThHCqCRGz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
 
 ```{admonition} Unit 1 subject matter covered:
 - Generate user interfaces by investigating and applying useability principles
