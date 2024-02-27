@@ -18,6 +18,37 @@ The standard class diagram is composed of three sections:
 
 ![class symbols](./assets/class_symbols.png)
 
+```{admonition} Checking the Class Diagram
+:class: warning
+When marking a Class Diagram the following questions are asked:
+
+- Are all the code's classes represented?
+- Does the diagram's attributes match the variables in the class' `__init__` method?
+- Does the diagram's methods match the class' methods?
+```
+
 ## Summary
 
 ![class diagram summary poster](assets/class_diagram.png)
+
+```{admonition} Unit 1 subject matter covered:
+- Symbolise algorithms and interrelationships with sketches and diagrams
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 2 subject matter covered:
+- Symbolise well-ordered and unambiguous algorithms using pseudocode for procedural code that processes data for insertion into a database or manipulates or displays retrieved data
+- Symbolise well-ordered and unambiguous algorithms using pseudocode for user interaction, data validation and data presentation
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 3 subject matter covered:
+- Generate a conceptual model of a possible solution by applying systems thinking that identifies system boundaries, properties, inputs and outputs, user interface, system controls
+- Recognise and describe program components such as objects, event handlers and multimedia assets
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 4 subject matter covered:
+- Symbolise and explain how application sub-systems, e.g. front end, back end, work together to constitute a solution
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```

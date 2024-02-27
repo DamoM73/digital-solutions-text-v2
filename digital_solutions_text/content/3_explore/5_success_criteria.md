@@ -2,16 +2,16 @@
 
 You have now fully explored the problem and identified all the requirements. The next step is to prioritise the requirements and established the method you will use to determine if they have been achieved.
 
+You will use two tables to achieve this:
+
+- Requirements table
+- Criteria table &mdash; states how to measure the success of achieving the requirements
+
 ## Requirements Table
 
-![Requirements Table](./assets/MuSCoW.png)
+The Requirements table prioritises the requirements that you have identified through the Explore phase. The requirements should be sorted according to their potential impact on the success of the project. For that we use a **MuSCoW** table.
 
-The requirements table is used to prioritise the identified requirements. Categorise the requirements in your exploration documents (mind map, empathy map, personas, and use case diagram) into on of the four columns:
-
-- **Must** &mdash; all the requirements that are explicitly expressed in the criteria sheet, stimulus material or from client interactions.
-- **Should:** &mdash; requirements that you think are important. It might include functional and non-functional requirements not mentioned in the criteria sheet or stimulus (eg. the Usability Principle of Safety).
-- **Could:** &mdash; really good ideas that you do not have the time, skills or resources to implement (eg. integrating with social media).
-- **Won't** &mdash; ideas that other might like, but you are not interested in (eg. integrating with social media). **Don't simply put the negative of a requirement** (eg. if you have mentioned the Usability Principle of Effectiveness, don't add "Won't crash" to this column).
+![MuSCoW table](./assets/MuSCoW.png)
 
 ## Criteria Table
 
