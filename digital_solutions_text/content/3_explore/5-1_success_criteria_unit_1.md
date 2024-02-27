@@ -61,7 +61,7 @@ These goals can be expanded or modified during the project life-cycle if require
 
 ```{admonition} Checking Criteria Tables for Unit 1
 :class: warning
-When marking a Criteria Tables the following questions are asked:
+When marking the Criteria Tables the following questions are asked:
 
 - Are all the requirements from the Must column, included in the Prescribed Criteria Table?
 - Are all the requirements from the Should column, included in the Self-determined Criteria Table?
