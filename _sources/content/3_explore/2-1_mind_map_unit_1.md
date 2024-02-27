@@ -128,6 +128,14 @@ Below is a starting template for your mind maps
 
 ![mind map starting template](./assets/mm_template_unit_1.png)
 
+```{admonition} Checking the Mind Map for Unit 1
+:class: warning
+When marking a Mind Map the following questions are asked:
+
+- Have all the nodes been responded to?
+- Are all the responses short (less than a sentence)?
+```
+
 ```{admonition} Unit 1 subject matter covered:
 - Understand methods of breaking down problems into parts using computational thinking and thinking tools, e.g. mind maps
 - Analyse problems to identify the human need, want or opportunity that requires a new or re-imagined digital solution
