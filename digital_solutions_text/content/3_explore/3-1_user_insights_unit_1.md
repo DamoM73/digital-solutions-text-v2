@@ -26,6 +26,14 @@ In doing this be aware that:
 - Needs are verbs and frame activities, actions and desires.
 - Refrain from using nouns as they will lead to defining solutions, and this is not the aim of the process.
 
+```{admonition} Checking the Empathy Maps for Unit 1
+:class: warning
+When marking the Empathy Maps the following questions are asked:
+
+- Are all the types of users represented?
+- Are there adequate observations in all four quadrants?
+```
+
 ## Persona
 
 ![Persona summary poster](assets/persona.png)
@@ -62,6 +70,15 @@ Components of a persona:
   - challenges they have in completing tasks
   - pain points &mdash; what makes things difficult
 - accessibility needs
+
+```{admonition} Checking the Personas for Unit 1
+:class: warning
+When marking the Personas the following questions are asked:
+
+- Are all the types of users represented?
+- Have the provide proto-personas been used?
+- Do the personas cover include people with impairment?
+```
 
 ```{admonition} Unit 1 subject matter covered:
 - Analyse a given problem to identify the user perspective and user-experience requirements
