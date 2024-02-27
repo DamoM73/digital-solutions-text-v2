@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-a-use-case-diagram">Steps to create a Use Case Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-diagram-symbols">Use Case Diagram Symbols</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,6 +564,37 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="use-case-diagram-unit-4">
 <h1>Use Case Diagram — Unit 4<a class="headerlink" href="#use-case-diagram-unit-4" title="Permalink to this heading">#</a></h1>
+<p><img alt="Use Case Diagram Summary" src="../../_images/use_case_diagram.png" /></p>
+<section id="steps-to-create-a-use-case-diagram">
+<h2>Steps to create a Use Case Diagram<a class="headerlink" href="#steps-to-create-a-use-case-diagram" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>What is the system being created?</p></li>
+<li><p>Who are the actors using the system? (People, Organisations, Other systems, External devices)</p></li>
+<li><p>Is each actor a primary actor or a secondary actor?</p></li>
+<li><p>What actions will the primary actors want to do with the system?</p></li>
+<li><p>How will each actor interact with the use cases?</p></li>
+<li><p>Are the any new actions automatically connected to current use cases?</p></li>
+<li><p>Are there any additional, optional actions connected to current use cases?</p></li>
+<li><p>Do any use cases or actors have sub categories?</p></li>
+</ol>
+</section>
+<section id="use-case-diagram-symbols">
+<h2>Use Case Diagram Symbols<a class="headerlink" href="#use-case-diagram-symbols" title="Permalink to this heading">#</a></h2>
+<p><img alt="Use Case Diagram Symbols" src="../../_images/use_case_symbols.png" /></p>
+<div class="warning admonition">
+<p class="admonition-title">Checking the Use Case Diagram for Unit 4</p>
+<p>When marking a Use Case Diagram the following questions are asked:</p>
+<ul class="simple">
+<li><p>Are all the actors outside of the code base?</p></li>
+<li><p>Do the primary actors (the ones on the left) initiate the interactions with the system?</p></li>
+<li><p>Does the system initiate the interactions with the secondary actors (the ones on the right)?</p></li>
+<li><p>Are all the UI interactions represented in the first column of Use Cases?</p></li>
+<li><p>Are the connections between the primary actors and the first column of Use Cases all associations (solid lines)?</p></li>
+<li><p>Are the conenctions between internal Use Case either extensions or inclusions?</p></li>
+<li><p>Do all the extensions have callout detailing what conditions result in it’s execution.</p></li>
+<li><p>Is the API represented as a secondary actor?</p></li>
+</ul>
+</div>
 <div class="admonition-unit-4-subject-matter-covered admonition">
 <p class="admonition-title">Unit 4 subject matter covered:</p>
 <ul class="simple">
@@ -560,6 +602,7 @@ document.write(`
 <span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -616,6 +659,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#steps-to-create-a-use-case-diagram">Steps to create a Use Case Diagram</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-diagram-symbols">Use Case Diagram Symbols</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
