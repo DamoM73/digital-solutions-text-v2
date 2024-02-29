@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-data">What data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-type-of-data">What type of data?</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,15 +564,39 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-requirements-unit-1">
 <h1>Data Requirements → Unit 1<a class="headerlink" href="#data-requirements-unit-1" title="Permalink to this heading">#</a></h1>
-<div class="admonition-unit-2-subject-matter-covered admonition">
-<p class="admonition-title">Unit 2 subject matter covered:</p>
+<p>Databases are not introduced until Unit 2, so the data requirements for Unit 1 are limited.</p>
+<section id="what-data">
+<h2>What data?<a class="headerlink" href="#what-data" title="Permalink to this heading">#</a></h2>
+<p>First you need to identify the data that the application will need.</p>
+<p>This data can be:</p>
 <ul class="simple">
-<li><p>Recognise data types, constraints, and primary and foreign keys</p></li>
-<li><p>Evaluate data quality using the prescribed criteria of accuracy and completeness</p></li>
-<li><p>Apply data management processes, e.g. encryption, consistency, searching, pattern recognition and de-identification
-<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<li><p>Data that is provided</p></li>
+<li><p>Data that the application will collect</p></li>
 </ul>
-</div>
+</section>
+<section id="what-type-of-data">
+<h2>What type of data?<a class="headerlink" href="#what-type-of-data" title="Permalink to this heading">#</a></h2>
+<p>Once you have identified what data the application will use, you then need to identify what type of data each one is.</p>
+<p>There are two considerations when doing this:</p>
+<ul class="simple">
+<li><p>What is data types:</p>
+<ul>
+<li><p>String</p></li>
+<li><p>Integer</p></li>
+<li><p>Float</p></li>
+<li><p>Boolean</p></li>
+</ul>
+</li>
+<li><p>What data structures:</p>
+<ul>
+<li><p>lists</p></li>
+<li><p>dictionaries</p></li>
+<li><p>tuples</p></li>
+<li><p>sets</p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -618,6 +653,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-data">What data?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-type-of-data">What type of data?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
