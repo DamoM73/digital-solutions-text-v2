@@ -56,7 +56,7 @@ How long the project will run for? What are the specific milestones or checkpoin
 
 ## Impacts
 
-From our [Digital Solutions Impacts](../2_concepts/3-3_impacts.md) choose three or four impacts that you think would naturally align with your solution. In your mind map create a node for each impact and then identify the impact’s:
+From our **[Digital Solutions Impacts](../2_concepts/3-3_impacts.md)** choose three or four impacts that you think would naturally align with your solution. In your mind map create a node for each impact and then identify the impact’s:
 
 - **Title** &mdash; what will you name this impact (replaces Impact 1, Impact 2 etc.)
 - **Category** &mdash; personal, social, economic or environmental
