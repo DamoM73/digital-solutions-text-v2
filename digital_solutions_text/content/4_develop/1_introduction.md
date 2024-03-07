@@ -42,3 +42,12 @@ To do this, we can use the following tools:
 - Entity Relationship Diagrams
 - Relational Schemas
 ```
+
+```{admonition} To develop ideas, students:
+- use design thinking to visualise ideas and synthesise information and ideas in response to a digital problem by using drawing and creative skills to represent and communicate ideas
+- acquire required information, tools and skills to implement a solution plan
+- use computational thinking to apply abstraction procedures to problem components
+- use computational thinking to express algorithms
+- use systems and design thinking to develop ideas about components and solutions to test conceptual models
+- use systems and design thinking to generate creative ideas, identify a solution and evaluate ideas that best meet the criteria for success. {cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
