@@ -1,0 +1,128 @@
+# To Do
+
+- [ ] Index
+- Introduction
+  - [x] How to use this text
+  - [x] Technologies used
+- Concepts
+  - [x] Core Concepts
+  - [x] Programming Concepts
+    - [x] Basic Features
+    - [x] Good Practice
+    - [x] Programming Paradigms
+    - [x] Pseudocode
+    - [x] Development Environment
+  - [x] User Experience Concepts
+    - [x] Useability Principles
+    - [x] Visual Communication
+    - [x] Digital Solution's Impacts
+  - [x] Data Concepts
+    - [x] Structuring Data
+    - [x] Data Principles
+    - [x] Managing and Manipulating Data
+  - [ ] Data Transmission
+    - [x] Privacy
+    - [x] Networking
+    - [x] Data Security
+- Explore
+  - [x] Explore Phase
+  - [x] Mind Map
+    - [x] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] User Insights
+    - [x] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Use Case Diagram
+    - [x] Unit 1
+    - [x] Unit 2
+    - [x] Unit 3
+    - [x] Unit 4
+  - [x] Success Criteria
+    - [x] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+- Develop
+  - [x] Develop Phase
+  - [x] UI Design
+    - [x] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Class Diagram
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] IPO Tables
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Desk Check
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Data Requirements
+    - [x] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [ ] Data Flow Diagram 
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [ ]  ERD and Relational Schema
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [ ] Data Dictionary
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [ ] Data Exchange Diagram
+    - [ ] Unit 4
+- Generate
+  - [x] Generate Phase
+  - [x] Coding
+    - [x] Unit 1
+    - [x] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Testing Table
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+- Evaluate
+  - [x] Evaluate Phase
+  - [x] Component Evaluation
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Solution Evaluation
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+  - [x] Impacts Assessment
+    - [ ] Unit 1
+    - [ ] Unit 2
+    - [ ] Unit 3
+    - [ ] Unit 4
+- Communication
+  - [ ] Introduction
+  - [ ] Technical Language
+  - [ ] Conventions
+  - [ ] Diagrams
+  - [ ] Modes
+  - [ ] Presentations
+- End Material
+  - [x] Glossary
+  - [x] Bibliography
