@@ -10,6 +10,8 @@ IPO tables are used to develop your algorithms. They are made up of three column
 
 Each IPO Table should represent one method (functions) with the **[Use Case Diagram](../3_explore/4_use_case_diagram.md)** informing what those methods should be. There is no need to represent all of your methods in IPO tables, but rather you need to show the more complicated or tricky code.
 
+## Coverage
+
 Across all you IPO Tables you should have examples of all the following algorithm components:
 
 - sequence
@@ -21,7 +23,7 @@ Across all you IPO Tables you should have examples of all the following algorith
 
 ## Summary
 
-![IPO summary poster](assets/ipo_table.png)
+![IPO summary poster](assets/ipo_table_summary.png)
 
 ```{admonition} Unit 1 subject matter covered:
 - Understand that simple algorithms consist of input, process and output at various stages
