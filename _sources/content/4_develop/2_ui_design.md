@@ -49,6 +49,7 @@ An application interface flowchart connects the screens of an application togeth
 
 ![UI flowchart](./assets/ui_flowchart.jpg)
 
+(annotating)=
 ## Annotating
 
 Annotating the UI is an import way to show how you have incorporated the Useability Principles into your UI design.

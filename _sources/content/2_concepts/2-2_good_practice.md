@@ -139,6 +139,7 @@ A runtime errors is an error that takes place during the running of a program. F
 
 Code simplicity refers to the practice of writing computer programs in a clear, understandable, and straightforward manner. It involves using straightforward logic, clear and meaningful variable names, and minimizing unnecessary complexity. Simple code is easier to read, debug, and maintain, which makes it more efficient and less error-prone.
 
+(naming_conventions)=
 ### Naming Conventions
 
 Python has naming rules and naming conventions.
@@ -171,6 +172,7 @@ Naming conventions:
   - `ThisIsCamelCase`
 - Do not use the names of keywords (eg. `print`, `for`, `while` and so on)
 
+(commenting)=
 ### Commenting
 
 ![commenting comic](./assets/future_self.png)
