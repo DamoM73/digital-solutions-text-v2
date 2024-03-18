@@ -80,11 +80,11 @@ These can include:
 - **User interface** criteria concerning:
   - User's input hardware (eg. mouse and keyboard)
   - User's output hardware (eg. screen, speakers)
-  - The way a user will interact with the system including the specific **<a href="https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html" target="_blank">UI components</a>** that they might use (eg. a date picker)
-- **Coded components** presented as a list of specific code modules that need to be developed in order to:
-  - Process user input
-  - Calculate results using data
-  - Store or display data
+  - User's interaction with the system, including the specific **<a href="https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html" target="_blank">UI components</a>** that they might use (eg. a date picker)
+- **Coded components** provide a list of specific code modules that  need to be developed to:
+  - Process input provided by the user
+  - Perform calculation on using data to produce results
+  - Permanently store data or display stored of calculated data
   - Also address the quality of the code through **[good practice](../2_concepts/2-2_good_practice.md)**:
     - Effective - can solve the identified problem
     - Efficient - uses minimal resources to solve identified problem
