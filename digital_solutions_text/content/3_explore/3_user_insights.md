@@ -2,6 +2,7 @@
 
 Determining the human needs and wants provides us with an understanding that we can use to assess the effectiveness of solution, as well as the individual constituent components.
 
+(empathy_map)=
 ## Empathy Map
 
 To help identify user needs, UX professionals use empathy maps.
@@ -10,6 +11,7 @@ To help identify user needs, UX professionals use empathy maps.
 
 {cite}`playbookux_2019_what`
 
+(persona)=
 ## Persona
 
 To ensure that the digital solution is meeting the needs of the user, rather than the needs of the developer, UX professionals employ user personas.

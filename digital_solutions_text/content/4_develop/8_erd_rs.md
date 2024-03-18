@@ -126,10 +126,12 @@ Below are the sample tables for the **Student Subject Database**.
 
 ![Enrolments table](./assets/sample_table_4.png)
 
+(erd)=
 ### EDR Summary
 
 ![EDR Summary poster](./assets/entity_relationship_diagram.png)
 
+(rs)=
 ## Relational Schema
 
 To convert your final, adjusted ERD to a Relational Schema (RS) you will need to identify the datatype of each field.
