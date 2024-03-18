@@ -2,6 +2,7 @@
 
 The UI Design is the most important way to demonstrate your application of the **[useability principles](../2_concepts/3-1_useability_principles.md)** and **[visual communication principles](../2_concepts/3-2_visual_communication.md)**. There are many different ways to symbolise a UI. In our course, you will only need to use wireframes mock-ups, but it is useful to know and understand what the other methods are used for.
 
+(sketching)=
 ## Sketching
 
 User Interface sketching refers to sketching out the basics of a user interface, most often using pen and paper. It occurs before getting into wireframing, prototyping and coding. Sketches are quick and dirty. Don't worry about the specifics of design or functionality in a UI sketch. A UI sketch should simply serve to help you eliminate bad ideas and brainstorm good ideas about how to bring your proposed product to the screen. The sketch should help you translate idea to interface in the minimum possible time. At the end of the UI sketching process you should know that you've figured out the absolute best way to bring your product to the screen.
@@ -20,6 +21,7 @@ In other words, a wireframe describes the basic structure, functions, and conten
 
 ![UI wireframe](./assets/wireframe-example.png)
 
+(wireframe)=
 ### Wireframe Summary
 
 ![Wireframe summary poster](assets/wireframe.png)
@@ -35,6 +37,7 @@ We will be using two different tools for creating mock-ups:
 
 ![UI mock-up](./assets/mockup-example.png)
 
+(mock-up)=
 ### Mock-up Summary
 
 ![Mock-up summary poster](assets/mock_up.png)
