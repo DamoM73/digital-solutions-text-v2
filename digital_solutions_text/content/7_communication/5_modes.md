@@ -22,6 +22,16 @@ Your visual communication is expected to:
   - headers and footers
 - use **[visual communication principles](../2_concepts/3-2_visual_communication.md)**
 
+## Spoken mode
+
+There is a spoke element to all your assessment instruments. This spoken communication is expected to:
+
+- be clear an understandable
+  - not too fast nor too slow
+  - at a volume which is easy to hear
+  - not too much background noise
+- be formal in its tone
+
 ```{admonition} Unit 1 subject matter covered:
 - Communicate using the modes of visual, written and spoken communication to present data and information about digital solutions.
 {cite}`queenslandcurriculumassessmentauthority_2017_digital`
