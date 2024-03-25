@@ -6,6 +6,13 @@ In coding you will be taking the algorithms from the develop phase and convertin
 
 You will need to develop your UI (view) using **[](qt_designer)**. The videos below will show you how to use QT Designer and covers most of the concepts.
 
+```{admonition} PyQt version
+:class: danger
+These videos are using PyQt5 while we are using PyQt6. Since PyQt6 is backwards compatible we will have access to all the features shown below.
+
+The one difference is you need to use **`pyuic6`** instead of `pyuic5` when converting the `.ui` file to a `.py` file.
+```
+
 ### Introduction
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/7HwGQQXuxnI?si=xpqtqQGDBHvGrDvW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
