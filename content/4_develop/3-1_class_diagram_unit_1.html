@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-class">UI Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datastore-class">Datastore Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-class">Controller Class</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,6 +565,47 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="class-diagram-unit-1">
 <h1>Class Diagram — Unit 1<a class="headerlink" href="#class-diagram-unit-1" title="Permalink to this heading">#</a></h1>
+<p>For unit 1 your programs will, most-likely consist of the three MVC classes (UI, Controller and Datastore). There will be very little need to move beyond these.</p>
+<section id="ui-class">
+<h2>UI Class<a class="headerlink" href="#ui-class" title="Permalink to this heading">#</a></h2>
+<p>You will generate the UI Class from your QT Designer file. Therefore, there is no reason for you to plan the class using a class diagram.</p>
+</section>
+<section id="datastore-class">
+<h2>Datastore Class<a class="headerlink" href="#datastore-class" title="Permalink to this heading">#</a></h2>
+<p>Using <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#mvc"><span class="std std-ref">MVC Architecture</span></a></strong>, the datastore (model) class is responsible for storage and retrieval of information. For unit 1, this mean saving and reading from files on the hard drive.</p>
+<p>A template for the class diagram would look like this:</p>
+<p><img alt="generic datastore class diagram" src="../../_images/class_diagram_datastore.png" /></p>
+<p>The datastore class diagram will need:</p>
+<ul class="simple">
+<li><p>an attribute that stores the save file name. There will need to be an attribute for each save file.</p></li>
+<li><p>add methods for each type of save to the hard drive</p></li>
+<li><p>get methods for each type of retrieval from the hard drive</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Naming Methods</p>
+<p>It is value to establish a consistent style for your method names. This enhances maintainability through the improving the readablity of your code, as-well-as reducing errors but developing a habit.</p>
+<p>For example, in the datastore:</p>
+<ul class="simple">
+<li><p>using the prefix of <code class="docutils literal notranslate"><span class="pre">add</span></code> for all methods that write data to the hard drive</p></li>
+<li><p>using the prefix of <code class="docutils literal notranslate"><span class="pre">get</span></code> for all methods that retreieve data from the hard drive</p></li>
+<li><p>using the prefix of <code class="docutils literal notranslate"><span class="pre">update</span></code> for all methods that change the data on the hard drive</p></li>
+</ul>
+</div>
+</section>
+<section id="controller-class">
+<h2>Controller Class<a class="headerlink" href="#controller-class" title="Permalink to this heading">#</a></h2>
+<p>The <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#mvc"><span class="std std-ref">MVC Architecture</span></a></strong> requires that all the program logic resided in the Control Class. It response to interactions from the ui class (signals). It collects data from the ui class and retrieves stored data from the datastore class. It processes this data, and then sends data to the ui class to be displayed or data to the datastore class to save.</p>
+<p>This will be the most complicated class in your program, and a template would look like this:</p>
+<p><img alt="generic controller class diagram" src="../../_images/class_diagram_controller.png" /></p>
+<p>The controller class diagram will need:</p>
+<ul class="simple">
+<li><p>an attribute for the datastore object</p></li>
+<li><p>an attribute for the ui object</p></li>
+<li><p>attributes for any other variables that are needed for the program logic</p></li>
+<li><p>a slot method to handle each signal from the UI</p></li>
+<li><p>additional methods for programming logic</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -609,6 +662,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ui-class">UI Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datastore-class">Datastore Class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#controller-class">Controller Class</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
