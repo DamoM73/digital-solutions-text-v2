@@ -1,8 +1,10 @@
 # Coding &mdash; Unit 1
 
+The first step of your coding will always be setting up a new **[development environment](../2_concepts/2-5_dev_env.md)**.
+
 ## Creating MVC Programs
 
-The videos below will introduce the concepts behind developing a **[](mvc)** program using PyQt.
+In Unit 1 you will be creating a productivity application (desktop app) using the **[MVC Architecture](mvc)**. The videos below will introduce the concepts behind developing a MVC program using PyQt.
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WZsdUKVdVsQ?si=4BgXfiwUj4aJ39hD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
