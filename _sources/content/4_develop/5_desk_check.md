@@ -79,3 +79,23 @@ Consider the following pseudocode:
 ```
 
 ![desk check 3](./assets/desk_check_3.png)
+
+```{admonition} Unit 1 subject matter covered:
+- Evaluate and make recommendations about algorithmic steps using debugging processes, e.g. desk checks
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 2 subject matter covered:
+- Test the SQL, algorithm and procedural code components of the prototype digital solution for reliability, maintainability and efficiency
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 3 subject matter covered:
+
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 4 subject matter covered:
+- Evaluate by desk checking algorithms to predict the output for a given input, identify errors and validate algorithms
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
