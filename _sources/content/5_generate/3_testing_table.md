@@ -34,3 +34,24 @@ Integrated Testing table
 ## Summary
 
 ![testing table summary poster](assets/testing_table.png)
+
+```{admonition} Unit 1 subject matter covered:
+- Test inputs, outputs and processes
+- Evaluate and make recommendations about algorithmic steps using debugging processes, e.g. desk checks
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 2 subject matter covered:
+- Test the SQL, algorithm and procedural code components of the prototype digital solution for reliability, maintainability and efficiency
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 3 subject matter covered:
+- Evaluate by testing program modules for reliability, maintainability and efficiency using computational thinking processes such as debugging to refine a prototype digital solution
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
+
+```{admonition} Unit 4 subject matter covered:
+- Evaluate solutions by testing to refine their accuracy, reliability, maintainability, efficiency, effectiveness and useability
+{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+```
