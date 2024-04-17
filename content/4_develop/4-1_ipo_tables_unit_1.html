@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,19 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-ipo-tables">Creating the IPO Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process">Process</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,6 +568,26 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="ipo-tables-unit-1">
 <h1>IPO Tables — Unit 1<a class="headerlink" href="#ipo-tables-unit-1" title="Permalink to this heading">#</a></h1>
+<p>Your class diagrams have identified all methods in your classes. These identified methods will inform your IPO Tables.</p>
+<p>Check your Controller and Datastore class diagram and identify the more complex methods. For example, methods that will contain <strong><a class="reference internal" href="../2_concepts/2-1_basic_features.html"><span class="doc std std-doc">the six basic algorithm building blocks</span></a></strong>.</p>
+<p>You will create IPO Tables for these methods.</p>
+<section id="creating-the-ipo-tables">
+<h2>Creating the IPO Tables<a class="headerlink" href="#creating-the-ipo-tables" title="Permalink to this heading">#</a></h2>
+<section id="input">
+<h3>Input<a class="headerlink" href="#input" title="Permalink to this heading">#</a></h3>
+<p>The Input identifies the information that will be passed into the method. This information will generally be sourced from other methods. For example, the Input for a <code class="docutils literal notranslate"><span class="pre">add_details()</span></code> method, could include a list of values that needs to be saved to the hard drive.</p>
+<p>The Input for Controller class methods could also include information taken from the UI. For example, the <code class="docutils literal notranslate"><span class="pre">click_ok()</span></code> method could retrieve the entered username and password from the login dialogue box.</p>
+</section>
+<section id="output">
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<p>The Output identifies the information that will be returned by the method. Again, the majority of the Output will be values returned to another method. For example, the <code class="docutils literal notranslate"><span class="pre">get_details()</span></code> method, could return a list of values that have been retrieved from the hard drive.</p>
+<p>Just like Input, the Output of Controller class methods can also include data that will be displayed on the UI. For example the <code class="docutils literal notranslate"><span class="pre">display_error()</span></code> method could display a pop-up error message.</p>
+</section>
+<section id="process">
+<h3>Process<a class="headerlink" href="#process" title="Permalink to this heading">#</a></h3>
+<p>The Process is the heart of the method. It details all the steps taken to convert the Input data into the Output data. Remember, these steps need to written in <strong><a class="reference internal" href="../2_concepts/2-4_pseudocode.html"><span class="doc std std-doc">pseudocode</span></a></strong>.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -609,6 +644,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-ipo-tables">Creating the IPO Tables</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#input">Input</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">Output</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#process">Process</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
