@@ -64,7 +64,7 @@
     - [ ] Unit 3
     - [ ] Unit 4
   - [x] Desk Check
-    - [ ] Unit 1
+    - [x] Unit 1
     - [ ] Unit 2
     - [ ] Unit 3
     - [ ] Unit 4
