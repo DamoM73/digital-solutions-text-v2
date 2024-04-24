@@ -549,6 +549,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boilerplate-development-environment">Boilerplate development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-repo-in-vs-code">Opening repo in VS Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environment">Virtual Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment">Create Virtual Environment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-first-commit-and-push">Make first commit and push</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-mvc-programs">Creating MVC Programs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-habits">Programming Habits</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#good-python-habits">5 Good Python Habits</a></li>
@@ -568,7 +575,145 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coding-unit-1">
 <h1>Coding — Unit 1<a class="headerlink" href="#coding-unit-1" title="Permalink to this heading">#</a></h1>
-<p>The first step of your coding will always be setting up a new <strong><a class="reference internal" href="../2_concepts/2-5_dev_env.html"><span class="doc std std-doc">development environment</span></a></strong>.</p>
+<p>The first step of your coding will always be setting up a new development environment. Instead of starting from scratch you will be provided with a code template. This is called boilerplate code in the industry.</p>
+<section id="boilerplate-development-environment">
+<h2>Boilerplate development environment<a class="headerlink" href="#boilerplate-development-environment" title="Permalink to this heading">#</a></h2>
+<p>The Boilerplate for your code is hosted on GitHub, so we will fork this repo and create your own repo</p>
+<p>To do this:</p>
+<ol class="arabic simple">
+<li><p>Go to the <strong><a class="reference external" href="https://github.com/DamoM73/PyQt6-Boiler-Plate">PyQt6 Boiler Plate repo</a></strong></p></li>
+<li><p>Click on the green <strong>Code</strong> button</p></li>
+<li><p>Click on the <strong>copy</strong> button beside the https url</p></li>
+</ol>
+<p><img alt="GitHub clone repo" src="../../_images/gh_clone_repo.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Open <strong>GitHub Desktop</strong></p></li>
+<li><p>Open the <strong>File</strong> menu</p></li>
+<li><p>Click <strong>Clone Repository</strong></p></li>
+</ol>
+<p><img alt="GitHub Desktop clone repo" src="../../_images/ghdt_clone_repo.png" /></p>
+<ol class="arabic simple" start="7">
+<li><p>Choose the <strong>URL</strong> tab</p></li>
+<li><p>Paste repo URL into <strong>URL or username/repository</strong> box</p></li>
+<li><p>Click <strong>Clone</strong></p></li>
+</ol>
+<p><img alt="Github desktop clone repo dialogue" src="../../_images/ghdt_cloning_dialogue.png" /></p>
+<p>The repo should now be copied onto your computer and ready for use.</p>
+</section>
+<section id="opening-repo-in-vs-code">
+<h2>Opening repo in VS Code<a class="headerlink" href="#opening-repo-in-vs-code" title="Permalink to this heading">#</a></h2>
+<p>We’re going to use GitHub Desktop to coordinate our programming. We will use it to:</p>
+<ul class="simple">
+<li><p>Open our code in VS Code and set up the workspace correctly</p></li>
+<li><p>Save (commit) our finished code to our local repo</p></li>
+<li><p>Sync (Push) our committed code up to GitHub (origin)</p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Git and GitHub terminology</p>
+<p>Git and GitHub uses a range of different terminology. Here are some of the terms we will be using:</p>
+<ul class="simple">
+<li><p><strong>Repository or repo</strong>: A repository is a special folder that stores all the files and their history for a project.</p></li>
+<li><p><strong>Commit</strong>: When you make changes to files in a repository, a commit is takes a snapshot of those changes. Each commit has a unique name and a message explaining what changes were made.</p></li>
+<li><p><strong>Pull</strong>: Pulling means getting the latest changes made by others and adding them to your own copy of the project.</p></li>
+<li><p><strong>Push</strong>: Pushing is when you share your changes with others by sending them to a central place, like a website or server.</p></li>
+<li><p><strong>Remote</strong>: A remote is a way to connect your local copy of the project with the online version. weare using GitHub. It allows you to share your work and collaborate with others.</p></li>
+<li><p><strong>Clone</strong>: Cloning is making a copy of a project from a remote location to your own computer so you can work on it.</p></li>
+<li><p><strong>Local</strong>: the copy of the repo that is on your computer</p></li>
+<li><p><strong>Origin</strong>: the copy of the repo that is on a remote location</p></li>
+<li><p><strong>Fork</strong>: making your own copy of someone else’s project.</p></li>
+</ul>
+<p>Note: the <em>other</em> that you could be working with might be you on another computer.</p>
+</div>
+<p>To use GitHub Desktop to open VS Code:</p>
+<ol class="arabic simple">
+<li><p>Open GitHub Desktop</p></li>
+<li><p>Make sure the <strong>Current repository</strong> (top lefthand) is <strong>PyQt6-Boiler-Plate</strong></p></li>
+<li><p>Click <strong>Open Visual Studio Code</strong></p></li>
+</ol>
+<p><img alt="Launch with GitHub Desktop" src="../../_images/launch_with_ghdt.png" /></p>
+<p>VS Code should now launch and you file panel of the lefthand side should show:</p>
+<ul class="simple">
+<li><p>PYQT6-BOILER-PLATE</p></li>
+<li><p>all the files in the image below</p></li>
+</ul>
+<p><img alt="Initial directory files" src="../../_images/initial_directory.png" /></p>
+</section>
+<section id="virtual-environment">
+<h2>Virtual Environment<a class="headerlink" href="#virtual-environment" title="Permalink to this heading">#</a></h2>
+<p>Python virtual environments enables you to designate distinct areas for various Python projects. It’s like having various rooms in your home, each with its unique furnishings and accents. You can work on various projects in a virtual environment without their interfering with one another. Each project gets a special “playground” with its own Python installation and particular libraries. A virtual environment is similar to walking into a specific room, and any Python programmes or libraries you use are exclusive to that project once you enter it. You can easily work on numerous Python projects because everything is kept organised and conflicts between projects are avoided.</p>
+<div class="note admonition">
+<p class="admonition-title">requirements.txt</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file lists all the external libraries that we need to install for this project.</p>
+<p>You can add extra libraries to this file, but to install them you will need to run the command:</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code></p></li>
+</ul>
+</div>
+<section id="create-virtual-environment">
+<h3>Create Virtual Environment<a class="headerlink" href="#create-virtual-environment" title="Permalink to this heading">#</a></h3>
+<div class="error admonition">
+<p class="admonition-title">Windows Users</p>
+<p>If you are a Windows user, you might need to run a Powershell command before you create a virtual environment for the first time.</p>
+<p>To do this:</p>
+<ol class="arabic simple">
+<li><p>Open Powershell <strong>as Adminstrator</strong></p></li>
+<li><p>Type the following: <code class="docutils literal notranslate"><span class="pre">Set-ExecutionPolicy</span> <span class="pre">Unrestricted</span> <span class="pre">-Force</span></code> then Enter</p></li>
+</ol>
+<p>You shouldn’t need to do this again, unless you get a new computer.</p>
+</div>
+<p>To create a virtual environment for this project:</p>
+<ol class="arabic simple">
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl</span></code> + <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">P</span></code> (Windows) / <code class="docutils literal notranslate"><span class="pre">Shift</span></code> + <code class="docutils literal notranslate"><span class="pre">Command</span></code> + <code class="docutils literal notranslate"><span class="pre">P</span></code> (macOS)</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">Python</span></code> at the top and choose <code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Create</span> <span class="pre">Environment...</span></code></p></li>
+</ol>
+<p><img alt="Create venv 1" src="../../_images/create_venv_1.png" /></p>
+<ol class="arabic simple" start="3">
+<li><p>At the top choose the <strong>Venv</strong> option</p></li>
+</ol>
+<p><img alt="Create venv 2" src="../../_images/create_venv_2.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Then choose the latest version of Python that you just installed</p></li>
+</ol>
+<p><img alt="Create venv 3" src="../../_images/create_venv_3.png" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Tick the box beside <strong>requirements.txt</strong> and then <strong>ok</strong></p></li>
+</ol>
+<p><img alt="Create venv 4" src="../../_images/create_venv_4.png" /></p>
+<p>VS Code will now:</p>
+<ul class="simple">
+<li><p>create your virtual environment</p></li>
+<li><p>perform any necessary updates</p></li>
+<li><p>install the libraries in the <strong>requirements.txt</strong> file</p></li>
+<li><p>activate your virtual environment</p></li>
+</ul>
+</section>
+</section>
+<section id="make-first-commit-and-push">
+<h2>Make first commit and push<a class="headerlink" href="#make-first-commit-and-push" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Change the text in <a class="reference external" href="http://README.md">README.md</a> to the text below and then save it:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># FIA2 Project</span>
+
+<span class="n">This</span> <span class="ow">is</span> <span class="n">my</span> <span class="n">code</span> <span class="k">for</span> <span class="n">my</span> <span class="n">FIA2</span> <span class="n">Project</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>In GitHub desktop write “Made first change” in the <strong>Summary (required)</strong> box</p></li>
+<li><p>Then click <strong>Commit to main</strong></p></li>
+</ol>
+<p><img alt="GitHub Desktop first commit" src="../../_images/ghdt_first_commit.png" /></p>
+<ol class="arabic simple" start="4">
+<li><p>Click <strong>Push origin</strong> (you will receive an error)</p></li>
+</ol>
+<p><img alt="GitHub Desktop fist push" src="../../_images/ghtd_first_push.png" /></p>
+<ol class="arabic simple" start="5">
+<li><p>Choose to <strong>Fork this repository</strong></p></li>
+<li><p>Choose <strong>For my own purposes</strong> and <strong>Continue</strong></p></li>
+<li><p>Click <strong>Push origin</strong> again</p></li>
+</ol>
+</section>
 <section id="creating-mvc-programs">
 <h2>Creating MVC Programs<a class="headerlink" href="#creating-mvc-programs" title="Permalink to this heading">#</a></h2>
 <p>In Unit 1 you will be creating a productivity application (desktop app) using the <strong><a class="reference internal" href="../2_concepts/2-3_paradigms.html#mvc"><span class="std std-ref">MVC Architecture</span></a></strong>. The videos below will introduce the concepts behind developing a MVC program using PyQt.</p>
@@ -656,6 +801,13 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boilerplate-development-environment">Boilerplate development environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-repo-in-vs-code">Opening repo in VS Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#virtual-environment">Virtual Environment</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-virtual-environment">Create Virtual Environment</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#make-first-commit-and-push">Make first commit and push</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-mvc-programs">Creating MVC Programs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-habits">Programming Habits</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#good-python-habits">5 Good Python Habits</a></li>
