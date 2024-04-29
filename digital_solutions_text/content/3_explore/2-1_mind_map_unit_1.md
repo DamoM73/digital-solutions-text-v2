@@ -56,7 +56,7 @@ How long the project will run for? What are the specific milestones or checkpoin
 
 ## Impacts
 
-From our **[Digital Solutions Impacts](../2_concepts/3-3_impacts.md)** choose three or four impacts that you think would naturally align with your solution. In your mind map create a node for each impact and then identify the impact’s:
+From our **[Digital Solutions Impacts](../2_concepts/3-3_impacts.md)** choose **three or four impacts** that you think would naturally align with your solution. In your mind map create a node for each impact and then identify the impact’s:
 
 - **Title** &mdash; what will you name this impact (replaces Impact 1, Impact 2 etc.)
 - **Category** &mdash; personal, social, economic or environmental
@@ -77,7 +77,7 @@ These are concerned with what the system needs to do.
 
 These can include:
 
-- **User interface** criteria concerning:
+- **User interface** criteria requires the identification of different aspects of the UI:
   - User's input hardware (eg. mouse and keyboard)
   - User's output hardware (eg. screen, speakers)
   - User's interaction with the system, including the specific **<a href="https://www.usability.gov/how-to-and-tools/methods/user-interface-elements.html" target="_blank">UI components</a>** that they might use (eg. a date picker)
@@ -90,7 +90,7 @@ These can include:
     - Efficient - uses minimal resources to solve identified problem
     - Maintainable - code that is easy to read and modify
     - Reliable - operate without producing errors or fail at a task
-- **Data** criteria concerning:
+- **Data** criteria identifies the type of data that the application will be using:
   - Data to be used (eg. any data that will be supplied or entered)
   - File formats to be used (eg. files saved as .txt files)
   - **[](data_structures)** to be used
@@ -101,18 +101,18 @@ Non-functional requirements specify the manner or the environment in which a sol
 
 They are concern with such matters as:
 
-- **[Usability principles](../2_concepts/3-1_useability_principles.md):**
+- **[Usability principles](../2_concepts/3-1_useability_principles.md)** list ways that you can address the different aspects of useability:
   - Accessibility &mdash; the ability to be used by many different people, even people with disabilities.
   - Effectiveness &mdash; the ability of users to use the system to do the work they need to do. Effectiveness includes reliability, which means the solution needs to be constant, dependable, consistent and repeatable.
   - Safety &mdash; the ability for users to make errors and recover from the mistake.
   - Utility &mdash; the ability of the system to provide all the functionality that users need.
   - Learnability &mdash; how easy the system is to learn
-- **Performance:** How quickly and efficiently the solution works and how it responds to commands and requests for action
-- **Security:** The level of protection the system and its data are expected to have in place
-- **Design:** The visual elements expected from the solution
-- **Documentation:** The type and extent of written documentation expected or needed (eg. help manuals)
-- **Economic:** The financial component of the project. Is there a budget? Can it have a running cost?
-- **Legal:** The legal frameworks that the project must work within. The most common are privacy and intellectual property laws.
+- **Performance:** identify How quickly and efficiently the solution works and how it responds to commands and requests for action
+- **Security:** explain level of protection the system and its data are expected to have in place
+- **Design:** what visual elements expected from the solution
+- **Documentation:** what type and extent of written documentation expected or needed (eg. help manuals)
+- **Economic:** what are the financial component of the project. Is there a budget? Can it have a running cost?
+- **Legal:** name the legal frameworks that the project must work within. The most common are privacy and intellectual property laws.
 
 **Note:** it is possible, depending on the project, that some of the nodes could be empty.
 
