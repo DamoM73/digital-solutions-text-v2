@@ -17,6 +17,17 @@
 
 ![Use Case Diagram Symbols](./assets/use_case_symbols.png)
 
+### Extend and Include
+
+These two are easy to confuse:
+
+- **Extend** &mdash; adds more functionality to the system
+  - is dependent on the extended (base) use case
+  - usually optional and can be triggered conditionally
+- **Include** &mdash; simplifies complex behaviours and can be used for common actions reused across multiple use cases.
+  - base use case is incomplete without the included use case
+  - included use case is mandatory and not optional
+
 ```{admonition} Checking the Use Case Diagram for Unit 1
 :class: warning
 When marking a Use Case Diagram the following questions are asked:

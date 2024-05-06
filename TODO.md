@@ -120,6 +120,7 @@
   - [ ] Introduction
   - [ ] Technical Language
   - [ ] Conventions
+    - [ ] Formatting Tricks
   - [ ] Diagrams
   - [ ] Modes
   - [ ] Presentations
