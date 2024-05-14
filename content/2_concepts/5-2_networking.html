@@ -197,7 +197,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="4-3_manipulating_data.html">Managing and Manipulating Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_data_transmission.html">Data Transmission</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_data_transmission.html">Data Exchange</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="5-1_privacy.html">Privacy</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Networking</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-3_data_security.html">Data Security</a></li>
@@ -563,6 +563,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness-of-delivery">Timeliness of delivery</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transmission-protocols">Data Transmission Protocols</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#http">HTTP</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-workflow">Basic Workflow</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-methods">HTTP Methods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status-codes">Status Codes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-http-2">Evolution: HTTP/2</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest">REST</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
@@ -637,6 +647,55 @@ document.write(`
 </section>
 <section id="timeliness-of-delivery">
 <h3>Timeliness of delivery<a class="headerlink" href="#timeliness-of-delivery" title="Permalink to this heading">#</a></h3>
+<p>The principle of timeliness of delivery in networking refers to the requirement that data should be delivered within a timeframe suitable for its intended use. This is crucial for ensuring that the information remains relevant and useful by the time it reaches its destination.</p>
+</section>
+</section>
+<section id="data-transmission-protocols">
+<h2>Data Transmission Protocols<a class="headerlink" href="#data-transmission-protocols" title="Permalink to this heading">#</a></h2>
+<section id="http">
+<h3>HTTP<a class="headerlink" href="#http" title="Permalink to this heading">#</a></h3>
+<p>The Hypertext Transfer Protocol (HTTP) is a foundational protocol for the World Wide Web, designed for the communication between web clients (usually browsers) and web servers. It’s a client-server protocol that facilitates the fetching of resources, such as HTML documents.</p>
+<section id="basic-workflow">
+<h4>Basic Workflow<a class="headerlink" href="#basic-workflow" title="Permalink to this heading">#</a></h4>
+<p><strong>Connection Establishment:</strong> The client initiates a TCP connection to the server. HTTP typically operates over TCP/IP and uses port 80 for standard HTTP connections.</p>
+<p><strong>Request-Response Cycle:</strong></p>
+<ul class="simple">
+<li><p>Request: Once the TCP connection is established, the client sends an HTTP request to the server. This request includes a request line (method, URL, HTTP version), headers (host, user-agent, content-type, etc.), and sometimes a body (for methods like POST or PUT).</p></li>
+<li><p>Response: The server processes the request and sends back an HTTP response. This response contains a status line (HTTP version, status code, status message), response headers (content-type, content-length, server, etc.), and often a body containing the requested resource or data.</p></li>
+</ul>
+<p><strong>Connection Closure:</strong> After the response is delivered, the connection can be closed, or kept open for further requests if the header Connection: keep-alive is used. This is common in HTTP/1.1 to reduce the overhead of establishing multiple TCP connections.</p>
+</section>
+<section id="http-methods">
+<h4>HTTP Methods<a class="headerlink" href="#http-methods" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>GET</strong>: Requests a representation of the specified resource. GET requests should only retrieve data and should have no other effect.</p></li>
+<li><p><strong>POST</strong>: Submits data to be processed (e.g., from a form) to the specified resource. The server may create or update resources based on the data provided.</p></li>
+<li><p><strong>PUT</strong>: Replaces all current representations of the target resource with the request payload.</p></li>
+<li><p><strong>DELETE</strong>: Removes the specified resource.</p></li>
+<li><p><strong>HEAD</strong>: Similar to GET, but it retrieves only the status line and header section.</p></li>
+<li><p><strong>OPTIONS</strong>: Describes the communication options for the target resource.</p></li>
+<li><p><strong>PATCH</strong>: Applies partial modifications to a resource.</p></li>
+</ul>
+</section>
+<section id="status-codes">
+<h4>Status Codes<a class="headerlink" href="#status-codes" title="Permalink to this heading">#</a></h4>
+<p>HTTP responses come with status codes that indicate the outcome of the request:</p>
+<ul class="simple">
+<li><p><strong>2xx (Success)</strong>: Indicates that the client’s request was successfully received, understood, and accepted (e.g., 200 OK, 201 Created).</p></li>
+<li><p><strong>3xx (Redirection)</strong>: Indicates that further action needs to be taken by the client in order to complete the request (e.g., 301 Moved Permanently, 302 Found).</p></li>
+<li><p><strong>4xx (Client Error)</strong>: Indicates an error that seems to have been caused by the client (e.g., 404 Not Found, 403 Forbidden).</p></li>
+<li><p><strong>5xx (Server Error)</strong>: Indicates an error on the server side (e.g., 500 Internal Server Error, 503 Service Unavailable).</p></li>
+</ul>
+</section>
+<section id="evolution-http-2">
+<h4>Evolution: HTTP/2<a class="headerlink" href="#evolution-http-2" title="Permalink to this heading">#</a></h4>
+<p>HTTP/2, the latest major version of HTTP, introduced several improvements:</p>
+<ul class="simple">
+<li><p><strong>Binary Protocol</strong>: Unlike HTTP/1.x, which is text-based, HTTP/2 uses binary encoding that is more efficient to parse.</p></li>
+<li><p><strong>Multiplexing</strong>: Multiple requests can be sent in rapid succession on the same TCP connection, and responses can be received out of order, solving the HTTP/1.x problem of head-of-line blocking.</p></li>
+<li><p><strong>Server Push</strong>: Servers can send resources to the client proactively.</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="data-exchange-methods">
@@ -737,6 +796,16 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jitter">Jitter</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#quality-of-service-qos-guarantee">Quality of Service (QoS) Guarantee</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#timeliness-of-delivery">Timeliness of delivery</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-transmission-protocols">Data Transmission Protocols</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#http">HTTP</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#basic-workflow">Basic Workflow</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-methods">HTTP Methods</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#status-codes">Status Codes</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#evolution-http-2">Evolution: HTTP/2</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
