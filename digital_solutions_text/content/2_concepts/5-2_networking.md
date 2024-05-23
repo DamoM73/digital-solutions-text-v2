@@ -62,11 +62,53 @@ Network Quality of Service (QoS) guarantee refers to the assurance that a networ
 
 To guarantee QoS, networks often employ various mechanisms, such as traffic prioritization, bandwidth reservation, and congestion management. For example, in a VoIP (Voice over Internet Protocol) call, QoS guarantee ensures that voice packets are prioritized over less time-sensitive data packets, reducing the chances of voice call degradation due to network congestion.
 
-
-
 ### Timeliness of delivery
 
+The principle of timeliness of delivery in networking refers to the requirement that data should be delivered within a timeframe suitable for its intended use. This is crucial for ensuring that the information remains relevant and useful by the time it reaches its destination.
 
+## Data Transmission Protocols
+
+### HTTP
+
+The Hypertext Transfer Protocol (HTTP) is a foundational protocol for the World Wide Web, designed for the communication between web clients (usually browsers) and web servers. It's a client-server protocol that facilitates the fetching of resources, such as HTML documents.
+
+#### Basic Workflow
+
+**Connection Establishment:** The client initiates a TCP connection to the server. HTTP typically operates over TCP/IP and uses port 80 for standard HTTP connections.
+
+**Request-Response Cycle:**
+
+- Request: Once the TCP connection is established, the client sends an HTTP request to the server. This request includes a request line (method, URL, HTTP version), headers (host, user-agent, content-type, etc.), and sometimes a body (for methods like POST or PUT).
+- Response: The server processes the request and sends back an HTTP response. This response contains a status line (HTTP version, status code, status message), response headers (content-type, content-length, server, etc.), and often a body containing the requested resource or data.
+
+**Connection Closure:** After the response is delivered, the connection can be closed, or kept open for further requests if the header Connection: keep-alive is used. This is common in HTTP/1.1 to reduce the overhead of establishing multiple TCP connections.
+
+#### HTTP Methods
+
+- **GET**: Requests a representation of the specified resource. GET requests should only retrieve data and should have no other effect.
+- **POST**: Submits data to be processed (e.g., from a form) to the specified resource. The server may create or update resources based on the data provided.
+- **PUT**: Replaces all current representations of the target resource with the request payload.
+- **DELETE**: Removes the specified resource.
+- **HEAD**: Similar to GET, but it retrieves only the status line and header section.
+- **OPTIONS**: Describes the communication options for the target resource.
+- **PATCH**: Applies partial modifications to a resource.
+
+#### Status Codes
+
+HTTP responses come with status codes that indicate the outcome of the request:
+
+- **2xx (Success)**: Indicates that the client's request was successfully received, understood, and accepted (e.g., 200 OK, 201 Created).
+- **3xx (Redirection)**: Indicates that further action needs to be taken by the client in order to complete the request (e.g., 301 Moved Permanently, 302 Found).
+- **4xx (Client Error)**: Indicates an error that seems to have been caused by the client (e.g., 404 Not Found, 403 Forbidden).
+- **5xx (Server Error)**: Indicates an error on the server side (e.g., 500 Internal Server Error, 503 Service Unavailable).
+
+#### Evolution: HTTP/2
+
+HTTP/2, the latest major version of HTTP, introduced several improvements:
+
+- **Binary Protocol**: Unlike HTTP/1.x, which is text-based, HTTP/2 uses binary encoding that is more efficient to parse.
+- **Multiplexing**: Multiple requests can be sent in rapid succession on the same TCP connection, and responses can be received out of order, solving the HTTP/1.x problem of head-of-line blocking.
+- **Server Push**: Servers can send resources to the client proactively.
 
 ## Data Exchange Methods
 
