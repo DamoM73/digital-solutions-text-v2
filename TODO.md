@@ -117,12 +117,12 @@
     - [ ] Unit 3
     - [ ] Unit 4
 - Communication
-  - [ ] Introduction
-  - [ ] Technical Language
-  - [ ] Conventions
+  - [x] Introduction
+  - [x] Technical Language
+  - [x] Conventions
     - [ ] Formatting Tricks
-  - [ ] Diagrams
-  - [ ] Modes
+  - [x] Diagrams
+  - [x] Modes
   - [ ] Presentations
 - End Material
   - [x] Glossary
