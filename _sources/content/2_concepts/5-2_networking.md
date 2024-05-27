@@ -2,6 +2,30 @@
 
 ## How do networks work?
 
+Networks are the backbone of the modern world, but how do they work. Check the following videos to learn the fundamental about networking.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3QhU9jd03a0?si=c15Ia4djP9A9xi-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AEaKrq3SpW8?si=gVh5_2f8jmQfuNen" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+```{admonition} Traceroute (Doobly Doo)
+:class: tip
+Want to run traceroute on your computer? See directions below. Remember you can replace "dftba.com" with whatever website you want!
+
+Traceroute on Windows
+1. Press the Start Button
+2. Type "CMD" and press "Enter"
+3. In the Command Prompt type "tracert dftba.com"
+
+Traceroute on Mac
+1. Click on the "Go" drop down menu
+2. Click on "Utilities"
+3. Open Terminal
+4. Type "traceroute dftba.com"
+```
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/guvsH5OFizE?si=-qBwz9LiQseDuxeH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Network Transmission Principles
 
 Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures.
