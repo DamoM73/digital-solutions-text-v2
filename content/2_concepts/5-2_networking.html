@@ -574,9 +574,31 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest">REST</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-representational-state-transfer">REST (Representational State Transfer)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-rest">What is REST?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-of-rest">Key Concepts of REST:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-data-exchange-using-rest">Example of Data Exchange Using REST:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-json">Key Features of JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#json-structure">JSON Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-json">Example of JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-json">Parsing JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-of-json">Usage of JSON</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-xml">Key Features of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xml-structure">XML Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-xml">Example of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-xml">Parsing XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-of-xml">Usage of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-xml">Advantages of XML</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-xml">Disadvantages of XML</a></li>
 </ul>
 </li>
 </ul>
@@ -721,14 +743,507 @@ document.write(`
 </section>
 <section id="data-exchange-methods">
 <h2>Data Exchange Methods<a class="headerlink" href="#data-exchange-methods" title="Permalink to this heading">#</a></h2>
-<section id="rest">
-<h3>REST<a class="headerlink" href="#rest" title="Permalink to this heading">#</a></h3>
+<section id="rest-representational-state-transfer">
+<h3>REST (Representational State Transfer)<a class="headerlink" href="#rest-representational-state-transfer" title="Permalink to this heading">#</a></h3>
+<section id="what-is-rest">
+<h4>What is REST?<a class="headerlink" href="#what-is-rest" title="Permalink to this heading">#</a></h4>
+<p>REST is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol – the HTTP (Hypertext Transfer Protocol). RESTful systems use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources.</p>
+</section>
+<section id="key-concepts-of-rest">
+<h4>Key Concepts of REST:<a class="headerlink" href="#key-concepts-of-rest" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Resources</strong>:</p>
+<ul class="simple">
+<li><p>Resources are the key components of a RESTful system. They are typically represented as data objects or services and can be accessed using a unique URL.</p></li>
+<li><p>Example: In a library system, resources could be books, authors, and borrowers.</p></li>
+</ul>
+</li>
+<li><p><strong>HTTP Methods</strong>:</p>
+<ul class="simple">
+<li><p>REST uses standard HTTP methods to perform operations on resources.</p>
+<ul>
+<li><p><strong>GET</strong>: Retrieve a resource.</p></li>
+<li><p><strong>POST</strong>: Create a new resource.</p></li>
+<li><p><strong>PUT</strong>: Update an existing resource.</p></li>
+<li><p><strong>DELETE</strong>: Remove a resource.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Stateless Communication</strong>:</p>
+<ul class="simple">
+<li><p>Each request from a client to a server must contain all the information the server needs to understand and process the request.</p></li>
+<li><p>The server does not store any state about the client session on its end. Every request is treated as independent.</p></li>
+</ul>
+</li>
+<li><p><strong>Representation</strong>:</p>
+<ul class="simple">
+<li><p>Resources are represented in different formats, usually JSON (JavaScript Object Notation) or XML (eXtensible Markup Language).</p></li>
+<li><p>The client requests a resource and the server responds with the resource’s current state in one of these formats.</p></li>
+</ul>
+</li>
+<li><p><strong>Uniform Interface</strong>:</p>
+<ul class="simple">
+<li><p>RESTful systems have a uniform interface, simplifying the architecture and enabling interactions between different systems.</p></li>
+<li><p>The four guiding principles of this uniform interface are:</p>
+<ul>
+<li><p>Identification of resources.</p>
+<ul>
+<li><p>Resources are identified in the requests, typically using URLs (Uniform Resource Locators).</p></li>
+<li><p>Each resource is uniquely identifiable via a URL, which allows the client to interact with it.</p></li>
+</ul>
+</li>
+<li><p>Manipulation of resources through representations.</p>
+<ul>
+<li><p>Resources are represented using standard formats such as JSON or XML.</p></li>
+<li><p>Clients manipulate resources by using these representations. For example, a client can update a book’s information by sending a JSON representation of the book to the server.</p></li>
+</ul>
+</li>
+<li><p>Self-descriptive messages.</p>
+<ul>
+<li><p>Each message (request or response) contains all the information necessary for the client or server to understand it.</p></li>
+<li><p>This means that the format, type of data, and other metadata are included within the messages.</p></li>
+<li><p>HTTP headers play a crucial role in this, providing metadata such as content type (Content-Type: application/json) and status codes (200 OK, 404 Not Found).</p></li>
+</ul>
+</li>
+<li><p>Hypermedia as the engine of application state (HATEOAS).</p>
+<ul>
+<li><p>Hypermedia means that the resources provided by the server include links to other resources.</p></li>
+<li><p>Clients can dynamically navigate to related resources by following these links, which are embedded in the representations.</p></li>
+<li><p>This allows clients to discover and interact with the API without needing prior knowledge of its structure.</p></li>
+<li><p>Example: A book resource might include links to related authors or reviews.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Example of a Uniform Interface in Action</p>
+<ul>
+<li><p>Consider a RESTful API for a library system:</p>
+<ul>
+<li><p>GET /books: Retrieves a list of books.</p></li>
+<li><p>GET /books/123: Retrieves the details of a specific book with ID 123.</p></li>
+<li><p>POST /books: Creates a new book.</p></li>
+<li><p>PUT /books/123: Updates the details of the book with ID 123.</p></li>
+<li><p>DELETE /books/123: Deletes the book with ID 123.</p></li>
+</ul>
+</li>
+<li><p>Each of these operations uses a consistent set of rules and conventions, making the API predictable and easy to use.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-of-data-exchange-using-rest">
+<h4>Example of Data Exchange Using REST:<a class="headerlink" href="#example-of-data-exchange-using-rest" title="Permalink to this heading">#</a></h4>
+<ol class="arabic">
+<li><p><strong>GET Request</strong>:</p>
+<ul>
+<li><p>A client wants to retrieve information about a book with the ID 123.</p></li>
+<li><p>The client sends a GET request to the server at the URL: <code class="docutils literal notranslate"><span class="pre">http://api.library.com/books/123</span></code>.</p></li>
+<li><p>The server responds with the book’s details in JSON format:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Introduction to Programming&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2020</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>POST Request</strong>:</p>
+<ul>
+<li><p>A client wants to add a new book to the library.</p></li>
+<li><p>The client sends a POST request with the book’s data to the URL: <code class="docutils literal notranslate"><span class="pre">http://api.library.com/books</span></code>.</p></li>
+<li><p>The server processes the request and adds the book to the database, responding with the created book’s details:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Advanced Programming&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jane Smith&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2021</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>PUT Request</strong>:</p>
+<ul>
+<li><p>A client wants to update the information of an existing book with the ID 123.</p></li>
+<li><p>The client sends a PUT request with the updated data to the URL: <code class="docutils literal notranslate"><span class="pre">http://api.library.com/books/123</span></code>.</p></li>
+<li><p>The server updates the book information and responds with the updated details:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Introduction to Programming - 2nd Edition&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;author&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2022</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>DELETE Request</strong>:</p>
+<ul>
+<li><p>A client wants to delete a book with the ID 123.</p></li>
+<li><p>The client sends a DELETE request to the URL: <code class="docutils literal notranslate"><span class="pre">http://api.library.com/books/123</span></code>.</p></li>
+<li><p>The server deletes the book and confirms the deletion:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book with ID 123 has been deleted.&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="summary">
+<h4>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h4>
+<p>RESTful APIs allow for a standardized way of interacting with web services using HTTP methods. The stateless nature and use of standard HTTP protocols make REST a scalable and simple way to design networked applications. Understanding REST is crucial for developing efficient and interoperable web services.</p>
+<p>Feel free to ask if you need more detailed examples or have specific questions about implementing RESTful services in your curriculum!</p>
+</section>
 </section>
 <section id="json">
 <h3>JSON<a class="headerlink" href="#json" title="Permalink to this heading">#</a></h3>
+<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It’s widely used in web applications to send and receive data between a server and a client.</p>
+<section id="key-features-of-json">
+<h4>Key Features of JSON<a class="headerlink" href="#key-features-of-json" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Simplicity</strong>:</p>
+<ul class="simple">
+<li><p>JSON syntax is straightforward and easy to understand.</p></li>
+<li><p>It is text-based, making it readable for humans.</p></li>
+</ul>
+</li>
+<li><p><strong>Language Independence</strong>:</p>
+<ul class="simple">
+<li><p>Although it originates from JavaScript, JSON is language-agnostic.</p></li>
+<li><p>It is supported by most programming languages, either natively or through libraries.</p></li>
+</ul>
+</li>
+<li><p><strong>Lightweight</strong>:</p>
+<ul class="simple">
+<li><p>JSON data is compact and can be easily transmitted over networks, making it efficient for data exchange.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="json-structure">
+<h4>JSON Structure<a class="headerlink" href="#json-structure" title="Permalink to this heading">#</a></h4>
+<p>JSON data is represented as key-value (called dictionaries in Python) pairs organized in a hierarchical structure. The basic building blocks of JSON are:</p>
+<ol class="arabic">
+<li><p><strong>Objects</strong>:</p>
+<ul>
+<li><p>Enclosed in curly braces <code class="docutils literal notranslate"><span class="pre">{}</span></code>.</p></li>
+<li><p>Contain a set of key-value pairs.</p></li>
+<li><p>Keys are strings, and values can be strings, numbers, objects, arrays, <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, or <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;isStudent&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Arrays</strong>:</p>
+<ul>
+<li><p>Enclosed in square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p></li>
+<li><p>Contain a list of values.</p></li>
+<li><p>Values can be of any JSON data type.</p></li>
+<li><p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;students&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Charlie&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Values</strong>:</p>
+<ul>
+<li><p>Can be strings, numbers, objects, arrays, booleans (<code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>), or <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p></li>
+<li><p>Strings are enclosed in double quotes.</p></li>
+<li><p>Numbers can be integers or floating-point.</p></li>
+<li><p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;height&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">5.75</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;isStudent&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;courses&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-of-json">
+<h4>Example of JSON<a class="headerlink" href="#example-of-json" title="Permalink to this heading">#</a></h4>
+<p>Here’s a complete example representing a student record:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;student&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;isEnrolled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;courses&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;courseName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mathematics&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;courseCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;MATH101&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;courseName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;English Literature&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;courseCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ENG201&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;credits&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;contact&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john.doe@example.com&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;555-1234&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="parsing-json">
+<h4>Parsing JSON<a class="headerlink" href="#parsing-json" title="Permalink to this heading">#</a></h4>
+<p>In Python use the <code class="docutils literal notranslate"><span class="pre">json</span></code> module to parse JSON strings and convert objects to JSON strings.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">json_string</span> <span class="o">=</span> <span class="s1">&#39;{&quot;name&quot;: &quot;John Doe&quot;, &quot;age&quot;: 30}&#39;</span>
+<span class="n">python_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">python_dict</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">])</span>  <span class="c1"># Output: John Doe</span>
+
+<span class="n">new_json_string</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">python_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_json_string</span><span class="p">)</span>  <span class="c1"># Output: {&quot;name&quot;: &quot;John Doe&quot;, &quot;age&quot;: 30}</span>
+</pre></div>
+</div>
+</section>
+<section id="usage-of-json">
+<h4>Usage of JSON<a class="headerlink" href="#usage-of-json" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>APIs</strong>:</p>
+<ul class="simple">
+<li><p>JSON is commonly used in RESTful APIs to exchange data between clients and servers.</p></li>
+</ul>
+</li>
+<li><p><strong>Configuration Files</strong>:</p>
+<ul class="simple">
+<li><p>Many software applications use JSON for configuration due to its readability and ease of parsing.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Storage</strong>:</p>
+<ul class="simple">
+<li><p>JSON can be used to store data in databases, especially in NoSQL databases like MongoDB.</p></li>
+</ul>
+</li>
+<li><p><strong>Web Development</strong>:</p>
+<ul class="simple">
+<li><p>Web applications use JSON to transmit data asynchronously between the server and the client, often with technologies like AJAX.</p></li>
+</ul>
+</li>
+</ol>
+<p>JSON’s simplicity, flexibility, and widespread support make it an essential tool for data interchange in modern web development. If you have any specific questions or need further details, feel free to ask!</p>
+</section>
 </section>
 <section id="xml">
 <h3>XML<a class="headerlink" href="#xml" title="Permalink to this heading">#</a></h3>
+<p>XML (eXtensible Markup Language) is a versatile and widely-used format for storing and transporting data. Unlike JSON, which is primarily used for data interchange, XML is more commonly used for document storage, configuration files, and data interchange in enterprise systems.</p>
+<section id="key-features-of-xml">
+<h4>Key Features of XML<a class="headerlink" href="#key-features-of-xml" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Self-Descriptive</strong>:</p>
+<ul class="simple">
+<li><p>XML documents are self-descriptive, meaning they include metadata about the data they contain.</p></li>
+<li><p>Each element is identified by a tag, making it clear what data is being represented.</p></li>
+</ul>
+</li>
+<li><p><strong>Hierarchical Structure</strong>:</p>
+<ul class="simple">
+<li><p>XML documents have a tree-like structure with nested elements.</p></li>
+<li><p>This hierarchical nature makes it easy to represent complex data relationships.</p></li>
+</ul>
+</li>
+<li><p><strong>Extensibility</strong>:</p>
+<ul class="simple">
+<li><p>XML is extensible, allowing users to define their own tags.</p></li>
+<li><p>This flexibility makes XML suitable for a wide range of applications.</p></li>
+</ul>
+</li>
+<li><p><strong>Human and Machine Readable</strong>:</p>
+<ul class="simple">
+<li><p>XML documents are both human-readable and machine-readable.</p></li>
+<li><p>They use plain text, making it easy to view and edit with a simple text editor.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="xml-structure">
+<h4>XML Structure<a class="headerlink" href="#xml-structure" title="Permalink to this heading">#</a></h4>
+<p>An XML document consists of elements enclosed in tags, forming a hierarchical tree structure. The basic building blocks of XML are:</p>
+<ol class="arabic">
+<li><p><strong>Elements</strong>:</p>
+<ul>
+<li><p>Enclosed in opening and closing tags <code class="docutils literal notranslate"><span class="pre">&lt;tag&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">&lt;/tag&gt;</span></code>.</p></li>
+<li><p>Can contain text, attributes, other elements, or a combination of these.</p></li>
+<li><p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;book&gt;</span>
+<span class="w">  </span><span class="nt">&lt;title&gt;</span>Introduction<span class="w"> </span>to<span class="w"> </span>Programming<span class="nt">&lt;/title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;author&gt;</span>John<span class="w"> </span>Doe<span class="nt">&lt;/author&gt;</span>
+<span class="w">  </span><span class="nt">&lt;year&gt;</span>2020<span class="nt">&lt;/year&gt;</span>
+<span class="nt">&lt;/book&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Attributes</strong>:</p>
+<ul>
+<li><p>Provide additional information about elements.</p></li>
+<li><p>Placed within the opening tag of an element.</p></li>
+<li><p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;book</span><span class="w"> </span><span class="na">id=</span><span class="s">&quot;123&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;title&gt;</span>Introduction<span class="w"> </span>to<span class="w"> </span>Programming<span class="nt">&lt;/title&gt;</span>
+<span class="w">  </span><span class="nt">&lt;author&gt;</span>John<span class="w"> </span>Doe<span class="nt">&lt;/author&gt;</span>
+<span class="w">  </span><span class="nt">&lt;year&gt;</span>2020<span class="nt">&lt;/year&gt;</span>
+<span class="nt">&lt;/book&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Prolog</strong>:</p>
+<ul>
+<li><p>The prolog is an optional part of the XML document that can contain an XML declaration and processing instructions.</p></li>
+<li><p>The XML declaration specifies the version of XML and the character encoding used in the document.</p></li>
+<li><p>Example:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="example-of-xml">
+<h4>Example of XML<a class="headerlink" href="#example-of-xml" title="Permalink to this heading">#</a></h4>
+<p>Here’s a complete example representing a student record in XML:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;student&gt;</span>
+<span class="w">  </span><span class="nt">&lt;id&gt;</span>12345<span class="nt">&lt;/id&gt;</span>
+<span class="w">  </span><span class="nt">&lt;name&gt;</span>John<span class="w"> </span>Doe<span class="nt">&lt;/name&gt;</span>
+<span class="w">  </span><span class="nt">&lt;age&gt;</span>21<span class="nt">&lt;/age&gt;</span>
+<span class="w">  </span><span class="nt">&lt;isEnrolled&gt;</span>true<span class="nt">&lt;/isEnrolled&gt;</span>
+<span class="w">  </span><span class="nt">&lt;courses&gt;</span>
+<span class="w">    </span><span class="nt">&lt;course&gt;</span>
+<span class="w">      </span><span class="nt">&lt;courseName&gt;</span>Mathematics<span class="nt">&lt;/courseName&gt;</span>
+<span class="w">      </span><span class="nt">&lt;courseCode&gt;</span>MATH101<span class="nt">&lt;/courseCode&gt;</span>
+<span class="w">      </span><span class="nt">&lt;credits&gt;</span>3<span class="nt">&lt;/credits&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/course&gt;</span>
+<span class="w">    </span><span class="nt">&lt;course&gt;</span>
+<span class="w">      </span><span class="nt">&lt;courseName&gt;</span>English<span class="w"> </span>Literature<span class="nt">&lt;/courseName&gt;</span>
+<span class="w">      </span><span class="nt">&lt;courseCode&gt;</span>ENG201<span class="nt">&lt;/courseCode&gt;</span>
+<span class="w">      </span><span class="nt">&lt;credits&gt;</span>4<span class="nt">&lt;/credits&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/course&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/courses&gt;</span>
+<span class="w">  </span><span class="nt">&lt;contact&gt;</span>
+<span class="w">    </span><span class="nt">&lt;email&gt;</span>john.doe@example.com<span class="nt">&lt;/email&gt;</span>
+<span class="w">    </span><span class="nt">&lt;phone&gt;</span>555-1234<span class="nt">&lt;/phone&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/contact&gt;</span>
+<span class="nt">&lt;/student&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="parsing-xml">
+<h4>Parsing XML<a class="headerlink" href="#parsing-xml" title="Permalink to this heading">#</a></h4>
+<p>Python can parse XML using libraries like <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+
+<span class="n">xml_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;student&gt;</span>
+<span class="s2">                &lt;id&gt;12345&lt;/id&gt;</span>
+<span class="s2">                &lt;name&gt;John Doe&lt;/name&gt;</span>
+<span class="s2">                &lt;age&gt;21&lt;/age&gt;</span>
+<span class="s2">                &lt;/student&gt;&quot;&quot;&quot;</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">xml_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># Output: John Doe</span>
+</pre></div>
+</div>
+</section>
+<section id="usage-of-xml">
+<h4>Usage of XML<a class="headerlink" href="#usage-of-xml" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Document Storage</strong>:</p>
+<ul class="simple">
+<li><p>XML is often used to store configuration files and data files.</p></li>
+<li><p>Example: Configuration files in many software applications, such as <code class="docutils literal notranslate"><span class="pre">web.xml</span></code> in Java web applications.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Interchange</strong>:</p>
+<ul class="simple">
+<li><p>XML is used to exchange data between different systems and platforms.</p></li>
+<li><p>Example: Web services often use XML-based protocols like SOAP (Simple Object Access Protocol) to communicate.</p></li>
+</ul>
+</li>
+<li><p><strong>RSS Feeds</strong>:</p>
+<ul class="simple">
+<li><p>XML is used to create RSS feeds, which are used to distribute updated content from websites.</p></li>
+<li><p>Example: News websites and blogs often provide RSS feeds in XML format.</p></li>
+</ul>
+</li>
+<li><p><strong>Document Formats</strong>:</p>
+<ul class="simple">
+<li><p>XML serves as the basis for various document formats.</p></li>
+<li><p>Example: Office document formats like DOCX (Microsoft Word) and ODT (OpenDocument Text) are based on XML.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="advantages-of-xml">
+<h4>Advantages of XML<a class="headerlink" href="#advantages-of-xml" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Versatility</strong>:</p>
+<ul class="simple">
+<li><p>XML can represent complex data structures and is suitable for a wide range of applications.</p></li>
+</ul>
+</li>
+<li><p><strong>Standardization</strong>:</p>
+<ul class="simple">
+<li><p>XML is a W3C standard, ensuring consistency and interoperability across different systems.</p></li>
+</ul>
+</li>
+<li><p><strong>Self-Descriptive</strong>:</p>
+<ul class="simple">
+<li><p>XML documents are self-descriptive, making them easy to understand and maintain.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<section id="disadvantages-of-xml">
+<h3>Disadvantages of XML<a class="headerlink" href="#disadvantages-of-xml" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Verbosity</strong>:</p>
+<ul class="simple">
+<li><p>XML can be quite verbose, leading to larger file sizes compared to more concise formats like JSON.</p></li>
+</ul>
+</li>
+<li><p><strong>Parsing Overhead</strong>:</p>
+<ul class="simple">
+<li><p>XML parsing can be computationally intensive, especially for large documents.</p></li>
+</ul>
+</li>
+</ol>
+<p>XML remains a robust and flexible choice for many applications, particularly those requiring a formal structure and extensive metadata. If you need further details or examples, feel free to ask!</p>
 <div class="admonition-unit-4-subject-matter-covered admonition">
 <p class="admonition-title">Unit 4 subject matter covered:</p>
 <ul class="simple">
@@ -830,9 +1345,31 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-exchange-methods">Data Exchange Methods</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest">REST</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rest-representational-state-transfer">REST (Representational State Transfer)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-rest">What is REST?</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-of-rest">Key Concepts of REST:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-data-exchange-using-rest">Example of Data Exchange Using REST:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#json">JSON</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-json">Key Features of JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#json-structure">JSON Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-json">Example of JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-json">Parsing JSON</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-of-json">Usage of JSON</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xml">XML</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#key-features-of-xml">Key Features of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#xml-structure">XML Structure</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-of-xml">Example of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-xml">Parsing XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-of-xml">Usage of XML</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-xml">Advantages of XML</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-xml">Disadvantages of XML</a></li>
 </ul>
 </li>
 </ul>
