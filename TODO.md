@@ -91,7 +91,10 @@
   - [x] Generate Phase
   - [x] Coding
     - [x] Unit 1
-    - [x] Unit 2
+    - [ ] Unit 2
+      - [ ] SQLite and Python
+      - [ ] Parsing CSV into Python
+      - [ ] Hangman with SQL
     - [ ] Unit 3
     - [ ] Unit 4
   - [x] Testing Table
