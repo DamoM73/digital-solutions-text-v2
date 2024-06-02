@@ -2,6 +2,30 @@
 
 ## How do networks work?
 
+Networks are the backbone of the modern world, but how do they work. Check the following videos to learn the fundamental about networking.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/3QhU9jd03a0?si=c15Ia4djP9A9xi-3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AEaKrq3SpW8?si=gVh5_2f8jmQfuNen" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+```{admonition} Traceroute (Doobly Doo)
+:class: tip
+Want to run traceroute on your computer? See directions below. Remember you can replace "dftba.com" with whatever website you want!
+
+Traceroute on Windows
+1. Press the Start Button
+2. Type "CMD" and press "Enter"
+3. In the Command Prompt type "tracert dftba.com"
+
+Traceroute on Mac
+1. Click on the "Go" drop down menu
+2. Click on "Utilities"
+3. Open Terminal
+4. Type "traceroute dftba.com"
+```
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/guvsH5OFizE?si=-qBwz9LiQseDuxeH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Network Transmission Principles
 
 Network transmission principles are fundamental concepts in networking that govern how data is sent and received across computer networks. These principles are essential for understanding how information flows efficiently and reliably over the internet and other network infrastructures.
@@ -112,15 +136,381 @@ HTTP/2, the latest major version of HTTP, introduced several improvements:
 
 ## Data Exchange Methods
 
-### REST
+### REST (Representational State Transfer)
 
+#### What is REST?
+
+REST is an architectural style for designing networked applications. It relies on a stateless, client-server, cacheable communications protocol -- the HTTP (Hypertext Transfer Protocol). RESTful systems use HTTP requests to perform CRUD (Create, Read, Update, Delete) operations on resources.
+
+#### Key Concepts of REST:
+
+1. **Resources**:
+   - Resources are the key components of a RESTful system. They are typically represented as data objects or services and can be accessed using a unique URL.
+   - Example: In a library system, resources could be books, authors, and borrowers.
+
+2. **HTTP Methods**:
+   - REST uses standard HTTP methods to perform operations on resources.
+     - **GET**: Retrieve a resource.
+     - **POST**: Create a new resource.
+     - **PUT**: Update an existing resource.
+     - **DELETE**: Remove a resource.
+
+3. **Stateless Communication**:
+   - Each request from a client to a server must contain all the information the server needs to understand and process the request.
+   - The server does not store any state about the client session on its end. Every request is treated as independent.
+
+4. **Representation**:
+   - Resources are represented in different formats, usually JSON (JavaScript Object Notation) or XML (eXtensible Markup Language).
+   - The client requests a resource and the server responds with the resource's current state in one of these formats.
+
+5. **Uniform Interface**:
+   - RESTful systems have a uniform interface, simplifying the architecture and enabling interactions between different systems.
+   - The four guiding principles of this uniform interface are:
+     - Identification of resources.
+       - Resources are identified in the requests, typically using URLs (Uniform Resource Locators).
+       - Each resource is uniquely identifiable via a URL, which allows the client to interact with it.
+     - Manipulation of resources through representations.
+       - Resources are represented using standard formats such as JSON or XML.
+       - Clients manipulate resources by using these representations. For example, a client can update a book's information by sending a JSON representation of the book to the server.
+     - Self-descriptive messages.
+       - Each message (request or response) contains all the information necessary for the client or server to understand it.
+       - This means that the format, type of data, and other metadata are included within the messages.
+       - HTTP headers play a crucial role in this, providing metadata such as content type (Content-Type: application/json) and status codes (200 OK, 404 Not Found).
+     - Hypermedia as the engine of application state (HATEOAS).
+       - Hypermedia means that the resources provided by the server include links to other resources.
+       - Clients can dynamically navigate to related resources by following these links, which are embedded in the representations.
+       - This allows clients to discover and interact with the API without needing prior knowledge of its structure.
+       - Example: A book resource might include links to related authors or reviews.
+   - Example of a Uniform Interface in Action
+     - Consider a RESTful API for a library system:
+       - GET /books: Retrieves a list of books.
+       - GET /books/123: Retrieves the details of a specific book with ID 123.
+       - POST /books: Creates a new book.
+       - PUT /books/123: Updates the details of the book with ID 123.
+       - DELETE /books/123: Deletes the book with ID 123.
+     - Each of these operations uses a consistent set of rules and conventions, making the API predictable and easy to use.
+
+#### Example of Data Exchange Using REST:
+
+1. **GET Request**:
+   - A client wants to retrieve information about a book with the ID 123.
+   - The client sends a GET request to the server at the URL: `http://api.library.com/books/123`.
+   - The server responds with the book's details in JSON format:
+     ```json
+     {
+       "id": 123,
+       "title": "Introduction to Programming",
+       "author": "John Doe",
+       "year": 2020
+     }
+     ```
+
+2. **POST Request**:
+   - A client wants to add a new book to the library.
+   - The client sends a POST request with the book's data to the URL: `http://api.library.com/books`.
+   - The server processes the request and adds the book to the database, responding with the created book's details:
+     ```json
+     {
+       "id": 124,
+       "title": "Advanced Programming",
+       "author": "Jane Smith",
+       "year": 2021
+     }
+     ```
+
+3. **PUT Request**:
+   - A client wants to update the information of an existing book with the ID 123.
+   - The client sends a PUT request with the updated data to the URL: `http://api.library.com/books/123`.
+   - The server updates the book information and responds with the updated details:
+     ```json
+     {
+       "id": 123,
+       "title": "Introduction to Programming - 2nd Edition",
+       "author": "John Doe",
+       "year": 2022
+     }
+     ```
+
+4. **DELETE Request**:
+   - A client wants to delete a book with the ID 123.
+   - The client sends a DELETE request to the URL: `http://api.library.com/books/123`.
+   - The server deletes the book and confirms the deletion:
+     ```json
+     {
+       "message": "Book with ID 123 has been deleted."
+     }
+     ```
+
+#### Summary
+
+RESTful APIs allow for a standardized way of interacting with web services using HTTP methods. The stateless nature and use of standard HTTP protocols make REST a scalable and simple way to design networked applications. Understanding REST is crucial for developing efficient and interoperable web services.
+
+Feel free to ask if you need more detailed examples or have specific questions about implementing RESTful services in your curriculum!
 
 ### JSON
 
+JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It's widely used in web applications to send and receive data between a server and a client.
+
+#### Key Features of JSON
+
+1. **Simplicity**:
+   - JSON syntax is straightforward and easy to understand.
+   - It is text-based, making it readable for humans.
+
+2. **Language Independence**:
+   - Although it originates from JavaScript, JSON is language-agnostic.
+   - It is supported by most programming languages, either natively or through libraries.
+
+3. **Lightweight**:
+   - JSON data is compact and can be easily transmitted over networks, making it efficient for data exchange.
+
+#### JSON Structure
+
+JSON data is represented as key-value (called dictionaries in Python) pairs organized in a hierarchical structure. The basic building blocks of JSON are:
+
+1. **Objects**:
+   - Enclosed in curly braces `{}`.
+   - Contain a set of key-value pairs.
+   - Keys are strings, and values can be strings, numbers, objects, arrays, `true`, `false`, or `null`.
+   - Example:
+     ```json
+     {
+       "name": "John Doe",
+       "age": 30,
+       "isStudent": false
+     }
+     ```
+
+2. **Arrays**:
+   - Enclosed in square brackets `[]`.
+   - Contain a list of values.
+   - Values can be of any JSON data type.
+   - Example:
+     ```json
+     {
+       "students": ["Alice", "Bob", "Charlie"]
+     }
+     ```
+
+3. **Values**:
+   - Can be strings, numbers, objects, arrays, booleans (`true` or `false`), or `null`.
+   - Strings are enclosed in double quotes.
+   - Numbers can be integers or floating-point.
+   - Example:
+     ```json
+     {
+       "name": "John Doe",
+       "age": 30,
+       "height": 5.75,
+       "isStudent": false,
+       "courses": null
+     }
+     ```
+
+#### Example of JSON
+
+Here’s a complete example representing a student record:
+
+```json
+{
+  "student": {
+    "id": 12345,
+    "name": "John Doe",
+    "age": 21,
+    "isEnrolled": true,
+    "courses": [
+      {
+        "courseName": "Mathematics",
+        "courseCode": "MATH101",
+        "credits": 3
+      },
+      {
+        "courseName": "English Literature",
+        "courseCode": "ENG201",
+        "credits": 4
+      }
+    ],
+    "contact": {
+      "email": "john.doe@example.com",
+      "phone": "555-1234"
+    }
+  }
+}
+```
+
+#### Parsing JSON
+
+In Python use the `json` module to parse JSON strings and convert objects to JSON strings.
+
+```python
+import json
+
+json_string = '{"name": "John Doe", "age": 30}'
+python_dict = json.loads(json_string)
+print(python_dict['name'])  # Output: John Doe
+
+new_json_string = json.dumps(python_dict)
+print(new_json_string)  # Output: {"name": "John Doe", "age": 30}
+```
+
+#### Usage of JSON
+
+1. **APIs**:
+   - JSON is commonly used in RESTful APIs to exchange data between clients and servers.
+
+2. **Configuration Files**:
+   - Many software applications use JSON for configuration due to its readability and ease of parsing.
+
+3. **Data Storage**:
+   - JSON can be used to store data in databases, especially in NoSQL databases like MongoDB.
+
+4. **Web Development**:
+   - Web applications use JSON to transmit data asynchronously between the server and the client, often with technologies like AJAX.
+
+JSON’s simplicity, flexibility, and widespread support make it an essential tool for data interchange in modern web development. If you have any specific questions or need further details, feel free to ask!
 
 ### XML
 
+XML (eXtensible Markup Language) is a versatile and widely-used format for storing and transporting data. Unlike JSON, which is primarily used for data interchange, XML is more commonly used for document storage, configuration files, and data interchange in enterprise systems.
 
+#### Key Features of XML
+
+1. **Self-Descriptive**:
+   - XML documents are self-descriptive, meaning they include metadata about the data they contain.
+   - Each element is identified by a tag, making it clear what data is being represented.
+
+2. **Hierarchical Structure**:
+   - XML documents have a tree-like structure with nested elements.
+   - This hierarchical nature makes it easy to represent complex data relationships.
+
+3. **Extensibility**:
+   - XML is extensible, allowing users to define their own tags.
+   - This flexibility makes XML suitable for a wide range of applications.
+
+4. **Human and Machine Readable**:
+   - XML documents are both human-readable and machine-readable.
+   - They use plain text, making it easy to view and edit with a simple text editor.
+
+#### XML Structure
+
+An XML document consists of elements enclosed in tags, forming a hierarchical tree structure. The basic building blocks of XML are:
+
+1. **Elements**:
+   - Enclosed in opening and closing tags `<tag>` and `</tag>`.
+   - Can contain text, attributes, other elements, or a combination of these.
+   - Example:
+     ```xml
+     <book>
+       <title>Introduction to Programming</title>
+       <author>John Doe</author>
+       <year>2020</year>
+     </book>
+     ```
+
+2. **Attributes**:
+   - Provide additional information about elements.
+   - Placed within the opening tag of an element.
+   - Example:
+     ```xml
+     <book id="123">
+       <title>Introduction to Programming</title>
+       <author>John Doe</author>
+       <year>2020</year>
+     </book>
+     ```
+
+3. **Prolog**:
+   - The prolog is an optional part of the XML document that can contain an XML declaration and processing instructions.
+   - The XML declaration specifies the version of XML and the character encoding used in the document.
+   - Example:
+     ```xml
+     <?xml version="1.0" encoding="UTF-8"?>
+     ```
+
+#### Example of XML
+
+Here’s a complete example representing a student record in XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+  <id>12345</id>
+  <name>John Doe</name>
+  <age>21</age>
+  <isEnrolled>true</isEnrolled>
+  <courses>
+    <course>
+      <courseName>Mathematics</courseName>
+      <courseCode>MATH101</courseCode>
+      <credits>3</credits>
+    </course>
+    <course>
+      <courseName>English Literature</courseName>
+      <courseCode>ENG201</courseCode>
+      <credits>4</credits>
+    </course>
+  </courses>
+  <contact>
+    <email>john.doe@example.com</email>
+    <phone>555-1234</phone>
+  </contact>
+</student>
+```
+
+#### Parsing XML
+
+Python can parse XML using libraries like `xml.etree.ElementTree`.
+  
+```python
+import xml.etree.ElementTree as ET
+
+xml_string = """<student>
+                <id>12345</id>
+                <name>John Doe</name>
+                <age>21</age>
+                </student>"""
+root = ET.fromstring(xml_string)
+print(root.find('name').text)  # Output: John Doe
+```
+
+#### Usage of XML
+
+1. **Document Storage**:
+   - XML is often used to store configuration files and data files.
+   - Example: Configuration files in many software applications, such as `web.xml` in Java web applications.
+
+2. **Data Interchange**:
+   - XML is used to exchange data between different systems and platforms.
+   - Example: Web services often use XML-based protocols like SOAP (Simple Object Access Protocol) to communicate.
+
+3. **RSS Feeds**:
+   - XML is used to create RSS feeds, which are used to distribute updated content from websites.
+   - Example: News websites and blogs often provide RSS feeds in XML format.
+
+4. **Document Formats**:
+   - XML serves as the basis for various document formats.
+   - Example: Office document formats like DOCX (Microsoft Word) and ODT (OpenDocument Text) are based on XML.
+
+#### Advantages of XML
+
+1. **Versatility**:
+   - XML can represent complex data structures and is suitable for a wide range of applications.
+  
+2. **Standardization**:
+   - XML is a W3C standard, ensuring consistency and interoperability across different systems.
+  
+3. **Self-Descriptive**:
+   - XML documents are self-descriptive, making them easy to understand and maintain.
+
+### Disadvantages of XML
+
+1. **Verbosity**:
+   - XML can be quite verbose, leading to larger file sizes compared to more concise formats like JSON.
+
+2. **Parsing Overhead**:
+   - XML parsing can be computationally intensive, especially for large documents.
+
+XML remains a robust and flexible choice for many applications, particularly those requiring a formal structure and extensive metadata. If you need further details or examples, feel free to ask!
 
 ```{admonition} Unit 4 subject matter covered:
 - Explain network transmission principles, including latency, jitter, guarantee and timeliness of delivery, and protocols relevant to the transmission of data over the internet, e.g. HTTP, HTTPS, FTP, VPN, streaming and broadcasting data packets
