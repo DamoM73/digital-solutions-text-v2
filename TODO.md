@@ -20,10 +20,10 @@
     - [x] Structuring Data
     - [x] Data Principles
     - [x] Managing and Manipulating Data
-  - [ ] Data Transmission
+  - [x] Data Transmission
     - [x] Privacy
     - [x] Networking
-    - [x] Data Security
+    - [ ] Data Security
 - Explore
   - [x] Explore Phase
   - [x] Mind Map
