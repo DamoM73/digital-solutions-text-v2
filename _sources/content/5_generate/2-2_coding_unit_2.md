@@ -6,6 +6,8 @@ One of the advantages of using MVC Architecture is ease of refactoring. You can 
 
 The videos below build on our **[hangman game from Unit 1](2-1_coding_unit_1.md)** by changing the datastore to an SQLite database. The use of a database allows for other features like recording results and having multiple user, so the other two modules are adjusted to include these features. These video also provide an example of a **<a href="https://youtu.be/Vq1laKeSk9M?si=Jj15sQKSG8DpizUp" target="_blank">stacked widget</a>**.
 
+**[Repository for the tutorial resources](https://github.com/DamoM73/gui_hangman_with_sql_starter)**
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bG9DT_PgKvg?si=6s-KmxaTm81lisUL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gC9KTYEithM?si=tFXsIT2wnRMzpfVz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

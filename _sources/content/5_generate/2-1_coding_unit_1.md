@@ -150,6 +150,8 @@ This is my code for my FIA2 Project
 
 In Unit 1 you will be creating a productivity application (desktop app) using the **[MVC Architecture](mvc)**. The videos below will introduce the concepts behind developing a MVC program using PyQt.
 
+**[Repository for the tutorial resources](https://github.com/DamoM73/gui_hangman_starter)**
+
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WZsdUKVdVsQ?si=4BgXfiwUj4aJ39hD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/T66K5Wasgww?si=LfN2_tmMosonsu7V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
