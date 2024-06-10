@@ -42,8 +42,6 @@ Encryption is the process of converting data into a coded format to prevent unau
 
 #### Why Encryption important
 
-#### Why is Encryption necessary
-
 Data encryption is necessary for several important reasons:
 
 1. **Data Security**: Encryption helps protect sensitive information from unauthorized access. It ensures that even if someone gains access to the data, they won't be able to read or use it without the encryption key.
