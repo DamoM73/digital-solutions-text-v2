@@ -8,7 +8,7 @@ Data breachers far more common than most people believe. The Office of the Austr
 
 Data security measures, including encryption, access controls, and regular security audits, help prevent such incidents and ensure that individuals and organizations can trust that their data is safe and confidential. It's not only about protecting information but also about maintaining trust, compliance with regulations, and upholding the integrity of data in an increasingly interconnected world.
 
-## Data Manegement
+## Data Management
 
 The folowing techniques used to manage data effectively, ensuring it can be stored and transferred securely and efficiently.
 
