@@ -526,7 +526,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -542,6 +544,32 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-files-in-python">Compressing Files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-file">Compressing a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-multiple-files">Compressing Multiple Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-directory">Compressing a Directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encrypting-files-in-python">Encrypting files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-cryptography-library">Install the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encrypting-a-file">Encrypting a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decrypting-a-file">Decrypting a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-files-in-python">Hashing files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-a-file">Hashing a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-with-other-algorithms">Hashing with Other Algorithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Notes:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -553,6 +581,244 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="coding-unit-4">
 <h1>Coding — Unit 4<a class="headerlink" href="#coding-unit-4" title="Permalink to this heading">#</a></h1>
+<section id="compressing-files-in-python">
+<h2>Compressing Files in Python<a class="headerlink" href="#compressing-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>To compress a file in Python, you can use the <code class="docutils literal notranslate"><span class="pre">zipfile</span></code> module, which provides tools for creating, reading, writing, and extracting ZIP files. Here’s a simple example to demonstrate how to compress a file using this module:</p>
+<section id="compressing-a-file">
+<h3>Compressing a File<a class="headerlink" href="#compressing-a-file" title="Permalink to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">compress_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
+        <span class="n">zipf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">file_to_compress</span> <span class="o">=</span> <span class="s1">&#39;example.txt&#39;</span>  <span class="c1"># Replace with your file path</span>
+<span class="n">compressed_file</span> <span class="o">=</span> <span class="s1">&#39;example.zip&#39;</span>   <span class="c1"># Replace with your desired output file path</span>
+
+<span class="n">compress_file</span><span class="p">(</span><span class="n">file_to_compress</span><span class="p">,</span> <span class="n">compressed_file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">file_to_compress</span><span class="si">}</span><span class="s2"> compressed to </span><span class="si">{</span><span class="n">compressed_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">example.txt</span></code> is the file you want to compress, and <code class="docutils literal notranslate"><span class="pre">example.zip</span></code> is the output ZIP file. The <code class="docutils literal notranslate"><span class="pre">os.path.basename(file_path)</span></code> function ensures that only the file name is included in the ZIP archive, not the full path.</p>
+</section>
+<section id="compressing-multiple-files">
+<h3>Compressing Multiple Files<a class="headerlink" href="#compressing-multiple-files" title="Permalink to this heading">#</a></h3>
+<p>If you want to compress multiple files into a single ZIP archive, you can modify the function to accept a list of files:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
+
+<span class="k">def</span> <span class="nf">compress_files</span><span class="p">(</span><span class="n">file_paths</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">file_paths</span><span class="p">:</span>
+            <span class="n">zipf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">files_to_compress</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;example1.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;example2.txt&#39;</span><span class="p">]</span>  <span class="c1"># Replace with your file paths</span>
+<span class="n">compressed_file</span> <span class="o">=</span> <span class="s1">&#39;examples.zip&#39;</span>   <span class="c1"># Replace with your desired output file path</span>
+
+<span class="n">compress_files</span><span class="p">(</span><span class="n">files_to_compress</span><span class="p">,</span> <span class="n">compressed_file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Files </span><span class="si">{</span><span class="n">files_to_compress</span><span class="si">}</span><span class="s2"> compressed to </span><span class="si">{</span><span class="n">compressed_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="compressing-a-directory">
+<h3>Compressing a Directory<a class="headerlink" href="#compressing-a-directory" title="Permalink to this heading">#</a></h3>
+<p>To compress all files in a directory, you can walk through the directory and add each file to the ZIP archive:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">compress_directory</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory_path</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+                <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+                <span class="n">zipf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">relpath</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">directory_path</span><span class="p">))</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">directory_to_compress</span> <span class="o">=</span> <span class="s1">&#39;example_directory&#39;</span>  <span class="c1"># Replace with your directory path</span>
+<span class="n">compressed_file</span> <span class="o">=</span> <span class="s1">&#39;example_directory.zip&#39;</span>    <span class="c1"># Replace with your desired output file path</span>
+
+<span class="n">compress_directory</span><span class="p">(</span><span class="n">directory_to_compress</span><span class="p">,</span> <span class="n">compressed_file</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directory </span><span class="si">{</span><span class="n">directory_to_compress</span><span class="si">}</span><span class="s2"> compressed to </span><span class="si">{</span><span class="n">compressed_file</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this script, <code class="docutils literal notranslate"><span class="pre">os.walk(directory_path)</span></code> is used to iterate through all files in the specified directory and its subdirectories. <code class="docutils literal notranslate"><span class="pre">os.path.relpath(file_path,</span> <span class="pre">directory_path)</span></code> ensures that the directory structure is preserved in the ZIP archive.</p>
+</section>
+</section>
+<section id="encrypting-files-in-python">
+<h2>Encrypting files in Python<a class="headerlink" href="#encrypting-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>To encrypt files in Python, you can use the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library, which provides a simple and secure way to encrypt and decrypt files.</p>
+<section id="install-the-cryptography-library">
+<h3>Install the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library<a class="headerlink" href="#install-the-cryptography-library" title="Permalink to this heading">#</a></h3>
+<p>First, you need to install the library. You can do this using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>cryptography
+</pre></div>
+</div>
+</section>
+<section id="encrypting-a-file">
+<h3>Encrypting a File<a class="headerlink" href="#encrypting-a-file" title="Permalink to this heading">#</a></h3>
+<p>Here’s a Python script that demonstrates how to encrypt a file using the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+
+<span class="c1"># Generate a key for encryption</span>
+<span class="k">def</span> <span class="nf">generate_key</span><span class="p">():</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">Fernet</span><span class="o">.</span><span class="n">generate_key</span><span class="p">()</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key_file</span><span class="p">:</span>
+        <span class="n">key_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+<span class="c1"># Load the encryption key</span>
+<span class="k">def</span> <span class="nf">load_key</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Encrypt a file</span>
+<span class="k">def</span> <span class="nf">encrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">load_key</span><span class="p">()</span>
+    <span class="n">fernet</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">original_data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="n">encrypted_data</span> <span class="o">=</span> <span class="n">fernet</span><span class="o">.</span><span class="n">encrypt</span><span class="p">(</span><span class="n">original_data</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span> <span class="o">+</span> <span class="s1">&#39;.enc&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">encrypted_file</span><span class="p">:</span>
+        <span class="n">encrypted_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">)</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">generate_key</span><span class="p">()</span>  <span class="c1"># Run this only once to generate and save the key</span>
+<span class="n">file_to_encrypt</span> <span class="o">=</span> <span class="s1">&#39;example.txt&#39;</span>  <span class="c1"># Replace with your file path</span>
+
+<span class="n">encrypt_file</span><span class="p">(</span><span class="n">file_to_encrypt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">file_to_encrypt</span><span class="si">}</span><span class="s2"> encrypted.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this script:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">generate_key()</span></code> generates and saves an encryption key to a file named <code class="docutils literal notranslate"><span class="pre">secret.key</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">load_key()</span></code> loads the encryption key from the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encrypt_file()</span></code> encrypts the specified file using the key.</p></li>
+</ul>
+</section>
+<section id="decrypting-a-file">
+<h3>Decrypting a File<a class="headerlink" href="#decrypting-a-file" title="Permalink to this heading">#</a></h3>
+<p>To decrypt the file, you can use the following script:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+
+<span class="c1"># Load the encryption key</span>
+<span class="k">def</span> <span class="nf">load_key</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="c1"># Decrypt a file</span>
+<span class="k">def</span> <span class="nf">decrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="n">key</span> <span class="o">=</span> <span class="n">load_key</span><span class="p">()</span>
+    <span class="n">fernet</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">encrypted_file</span><span class="p">:</span>
+        <span class="n">encrypted_data</span> <span class="o">=</span> <span class="n">encrypted_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+    <span class="n">decrypted_data</span> <span class="o">=</span> <span class="n">fernet</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">encrypted_data</span><span class="p">)</span>
+
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.enc&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">),</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">decrypted_file</span><span class="p">:</span>
+        <span class="n">decrypted_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">decrypted_data</span><span class="p">)</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">file_to_decrypt</span> <span class="o">=</span> <span class="s1">&#39;example.txt.enc&#39;</span>  <span class="c1"># Replace with your encrypted file path</span>
+
+<span class="n">decrypt_file</span><span class="p">(</span><span class="n">file_to_decrypt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;File </span><span class="si">{</span><span class="n">file_to_decrypt</span><span class="si">}</span><span class="s2"> decrypted.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this script:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">load_key()</span></code> loads the encryption key from the file.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decrypt_file()</span></code> decrypts the specified file using the key and saves the decrypted data.</p></li>
+</ul>
+</section>
+<section id="important-notes">
+<h3>Important Notes:<a class="headerlink" href="#important-notes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Key Management:</strong> The encryption key (<code class="docutils literal notranslate"><span class="pre">secret.key</span></code>) must be kept secure. If it is lost, you won’t be able to decrypt your files. If it is stolen, anyone with the key can decrypt your files.</p></li>
+<li><p><strong>File Extensions:</strong> The encrypted file is saved with an <code class="docutils literal notranslate"><span class="pre">.enc</span></code> extension to differentiate it from the original file. You can change this as needed.</p></li>
+</ul>
+</section>
+</section>
+<section id="hashing-files-in-python">
+<h2>Hashing files in Python<a class="headerlink" href="#hashing-files-in-python" title="Permalink to this heading">#</a></h2>
+<p>Hashing a file in Python can be done using the <code class="docutils literal notranslate"><span class="pre">hashlib</span></code> module, which provides various hash functions such as SHA-256, MD5, and others.</p>
+<section id="hashing-a-file">
+<h3>Hashing a File<a class="headerlink" href="#hashing-a-file" title="Permalink to this heading">#</a></h3>
+<p>Here’s a Python script that demonstrates how to hash a file using SHA-256:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+
+<span class="k">def</span> <span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+    <span class="c1"># Create a SHA-256 hash object</span>
+    <span class="n">sha256_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
+    
+    <span class="c1"># Open the file in binary mode</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1"># Read the file in chunks to handle large files</span>
+        <span class="k">for</span> <span class="n">byte_block</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4096</span><span class="p">),</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+            <span class="n">sha256_hash</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">byte_block</span><span class="p">)</span>
+    
+    <span class="c1"># Return the hexadecimal digest of the hash</span>
+    <span class="k">return</span> <span class="n">sha256_hash</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">file_to_hash</span> <span class="o">=</span> <span class="s1">&#39;example.txt&#39;</span>  <span class="c1"># Replace with your file path</span>
+
+<span class="n">file_hash</span> <span class="o">=</span> <span class="n">hash_file</span><span class="p">(</span><span class="n">file_to_hash</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The SHA-256 hash of the file is: </span><span class="si">{</span><span class="n">file_hash</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this script:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hashlib.sha256()</span></code> creates a SHA-256 hash object.</p></li>
+<li><p>The file is opened in binary mode (<code class="docutils literal notranslate"><span class="pre">'rb'</span></code>) to ensure it works with all types of files, including text and binary files.</p></li>
+<li><p>The file is read in chunks of 4096 bytes to handle large files efficiently.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">update()</span></code> method is called for each chunk to update the hash object.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">hexdigest()</span></code> method returns the hash value as a hexadecimal string.</p></li>
+</ul>
+</section>
+<section id="hashing-with-other-algorithms">
+<h3>Hashing with Other Algorithms<a class="headerlink" href="#hashing-with-other-algorithms" title="Permalink to this heading">#</a></h3>
+<p>You can easily switch to other hash algorithms provided by <code class="docutils literal notranslate"><span class="pre">hashlib</span></code> (e.g., MD5, SHA-1) by replacing <code class="docutils literal notranslate"><span class="pre">hashlib.sha256()</span></code> with the desired hash function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+
+<span class="k">def</span> <span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">):</span>
+    <span class="c1"># Create a hash object based on the chosen algorithm</span>
+    <span class="n">hash_obj</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">algorithm</span><span class="p">)</span>
+    
+    <span class="c1"># Open the file in binary mode</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="c1"># Read the file in chunks to handle large files</span>
+        <span class="k">for</span> <span class="n">byte_block</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">4096</span><span class="p">),</span> <span class="sa">b</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+            <span class="n">hash_obj</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">byte_block</span><span class="p">)</span>
+    
+    <span class="c1"># Return the hexadecimal digest of the hash</span>
+    <span class="k">return</span> <span class="n">hash_obj</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+<span class="c1"># Example usage</span>
+<span class="n">file_to_hash</span> <span class="o">=</span> <span class="s1">&#39;example.txt&#39;</span>  <span class="c1"># Replace with your file path</span>
+
+<span class="c1"># Hash the file using SHA-256</span>
+<span class="n">file_hash_sha256</span> <span class="o">=</span> <span class="n">hash_file</span><span class="p">(</span><span class="n">file_to_hash</span><span class="p">,</span> <span class="s1">&#39;sha256&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The SHA-256 hash of the file is: </span><span class="si">{</span><span class="n">file_hash_sha256</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Hash the file using MD5 (for example, though it&#39;s less secure)</span>
+<span class="n">file_hash_md5</span> <span class="o">=</span> <span class="n">hash_file</span><span class="p">(</span><span class="n">file_to_hash</span><span class="p">,</span> <span class="s1">&#39;md5&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The MD5 hash of the file is: </span><span class="si">{</span><span class="n">file_hash_md5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This script allows you to specify the hash algorithm you want to use. Just pass the desired algorithm name (e.g., <code class="docutils literal notranslate"><span class="pre">'sha256'</span></code>, <code class="docutils literal notranslate"><span class="pre">'md5'</span></code>, <code class="docutils literal notranslate"><span class="pre">'sha1'</span></code>) to the <code class="docutils literal notranslate"><span class="pre">hash_file</span></code> function.</p>
+</section>
+<section id="id1">
+<h3>Important Notes:<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Security Considerations:</strong> Some hash algorithms like MD5 and SHA-1 are considered weak and should not be used for security-critical applications. SHA-256 and SHA-3 are generally recommended for secure hashing.</p></li>
+<li><p><strong>File Integrity:</strong> Hashing is commonly used to verify file integrity. By comparing the hash of a downloaded file with a known hash value, you can ensure the file has not been tampered with.</p></li>
+</ul>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -609,6 +875,38 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-files-in-python">Compressing Files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-file">Compressing a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-multiple-files">Compressing Multiple Files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compressing-a-directory">Compressing a Directory</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encrypting-files-in-python">Encrypting files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-the-cryptography-library">Install the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encrypting-a-file">Encrypting a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#decrypting-a-file">Decrypting a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-notes">Important Notes:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-files-in-python">Hashing files in Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-a-file">Hashing a File</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing-with-other-algorithms">Hashing with Other Algorithms</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Important Notes:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
