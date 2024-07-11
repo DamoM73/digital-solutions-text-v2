@@ -36,7 +36,7 @@ Consider this example for the DIWK Pyramid in action
 - **data:** 3000mm
 - **information:** 3000mm is the length of a timber board I am buying
 - **knowledge:** previously I could not fit a 2600mm timber board in my car
-- **action:** I will have to get the board delivered
+- **wisdom:** I will have to get the board delivered
 
 ### What is data-driven programming
 
