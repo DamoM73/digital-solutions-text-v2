@@ -4,7 +4,7 @@ Databases are not introduced until Unit 2, so the data requirements for Unit 1 a
 
 ## What data?
 
-First you need to identify the data that the application will need. 
+First you need to identify the data that the application will need.
 
 This data can be:
 
