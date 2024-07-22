@@ -17,7 +17,7 @@ Your data dictionaries should include the following details:
     - NOT NULL - Ensures that a column cannot have NULL value
     - DEFAULT Constraint − Provides a default value for a column when none is specified
     - UNIQUE Constraint − Ensures that all values in a column are different
-    - PRIMARY Key − Uniquely identifies each row/record in a database table
+    - PRIMARY KEY Constraint − Uniquely identifies each row/record in a database table
     - CHECK Constraint − Ensures that all values in a column satisfies certain conditions.
   - Data can also be validated in Python before Inserting it into the database.
 - **Formatting:** data can either be stored formatted or can be formatted once retrieved.
