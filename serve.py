@@ -8,7 +8,7 @@ class BuildJupyterBookHandler(FileSystemEventHandler):
     def __init__(self, command):
         self.command = command
         self.last_run = 0
-        self.debounce_seconds = 2
+        self.debounce_seconds = 10
 
     def should_rebuild(self):
         current_time = time.time()

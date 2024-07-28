@@ -6,6 +6,88 @@ SQL (Structured Query Language) is a standard programming language specifically 
 
 According to Stack Overflow's 2023 Developer Survey {cite}`stackoverflow_2023_stack`, SQL-based databases dominate the database management system (DBMS) market. It is estimated that approximately 90% or more of databases use SQL.
 
+### Database Resources
+
+For the following SQL section we will be using the following databases:
+
+- [Chinook database](./assets/chinook.db)
+- [Movies database](./assets/moives.db)
+- [Repairs database](./assets/repairs.db)
+- [School database](./assets/school.db)
+- [Shares database](./assets/shares.db)
+- [World database](./assets/world.db)
+
+Below is the Relational Schemas for these databases
+
+![relational schemas](./assets/relational_schemas.png)
+
+### SELECT Statement
+
+The SQL `SELECT` statement is used to retrieve specific data from tables within a relational database. The data is return in the form of a table.
+
+#### SELECT Tutorials
+
+Complete:
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_select.asp) on the `SELECT` statement
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_distinct.asp) on the `SELECT DISTINCT` statement
+
+#### SELECT Exercises
+
+Using the **Movies** database:
+
+- Display the name of all the directors
+- Display the name of all the members
+- Display the details in the movie table
+- Display all the years of release with no duplications
+- Display the number of all movies on hire and when they are due back
+
+### WHERE clause
+
+The SQL `WHERE` clause is used to filter records in a database query to include only those that meet specified conditions.
+
+#### WHERE Tutorials
+
+Complete
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_where.asp) on the `WHERE` clause
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_and_or.asp) on the `AND`, `OR` and `NOT` operators
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_like.asp) on the `LIKE` operator
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_null_values.asp) on `NULL` values
+
+#### WHERE Exercises
+
+Using the Movies database
+
+- Display the name of all the US directors
+- Display the name of the all non-US directors
+- Display the name of all the members who owe money
+- Display all the movies that have 'the' in their title
+- Display all the movies that start with Z
+
+Using the Repairs database
+
+- List the owners whose repair is ready to collect
+- List the owners whose iMac is still being repaired
+
+Using the World database
+
+- Which countries have not achieved independence but still have a capital
+- Which countries are missing information?
+- List countries that are either constitutional monarchies or republics
+
+### Calculations and functions
+
+### ORDER BY
+
+### GROUP BY
+
+### Subqueries
+
+### Join tables
+
+### Record Management
+
 ## Converting datastore to a database
 
 One of the advantages of using MVC Architecture is ease of refactoring. You can change any of the three modules, as long as calling the methods that interconnect the modules remain the same. For example, if you want to change the datastore module so it uses a database, you can change that one module and leave the main and UI module alone.
