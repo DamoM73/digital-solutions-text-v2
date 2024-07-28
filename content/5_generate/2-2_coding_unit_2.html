@@ -549,7 +549,26 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-resources">Database Resources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-statement">SELECT Statement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-tutorials">SELECT Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-exercises">SELECT Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-clause">WHERE clause</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-tutorials">WHERE Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-exercises">WHERE Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations-and-functions">Calculations and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by">GROUP BY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tables">Join tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
 </ul>
             </nav>
@@ -568,6 +587,97 @@ document.write(`
 <h2>SQL<a class="headerlink" href="#sql" title="Permalink to this heading">#</a></h2>
 <p>SQL (Structured Query Language) is a standard programming language specifically designed for managing and manipulating relational databases. It allows users to create, read, update, and delete data within a database, as well as to define and manage database structures. SQL is used to perform tasks such as querying data to retrieve specific information, inserting new data records, updating existing data, and deleting unwanted data. Additionally, SQL enables the creation of database schemas, the definition of relationships between different data tables, and the implementation of security measures to control access to the data. Its powerful and versatile nature makes SQL an essential tool for database management and analysis.</p>
 <p>According to Stack Overflow’s 2023 Developer Survey <span id="id1">[]</span>, SQL-based databases dominate the database management system (DBMS) market. It is estimated that approximately 90% or more of databases use SQL.</p>
+<section id="database-resources">
+<h3>Database Resources<a class="headerlink" href="#database-resources" title="Permalink to this heading">#</a></h3>
+<p>For the following SQL section we will be using the following databases:</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="../../_downloads/1ba172bb6f141aa50213a2b1f05e991f/chinook.db"><span class="xref download myst">Chinook database</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/ad6b73df3994fee1c57084a300c2f3e1/moives.db"><span class="xref download myst">Movies database</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/a405563c494bb662336ff50aca536388/repairs.db"><span class="xref download myst">Repairs database</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/86f3c1e57011ca62cae7ce948a7c408e/school.db"><span class="xref download myst">School database</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/07cb42738d7985bd3a0af87a4fa8ba93/shares.db"><span class="xref download myst">Shares database</span></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/0810e3b849cf931551f351c704e850dd/world.db"><span class="xref download myst">World database</span></a></p></li>
+</ul>
+<p>Below is the Relational Schemas for these databases</p>
+<p><img alt="relational schemas" src="../../_images/relational_schemas.png" /></p>
+</section>
+<section id="select-statement">
+<h3>SELECT Statement<a class="headerlink" href="#select-statement" title="Permalink to this heading">#</a></h3>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement is used to retrieve specific data from tables within a relational database. The data is return in the form of a table.</p>
+<section id="select-tutorials">
+<h4>SELECT Tutorials<a class="headerlink" href="#select-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_select.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> statement</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_distinct.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">SELECT</span> <span class="pre">DISTINCT</span></code> statement</p></li>
+</ul>
+</section>
+<section id="select-exercises">
+<h4>SELECT Exercises<a class="headerlink" href="#select-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the <strong>Movies</strong> database:</p>
+<ul class="simple">
+<li><p>Display the name of all the directors</p></li>
+<li><p>Display the name of all the members</p></li>
+<li><p>Display the details in the movie table</p></li>
+<li><p>Display all the years of release with no duplications</p></li>
+<li><p>Display the number of all movies on hire and when they are due back</p></li>
+</ul>
+</section>
+</section>
+<section id="where-clause">
+<h3>WHERE clause<a class="headerlink" href="#where-clause" title="Permalink to this heading">#</a></h3>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause is used to filter records in a database query to include only those that meet specified conditions.</p>
+<section id="where-tutorials">
+<h4>WHERE Tutorials<a class="headerlink" href="#where-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_where.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">WHERE</span></code> clause</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_and_or.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">AND</span></code>, <code class="docutils literal notranslate"><span class="pre">OR</span></code> and <code class="docutils literal notranslate"><span class="pre">NOT</span></code> operators</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_like.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">LIKE</span></code> operator</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_null_values.asp">W3schools Tutorial</a> on <code class="docutils literal notranslate"><span class="pre">NULL</span></code> values</p></li>
+</ul>
+</section>
+<section id="where-exercises">
+<h4>WHERE Exercises<a class="headerlink" href="#where-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Movies database</p>
+<ul class="simple">
+<li><p>Display the name of all the US directors</p></li>
+<li><p>Display the name of the all non-US directors</p></li>
+<li><p>Display the name of all the members who owe money</p></li>
+<li><p>Display all the movies that have ‘the’ in their title</p></li>
+<li><p>Display all the movies that start with Z</p></li>
+</ul>
+<p>Using the Repairs database</p>
+<ul class="simple">
+<li><p>List the owners whose repair is ready to collect</p></li>
+<li><p>List the owners whose iMac is still being repaired</p></li>
+</ul>
+<p>Using the World database</p>
+<ul class="simple">
+<li><p>Which countries have not achieved independence but still have a capital</p></li>
+<li><p>Which countries are missing information?</p></li>
+<li><p>List countries that are either constitutional monarchies or republics</p></li>
+</ul>
+</section>
+</section>
+<section id="calculations-and-functions">
+<h3>Calculations and functions<a class="headerlink" href="#calculations-and-functions" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="order-by">
+<h3>ORDER BY<a class="headerlink" href="#order-by" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="group-by">
+<h3>GROUP BY<a class="headerlink" href="#group-by" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="subqueries">
+<h3>Subqueries<a class="headerlink" href="#subqueries" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="join-tables">
+<h3>Join tables<a class="headerlink" href="#join-tables" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="record-management">
+<h3>Record Management<a class="headerlink" href="#record-management" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 <section id="converting-datastore-to-a-database">
 <h2>Converting datastore to a database<a class="headerlink" href="#converting-datastore-to-a-database" title="Permalink to this heading">#</a></h2>
@@ -640,7 +750,26 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sql">SQL</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#database-resources">Database Resources</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#select-statement">SELECT Statement</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-tutorials">SELECT Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#select-exercises">SELECT Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#where-clause">WHERE clause</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-tutorials">WHERE Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-exercises">WHERE Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations-and-functions">Calculations and functions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by">GROUP BY</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tables">Join tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
 </ul>
   </nav></div>
