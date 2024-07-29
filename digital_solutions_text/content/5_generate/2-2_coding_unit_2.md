@@ -21,6 +21,8 @@ Below is the Relational Schemas for these databases
 
 ![relational schemas](./assets/relational_schemas.png)
 
+[Exercise solutions](../8_solutions/1_sql_exercises.md) can be found in the solutions section.
+
 ### SELECT Statement
 
 The SQL `SELECT` statement is used to retrieve specific data from tables within a relational database. The data is return in the form of a table.
@@ -88,7 +90,7 @@ Complete:
 - [W3schools Tutorial](https://www.w3schools.com/sql/sql_min_max.asp) on the `MIN()` and `MAX()` functions
 - [W3schools Tutorial](https://www.w3schools.com/sql/sql_count_avg_sum.asp) on the `COUNT()`, `AVG()` and `SUM()` Functions
 
-#### Filters and aggregators exercises
+#### Filters and Aggregators exercises
 
 Using the Movies database
 
@@ -224,7 +226,7 @@ Using the Chinook database
 
 SQL record management keywords, such as `INSERT`, `UPDATE`, and `DELETE`, are used to add new records, modify existing records, remove records in a database table respectively.
 
-### Record Management Tutorials
+#### Record Management Tutorials
 
 Complete:
 
@@ -232,7 +234,7 @@ Complete:
 - W3schools Tutorial on the `UPDATE` Statement
 - W3schools Tutorial on the `DELETE` Statement
 
-### Record Management Exercises
+#### Record Management Exercises
 
 Using the Movies database
 

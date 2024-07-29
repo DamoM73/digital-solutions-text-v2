@@ -184,6 +184,10 @@ parts:
     - file: content/7_communication/5_modes
     - file: content/7_communication/6_presentations
 
+  - caption: Solutions
+    chapters:
+    - file: content/8_solutions/1_sql_exercises
+
   - caption: End material
     chapters:
     - file: content/glossary
