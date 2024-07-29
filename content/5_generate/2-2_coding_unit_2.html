@@ -561,12 +561,34 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-exercises">WHERE Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations-and-functions">Calculations and functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by">GROUP BY</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tables">Join tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators">Filters and Aggregators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-tutorials">Filters and Aggregators Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and aggregators exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by-tutorials">ORDER BY Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by-exercises">ORDER BY Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having">GROUP BY and HAVING</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having-tutorials">GROUP BY and HAVING Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having-exercises">GROUP BY and HAVING Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries-tutorials">Subqueries Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries-exercises">Subqueries Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join">JOIN</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tutorials">JOIN Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-exercises">JOIN Exercises</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
@@ -660,23 +682,184 @@ document.write(`
 </ul>
 </section>
 </section>
-<section id="calculations-and-functions">
-<h3>Calculations and functions<a class="headerlink" href="#calculations-and-functions" title="Permalink to this heading">#</a></h3>
+<section id="filters-and-aggregators">
+<h3>Filters and Aggregators<a class="headerlink" href="#filters-and-aggregators" title="Permalink to this heading">#</a></h3>
+<p>SQL filter clauses are used to restrict the number of rows returned by a query based on specified conditions, enabling more precise data retrieval and manipulation. While SQL aggregators are functions used to perform calculations on multiple rows of a table’s column and return a single value.</p>
+<section id="filters-and-aggregators-tutorials">
+<h4>Filters and Aggregators Tutorials<a class="headerlink" href="#filters-and-aggregators-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_top.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">TOP</span></code> and <code class="docutils literal notranslate"><span class="pre">LIMIT</span></code> clauses</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_min_max.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">MIN()</span></code> and <code class="docutils literal notranslate"><span class="pre">MAX()</span></code> functions</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_count_avg_sum.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">COUNT()</span></code>, <code class="docutils literal notranslate"><span class="pre">AVG()</span></code> and <code class="docutils literal notranslate"><span class="pre">SUM()</span></code> Functions</p></li>
+</ul>
+</section>
+<section id="filters-and-aggregators-exercises">
+<h4>Filters and aggregators exercises<a class="headerlink" href="#filters-and-aggregators-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Movies database</p>
+<ul class="simple">
+<li><p>How many directors are there from Australia?</p></li>
+<li><p>How many directors have the name John?</p></li>
+<li><p>What is the longest movie?</p></li>
+<li><p>If I was to watch all the movies, back-to-back, how many minutes will I need (no pausing for toilet stops)</p></li>
+</ul>
+<p>Using the Repairs database</p>
+<ul class="simple">
+<li><p>What is the average repair rate?</p></li>
+<li><p>How many repairs are waiting to be picked up?</p></li>
+</ul>
+<p>Using the Shares database</p>
+<ul class="simple">
+<li><p>How many companies are there in the high risk category?</p></li>
+<li><p>Which company has the biggest difference between their highest and lowest price?</p></li>
+<li><p>What is the cheapest, medium or low risk share on the New York Stock Exchange?</p></li>
+<li><p>List all shares that are currently within 10% of their highest price?</p></li>
+</ul>
+</section>
 </section>
 <section id="order-by">
 <h3>ORDER BY<a class="headerlink" href="#order-by" title="Permalink to this heading">#</a></h3>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> keyword is used to sort the result set of a query by one or more columns, either in ascending (ASC) or descending (DESC) order.</p>
+<section id="order-by-tutorials">
+<h4>ORDER BY Tutorials<a class="headerlink" href="#order-by-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_orderby.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">ORDER</span> <span class="pre">BY</span></code> Keyword</p></li>
+</ul>
 </section>
-<section id="group-by">
-<h3>GROUP BY<a class="headerlink" href="#group-by" title="Permalink to this heading">#</a></h3>
+<section id="order-by-exercises">
+<h4>ORDER BY Exercises<a class="headerlink" href="#order-by-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Movies database</p>
+<ul class="simple">
+<li><p>List all the movies names in alphabetical order</p></li>
+<li><p>What is the 5 oldest movie in stock?</p></li>
+<li><p>Display the movies in chronological order, and then alphabetical order within each year.</p></li>
+</ul>
+<p>Using the School Database</p>
+<ul class="simple">
+<li><p>List the name of the grade 6 students in alphabetical order</p></li>
+<li><p>What is the top three results in percentage</p></li>
+<li><p>List all the boys’ birthdays in order, then all the girls’ birthdays in order, with their names</p></li>
+</ul>
+</section>
+</section>
+<section id="group-by-and-having">
+<h3>GROUP BY and HAVING<a class="headerlink" href="#group-by-and-having" title="Permalink to this heading">#</a></h3>
+<p>The SQL <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> statement is used to group rows that have the same values in specified columns into summary rows, often in conjunction with aggregate functions to perform calculations on each group. While the SQL HAVING statement is used to filter groups of rows created by the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> clause based on specified conditions, typically involving aggregate functions.</p>
+<section id="group-by-and-having-tutorials">
+<h4>GROUP BY and HAVING Tutorials<a class="headerlink" href="#group-by-and-having-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_groupby.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">GROUP</span> <span class="pre">BY</span></code> Statement</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_having.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">HAVING</span></code> Clause</p></li>
+</ul>
+</section>
+<section id="group-by-and-having-exercises">
+<h4>GROUP BY and HAVING Exercises<a class="headerlink" href="#group-by-and-having-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Movies database</p>
+<ul class="simple">
+<li><p>How many directors are there from each country?</p></li>
+<li><p>How many movies does each member number have on hire?</p></li>
+<li><p>How many movies are stocked from each year?</p></li>
+</ul>
+<p>Using the School database</p>
+<ul class="simple">
+<li><p>What is the average result for each subject(code)?</p></li>
+<li><p>How many boys and girls in each grade?</p></li>
+</ul>
+<p>Using the Shares database</p>
+<ul class="simple">
+<li><p>How many companies are there in each risk category?</p></li>
+<li><p>What is the cheapest, medium risk and cheapest low risk share on the New York Stock Exchange?</p></li>
+</ul>
+<p>Using the Chinook database</p>
+<ul class="simple">
+<li><p>How many customers are there from each country?</p></li>
+<li><p>How many customers in each city?</p></li>
+<li><p>How much were the sales for each country?</p></li>
+</ul>
+</section>
 </section>
 <section id="subqueries">
 <h3>Subqueries<a class="headerlink" href="#subqueries" title="Permalink to this heading">#</a></h3>
+<p>SQL sub-queries are queries embedded within another SQL query to provide results that are used by the outer query, enabling more complex and flexible data retrieval and manipulation​. Subqueries are possible since every query returns a table. Effectively, you run one query which returns a table, then you run another query on the data in the returned table.</p>
+<section id="subqueries-tutorials">
+<h4>Subqueries Tutorials<a class="headerlink" href="#subqueries-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_in.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">IN</span></code> Operator</p></li>
+</ul>
 </section>
-<section id="join-tables">
-<h3>Join tables<a class="headerlink" href="#join-tables" title="Permalink to this heading">#</a></h3>
+<section id="subqueries-exercises">
+<h4>Subqueries Exercises<a class="headerlink" href="#subqueries-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Schools database</p>
+<ul class="simple">
+<li><p>What are the percentage results for students in grade 7</p></li>
+<li><p>What subject is taught by the teacher in room A2?</p></li>
+<li><p>In which subjects did students score over 90%?</p></li>
+<li><p>List the names of the students in grades 4 or 5 who scored over 50% for language.</p></li>
+<li><p>List the names of students who do science.</p></li>
+</ul>
+<p>Repairs database</p>
+<ul class="simple">
+<li><p>Who owns devices being repaired by Ted Carrol?</p></li>
+<li><p>What are the names of the technicians who are still not expert (N) at repairing Macs?</p></li>
+<li><p>What rate will Byrne be charged for repairs?</p></li>
+<li><p>List the owners whose devices have a high (H) priority for repair.</p></li>
+<li><p>What level of qualification has the technician who is doing James’ repair job?</p></li>
+</ul>
+</section>
+</section>
+<section id="join">
+<h3>JOIN<a class="headerlink" href="#join" title="Permalink to this heading">#</a></h3>
+<p>SQL join clauses are used to combine rows from two or more tables based on a related column between them, enabling the retrieval of data that spans multiple tables.</p>
+<section id="join-tutorials">
+<h4>JOIN Tutorials<a class="headerlink" href="#join-tutorials" title="Permalink to this heading">#</a></h4>
+<p>Complete</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_join.asp">W3schools Tutorial</a> on Joins</p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/sql_join_inner.asp">W3schools Tutorial</a> on the <code class="docutils literal notranslate"><span class="pre">INNER</span> <span class="pre">JOIN</span></code> Keyword</p></li>
+</ul>
+</section>
+<section id="join-exercises">
+<h4>JOIN Exercises<a class="headerlink" href="#join-exercises" title="Permalink to this heading">#</a></h4>
+<p>Using the Schools database</p>
+<ul class="simple">
+<li><p>What is the average percentage of the students for each teacher</p></li>
+<li><p>List all the students taught by Mr Simms</p></li>
+</ul>
+<p>Using the Chinook database</p>
+<ul class="simple">
+<li><p>List all albums, including artist name</p></li>
+<li><p>List the name of all the tacks in the metal genre</p></li>
+<li><p>List all the details of all Def Leppard tracks.</p></li>
+</ul>
+</section>
 </section>
 <section id="record-management">
 <h3>Record Management<a class="headerlink" href="#record-management" title="Permalink to this heading">#</a></h3>
+<p>SQL record management keywords, such as <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>, <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>, and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, are used to add new records, modify existing records, remove records in a database table respectively.</p>
+</section>
+<section id="record-management-tutorials">
+<h3>Record Management Tutorials<a class="headerlink" href="#record-management-tutorials" title="Permalink to this heading">#</a></h3>
+<p>Complete:</p>
+<ul class="simple">
+<li><p>W3schools Tutorial on the <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span></code> Statement</p></li>
+<li><p>W3schools Tutorial on the <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code> Statement</p></li>
+<li><p>W3schools Tutorial on the <code class="docutils literal notranslate"><span class="pre">DELETE</span></code> Statement</p></li>
+</ul>
+</section>
+<section id="record-management-exercises">
+<h3>Record Management Exercises<a class="headerlink" href="#record-management-exercises" title="Permalink to this heading">#</a></h3>
+<p>Using the Movies database</p>
+<ul class="simple">
+<li><p>Add a new director record for Australian director Rachael Perkins</p></li>
+<li><p>Add a new member record. Name: Melissa Small, Address: 38 Loggers Ln</p></li>
+<li><p>Add movies on hire for Aliens being hired to Reis,E return date is in two weeks.</p></li>
+<li><p>Update Fitzgerald,F’s address to 13 Elms St</p></li>
+<li><p>Lennon,S has paid her fees, adjust the database appropriately</p></li>
+<li><p>The store is doing a cull and getting rid of all movies before 1970, adjust the database appropriately.</p></li>
+</ul>
 </section>
 </section>
 <section id="converting-datastore-to-a-database">
@@ -762,12 +945,34 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#where-exercises">WHERE Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calculations-and-functions">Calculations and functions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by">GROUP BY</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tables">Join tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators">Filters and Aggregators</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-tutorials">Filters and Aggregators Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and aggregators exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by-tutorials">ORDER BY Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by-exercises">ORDER BY Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having">GROUP BY and HAVING</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having-tutorials">GROUP BY and HAVING Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#group-by-and-having-exercises">GROUP BY and HAVING Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries">Subqueries</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries-tutorials">Subqueries Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#subqueries-exercises">Subqueries Exercises</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#join">JOIN</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-tutorials">JOIN Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-exercises">JOIN Exercises</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>

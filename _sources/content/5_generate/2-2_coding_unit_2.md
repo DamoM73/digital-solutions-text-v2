@@ -76,17 +76,172 @@ Using the World database
 - Which countries are missing information?
 - List countries that are either constitutional monarchies or republics
 
-### Calculations and functions
+### Filters and Aggregators
+
+SQL filter clauses are used to restrict the number of rows returned by a query based on specified conditions, enabling more precise data retrieval and manipulation. While SQL aggregators are functions used to perform calculations on multiple rows of a table's column and return a single value. 
+
+#### Filters and Aggregators Tutorials
+
+Complete:
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_top.asp) on the `TOP` and `LIMIT` clauses
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_min_max.asp) on the `MIN()` and `MAX()` functions
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_count_avg_sum.asp) on the `COUNT()`, `AVG()` and `SUM()` Functions
+
+#### Filters and aggregators exercises
+
+Using the Movies database
+
+- How many directors are there from Australia?
+- How many directors have the name John?
+- What is the longest movie?
+- If I was to watch all the movies, back-to-back, how many minutes will I need (no pausing for toilet stops)
+
+Using the Repairs database
+
+- What is the average repair rate?
+- How many repairs are waiting to be picked up?
+
+Using the Shares database
+
+- How many companies are there in the high risk category?
+- Which company has the biggest difference between their highest and lowest price?
+- What is the cheapest, medium or low risk share on the New York Stock Exchange?
+- List all shares that are currently within 10% of their highest price?
 
 ### ORDER BY
 
-### GROUP BY
+The SQL `ORDER BY` keyword is used to sort the result set of a query by one or more columns, either in ascending (ASC) or descending (DESC) order.
+
+#### ORDER BY Tutorials
+
+Complete:
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_orderby.asp) on the `ORDER BY` Keyword
+
+#### ORDER BY Exercises
+
+Using the Movies database
+
+- List all the movies names in alphabetical order
+- What is the 5 oldest movie in stock?
+- Display the movies in chronological order, and then alphabetical order within each year.
+
+Using the School Database
+
+- List the name of the grade 6 students in alphabetical order
+- What is the top three results in percentage
+- List all the boys' birthdays in order, then all the girls' birthdays in order, with their names
+
+### GROUP BY and HAVING
+
+The SQL `GROUP BY` statement is used to group rows that have the same values in specified columns into summary rows, often in conjunction with aggregate functions to perform calculations on each group. While the SQL HAVING statement is used to filter groups of rows created by the `GROUP BY` clause based on specified conditions, typically involving aggregate functions.
+
+#### GROUP BY and HAVING Tutorials
+
+Complete:
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_groupby.asp) on the `GROUP BY` Statement
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_having.asp) on the `HAVING` Clause
+
+#### GROUP BY and HAVING Exercises
+
+Using the Movies database
+
+- How many directors are there from each country?
+- How many movies does each member number have on hire?
+- How many movies are stocked from each year?
+
+Using the School database
+
+- What is the average result for each subject(code)?
+- How many boys and girls in each grade?
+
+Using the Shares database
+
+- How many companies are there in each risk category?
+- What is the cheapest, medium risk and cheapest low risk share on the New York Stock Exchange?
+
+Using the Chinook database
+
+- How many customers are there from each country?
+- How many customers in each city?
+- How much were the sales for each country?
 
 ### Subqueries
 
-### Join tables
+SQL sub-queries are queries embedded within another SQL query to provide results that are used by the outer query, enabling more complex and flexible data retrieval and manipulation​. Subqueries are possible since every query returns a table. Effectively, you run one query which returns a table, then you run another query on the data in the returned table.
+
+#### Subqueries Tutorials
+
+Complete:
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_in.asp) on the `IN` Operator
+
+#### Subqueries Exercises
+
+Using the Schools database
+
+- What are the percentage results for students in grade 7
+- What subject is taught by the teacher in room A2?
+- In which subjects did students score over 90%?
+- List the names of the students in grades 4 or 5 who scored over 50% for language.
+- List the names of students who do science.
+
+Repairs database
+
+- Who owns devices being repaired by Ted Carrol?
+- What are the names of the technicians who are still not expert (N) at repairing Macs?
+- What rate will Byrne be charged for repairs?
+- List the owners whose devices have a high (H) priority for repair.
+- What level of qualification has the technician who is doing James' repair job?
+
+### JOIN
+
+SQL join clauses are used to combine rows from two or more tables based on a related column between them, enabling the retrieval of data that spans multiple tables.
+
+#### JOIN Tutorials
+
+Complete
+
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_join.asp) on Joins
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_join_inner.asp) on the `INNER JOIN` Keyword
+
+#### JOIN Exercises
+
+Using the Schools database
+
+- What is the average percentage of the students for each teacher
+- List all the students taught by Mr Simms
+
+Using the Chinook database
+
+- List all albums, including artist name
+- List the name of all the tacks in the metal genre
+- List all the details of all Def Leppard tracks.
 
 ### Record Management
+
+SQL record management keywords, such as `INSERT`, `UPDATE`, and `DELETE`, are used to add new records, modify existing records, remove records in a database table respectively.
+
+### Record Management Tutorials
+
+Complete:
+
+- W3schools Tutorial on the `INSERT INTO` Statement
+- W3schools Tutorial on the `UPDATE` Statement
+- W3schools Tutorial on the `DELETE` Statement
+
+### Record Management Exercises
+
+Using the Movies database
+
+- Add a new director record for Australian director Rachael Perkins
+- Add a new member record. Name: Melissa Small, Address: 38 Loggers Ln
+- Add movies on hire for Aliens being hired to Reis,E return date is in two weeks.
+- Update Fitzgerald,F's address to 13 Elms St
+- Lennon,S has paid her fees, adjust the database appropriately
+- The store is doing a cull and getting rid of all movies before 1970, adjust the database appropriately.
 
 ## Converting datastore to a database
 
