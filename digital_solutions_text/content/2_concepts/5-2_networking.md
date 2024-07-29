@@ -547,6 +547,138 @@ print(root.find('name').text)  # Output: John Doe
 
 XML remains a robust and flexible choice for many applications, particularly those requiring a formal structure and extensive metadata. If you need further details or examples, feel free to ask!
 
+### CSV & TSV
+
+CSV (Comma-Separated Values) and TSV (Tab-Separated Values) are both formats used for storing and exchanging tabular data in a plain text format. In a CSV file, each line corresponds to a row of data, and each value in the row is separated by a comma. TSV is similar to CSV, but instead of commas, tabs are used to separate values.
+
+#### CSV & TSV Key Features
+
+1. **Simplicity:**
+   - Easy to read and write by both humans and machines.
+2. **Compatibility:**
+   - Supported by most spreadsheet programs like Microsoft Excel, Google Sheets, and database management systems.
+3. **Flexibility:**
+   - Can store data of various types, including text and numbers.
+4. **Plain Text:**
+   - Data is stored in a simple text format, making it easy to handle and manipulate.
+5. **Data Import/Export:**
+   - These formats are commonly used for importing and exporting data in and out of databases, spreadsheets, and other data management systems.
+
+#### CSV & TSV Structure
+
+##### Structure of CSV (Comma-Separated Values) Files
+
+- **Header Row**: Often includes column names.
+- **Data Rows**: Each row contains data fields separated by commas.
+- **Optional Quotes**: Fields that contain commas, line breaks, or quotes are enclosed in double quotes
+- **Example**:
+
+```
+Name, Age, City
+Alice, 30, New York
+Bob, 25, Los Angeles
+Charlie, 35, "San Francisco, CA"
+```
+
+- The header row specifies the columns: Name, Age, City.
+- Each subsequent row contains the corresponding data for each column.
+- The field "San Francisco, CA" is enclosed in double quotes to handle the comma within the data.
+
+##### Structure of TSV (Tab-Separated Values) Files
+
+- **Header Row**: Often includes column names.
+- **Data Rows**: Each row contains data fields separated by tabs.
+- **Plain Text**: Fields generally do not need to be enclosed in quotes.
+- **Example**:
+
+```
+Name    Age    City
+Alice    30    New York
+Bob    25    Los Angeles
+Charlie    35    San Francisco, CA
+```
+
+- The header row specifies the columns: Name, Age, City.
+- Each subsequent row contains the corresponding data for each column.
+- Tabs are used as delimiters, and no special handling is required for fields with commas.
+
+##### Key Differences:
+
+- **Delimiter**: CSV uses commas, while TSV uses tabs.
+- **Field Handling**: CSV may require quotes for fields with special characters; TSV generally does not.
+
+#### Parsing
+
+Parsing CSV and TSV files in Python can be done efficiently using the `csv` module for both formats. Below are examples demonstrating how to parse each type of file.
+
+##### Parsing a CSV File
+
+```python
+import csv
+
+with open('data.csv', mode='r', newline='') as file:
+    csv_reader = csv.reader(file)
+    headers = next(csv_reader)  # Read the header row
+    for row in csv_reader:
+        print(row)
+```
+
+##### Parsing a TSV File
+
+```python
+import csv
+
+with open('data.tsv', mode='r', newline='') as file:
+    tsv_reader = csv.reader(file, delimiter='\t')
+    headers = next(tsv_reader)  # Read the header row
+    for row in tsv_reader:
+        print(row)
+```
+
+#### Advantages of CSV and TSV
+
+Using CSV (Comma-Separated Values) or TSV (Tab-Separated Values) to exchange data offers several advantages:
+
+1. **Simplicity and Readability:**
+   - Files are easy to read and write by both humans and machines. 
+   - The format is straightforward, with each line corresponding to a data record and each value separated by a comma .
+2. **Wide Compatibility:**
+   - Files are supported by a vast array of software applications, including spreadsheet programs like Microsoft Excel and Google Sheets, database management systems, and various data analysis tools .
+3. **Lightweight:**
+   - Files are typically smaller in size compared to other formats like XML or JSON, which makes them efficient for storage and transfer, particularly over networks .
+4. **Ease of Use:**
+   - Creating, editing, and parsing CSV files requires minimal resources and can be done with basic text editors and programming languages .
+5. **TSV files avoid delimiter conflicts:**
+   - Using tabs as delimiters in TSV files reduces the risk of conflicts with data values that might contain commas, making it easier to parse without requiring special handling for embedded delimiters .
+6. **TSV Compatibility:** 
+   - TSV files are not as universally supported as CSV, but are still compatible with many spreadsheet applications and text editors .
+
+#### Disadvantages of CSV and TSV
+
+Using CSV (Comma-Separated Values) or TSV (Tab-Separated Values) to exchange data also has several disadvantages:
+
+1. **Lack of Standardization**:
+   - There is no universal standard for CSV and TSV files, leading to inconsistencies in how different applications handle delimiters, line breaks, and special characters.
+
+2. **Limited Data Types**:
+   - CSV and TSV files can only store plain text, which limits their ability to represent more complex data types such as binary data, hierarchical data, or objects.
+
+3. **Delimiter Conflicts**:
+   - For CSV files fields containing commas must be enclosed in quotes, which can complicate parsing and data entry. Additionally, if the data itself contains quotes or line breaks, it requires additional escaping.
+   - For TSV files, data that contains tabs can complicate parsing and require special handling.
+
+4. **No Support for Metadata**:
+   - CSV files do not include metadata about the data, such as data types, schema information, or encoding, making it difficult to ensure data integrity and consistency【18†source】.
+
+5. **Scalability Issues**:
+   - For very large datasets, both CSV and TSV formats can become inefficient in terms of processing speed and memory usage, as they require reading the entire file into memory for manipulation.
+
+6. **Lack of Data Validation**:
+   - Both formats lack built-in mechanisms for data validation, which can lead to inconsistencies and errors if the data is not carefully managed and validated externally.
+
+7. **No Support for Hierarchical Data**:
+   - Both CSV and TSV are flat-file formats and do not support hierarchical or nested data structures, limiting their use for complex data representations.
+
 ```{admonition} Unit 4 subject matter covered:
 - Explain network transmission principles, including latency, jitter, guarantee and timeliness of delivery, and protocols relevant to the transmission of data over the internet, e.g. HTTP, HTTPS, FTP, VPN, streaming and broadcasting data packets
 - Explain methods for data exchange used to transfer data across networked systems including REST, JSON and XML
