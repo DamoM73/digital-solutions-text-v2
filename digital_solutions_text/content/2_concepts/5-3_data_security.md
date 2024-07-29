@@ -10,7 +10,7 @@ Data security measures, including encryption, access controls, and regular secur
 
 ## Data Management
 
-The folowing techniques used to manage data effectively, ensuring it can be stored and transferred securely and efficiently.
+The following techniques used to manage data effectively, ensuring it can be stored and transferred securely and efficiently.
 
 ### Data Compression
 
