@@ -605,6 +605,23 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-xml">Disadvantages of XML</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv">CSV &amp; TSV</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv-key-features">CSV &amp; TSV Key Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv-structure">CSV &amp; TSV Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-csv-comma-separated-values-files">Structure of CSV (Comma-Separated Values) Files</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-tsv-tab-separated-values-files">Structure of TSV (Tab-Separated Values) Files</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences">Key Differences:</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing">Parsing</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-a-csv-file">Parsing a CSV File</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-a-tsv-file">Parsing a TSV File</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-csv-and-tsv">Advantages of CSV and TSV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-csv-and-tsv">Disadvantages of CSV and TSV</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1274,6 +1291,197 @@ document.write(`
 </li>
 </ol>
 <p>XML remains a robust and flexible choice for many applications, particularly those requiring a formal structure and extensive metadata. If you need further details or examples, feel free to ask!</p>
+</section>
+</section>
+<section id="csv-tsv">
+<h3>CSV &amp; TSV<a class="headerlink" href="#csv-tsv" title="Permalink to this heading">#</a></h3>
+<p>CSV (Comma-Separated Values) and TSV (Tab-Separated Values) are both formats used for storing and exchanging tabular data in a plain text format. In a CSV file, each line corresponds to a row of data, and each value in the row is separated by a comma. TSV is similar to CSV, but instead of commas, tabs are used to separate values.</p>
+<section id="csv-tsv-key-features">
+<h4>CSV &amp; TSV Key Features<a class="headerlink" href="#csv-tsv-key-features" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>Simplicity:</strong></p>
+<ul class="simple">
+<li><p>Easy to read and write by both humans and machines.</p></li>
+</ul>
+</li>
+<li><p><strong>Compatibility:</strong></p>
+<ul class="simple">
+<li><p>Supported by most spreadsheet programs like Microsoft Excel, Google Sheets, and database management systems.</p></li>
+</ul>
+</li>
+<li><p><strong>Flexibility:</strong></p>
+<ul class="simple">
+<li><p>Can store data of various types, including text and numbers.</p></li>
+</ul>
+</li>
+<li><p><strong>Plain Text:</strong></p>
+<ul class="simple">
+<li><p>Data is stored in a simple text format, making it easy to handle and manipulate.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Import/Export:</strong></p>
+<ul class="simple">
+<li><p>These formats are commonly used for importing and exporting data in and out of databases, spreadsheets, and other data management systems.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="csv-tsv-structure">
+<h4>CSV &amp; TSV Structure<a class="headerlink" href="#csv-tsv-structure" title="Permalink to this heading">#</a></h4>
+<section id="structure-of-csv-comma-separated-values-files">
+<h5>Structure of CSV (Comma-Separated Values) Files<a class="headerlink" href="#structure-of-csv-comma-separated-values-files" title="Permalink to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>Header Row</strong>: Often includes column names.</p></li>
+<li><p><strong>Data Rows</strong>: Each row contains data fields separated by commas.</p></li>
+<li><p><strong>Optional Quotes</strong>: Fields that contain commas, line breaks, or quotes are enclosed in double quotes</p></li>
+<li><p><strong>Example</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span><span class="p">,</span> <span class="n">Age</span><span class="p">,</span> <span class="n">City</span>
+<span class="n">Alice</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">New</span> <span class="n">York</span>
+<span class="n">Bob</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="n">Los</span> <span class="n">Angeles</span>
+<span class="n">Charlie</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="s2">&quot;San Francisco, CA&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The header row specifies the columns: Name, Age, City.</p></li>
+<li><p>Each subsequent row contains the corresponding data for each column.</p></li>
+<li><p>The field “San Francisco, CA” is enclosed in double quotes to handle the comma within the data.</p></li>
+</ul>
+</section>
+<section id="structure-of-tsv-tab-separated-values-files">
+<h5>Structure of TSV (Tab-Separated Values) Files<a class="headerlink" href="#structure-of-tsv-tab-separated-values-files" title="Permalink to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>Header Row</strong>: Often includes column names.</p></li>
+<li><p><strong>Data Rows</strong>: Each row contains data fields separated by tabs.</p></li>
+<li><p><strong>Plain Text</strong>: Fields generally do not need to be enclosed in quotes.</p></li>
+<li><p><strong>Example</strong>:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span>    <span class="n">Age</span>    <span class="n">City</span>
+<span class="n">Alice</span>    <span class="mi">30</span>    <span class="n">New</span> <span class="n">York</span>
+<span class="n">Bob</span>    <span class="mi">25</span>    <span class="n">Los</span> <span class="n">Angeles</span>
+<span class="n">Charlie</span>    <span class="mi">35</span>    <span class="n">San</span> <span class="n">Francisco</span><span class="p">,</span> <span class="n">CA</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The header row specifies the columns: Name, Age, City.</p></li>
+<li><p>Each subsequent row contains the corresponding data for each column.</p></li>
+<li><p>Tabs are used as delimiters, and no special handling is required for fields with commas.</p></li>
+</ul>
+</section>
+<section id="key-differences">
+<h5>Key Differences:<a class="headerlink" href="#key-differences" title="Permalink to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>Delimiter</strong>: CSV uses commas, while TSV uses tabs.</p></li>
+<li><p><strong>Field Handling</strong>: CSV may require quotes for fields with special characters; TSV generally does not.</p></li>
+</ul>
+</section>
+</section>
+<section id="parsing">
+<h4>Parsing<a class="headerlink" href="#parsing" title="Permalink to this heading">#</a></h4>
+<p>Parsing CSV and TSV files in Python can be done efficiently using the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module for both formats. Below are examples demonstrating how to parse each type of file.</p>
+<section id="parsing-a-csv-file">
+<h5>Parsing a CSV File<a class="headerlink" href="#parsing-a-csv-file" title="Permalink to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">csv_reader</span><span class="p">)</span>  <span class="c1"># Read the header row</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">csv_reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="parsing-a-tsv-file">
+<h5>Parsing a TSV File<a class="headerlink" href="#parsing-a-tsv-file" title="Permalink to this heading">#</a></h5>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.tsv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">tsv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">headers</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">tsv_reader</span><span class="p">)</span>  <span class="c1"># Read the header row</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">tsv_reader</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="advantages-of-csv-and-tsv">
+<h4>Advantages of CSV and TSV<a class="headerlink" href="#advantages-of-csv-and-tsv" title="Permalink to this heading">#</a></h4>
+<p>Using CSV (Comma-Separated Values) or TSV (Tab-Separated Values) to exchange data offers several advantages:</p>
+<ol class="arabic simple">
+<li><p><strong>Simplicity and Readability:</strong></p>
+<ul class="simple">
+<li><p>Files are easy to read and write by both humans and machines.</p></li>
+<li><p>The format is straightforward, with each line corresponding to a data record and each value separated by a comma .</p></li>
+</ul>
+</li>
+<li><p><strong>Wide Compatibility:</strong></p>
+<ul class="simple">
+<li><p>Files are supported by a vast array of software applications, including spreadsheet programs like Microsoft Excel and Google Sheets, database management systems, and various data analysis tools .</p></li>
+</ul>
+</li>
+<li><p><strong>Lightweight:</strong></p>
+<ul class="simple">
+<li><p>Files are typically smaller in size compared to other formats like XML or JSON, which makes them efficient for storage and transfer, particularly over networks .</p></li>
+</ul>
+</li>
+<li><p><strong>Ease of Use:</strong></p>
+<ul class="simple">
+<li><p>Creating, editing, and parsing CSV files requires minimal resources and can be done with basic text editors and programming languages .</p></li>
+</ul>
+</li>
+<li><p><strong>TSV files avoid delimiter conflicts:</strong></p>
+<ul class="simple">
+<li><p>Using tabs as delimiters in TSV files reduces the risk of conflicts with data values that might contain commas, making it easier to parse without requiring special handling for embedded delimiters .</p></li>
+</ul>
+</li>
+<li><p><strong>TSV Compatibility:</strong></p>
+<ul class="simple">
+<li><p>TSV files are not as universally supported as CSV, but are still compatible with many spreadsheet applications and text editors .</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="disadvantages-of-csv-and-tsv">
+<h4>Disadvantages of CSV and TSV<a class="headerlink" href="#disadvantages-of-csv-and-tsv" title="Permalink to this heading">#</a></h4>
+<p>Using CSV (Comma-Separated Values) or TSV (Tab-Separated Values) to exchange data also has several disadvantages:</p>
+<ol class="arabic simple">
+<li><p><strong>Lack of Standardization</strong>:</p>
+<ul class="simple">
+<li><p>There is no universal standard for CSV and TSV files, leading to inconsistencies in how different applications handle delimiters, line breaks, and special characters.</p></li>
+</ul>
+</li>
+<li><p><strong>Limited Data Types</strong>:</p>
+<ul class="simple">
+<li><p>CSV and TSV files can only store plain text, which limits their ability to represent more complex data types such as binary data, hierarchical data, or objects.</p></li>
+</ul>
+</li>
+<li><p><strong>Delimiter Conflicts</strong>:</p>
+<ul class="simple">
+<li><p>For CSV files fields containing commas must be enclosed in quotes, which can complicate parsing and data entry. Additionally, if the data itself contains quotes or line breaks, it requires additional escaping.</p></li>
+<li><p>For TSV files, data that contains tabs can complicate parsing and require special handling.</p></li>
+</ul>
+</li>
+<li><p><strong>No Support for Metadata</strong>:</p>
+<ul class="simple">
+<li><p>CSV files do not include metadata about the data, such as data types, schema information, or encoding, making it difficult to ensure data integrity and consistency【18†source】.</p></li>
+</ul>
+</li>
+<li><p><strong>Scalability Issues</strong>:</p>
+<ul class="simple">
+<li><p>For very large datasets, both CSV and TSV formats can become inefficient in terms of processing speed and memory usage, as they require reading the entire file into memory for manipulation.</p></li>
+</ul>
+</li>
+<li><p><strong>Lack of Data Validation</strong>:</p>
+<ul class="simple">
+<li><p>Both formats lack built-in mechanisms for data validation, which can lead to inconsistencies and errors if the data is not carefully managed and validated externally.</p></li>
+</ul>
+</li>
+<li><p><strong>No Support for Hierarchical Data</strong>:</p>
+<ul class="simple">
+<li><p>Both CSV and TSV are flat-file formats and do not support hierarchical or nested data structures, limiting their use for complex data representations.</p></li>
+</ul>
+</li>
+</ol>
 <div class="admonition-unit-4-subject-matter-covered admonition">
 <p class="admonition-title">Unit 4 subject matter covered:</p>
 <ul class="simple">
@@ -1401,6 +1609,23 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#usage-of-xml">Usage of XML</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-xml">Advantages of XML</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-xml">Disadvantages of XML</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv">CSV &amp; TSV</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv-key-features">CSV &amp; TSV Key Features</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#csv-tsv-structure">CSV &amp; TSV Structure</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-csv-comma-separated-values-files">Structure of CSV (Comma-Separated Values) Files</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-of-tsv-tab-separated-values-files">Structure of TSV (Tab-Separated Values) Files</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#key-differences">Key Differences:</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing">Parsing</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-a-csv-file">Parsing a CSV File</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#parsing-a-tsv-file">Parsing a TSV File</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-csv-and-tsv">Advantages of CSV and TSV</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-csv-and-tsv">Disadvantages of CSV and TSV</a></li>
 </ul>
 </li>
 </ul>
