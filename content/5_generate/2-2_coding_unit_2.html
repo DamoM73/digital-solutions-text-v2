@@ -349,6 +349,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../7_communication/5_modes.html">Modes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../7_communication/6_presentations.html">Presentations</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../8_solutions/1_sql_exercises.html">SQL Exercises</a></li>
+</ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">End material</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
@@ -563,7 +567,7 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators">Filters and Aggregators</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-tutorials">Filters and Aggregators Tutorials</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and aggregators exercises</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and Aggregators exercises</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a><ul class="nav section-nav flex-column">
@@ -586,9 +590,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-exercises">JOIN Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
@@ -622,6 +628,7 @@ document.write(`
 </ul>
 <p>Below is the Relational Schemas for these databases</p>
 <p><img alt="relational schemas" src="../../_images/relational_schemas.png" /></p>
+<p><a class="reference internal" href="../8_solutions/1_sql_exercises.html"><span class="doc std std-doc">Exercise solutions</span></a> can be found in the solutions section.</p>
 </section>
 <section id="select-statement">
 <h3>SELECT Statement<a class="headerlink" href="#select-statement" title="Permalink to this heading">#</a></h3>
@@ -695,7 +702,7 @@ document.write(`
 </ul>
 </section>
 <section id="filters-and-aggregators-exercises">
-<h4>Filters and aggregators exercises<a class="headerlink" href="#filters-and-aggregators-exercises" title="Permalink to this heading">#</a></h4>
+<h4>Filters and Aggregators exercises<a class="headerlink" href="#filters-and-aggregators-exercises" title="Permalink to this heading">#</a></h4>
 <p>Using the Movies database</p>
 <ul class="simple">
 <li><p>How many directors are there from Australia?</p></li>
@@ -839,9 +846,8 @@ document.write(`
 <section id="record-management">
 <h3>Record Management<a class="headerlink" href="#record-management" title="Permalink to this heading">#</a></h3>
 <p>SQL record management keywords, such as <code class="docutils literal notranslate"><span class="pre">INSERT</span></code>, <code class="docutils literal notranslate"><span class="pre">UPDATE</span></code>, and <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, are used to add new records, modify existing records, remove records in a database table respectively.</p>
-</section>
 <section id="record-management-tutorials">
-<h3>Record Management Tutorials<a class="headerlink" href="#record-management-tutorials" title="Permalink to this heading">#</a></h3>
+<h4>Record Management Tutorials<a class="headerlink" href="#record-management-tutorials" title="Permalink to this heading">#</a></h4>
 <p>Complete:</p>
 <ul class="simple">
 <li><p>W3schools Tutorial on the <code class="docutils literal notranslate"><span class="pre">INSERT</span> <span class="pre">INTO</span></code> Statement</p></li>
@@ -850,7 +856,7 @@ document.write(`
 </ul>
 </section>
 <section id="record-management-exercises">
-<h3>Record Management Exercises<a class="headerlink" href="#record-management-exercises" title="Permalink to this heading">#</a></h3>
+<h4>Record Management Exercises<a class="headerlink" href="#record-management-exercises" title="Permalink to this heading">#</a></h4>
 <p>Using the Movies database</p>
 <ul class="simple">
 <li><p>Add a new director record for Australian director Rachael Perkins</p></li>
@@ -860,6 +866,7 @@ document.write(`
 <li><p>Lennon,S has paid her fees, adjust the database appropriately</p></li>
 <li><p>The store is doing a cull and getting rid of all movies before 1970, adjust the database appropriately.</p></li>
 </ul>
+</section>
 </section>
 </section>
 <section id="converting-datastore-to-a-database">
@@ -947,7 +954,7 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators">Filters and Aggregators</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-tutorials">Filters and Aggregators Tutorials</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and aggregators exercises</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filters-and-aggregators-exercises">Filters and Aggregators exercises</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#order-by">ORDER BY</a><ul class="nav section-nav flex-column">
@@ -970,9 +977,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#join-exercises">JOIN Exercises</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management">Record Management</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-tutorials">Record Management Tutorials</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
