@@ -106,7 +106,7 @@ Malware is malicious software designed to disrupt, damage, or gain unauthorized 
   - automatically displays or downloads advertising content, such as banners or pop-ups, on a user's computer or mobile device, often without their consent or knowledge.
   - while not always malicious, it can invade privacy by tracking user behaviour and gathering personal information for targeted advertising, and in some cases, it can serve as a conduit for more harmful malware.
 
-##### Malware example
+##### Malware Example
 
 One of the most infamous malware attacks is the **[WannaCry ransomware attack](https://en.wikipedia.org/wiki/WannaCry_ransomware_attack)**, which occurred in May 2017. WannaCry exploited a vulnerability in Microsoft Windows, known as EternalBlue, to spread rapidly across networks worldwide. 
 
@@ -118,7 +118,7 @@ The National Health Service (NHS) in the United Kingdom was particularly hard hi
 
 Phishing is a technique where attackers attempt to obtain sensitive information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity in electronic communications.
 
-##### Phishing example
+##### Phishing Example
 
 A notable example of a phishing attack is the **[2016 attack on John Podesta](https://en.wikipedia.org/wiki/Podesta_emails#:~:text=In%20March%202016%2C%20the%20personal,work%2Drelated%2C%20were%20hacked.)**, chairman of Hillary Clinton's presidential campaign. 
 
@@ -130,7 +130,7 @@ This breach led to the exposure of thousands of emails, which were subsequently 
 
 MitM Attacks occurs when attackers intercept communication between two parties to steal or manipulate data. Common in unsecured Wi-Fi networks.
 
-##### Man-in-the-middle attack example
+##### Man-in-the-Middle Attack Example
 
 In 2015, Lenovo was found to have pre-installed a software called [Superfish](https://en.wikipedia.org/wiki/Superfish) on some of its laptops.
 
@@ -154,7 +154,7 @@ The attack highlighted the vulnerabilities of IoT devices and the significant im
 
 Insider threats are security risks originating from within the organization, often involving employees or contractors who have access to sensitive information.
 
-#### Insider threat example
+##### Insider Threat Example
 
 One of the most infamous examples of an insider threat is the case of **[Edward Snowden](https://en.wikipedia.org/wiki/Edward_Snowden)**. 
 
@@ -166,7 +166,7 @@ His actions had profound implications for national security and privacy, leading
 
 SQL Injections are a type of attack where malicious SQL statements are inserted into an entry field for execution, allowing attackers to access or manipulate the database.
 
-##### SQL injection example
+##### SQL Injection Example
 
 A famous example of an SQL injection attack is the 2008 breach of **[Heartland Payment Systems](https://en.wikipedia.org/wiki/Heartland_Payment_Systems)**. 
 
@@ -178,7 +178,7 @@ This breach led to significant financial losses and legal repercussions for the 
 
 XSS is an attack where malicious scripts are injected into otherwise benign and trusted websites, affecting users who visit the site.
 
-##### Cross-Site Scripting example
+##### Cross-Site Scripting Example
 
 One of the most notable examples of a Cross-Site Scripting (XSS) attack occurred on MySpace in 2005, known as the **["Samy worm" attack](https://en.wikipedia.org/wiki/Samy_(computer_worm))**. 
 
@@ -190,7 +190,7 @@ This incident highlighted the severe impact of XSS vulnerabilities and the impor
 
 APTs are long-term targeted attacks where an intruder gains access to a network and remains undetected for an extended period to steal data.
 
-##### Advanced Persistent Threat example
+##### Advanced Persistent Threat Example
 
 One of the most famous examples of an Advanced Persistent Threat (APT) is the [Stuxnet attack](https://en.wikipedia.org/wiki/Stuxnet), discovered in 2010. 
 
@@ -202,7 +202,7 @@ This attack highlighted the potential of cyber warfare and the risks posed by AP
 
 Zero-day Exploits are attacks that exploit previously unknown vulnerabilities in software before developers have a chance to issue patches.
 
-##### Zero-Day Exploits example
+##### Zero-Day Exploits Example
 
 Both the Stuxnet worm and the WannaCry ransomware used zero-day exploits. 
 
@@ -216,11 +216,11 @@ Stuxnet used the following exploits:
 - **MS08-067 (CVE-2008-4250)**: Although not a zero-day at the time of the Stuxnet attack, this older vulnerability was used to propagate across networked systems by exploiting a flaw in the Windows Server Service.
 - **Win32k.sys Vulnerability (CVE-2010-2743)**: This vulnerability in the Windows kernel allowed Stuxnet to execute arbitrary code with kernel-mode privileges, providing extensive control over the infected system.
 
-#### Supply chain attacks
+#### Supply Chain Attacks
 
 Supply chain attacks are a type of malicious data security threat where attackers compromise an organization by targeting its less secure elements in the supply network, such as software vendors, third-party services, or hardware suppliers, to infiltrate and harm the primary target
 
-##### Supply chain attack example
+##### Supply Chain Attack Example
 
 One of the most notorious examples of a supply chain attack is the **[2020 SolarWinds hack](https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach)**. 
 
@@ -237,7 +237,7 @@ Non-malicious threats to data security are risks that arise from unintentional a
 
 Human error includes mistakes made by employees or users, such as accidentally deleting data, misconfiguring systems, or sending sensitive information to the wrong recipient.
 
-##### Human Error example
+##### Human Error Example
 
 A famous example of a data security risk caused by human error is the [2017 Equifax data breach](https://en.wikipedia.org/wiki/2017_Equifax_data_breach#:~:text=Private%20records%20of%20147.9%20million,the%20public%20until%20September%202017.). 
 
@@ -249,7 +249,7 @@ Despite being alerted to the vulnerability and the availability of a patch two m
 
 Hardware Failures refer to physical malfunctions of storage devices, servers, or other critical hardware components that can lead to data loss or downtime.
 
-##### Hardware Failure example
+##### Hardware Failure Example
 
 A significant example of hardware failure resulting in data loss is the **[2011 outage experienced by the cloud service provider Amazon Web Services (AWS)](https://money.cnn.com/2011/04/21/technology/amazon_server_outage/index.htm)**. 
 
@@ -261,19 +261,19 @@ Many businesses experienced prolonged outages, and some permanently lost data du
 
 Flaws or vulnerabilities in software that can cause data corruption, loss, or unintended exposure of sensitive information.
 
-##### Software Bug example
+##### Software Bug Example
 
-A famous example of hardware failure is the **[1996 Ariane 5 rocket launch disaster](https://en.wikipedia.org/wiki/Ariane_flight_V88)**. 
+In July 2023, a **[software update for the CrowdStrike Falcon sensor resulted in a widespread issue](https://www.wired.com/story/crowdstrike-outage-update-windows/)**. 
 
-The European Space Agency (ESA) launched the Ariane 5 rocket, but just 37 seconds after lift-off, the rocket veered off its flight path and self-destructed. The failure was traced to a malfunction in the rocket's inertial reference system, which was caused by a software error attempting to convert a 64-bit floating-point number to a 16-bit signed integer. This error was a result of reusing software from the Ariane 4 rocket without adequately testing it for the new conditions of the Ariane 5. 
+The issue caused Blue Screen of Death (BSOD) errors on Windows systems, leading to significant IT disruptions. The flawed update caused system crashes and data loss across thousands of devices by corrupting system files and interrupting critical operations. This incident is attributed to a logic error in the sensor's configuration file.
 
-The disaster resulted in the loss of the rocket and its payload, worth approximately $370 million.
+This exemplifies how software bugs can lead to severe data loss and operational downtime, highlighting the necessity for rigorous testing and robust incident response protocols to mitigate such risks.
 
 #### Power Outages
 
 Sudden loss of power can disrupt operations, cause data corruption, and affect the availability of systems and services.
 
-#### Power Outages example
+##### Power Outages Example
 
 A notable example of data security being placed at risk due to power outages occurred in 2013 at the **[National Security Agency's (NSA) massive data centre in Bluffdale](https://www.bbc.com/news/technology-24443266)**, Utah. 
 
@@ -283,7 +283,7 @@ The facility experienced a series of power outages caused by electrical surges. 
 
 Events such as floods, earthquakes, hurricanes, and fires that can physically damage data centres and IT infrastructure, leading to data loss or prolonged downtime.
 
-#### Natural Disasters example
+##### Natural Disasters Example
 
 A well-known example of data security being jeopardized due to natural disasters occurred during **[Hurricane Sandy in 2012](https://abcnews.go.com/Technology/hurricane-sandy-takes-york-city-data-center-gawker/story?id=17601425)**. 
 
@@ -295,7 +295,7 @@ Despite having backup generators, Datagram's fuel pumps were located in a baseme
 
 Issues with network infrastructure, such as router failures or connectivity problems, that can disrupt access to data and services.
 
-#### Network Failures example
+##### Network Failures Example
 
 A significant example of network failures risking data security is the **[2008 outage at RBS (Royal Bank of Scotland), NatWest, and Ulster Bank](https://www.theguardian.com/money/2012/jun/29/natwest-fiasco-what-happens-now)**.
 
@@ -307,7 +307,7 @@ The network failure exposed vulnerabilities in the bank's IT infrastructure and 
 
 Problems with keeping data consistent across different systems or storage locations, which can lead to data discrepancies or loss.
 
-#### Data Synchronization Issues example
+##### Data Synchronization Issues Example
 
 Another example of data synchronization issues risking data security is the **[T-Mobile data breach in 2020](https://www.cpomagazine.com/cyber-security/second-data-breach-in-2020-for-t-mobile-exposed-customer-and-call-related-information-of-200000-subscribers/)**. 
 
@@ -319,7 +319,7 @@ The incident exposed vulnerabilities in how data was managed and synchronized, h
 
 Failure to regularly back up data or improper backup procedures can result in significant data loss in the event of a failure or disaster.
 
-##### Lack of Proper Backups example
+##### Lack of Proper Backups Example
 
 A famous example of data loss due to a lack of proper backups occurred in [2014 with the cloud storage provider, Code Spaces](https://www.breaches.cloud/incidents/codespaces/). 
 
@@ -331,7 +331,7 @@ Code Spaces had not maintained offsite backups or a robust backup strategy, lead
 
 Conditions such as high humidity, dust, or temperature extremes that can negatively impact hardware performance and reliability.
 
-##### Environmental Factors example
+##### Environmental Factors Example
 
 A notable example of data loss due to environmental conditions is the **[2011 fire at the OVH data centre in Strasbourg, France](https://www.reuters.com/article/world/millions-of-websites-offline-after-fire-at-french-cloud-services-firm-idUSKBN2B20NT/)**. 
 
@@ -339,11 +339,11 @@ The fire was triggered by high humidity and electrical issues, leading to signif
 
 This event highlighted the critical importance of maintaining proper environmental controls, such as humidity and temperature regulation, and having robust disaster recovery plans to mitigate the impact of such incidents.
 
-### Protecting against data security threats
+### Protecting Against Data Security Threats
 
 Protecting against malicious attacks involves a multi-layered approach that combines preventive measures, user education, and robust security practices:
 
-#### Software measures
+#### Software Measures
 
 - **Install and Maintain Antivirus Software**: Use reputable antivirus and anti-malware programs to detect and remove malicious software. Ensure these programs are updated regularly to protect against the latest threats.
 - **Regular Software Updates**: Keep all software, including operating systems, browsers, and plugins, up to date to patch vulnerabilities that malware could exploit.
@@ -352,8 +352,8 @@ Protecting against malicious attacks involves a multi-layered approach that comb
 - **Use Intrusion Detection and Prevention Systems (IDPS)**: Deploy IDPS to monitor network traffic for suspicious activity and potential intrusions, enabling prompt action to mitigate threats.
 - **Behavioural Analytics**: Implement tools that use machine learning to analyse user behaviour and detect anomalies that may indicate insider threats
 - **Prepared Statements**: Ensure that SQL queries are parameterized, which separates SQL code from data, making it impossible for an attacker to alter the query structure
-- **Whitelisting**: Validate input against a list of allowed characters or patterns
 - **Custom Error Messages**: Avoid exposing detailed error messages to users. Customize error messages to prevent attackers from gaining insights into the database structure.
+- **Whitelisting**: Validate input against a list of allowed characters or patterns
 - **Sanitize User Input**: Ensure all user input is sanitized to remove or encode any potentially harmful characters before processing.
 - **Encode Output**: Encode all data before rendering it on the webpage to prevent the browser from interpreting it as executable code.
 - **Use Secure Web Frameworks**: Utilize frameworks that have built-in protections against XSS, such as Ruby on Rails, Django, and Angular.
@@ -362,18 +362,15 @@ Protecting against malicious attacks involves a multi-layered approach that comb
 - **Synchronous Replication**: Use synchronous replication to ensure that data is written to multiple locations simultaneously, reducing the risk of discrepancies.
 - **Automation Tools**: Use automated data synchronization tools and processes to reduce the risk of human error and ensure consistent data updates across systems.
 
-
 #### Hardware measures
 
 - **Disconnect Infected Devices**: If a device is suspected to be infected with malware, disconnect it from the network immediately to prevent the spread to other systems.
 - **RAID Configurations**: Use RAID (Redundant Array of Independent Disks) to create copies of data across multiple disks, so if one disk fails, data remains accessible.
-- **Predictive Maintenance**: Regularly inspect and maintain hardware to identify and address potential failures before they occur. Utilize monitoring tools to track hardware health and performance.
 - **High Availability**: Set up failover systems that automatically switch to a backup system in case of hardware failure, ensuring continuous data availability.
 - **Battery Backup**: Deploy UPS systems to provide immediate, short-term power during an outage, allowing time for safe shutdown or switching to backup generators.
 - **Long-term Power**: Install backup generators to supply power for extended periods during outages. Ensure they are regularly maintained and tested.
 - **Proactive Monitoring**: Implement environmental monitoring systems to detect and alert for power issues, temperature fluctuations, and other environmental factors that could lead to hardware failure.
 - **Scheduled Maintenance**: Perform regular network maintenance and updates to prevent failures due to outdated hardware or software. Ensure all network components are updated with the latest security patches.
-
 
 #### Networking measures
 
@@ -387,7 +384,6 @@ Protecting against malicious attacks involves a multi-layered approach that comb
 - **Distributed Data Centres**: Use geographically dispersed data centres to ensure that data and services remain available even if one location experiences a power outage.
 - **Cloud Integration**: Utilize cloud services for data storage and critical applications, leveraging the redundancy and high availability provided by major cloud providers.
 - **Implement Redundancy**: Ensure critical network components have backups. Use multiple ISPs, redundant routers, and switches to provide alternative paths for data if one fails.
-
 
 #### Policy measures
 
