@@ -82,27 +82,27 @@ Malicious data security threats are intentional acts by attackers designed to co
 
 Malware is malicious software designed to disrupt, damage, or gain unauthorized access to computer systems. This includes:
 
-- **viruses**
+- **Viruses**
   - designed to replicate themselves and spread from one computer to another
   - often disrupting operations, corrupting or deleting data, and potentially causing significant damage to systems and networks
   - spread by attaching itself to executable files or documents
-- **worms**
+- **Worms**
   - self-replicating malware
   - spreads autonomously across networks, exploiting vulnerabilities without needing to attach itself to an existing program
   - causes harm by consuming bandwidth, overloading systems, or delivering additional payloads such as ransomware.
 - **Trojans**
   - disguises itself as a legitimate or benign application to deceive users into installing it
   - allows attackers to gain unauthorized access to the user's system to steal data, create backdoors, or perform other harmful actions once it is executed.
-- **ransomware**
+- **Ransomware**
   - designed to block access to a computer system or data
   - typically encrypts files until a ransom is paid to the attacker to restore access
   - often spreads through phishing emails, malicious downloads, or exploit kits
   - can cause significant disruption to individuals and organizations by locking them out of their own data or systems
-- **spyware**
+- **Spyware**
   - designed to secretly monitor and collect information about a user's activities without their knowledge or consent
   - data can include browsing habits, keystrokes, login credentials, and other sensitive information
   - data is sent to the attacker for malicious purposes such as identity theft, financial fraud, or unauthorized access to systems and accounts.
-- **adware**
+- **Adware**
   - automatically displays or downloads advertising content, such as banners or pop-ups, on a user's computer or mobile device, often without their consent or knowledge.
   - while not always malicious, it can invade privacy by tracking user behaviour and gathering personal information for targeted advertising, and in some cases, it can serve as a conduit for more harmful malware.
 
