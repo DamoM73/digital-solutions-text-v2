@@ -230,9 +230,9 @@ SQL record management keywords, such as `INSERT`, `UPDATE`, and `DELETE`, are us
 
 Complete:
 
-- W3schools Tutorial on the `INSERT INTO` Statement
-- W3schools Tutorial on the `UPDATE` Statement
-- W3schools Tutorial on the `DELETE` Statement
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_insert.asp) on the `INSERT INTO` Statement
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_update.asp) on the `UPDATE` Statement
+- [W3schools Tutorial](https://www.w3schools.com/sql/sql_delete.asp) on the `DELETE` Statement
 
 #### Record Management Exercises
 
