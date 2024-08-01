@@ -605,8 +605,8 @@ DELETE FROM movies_onhire
 WHERE movienumber IN (
     SELECT movienumb
     FROM movie
-    WHERE year < 1960)
+    WHERE year < 1970)
 
 DELETE FROM movie
-WHERE year < 1960
+WHERE year < 1970
 ```
