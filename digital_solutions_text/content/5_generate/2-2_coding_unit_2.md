@@ -245,6 +245,98 @@ Using the Movies database
 - Lennon,S has paid her fees, adjust the database appropriately
 - The store is doing a cull and getting rid of all movies before 1970, adjust the database appropriately.
 
+## Python and SQLite
+
+To work with SQLite in Python, we use the SQLite3 library.
+
+### Setup
+
+SQLite3 is part of the standard library, so we don't need to pip install it, just import it.
+
+So you start a your file with:
+
+``` python
+import sqlite3
+```
+
+The next step is to connect to the SQLite database your program will use. This is similar concept to opening Word document. If you are going to work on a Word document, first you need to open it.
+
+In this example, we will be connecting to the **chinook.db** database
+
+``` python
+connection = sqlite3.connect("chinook.db")
+```
+
+The connection is what we use to access the database.
+
+Next we need to create a cursor. A cursor is the 'tool' that we use to edit the data in the database. Again, with our Word analogy, the cursor is where you are editing the text.
+
+``` python
+cursor = connection.cursor()
+```
+
+So that is two different ways to interact with the database, but they have different purposes:
+
+- **connection** &rarr; works with the database file
+- **cursor** &rarr; works with the data in the database
+
+### Queries
+
+To run SQL queries you need to use the `cursor.execute()` method.
+
+Note that the `cursor.execute()` method accepts two arguments:
+
+- **SQL command** &rarr; a string that contains the SQL command. It is important to note that all values in the SQL query are parameterised. This means than rather than hard coding user values into the query, they are included in a collection (either a tuple or dictionary), which is also passed to the method. A placeholder indicates where the values should be inserted.
+- **Values collection** &rarr; this contains the values to be added to the query.
+
+```{admonition} Why use parameterised queries
+:class: tip
+We use parameterised queries for the following reasons:
+
+- **Security:** Prevents SQL injection by separating SQL code from data.
+- **Efficiency:** Helps in query optimization and reuse.
+- **Simplicity:** Makes code easier to read and maintain.
+```
+
+``` python
+cursor.execute(
+    """
+    SELECT customers.FirstName ||" "|| customers.LastName
+    FROM customers
+    WHERE Country = :country 
+    """,
+    {
+        "country":"USA"
+    }
+)
+```
+
+In the example above we have used the named placeholders example.
+
+- In the SQL query the `:country` is the placeholder.
+- Python will look for **country** in the dictionary from the second argument, and then insert the value "USA" in its place.
+
+Once the query has been executed, you need to retrieve the results.
+
+There are three commands to do this:
+
+- **`cursor.fetchone()`** &rarr; retrieves the next row of a query result set, returning a single row as a tuple, or `None` when no more data is available.
+- **`cursor.fetchall()`** &rarr; retrieves all remaining rows of a query result set as a list of tuples. If no more data is available, it returns an empty list `[]`.
+- **`fetchmany(size)`** &rarr; retrieves the next set of rows from a query result set, returning a list of tuples with at most `size` rows. If fewer rows are available than requested, it returns only the available rows. If no more data is available, it returns an empty list `[]`.
+
+In our example we will retrieve all rows.
+
+``` python
+results = cursor.fetchall()
+```
+
+Because `fetchall()` returns a list of tuples, we need to iterate through that list to see each row. It would be the same for `fetchmany(size)`.
+
+``` python
+for result in results:
+    print(result[0])
+```
+
 ## Converting datastore to a database
 
 One of the advantages of using MVC Architecture is ease of refactoring. You can change any of the three modules, as long as calling the methods that interconnect the modules remain the same. For example, if you want to change the datastore module so it uses a database, you can change that one module and leave the main and UI module alone.
