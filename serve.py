@@ -26,7 +26,7 @@ class BuildJupyterBookHandler(FileSystemEventHandler):
 if __name__ == "__main__":
     source_path = 'digital_solutions_text'  # Source files directory
     build_output_path = 'digital_solutions_text\_build\html'  # Adjust the path as per your system
-    build_command = 'jupyter-book build ' + source_path
+    build_command = f'jupyter-book build {source_path}'
 
     # Set up watchdog observer
     event_handler = BuildJupyterBookHandler(build_command)
