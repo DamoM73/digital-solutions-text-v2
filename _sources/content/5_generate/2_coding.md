@@ -99,7 +99,7 @@ By it's very nature a UI program is a **[](event_driven)**. This is where the co
 - Generate selection structures, counted loops, while loops, and single, multi-branch and nested conditional logic statements
 - Generate local and global variables
 - Generate a prototype digital solution in response to a problem
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 2 subject matter covered:
@@ -111,7 +111,7 @@ By it's very nature a UI program is a **[](event_driven)**. This is where the co
 - Generate a prototype digital solution to access, manipulate and display data in a website, mobile application or interactive media that validates the data to be entered for reliability to ensure that the data is valid for use and storage
 - Generate a prototype digital solution to access, manipulate and display data in a website, mobile application or interactive media that includes user interfaces that will enable the insertion, updating and selection of data from/to a database
 - Generate a prototype digital solution to access, manipulate and display data in a website, mobile application or interactive media that creates procedural code to control user interaction, data validation, execution of SQL queries, manipulation and display of query results through the user interface
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 3 subject matter covered:
@@ -135,7 +135,7 @@ By it's very nature a UI program is a **[](event_driven)**. This is where the co
 - Generate program modules that control the interactions in a digital solution
 - Communicate and clarify knowledge and understanding about the purpose of code statements using code comments
 - Synthesise user interface, processing and data components to generate a prototype digital solution
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 4 subject matter covered:
@@ -154,5 +154,5 @@ By it's very nature a UI program is a **[](event_driven)**. This is where the co
 - Generate within programmed methods use of code-specific arithmetic comparison and logical operators, including real division, integer division, modulus
 - Generate within programmed methods use of data types, error-checking functions and conversions
 - Generate within programmed methods use of structures, including one-dimensional collections, e.g. arrays and lists
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

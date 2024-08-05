@@ -429,7 +429,7 @@ Type hint provides many benefits:
 - **Better IDE Support:** Type hints enable more accurate autocompletion and refactoring tools in IDEs.
 - **Documentation:** Serves as an additional form of documentation, making code easier to understand and maintain.
 
-Never-the-less, there are also limitations:
+Never-the-less, there are also some limitations:
 
 - **No Runtime Enforcement:** Type hints do not enforce type checks at runtime, so they rely on external tools for validation.
 **Complexity:** For large codebases, maintaining type hints can become complex, especially with dynamic typing features in Python.
