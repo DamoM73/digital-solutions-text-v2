@@ -622,6 +622,17 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-type-hinting">Python Type Hinting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-type-hinting-works">How Type Hinting Works</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#function-annotations">Function Annotations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-annotations">Variable Annotations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-hints-for-complex-data-types">Type Hints for Complex Data Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-types">Optional Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-checking-tools">Type Checking Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -1050,6 +1061,70 @@ document.write(`
 <p><strong><a class="reference external" href="https://github.com/DamoM73/gui_hangman_with_sql_starter">Repository for the tutorial resources</a></strong></p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=z4FVl8anWQUm8UJH&amp;list=PLXCOpHy94WuY2zt6lfl3sJmikB3Jj57r-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
+<section id="python-type-hinting">
+<h2>Python Type Hinting<a class="headerlink" href="#python-type-hinting" title="Permalink to this heading">#</a></h2>
+<p>Python type hinting is a feature introduced in Python 3.5 that allows developers to specify the expected data types of variables, function parameters, and return values.</p>
+<p>Type hint provides many benefits:</p>
+<ul class="simple">
+<li><p><strong>Improved Readability:</strong> Type hints make it easier for developers to understand what types of data are expected in different parts of the codebase.</p></li>
+<li><p><strong>Early Error Detection:</strong> Static type checking tools can detect mismatches between expected and actual data types, helping catch bugs early.</p></li>
+<li><p><strong>Better IDE Support:</strong> Type hints enable more accurate autocompletion and refactoring tools in IDEs.</p></li>
+<li><p><strong>Documentation:</strong> Serves as an additional form of documentation, making code easier to understand and maintain.</p></li>
+</ul>
+<p>Never-the-less, there are also limitations:</p>
+<ul class="simple">
+<li><p><strong>No Runtime Enforcement:</strong> Type hints do not enforce type checks at runtime, so they rely on external tools for validation.
+<strong>Complexity:</strong> For large codebases, maintaining type hints can become complex, especially with dynamic typing features in Python.</p></li>
+</ul>
+<section id="how-type-hinting-works">
+<h3>How Type Hinting Works<a class="headerlink" href="#how-type-hinting-works" title="Permalink to this heading">#</a></h3>
+<section id="function-annotations">
+<h4>Function Annotations<a class="headerlink" href="#function-annotations" title="Permalink to this heading">#</a></h4>
+<p>Type hints are added using annotations in function definitions. For example, you can specify the types of parameters and return values using the colon <code class="docutils literal notranslate"><span class="pre">:</span></code> and the arrow <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> are expected to be integers, and the function <code class="docutils literal notranslate"><span class="pre">add</span></code> is expected to return an integer.</p>
+</section>
+<section id="variable-annotations">
+<h4>Variable Annotations<a class="headerlink" href="#variable-annotations" title="Permalink to this heading">#</a></h4>
+<p>Type hints can also be used for variables, although this doesn’t enforce the type but serves as documentation.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="type-hints-for-complex-data-types">
+<h4>Type Hints for Complex Data Types<a class="headerlink" href="#type-hints-for-complex-data-types" title="Permalink to this heading">#</a></h4>
+<p>For more complex data types like lists, dictionaries, and tuples, the typing module provides various generic types.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;sum&quot;</span><span class="p">:</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)}</span>
+
+<span class="n">coordinates</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">39.9</span><span class="p">,</span> <span class="o">-</span><span class="mf">105.1</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-types">
+<h4>Optional Types<a class="headerlink" href="#optional-types" title="Permalink to this heading">#</a></h4>
+<p>The Optional type is used to indicate that a variable can have a value of a specified type or be None.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">name</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello, stranger!&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="type-checking-tools">
+<h4>Type Checking Tools<a class="headerlink" href="#type-checking-tools" title="Permalink to this heading">#</a></h4>
+<p>Python type hints do not enforce type checks at runtime. However, tools like mypy, pytype, and IDEs such as PyCharm use these hints to perform static type checking, helping developers catch errors before runtime.</p>
+</section>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1184,6 +1259,17 @@ document.write(`
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-type-hinting">Python Type Hinting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-type-hinting-works">How Type Hinting Works</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#function-annotations">Function Annotations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-annotations">Variable Annotations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-hints-for-complex-data-types">Type Hints for Complex Data Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-types">Optional Types</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#type-checking-tools">Type Checking Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
