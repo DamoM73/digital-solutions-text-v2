@@ -406,6 +406,8 @@ cursor.execute(
 connection.commit()
 ```
 
+
+
 ## Converting datastore to a database
 
 One of the advantages of using MVC Architecture is ease of refactoring. You can change any of the three modules, as long as calling the methods that interconnect the modules remain the same. For example, if you want to change the datastore module so it uses a database, you can change that one module and leave the main and UI module alone.
@@ -415,3 +417,71 @@ The videos below build on our **[hangman game from Unit 1](2-1_coding_unit_1.md)
 **[Repository for the tutorial resources](https://github.com/DamoM73/gui_hangman_with_sql_starter)**
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/videoseries?si=z4FVl8anWQUm8UJH&amp;list=PLXCOpHy94WuY2zt6lfl3sJmikB3Jj57r-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Python Type Hinting
+
+Python type hinting is a feature introduced in Python 3.5 that allows developers to specify the expected data types of variables, function parameters, and return values.
+
+Type hint provides many benefits:
+
+- **Improved Readability:** Type hints make it easier for developers to understand what types of data are expected in different parts of the codebase.
+- **Early Error Detection:** Static type checking tools can detect mismatches between expected and actual data types, helping catch bugs early.
+- **Better IDE Support:** Type hints enable more accurate autocompletion and refactoring tools in IDEs.
+- **Documentation:** Serves as an additional form of documentation, making code easier to understand and maintain.
+
+Never-the-less, there are also limitations:
+
+- **No Runtime Enforcement:** Type hints do not enforce type checks at runtime, so they rely on external tools for validation.
+**Complexity:** For large codebases, maintaining type hints can become complex, especially with dynamic typing features in Python.
+
+### How Type Hinting Works
+
+#### Function Annotations
+
+Type hints are added using annotations in function definitions. For example, you can specify the types of parameters and return values using the colon `:` and the arrow `->`.
+
+```python
+def add(x: int, y: int) -> int:
+    return x + y
+```
+
+In this example, `x` and `y` are expected to be integers, and the function `add` is expected to return an integer.
+
+#### Variable Annotations
+
+Type hints can also be used for variables, although this doesn't enforce the type but serves as documentation.
+
+```python
+age: int = 25
+name: str = "Alice"
+```
+
+#### Type Hints for Complex Data Types
+
+For more complex data types like lists, dictionaries, and tuples, the typing module provides various generic types.
+
+``` python
+from typing import List, Dict, Tuple
+
+def process_data(data: List[int]) -> Dict[str, int]:
+    return {"sum": sum(data), "count": len(data)}
+
+coordinates: Tuple[float, float] = (39.9, -105.1)
+```
+
+#### Optional Types
+
+The Optional type is used to indicate that a variable can have a value of a specified type or be None.
+
+``` python
+from typing import Optional
+
+def greet(name: Optional[str] = None) -> str:
+    if name:
+        return f"Hello, {name}!"
+    return "Hello, stranger!"
+```
+
+#### Type Checking Tools
+
+Python type hints do not enforce type checks at runtime. However, tools like mypy, pytype, and IDEs such as PyCharm use these hints to perform static type checking, helping developers catch errors before runtime.
