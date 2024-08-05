@@ -80,7 +80,7 @@ Using the World database
 
 ### Filters and Aggregators
 
-SQL filter clauses are used to restrict the number of rows returned by a query based on specified conditions, enabling more precise data retrieval and manipulation. While SQL aggregators are functions used to perform calculations on multiple rows of a table's column and return a single value. 
+SQL filter clauses are used to restrict the number of rows returned by a query based on specified conditions, enabling more precise data retrieval and manipulation. While SQL aggregators are functions used to perform calculations on multiple rows of a table's column and return a single value.
 
 #### Filters and Aggregators Tutorials
 
@@ -247,94 +247,163 @@ Using the Movies database
 
 ## Python and SQLite
 
-To work with SQLite in Python, we use the SQLite3 library.
+This section gives a brief overview of using SQLite in Python. W3schools give more details in **[this blog](https://www.w3schools.blog/sqlite-tutorial)**.
+
+To work with SQLite in Python we will use the `sqlite3` module. It is part of the Python standard Library, so it is already installed.
 
 ### Setup
 
-SQLite3 is part of the standard library, so we don't need to pip install it, just import it.
+There are three steps to setting up your Python code to use `sqlite3`:
 
-So you start a your file with:
+#### 1. Import the module
+
+This is your usual `import` command at the top of your Python file.
 
 ``` python
 import sqlite3
 ```
 
-The next step is to connect to the SQLite database your program will use. This is similar concept to opening Word document. If you are going to work on a Word document, first you need to open it.
+#### 2. Connect to the database
 
-In this example, we will be connecting to the **chinook.db** database
+You need to create a connection object. The connection object is used to make changes to the database file. Generate a connection object using the `sqlite3.connect` method and assign it to a variable.
 
 ``` python
-connection = sqlite3.connect("chinook.db")
+import sqlite3
+
+connection = sqlite3.connect("database_file.db")
 ```
 
-The connection is what we use to access the database.
+#### 3. Create a cursor
 
-Next we need to create a cursor. A cursor is the 'tool' that we use to edit the data in the database. Again, with our Word analogy, the cursor is where you are editing the text.
+Finally you need to create a cursor object. The cursor object is used to run SQL queries on the database via the connection object.
 
 ``` python
+import sqlite3
+
+connection = sqlite3.connect("database_file.db")
 cursor = connection.cursor()
 ```
 
-So that is two different ways to interact with the database, but they have different purposes:
+Now you are set to access your SQLite database with Python.
 
-- **connection** &rarr; works with the database file
-- **cursor** &rarr; works with the data in the database
+### SQLite3 Queries
 
-### Queries
+There are two steps to running a query in using `sqlite3` and Python.
 
-To run SQL queries you need to use the `cursor.execute()` method.
+#### 1. Execute the SQL query statement
 
-Note that the `cursor.execute()` method accepts two arguments:
-
-- **SQL command** &rarr; a string that contains the SQL command. It is important to note that all values in the SQL query are parameterised. This means than rather than hard coding user values into the query, they are included in a collection (either a tuple or dictionary), which is also passed to the method. A placeholder indicates where the values should be inserted.
-- **Values collection** &rarr; this contains the values to be added to the query.
-
-```{admonition} Why use parameterised queries
-:class: tip
-We use parameterised queries for the following reasons:
-
-- **Security:** Prevents SQL injection by separating SQL code from data.
-- **Efficiency:** Helps in query optimization and reuse.
-- **Simplicity:** Makes code easier to read and maintain.
-```
+The SQL query statement is provided as a string. Below is an example of how I format the code using a multiline string. It makes it easier to read, and, therefore, increases maintainability.
 
 ``` python
 cursor.execute(
     """
-    SELECT customers.FirstName ||" "|| customers.LastName
+    SELECT name, phone_num
     FROM customers
-    WHERE Country = :country 
-    """,
-    {
-        "country":"USA"
-    }
+    """
 )
 ```
 
-In the example above we have used the named placeholders example.
+#### 2. Fetch the results
 
-- In the SQL query the `:country` is the placeholder.
-- Python will look for **country** in the dictionary from the second argument, and then insert the value "USA" in its place.
+Once the query has been executed, you need to fetch the results that are stored in the cursor. You have three fetching options:
 
-Once the query has been executed, you need to retrieve the results.
-
-There are three commands to do this:
-
-- **`cursor.fetchone()`** &rarr; retrieves the next row of a query result set, returning a single row as a tuple, or `None` when no more data is available.
-- **`cursor.fetchall()`** &rarr; retrieves all remaining rows of a query result set as a list of tuples. If no more data is available, it returns an empty list `[]`.
-- **`fetchmany(size)`** &rarr; retrieves the next set of rows from a query result set, returning a list of tuples with at most `size` rows. If fewer rows are available than requested, it returns only the available rows. If no more data is available, it returns an empty list `[]`.
-
-In our example we will retrieve all rows.
+1. `fetchall()` - returns all the results
+2. `fetchone()` - returns the next result
+3. `fetchmany(size)` - returns the `size` number of rows
 
 ``` python
-results = cursor.fetchall()
+cursor.execute(
+    """
+    SELECT name, phone_num
+    FROM Customers
+    """
+)
+
+reults = cursor.fetchall()
 ```
 
-Because `fetchall()` returns a list of tuples, we need to iterate through that list to see each row. It would be the same for `fetchmany(size)`.
+### SQLite3 INSERT, CREATE, UPDATE, DELETE
+
+All SQL statements that involve making changes to the database (INSERT, CREATE, UPDATE and DELETE) also have two steps, but they are slightly different.
+
+#### Execute the SQL statement
+
+The first step in as the same. The cursor needs to be used to execute the SQL statement.
 
 ``` python
-for result in results:
-    print(result[0])
+import sqlite3
+
+cursor.execute(
+    """
+    INSERT INTO Customers (name, phone_num)
+    VALUES ("John", "0434123456")
+    """
+)
+```
+
+#### Commit changes
+
+The changes to the database will not be permanent until they have been committed to the database file. You can commit numerous execute commands to the database in one go. To make the commitment we use the connection's `commit()` method.
+
+``` python
+import sqlite3
+
+cursor.execute(
+    """
+    INSERT INTO Customers (name, phone_num)
+    VALUES ("John", "0434123456")
+    """
+)
+
+connection.commit()
+```
+
+### Using variables
+
+![XKCD](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)
+
+To avoid SQL injection attacks, the correct way to insert variables values into your SQL statements is to use the parameter substitution method. This method inserts a placeholder in the SQL statement, and the values are then passes as a second argument to the `execute()` method. We will be using dictionaries to do this, although lists can also be used.
+
+#### Parameterised Queries
+
+Below is an example of a parameterised query statement.
+
+``` python
+import sqlite3
+
+cursor.execute(
+    """
+    SELECT name, phone_num
+    FROM Customers
+    WHERE name = :name
+    """,
+    {
+        "name": "John"
+    }
+)
+
+reults = cursor.fetchall()
+```
+
+#### Parameterised INSERT, CREATE, UPDATE, DELETE
+
+Below is an example of a parameterised insert statement
+
+``` python
+import sqlite3
+
+cursor.execute(
+    """
+    INSERT INTO Customers (name, phone_num)
+    VALUES (:name, :phone)
+    """,
+    {
+        "name":"John",
+        "phone":"0434123456"
+    }
+)
+
+connection.commit()
 ```
 
 ## Converting datastore to a database
