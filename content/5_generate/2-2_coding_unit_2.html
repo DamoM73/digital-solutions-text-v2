@@ -597,6 +597,11 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-sqlite">Python and SQLite</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queries">Queries</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
 </ul>
             </nav>
@@ -869,6 +874,84 @@ document.write(`
 </section>
 </section>
 </section>
+<section id="python-and-sqlite">
+<h2>Python and SQLite<a class="headerlink" href="#python-and-sqlite" title="Permalink to this heading">#</a></h2>
+<p>To work with SQLite in Python, we use the SQLite3 library.</p>
+<section id="setup">
+<h3>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h3>
+<p>SQLite3 is part of the standard library, so we don’t need to pip install it, just import it.</p>
+<p>So you start a your file with:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+</pre></div>
+</div>
+<p>The next step is to connect to the SQLite database your program will use. This is similar concept to opening Word document. If you are going to work on a Word document, first you need to open it.</p>
+<p>In this example, we will be connecting to the <strong>chinook.db</strong> database</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;chinook.db&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The connection is what we use to access the database.</p>
+<p>Next we need to create a cursor. A cursor is the ‘tool’ that we use to edit the data in the database. Again, with our Word analogy, the cursor is where you are editing the text.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>So that is two different ways to interact with the database, but they have different purposes:</p>
+<ul class="simple">
+<li><p><strong>connection</strong> → works with the database file</p></li>
+<li><p><strong>cursor</strong> → works with the data in the database</p></li>
+</ul>
+</section>
+<section id="queries">
+<h3>Queries<a class="headerlink" href="#queries" title="Permalink to this heading">#</a></h3>
+<p>To run SQL queries you need to use the <code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code> method.</p>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">cursor.execute()</span></code> method accepts two arguments:</p>
+<ul class="simple">
+<li><p><strong>SQL command</strong> → a string that contains the SQL command. It is important to note that all values in the SQL query are parameterised. This means than rather than hard coding user values into the query, they are included in a collection (either a tuple or dictionary), which is also passed to the method. A placeholder indicates where the values should be inserted.</p></li>
+<li><p><strong>Values collection</strong> → this contains the values to be added to the query.</p></li>
+</ul>
+<div class="tip admonition">
+<p class="admonition-title">Why use parameterised queries</p>
+<p>We use parameterised queries for the following reasons:</p>
+<ul class="simple">
+<li><p><strong>Security:</strong> Prevents SQL injection by separating SQL code from data.</p></li>
+<li><p><strong>Efficiency:</strong> Helps in query optimization and reuse.</p></li>
+<li><p><strong>Simplicity:</strong> Makes code easier to read and maintain.</p></li>
+</ul>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    SELECT customers.FirstName ||&quot; &quot;|| customers.LastName</span>
+<span class="sd">    FROM customers</span>
+<span class="sd">    WHERE Country = :country </span>
+<span class="sd">    &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;USA&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>In the example above we have used the named placeholders example.</p>
+<ul class="simple">
+<li><p>In the SQL query the <code class="docutils literal notranslate"><span class="pre">:country</span></code> is the placeholder.</p></li>
+<li><p>Python will look for <strong>country</strong> in the dictionary from the second argument, and then insert the value “USA” in its place.</p></li>
+</ul>
+<p>Once the query has been executed, you need to retrieve the results.</p>
+<p>There are three commands to do this:</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">cursor.fetchone()</span></code></strong> → retrieves the next row of a query result set, returning a single row as a tuple, or <code class="docutils literal notranslate"><span class="pre">None</span></code> when no more data is available.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">cursor.fetchall()</span></code></strong> → retrieves all remaining rows of a query result set as a list of tuples. If no more data is available, it returns an empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">fetchmany(size)</span></code></strong> → retrieves the next set of rows from a query result set, returning a list of tuples with at most <code class="docutils literal notranslate"><span class="pre">size</span></code> rows. If fewer rows are available than requested, it returns only the available rows. If no more data is available, it returns an empty list <code class="docutils literal notranslate"><span class="pre">[]</span></code>.</p></li>
+</ul>
+<p>In our example we will retrieve all rows.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Because <code class="docutils literal notranslate"><span class="pre">fetchall()</span></code> returns a list of tuples, we need to iterate through that list to see each row. It would be the same for <code class="docutils literal notranslate"><span class="pre">fetchmany(size)</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</section>
+</section>
 <section id="converting-datastore-to-a-database">
 <h2>Converting datastore to a database<a class="headerlink" href="#converting-datastore-to-a-database" title="Permalink to this heading">#</a></h2>
 <p>One of the advantages of using MVC Architecture is ease of refactoring. You can change any of the three modules, as long as calling the methods that interconnect the modules remain the same. For example, if you want to change the datastore module so it uses a database, you can change that one module and leave the main and UI module alone.</p>
@@ -982,6 +1065,11 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#record-management-exercises">Record Management Exercises</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-and-sqlite">Python and SQLite</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queries">Queries</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#converting-datastore-to-a-database">Converting datastore to a database</a></li>
