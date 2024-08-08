@@ -29,7 +29,7 @@ Across all you IPO Tables you should have examples of all the following algorith
 - Understand that simple algorithms consist of input, process and output at various stages
 - Represent algorithms using pseudocode by identifying and describing the steps and their behaviour in the algorithm
 - Represent algorithms using pseudocode by identifying and explaining the algorithmic steps required for a programmed solution
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 2 subject matter covered:
@@ -38,7 +38,7 @@ Across all you IPO Tables you should have examples of all the following algorith
 - Symbolise well-ordered and unambiguous algorithms using pseudocode for procedural code that processes data for insertion into a database or manipulates or displays retrieved data
 - Symbolise well-ordered and unambiguous algorithms using pseudocode for user interaction, data validation and data presentation
 - Understand and use the basic constructs of an algorithm including assignment, sequence, selection, condition, iteration and modularisation
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 3 subject matter covered:
@@ -54,7 +54,7 @@ Across all you IPO Tables you should have examples of all the following algorith
 - Symbolise well-ordered and unambiguous algorithms using pseudocode for user interaction, data validation and data presentation
 - Generate generic pseudocode suitable for a variety of programming languages to communicate requirements for programmed components
 - Generate pseudocode to solve defined problems
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 4 subject matter covered:
@@ -64,5 +64,5 @@ Across all you IPO Tables you should have examples of all the following algorith
 - Symbolise representations of a digital solution
 - Symbolise algorithmic steps as pseudocode
 - Develop simple Caesar, Polyaphabetic (e.g. Vignere and Gronsfeld), and one-time pad encryption algorithms
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

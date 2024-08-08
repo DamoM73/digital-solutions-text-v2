@@ -39,5 +39,5 @@ When marking a Use Case Diagram the following questions are asked:
 - Analyse problems and information to determine and describe interactions in terms of inputs, processes and outputs
 - Analyse problems and information to determine boundary or scope of the problem
 - Generate a conceptual model of a possible solution by applying systems thinking that identifies system boundaries, properties, inputs and outputs, user interface, system controls
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

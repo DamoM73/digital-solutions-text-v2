@@ -7,5 +7,5 @@
 - Evaluate and make recommendations about user interfaces based on useability principles
 - Evaluate and make recommendations about the effectiveness of algorithms
 - Evaluate and make recommendations about the solution and its components by testing to identify errors using computational thinking processes, e.g. debugging techniques
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

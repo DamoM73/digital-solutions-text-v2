@@ -147,5 +147,5 @@ When marking a Mind Map the following questions are asked:
 - Understand and describe personal, social and economic impacts
 - Explore existing user interfaces to identify pitfalls and useful solutions
 - Explore existing user interfaces to determine how user characteristics influence the user-interface requirements and user experience for problems and solutions in relation to the useability principles
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

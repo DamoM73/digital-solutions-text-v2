@@ -33,5 +33,5 @@ When marking a Use Case Diagram the following questions are asked:
 
 ```{admonition} Unit 4 subject matter covered:
 - Analyse problems and information to determine boundary of scope of given problems
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

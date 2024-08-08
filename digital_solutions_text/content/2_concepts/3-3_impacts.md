@@ -117,11 +117,11 @@ For example:
 
 ```{admonition} Unit 1 subject matter covered:
 - understand and describe personal, social and economic impacts
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
 
 ```{admonition} Unit 1 subject matter covered:
 - explore and communicate the personal, social and economic impacts of storing data in a database for individuals, organisations and governments
 - recognise the elements needed for a data-driven solution, including the personal, social and economic impacts of storing data in databases for individuals, organisations and governments
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

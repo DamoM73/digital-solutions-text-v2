@@ -2,5 +2,5 @@
 
 ```{admonition} Unit 3 subject matter covered:
 - Symbolise, explain and use advanced data processes, including table joins, referential integrity, redundancy reduction and anomaly updating
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

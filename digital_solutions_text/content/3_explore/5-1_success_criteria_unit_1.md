@@ -71,5 +71,5 @@ When marking the Criteria Tables the following questions are asked:
 ```{admonition} Unit 1 subject matter covered:
 - Analyse a given problem to identify the requirements of the solution
 - Analyse a given problem to identify prescribed and self-determined criteria to evaluate the personal, social and economic impacts of the solution
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

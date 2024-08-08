@@ -64,5 +64,5 @@ A data driven application can be though as having three different viewing layers
 - Understand the nature of data-driven problems
 - Understand the difference between data, information and wisdom
 - Understand that data-driven programming is typically applied to streams of structured data for filtering, transforming, aggregating (such as computing statistics), or calling other programs
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

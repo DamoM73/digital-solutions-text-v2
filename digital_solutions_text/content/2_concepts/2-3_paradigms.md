@@ -81,5 +81,5 @@ If there are any updates from the views, it modifies the data with a setter func
 
 ```{admonition} Unit 1 subject matter covered:
 - Identify and describe code object/event triggers and their effect on user interfaces.
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

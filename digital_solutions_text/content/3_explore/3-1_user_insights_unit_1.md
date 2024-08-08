@@ -84,5 +84,5 @@ When marking the Personas the following questions are asked:
 - Analyse a given problem to identify the user perspective and user-experience requirements
 - Recognise and describe the meaning and importance of user experience
 - Recognise and describe useability principles including accessibility, effectiveness, safety, utility and learnability
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

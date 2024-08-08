@@ -10,5 +10,5 @@
 - Symbolise ideas for user interface and interconnecting systems using sketches, diagrams or mock-ups
 - Explore and use the elements and principles of visual communication elements are limited to space, line, colour, shape, texture, tone, form, proportion and scale
 - Explore and use the elements and principles of visual communication principles are limited to balance, contrast, proximity, harmony, alignment, repetition and hierarchy
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

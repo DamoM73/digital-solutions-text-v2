@@ -16,5 +16,5 @@
 - Explore and use the elements and principles of visual communication principles are limited to balance, contrast, proximity, harmony, alignment, repetition and hierarchy
 - Generate ideas using innovation and collaboration
 - Recognise and describe user-interface components such as user hardware and peripheral devices used for input and output
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

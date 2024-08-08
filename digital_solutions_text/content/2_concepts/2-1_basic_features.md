@@ -366,5 +366,5 @@ Bitwise operators are used to compare (binary) numbers. Realistically we are not
 - Understand the five basic features of programming – variables, control structures, data structures, syntax and libraries and classes.
 - Identify and describe the purpose of code syntax and rules.
 - Identify and describe the scope and use of local and global variables
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

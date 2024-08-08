@@ -24,5 +24,5 @@ You will need to:
   - generate individual components of a preferred solution
   - generate and refine a preferred solution in response to new or existing information
 - use design thinking to evaluate and respond to the results of alpha testing
-- use systems and design thinking to construct a solution and communicate knowledge and understanding of the solution.{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+- use systems and design thinking to construct a solution and communicate knowledge and understanding of the solution.{cite}`qcaa_2017_digital`
 ```

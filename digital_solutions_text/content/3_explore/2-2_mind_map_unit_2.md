@@ -21,5 +21,5 @@
 - Recognise the elements needed for a data-driven solution, including the data that is required from real-world data sources, e.g. files, peripheral devices, online sources and users
 - Recognise the elements needed for a data-driven solution, including the personal, social and economic impacts of storing data in databases for individuals, organisations and governments
 - Explore and communicate the personal, social and economic impacts of storing data in a database for individuals, organisations and governments
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

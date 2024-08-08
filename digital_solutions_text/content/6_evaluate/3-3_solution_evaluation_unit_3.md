@@ -3,5 +3,5 @@
 ```{admonition} Unit 3 subject matter covered:
 - Evaluate against prescribed and self-determined criteria the user interface and programmed solutions
 - Evaluate against prescribed and self-determined criteria the prototype digital solution.
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

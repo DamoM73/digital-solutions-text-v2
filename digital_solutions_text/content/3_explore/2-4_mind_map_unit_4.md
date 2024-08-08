@@ -23,5 +23,5 @@
 - Determine manageable aspects of a problem through a decomposition and analysis of available tools and code libraries
 - Determine manageable aspects of a problem through a decomposition and analysis of data storage and output requirements
 - Determine manageable aspects of a problem through a decomposition and analysis of data interface
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
