@@ -561,8 +561,31 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryptions">Symmetric Encryptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Characteristics and Security</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics and Security</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">
@@ -714,13 +737,6 @@ document.write(`
 <li><p><strong>Decryption:</strong> Your friend uses the key to translate the coded message back into English so they can read it.</p></li>
 </ul>
 </section>
-<section id="types-of-encryption">
-<h4>Types of Encryption<a class="headerlink" href="#types-of-encryption" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Symmetric Encryption:</strong> The same key is used for both encryption and decryption. It’s like having one key for a lock that both you and your friend have copies of.</p></li>
-<li><p><strong>Asymmetric Encryption:</strong> Uses two keys—a public key for encryption and a private key for decryption. It’s like having a lock with two keys: one for locking (encrypting) that everyone can use, and one for unlocking (decrypting) that only you have.</p></li>
-</ul>
-</section>
 <section id="why-encryption-important">
 <h4>Why Encryption important<a class="headerlink" href="#why-encryption-important" title="Permalink to this heading">#</a></h4>
 <p>Data encryption is necessary for several important reasons:</p>
@@ -733,6 +749,262 @@ document.write(`
 <li><p><strong>Secure Communication</strong>: Encryption is essential for securing online transactions, such as e-commerce purchases and online banking. It prevents hackers from intercepting sensitive financial information.</p></li>
 <li><p><strong>International Data Transfer</strong>: When data is transferred across borders, encryption can protect it from government surveillance or other forms of unauthorized access.</p></li>
 </ol>
+</section>
+<section id="types-of-encryption">
+<h4>Types of Encryption<a class="headerlink" href="#types-of-encryption" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Symmetric Encryption:</strong> The same key is used for both encryption and decryption. It’s like having one key for a lock that both you and your friend have copies of.</p></li>
+<li><p><strong>Asymmetric Encryption:</strong> Uses two keys—a public key for encryption and a private key for decryption. It’s like having a lock with two keys: one for locking (encrypting) that everyone can use, and one for unlocking (decrypting) that only you have.</p></li>
+</ul>
+</section>
+</section>
+<section id="symmetric-encryptions">
+<h3>Symmetric Encryptions<a class="headerlink" href="#symmetric-encryptions" title="Permalink to this heading">#</a></h3>
+<section id="caesar-cipher">
+<h4>Caesar cipher<a class="headerlink" href="#caesar-cipher" title="Permalink to this heading">#</a></h4>
+<p>The Caesar cipher is one of the simplest and most well-known encryption techniques. It is a type of substitution cipher where each letter in the plaintext is shifted a fixed number of places down or up the alphabet. It is named after Julius Caesar, who reportedly used it to protect his private correspondence.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sMOZf4GN3oc?si=4T63pMsUZ5TGakaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<section id="how-the-caesar-cipher-works">
+<h5>How the Caesar Cipher Works<a class="headerlink" href="#how-the-caesar-cipher-works" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>Choose a Shift Value:</strong> Decide on the number of positions each letter will be shifted. For example, with a shift of 3:</p>
+<ul class="simple">
+<li><p>A becomes D</p></li>
+<li><p>B becomes E</p></li>
+<li><p>C becomes F</p></li>
+<li><p>…, and so on.</p></li>
+</ul>
+</li>
+<li><p><strong>Encrypt the Plaintext:</strong> Replace each letter in the plaintext with the letter that appears a fixed number of positions down the alphabet.</p>
+<ul class="simple">
+<li><p>For example, with a shift of 3, the word “HELLO” becomes “KHOOR”.</p></li>
+</ul>
+</li>
+<li><p><strong>Decrypt the Ciphertext:</strong> To decrypt the message, shift the letters in the opposite direction by the same number of positions.</p>
+<ul class="simple">
+<li><p>“KHOOR” with a shift of 3 back becomes “HELLO”.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="caesar-example">
+<h5>Caesar Example<a class="headerlink" href="#caesar-example" title="Permalink to this heading">#</a></h5>
+<p><strong>Encryption Process:</strong></p>
+<ul class="simple">
+<li><p>Plaintext: “ATTACK AT DAWN”</p></li>
+<li><p>Shift: 3</p></li>
+<li><p>Ciphertext: “DWWDFN DW GDZQ”</p></li>
+</ul>
+<p><strong>Decryption Process:</strong></p>
+<ul class="simple">
+<li><p>Ciphertext: “DWWDFN DW GDZQ”</p></li>
+<li><p>Shift: 3</p></li>
+<li><p>Plaintext: “ATTACK AT DAWN”</p></li>
+</ul>
+</section>
+<section id="caesar-pseudocode">
+<h5>Caesar Pseudocode<a class="headerlink" href="#caesar-pseudocode" title="Permalink to this heading">#</a></h5>
+<p><strong>Encryption</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">encrypt_caesar</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">FOR</span> <span class="n">each</span> <span class="n">character</span> <span class="s1">&#39;char&#39;</span> <span class="ow">in</span> <span class="s1">&#39;plaintext&#39;</span><span class="p">:</span>
+        <span class="n">IF</span> <span class="n">char</span> <span class="n">IS</span> <span class="n">a</span> <span class="n">letter</span><span class="p">:</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">position</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+        <span class="n">ELSE</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+
+    <span class="n">RETURN</span> <span class="n">result</span>
+
+</pre></div>
+</div>
+<p><strong>Decryption</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">decrypt_caesar</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">FOR</span> <span class="n">each</span> <span class="n">character</span> <span class="s1">&#39;char&#39;</span> <span class="ow">in</span> <span class="s1">&#39;ciphertext&#39;</span><span class="p">:</span>
+        <span class="n">IF</span> <span class="n">char</span> <span class="n">IS</span> <span class="n">a</span> <span class="n">letter</span><span class="p">:</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="n">position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">position</span> <span class="o">-</span> <span class="n">shift</span> <span class="o">+</span> <span class="mi">26</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+        <span class="n">ELSE</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+
+    <span class="n">RETURN</span> <span class="n">result</span>
+</pre></div>
+</div>
+</section>
+<section id="characteristics-and-security">
+<h5>Characteristics and Security<a class="headerlink" href="#characteristics-and-security" title="Permalink to this heading">#</a></h5>
+<p><strong>Simplicity:</strong> The Caesar cipher is very easy to understand and implement, making it an excellent introductory example of encryption.</p>
+<p><strong>Weak Security:</strong> It is vulnerable to brute force attacks since there are only 25 possible shifts (not counting the shift of 0, which leaves the text unchanged). Frequency analysis can also easily break the cipher because the letter frequencies in the ciphertext match those in the plaintext.</p>
+<p><strong>Requires Agreed Upon Key:</strong> Like all Symmetric Encryptions, Caesar Cipher requires the sender and receiver to agree upon a key prior to the message being sent.</p>
+</section>
+</section>
+<section id="vigenere-cipher">
+<h4>Vigenère Cipher<a class="headerlink" href="#vigenere-cipher" title="Permalink to this heading">#</a></h4>
+<p>The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It employs a keyword to determine the shift applied to each letter of the plaintext, making it more secure than the Caesar cipher.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCkGauRMs2A?si=Cfp7WfU4D1PE50xJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<section id="how-the-vigenere-cipher-works">
+<h5>How the Vigenère Cipher Works<a class="headerlink" href="#how-the-vigenere-cipher-works" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p><strong>Choose a Keyword:</strong> A keyword is selected, and each letter of the keyword is used to create a different Caesar cipher shift.</p>
+<ul class="simple">
+<li><p>For example, if the keyword is “KEY”, it corresponds to shifts of K=10, E=4, and Y=24.</p></li>
+</ul>
+</li>
+<li><p><strong>Repeat the Keyword:</strong> The keyword is repeated to match the length of the plaintext.</p>
+<ul class="simple">
+<li><p>For example, if the plaintext is “ATTACKATDAWN” and the keyword is “KEY”, the repeated keyword is “KEYKEYKEYKEY”.</p></li>
+</ul>
+</li>
+<li><p><strong>Encrypt the Plaintext:</strong> Each letter of the plaintext is shifted according to the corresponding letter of the keyword. The shift is determined by converting the keyword letter into a number (A=0, B=1, …, Z=25).</p></li>
+<li><p><strong>Decrypt the Cyphertext:</strong> To decrypt the message, the same keyword is used. Each letter of the ciphertext is shifted back according to the corresponding letter of the keyword.</p></li>
+</ol>
+</section>
+<section id="vigenere-example">
+<h5>Vigenère Example<a class="headerlink" href="#vigenere-example" title="Permalink to this heading">#</a></h5>
+<p><strong>Encryption process</strong></p>
+<ul class="simple">
+<li><p>Plaintext: ATTACKATDAWN</p></li>
+<li><p>Keyword:   KEYKEYKEYKEY</p></li>
+<li><p>Encryption:</p>
+<ul>
+<li><p>A (shift by K, 10 positions) -&gt; K</p></li>
+<li><p>T (shift by E, 4 positions) -&gt; X</p></li>
+<li><p>T (shift by Y, 24 positions) -&gt; R</p></li>
+<li><p>A (shift by K, 10 positions) -&gt; K</p></li>
+<li><p>C (shift by E, 4 positions) -&gt; G</p></li>
+<li><p>K (shift by Y, 24 positions) -&gt; I</p></li>
+<li><p>A (shift by K, 10 positions) -&gt; K</p></li>
+<li><p>T (shift by E, 4 positions) -&gt; X</p></li>
+<li><p>D (shift by Y, 24 positions) -&gt; B</p></li>
+<li><p>A (shift by K, 10 positions) -&gt; K</p></li>
+<li><p>W (shift by E, 4 positions) -&gt; A</p></li>
+<li><p>N (shift by Y, 24 positions) -&gt; L</p></li>
+</ul>
+</li>
+<li><p>Ciphertext: KXRGIKXBKAL</p></li>
+</ul>
+<p><strong>Decryption Process</strong></p>
+<ul class="simple">
+<li><p>Ciphertext: KXRGIKXBKAL</p></li>
+<li><p>Keyword:    KEYKEYKEYKEY</p></li>
+<li><p>Decryption:</p>
+<ul>
+<li><p>K (shift back by K, 10 positions) -&gt; A</p></li>
+<li><p>X (shift back by E, 4 positions) -&gt; T</p></li>
+<li><p>R (shift back by Y, 24 positions) -&gt; T</p></li>
+<li><p>K (shift back by K, 10 positions) -&gt; A</p></li>
+<li><p>G (shift back by E, 4 positions) -&gt; C</p></li>
+<li><p>I (shift back by Y, 24 positions) -&gt; K</p></li>
+<li><p>K (shift back by K, 10 positions) -&gt; A</p></li>
+<li><p>X (shift back by E, 4 positions) -&gt; T</p></li>
+<li><p>B (shift back by Y, 24 positions) -&gt; D</p></li>
+<li><p>K (shift back by K, 10 positions) -&gt; A</p></li>
+<li><p>A (shift back by E, 4 positions) -&gt; W</p></li>
+<li><p>L (shift back by Y, 24 positions) -&gt; N</p></li>
+</ul>
+</li>
+<li><p>Plaintext: ATTACKATDAWN</p></li>
+</ul>
+</section>
+<section id="vigenere-pseudocode">
+<h5>Vigenère Pseudocode<a class="headerlink" href="#vigenere-pseudocode" title="Permalink to this heading">#</a></h5>
+<p><strong>Encryption</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">encrypt_vigenere</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">keyword_length</span> <span class="o">=</span> <span class="n">LENGTH</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
+    
+    <span class="n">FOR</span> <span class="n">i</span> <span class="n">FROM</span> <span class="mi">0</span> <span class="n">TO</span> <span class="n">LENGTH</span><span class="p">(</span><span class="n">plaintext</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">char</span> <span class="o">=</span> <span class="n">plaintext</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="n">IF</span> <span class="n">char</span> <span class="n">IS</span> <span class="n">a</span> <span class="n">letter</span><span class="p">:</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="n">shift_char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">keyword</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="n">keyword_length</span><span class="p">])</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">shift_char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">char_position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">char_position</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+        <span class="n">ELSE</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+
+    <span class="n">RETURN</span> <span class="n">result</span>
+</pre></div>
+</div>
+<p><strong>Decryption</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">decrypt_vigenere</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+    <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">keyword_length</span> <span class="o">=</span> <span class="n">LENGTH</span><span class="p">(</span><span class="n">keyword</span><span class="p">)</span>
+    
+    <span class="n">FOR</span> <span class="n">i</span> <span class="n">FROM</span> <span class="mi">0</span> <span class="n">TO</span> <span class="n">LENGTH</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">char</span> <span class="o">=</span> <span class="n">ciphertext</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        
+        <span class="n">IF</span> <span class="n">char</span> <span class="n">IS</span> <span class="n">a</span> <span class="n">letter</span><span class="p">:</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="n">shift_char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">keyword</span><span class="p">[</span><span class="n">i</span> <span class="o">%</span> <span class="n">keyword_length</span><span class="p">])</span>
+            <span class="n">shift</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">shift_char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">char_position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
+            <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">char_position</span> <span class="o">-</span> <span class="n">shift</span> <span class="o">+</span> <span class="mi">26</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+        <span class="n">ELSE</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+
+    <span class="n">RETURN</span> <span class="n">result</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h5>Characteristics and Security<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
+<p><strong>Polyalphabetic Substitution</strong>: The Vigenère cipher uses multiple Caesar ciphers, which makes frequency analysis attacks much more difficult compared to simple substitution ciphers.</p>
+<p><strong>Simple to Implement</strong>: The method is straightforward to implement and understand.</p>
+<p><strong>Keyword Repetition</strong>: If the keyword is significantly shorter than the plaintext, patterns may emerge, making the cipher vulnerable to Kasiski examination and other statistical attacks.</p>
+<p><strong>Keyword Guessing</strong>: If the attacker guesses or determines the length of the keyword, the Vigenère cipher can be broken using methods like frequency analysis.</p>
+<p><strong>Requires Agreed Upon Key:</strong> Like all Symmetric Encryptions, Vigenère Cipher requires the sender and receiver to agree upon a key prior to the message being sent.</p>
+</section>
+</section>
+<section id="gronsfeld-cipher">
+<h4>Gronsfeld Cipher<a class="headerlink" href="#gronsfeld-cipher" title="Permalink to this heading">#</a></h4>
+<p>The Gronsfeld cipher is a variant of the Vigenère cipher that uses a numeric key instead of a keyword to shift the letters of the plaintext. It shares many similarities with the Vigenère cipher but simplifies the key by restricting it to numeric digits, making it somewhat easier to use and remember.</p>
+</section>
+<section id="one-time-pad-encryption">
+<h4>One-time Pad Encryption<a class="headerlink" href="#one-time-pad-encryption" title="Permalink to this heading">#</a></h4>
+<p>The one-time pad (OTP) encryption is a theoretically unbreakable encryption technique that involves a random key that is as long as the message being encrypted. It was first described by Frank Miller in 1882 and later formalized by Gilbert Vernam in 1917.</p>
+<section id="how-one-time-pad-encryption-works">
+<h5>How One-Time Pad Encryption Works<a class="headerlink" href="#how-one-time-pad-encryption-works" title="Permalink to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>Key Generation: Generate a truly random key that is the same length as the plaintext message. This key must be kept completely secret and used only once.</p></li>
+<li><p>Encryption:</p>
+<ul class="simple">
+<li><p>Convert the plaintext message and the key into numerical form (e.g., using the ASCII values of characters).</p></li>
+<li><p>Perform bitwise XOR (exclusive OR) operation between the numerical representations of the plaintext and the key to produce the ciphertext.</p></li>
+</ul>
+</li>
+<li><p>Decryption:</p>
+<ul class="simple">
+<li><p>Convert the ciphertext and the key into numerical form.</p></li>
+<li><p>Perform bitwise XOR operation between the numerical representations of the ciphertext and the key to retrieve the original plaintext.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id3">
+<h5>Characteristics and Security<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<ul class="simple">
+<li><p><strong>Perfect Security:</strong> If the key is truly random, kept secret, and never reused, the one-time pad is theoretically unbreakable. This is because every possible plaintext of the same length as the ciphertext is equally likely.</p></li>
+<li><p><strong>No Patterns:</strong> Since the key is random and as long as the message, there are no patterns that an attacker can exploit.</p></li>
+<li><p><strong>Key Distribution:</strong> The key must be distributed securely to both the sender and the receiver, which can be impractical for large-scale use.</p></li>
+<li><p><strong>Scalability:</strong> The need for a key that is as long as the message makes it impractical for large amounts of data.</p></li>
+</ul>
+</section>
 </section>
 </section>
 <section id="hashing">
@@ -1091,7 +1363,7 @@ document.write(`
 <li><p>Recognise and describe how data compression, encryption and hashing are used in the storage and transfer of data</p></li>
 <li><p>Symbolise, analyse and evaluate Caesar, Polyalphabetic (e.g. Vigenere and Gronsfield), and one-time pad encryption algorithms</p></li>
 <li><p>Symbolise and explain secure data transmission techniques and processes, including the use of encryption, decryption, authentication, hashing and checksums
-<span id="id2">[]</span></p></li>
+<span id="id4">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
 </section>
@@ -1170,8 +1442,31 @@ document.write(`
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryptions">Symmetric Encryptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Characteristics and Security</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics and Security</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">

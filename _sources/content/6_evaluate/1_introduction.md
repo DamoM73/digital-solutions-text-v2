@@ -2,7 +2,7 @@
 
 ## What happens in the Evaluate Phase?
 
-> When students evaluate, they use systems, design and computational thinking to appraise personal, social and economic impacts, components and digital solutions by weighing up or assessing strengths, implications and limitations against prescribed and self-determined criteria. When students refine ideas and a digital solution, they make partial or minor changes based on selected criteria to improve the user experience and technical operation. Evaluation occurs throughout each phase of the problem-solving process in Digital Solutions in order to refine the components and a solution in response to the prescribed and self-determined criteria. {cite}`queenslandcurriculumassessmentauthority_2017_digital`
+> When students evaluate, they use systems, design and computational thinking to appraise personal, social and economic impacts, components and digital solutions by weighing up or assessing strengths, implications and limitations against prescribed and self-determined criteria. When students refine ideas and a digital solution, they make partial or minor changes based on selected criteria to improve the user experience and technical operation. Evaluation occurs throughout each phase of the problem-solving process in Digital Solutions in order to refine the components and a solution in response to the prescribed and self-determined criteria. {cite}`qcaa_2017_digital`
 
 Evaluation happens in two phases:
 
@@ -23,5 +23,5 @@ Evaluation happens in two phases:
 appraise test data and errors
 - use design thinking to evaluate components and the digital solution against prescribed and self-determined criteria
 - make changes in response to continual testing and appraisal of components and digital solutions
-- make justified recommendations about inputs and the digital solution with supporting evidence.{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+- make justified recommendations about inputs and the digital solution with supporting evidence.{cite}`qcaa_2017_digital`
 ```

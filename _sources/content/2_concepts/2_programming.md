@@ -4,7 +4,7 @@
 
 > Problem solving in technology-rich environments involves using digital technology, communication tools and networks to acquire and evaluate information, communicate with others and perform practical tasks. It requires the ability to solve problems for personal, social and economic purposes through the setting of appropriate goals and plans and by the accessing and making use of information through computers and computer networks.{cite}`piaacexpertgroupinproblemsolvingintechnologyrichenvironments_2009_piaac`
 
-> Digital problems are therefore those problems that are solvable using information and communication technologies. These digital solutions can use a wide variety of developed and developing contexts such as web applications, mobile applications, interactive media and intelligent systems. {cite}`digitaltechnologieshub_topics`
+> Digital problems are therefore those problems that are solvable using information and communication technologies. These digital solutions can use a wide variety of developed and developing contexts such as web applications, mobile applications, interactive media and intelligent systems. {cite}`digitaltechnologieshub_2017_topics`
 
 What distinguishes a digital problem is that the solution consists of digital hardware and software working together to form a digital system.
 
@@ -26,7 +26,7 @@ For example, the input process and output (IPO) for logging on would be:
 
 ## Computational thinking
 
-> Computational thinking describes the processes and approaches we draw on when thinking about how a computer can help us to solve complex problems and create systems. We often draw on logical reasoning, algorithms, decomposition, abstraction, and patterns and generalisation when thinking computationally. {cite}`digitaltechnologieshub_topics`
+> Computational thinking describes the processes and approaches we draw on when thinking about how a computer can help us to solve complex problems and create systems. We often draw on logical reasoning, algorithms, decomposition, abstraction, and patterns and generalisation when thinking computationally. {cite}`digitaltechnologieshub_2017_topics`
 
 ### Decomposition
 
@@ -107,5 +107,5 @@ In systems thinking, you need to identify and explore how different parts of a s
 ```{admonition} Unit 1 subject matter covered:
 - Understand the constituents of a digital problem
 - Understand that simple algorithms consist of input, process and output at various stages 
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

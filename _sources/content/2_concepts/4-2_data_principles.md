@@ -166,5 +166,5 @@ Some common data formats that need to be established:
 - Explain data principles including anomalies
 - Explain data principles including redundancy
 - Explain data principles including security
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

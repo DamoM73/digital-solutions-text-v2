@@ -35,11 +35,6 @@ Encryption is the process of converting data into a coded format to prevent unau
 - **Encryption:** Imagine you write a message in English and then translate it into a secret code that only your friend knows how to read. Even if someone else gets hold of the coded message, they can't understand it without the key to decode it.
 - **Decryption:** Your friend uses the key to translate the coded message back into English so they can read it.
 
-#### Types of Encryption
-
-- **Symmetric Encryption:** The same key is used for both encryption and decryption. It's like having one key for a lock that both you and your friend have copies of.
-- **Asymmetric Encryption:** Uses two keys—a public key for encryption and a private key for decryption. It's like having a lock with two keys: one for locking (encrypting) that everyone can use, and one for unlocking (decrypting) that only you have.
-
 #### Why Encryption important
 
 Data encryption is necessary for several important reasons:
@@ -57,6 +52,241 @@ Data encryption is necessary for several important reasons:
 6. **Secure Communication**: Encryption is essential for securing online transactions, such as e-commerce purchases and online banking. It prevents hackers from intercepting sensitive financial information.
 
 7. **International Data Transfer**: When data is transferred across borders, encryption can protect it from government surveillance or other forms of unauthorized access.
+
+#### Types of Encryption
+
+- **Symmetric Encryption:** The same key is used for both encryption and decryption. It's like having one key for a lock that both you and your friend have copies of.
+- **Asymmetric Encryption:** Uses two keys—a public key for encryption and a private key for decryption. It's like having a lock with two keys: one for locking (encrypting) that everyone can use, and one for unlocking (decrypting) that only you have.
+
+### Symmetric Encryptions
+
+#### Caesar cipher
+
+The Caesar cipher is one of the simplest and most well-known encryption techniques. It is a type of substitution cipher where each letter in the plaintext is shifted a fixed number of places down or up the alphabet. It is named after Julius Caesar, who reportedly used it to protect his private correspondence.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sMOZf4GN3oc?si=4T63pMsUZ5TGakaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+##### How the Caesar Cipher Works
+
+1. **Choose a Shift Value:** Decide on the number of positions each letter will be shifted. For example, with a shift of 3:
+
+   - A becomes D
+   - B becomes E
+   - C becomes F
+   - ..., and so on.
+
+2. **Encrypt the Plaintext:** Replace each letter in the plaintext with the letter that appears a fixed number of positions down the alphabet.
+
+   - For example, with a shift of 3, the word "HELLO" becomes "KHOOR".
+
+3. **Decrypt the Ciphertext:** To decrypt the message, shift the letters in the opposite direction by the same number of positions.
+
+   - "KHOOR" with a shift of 3 back becomes "HELLO".
+
+##### Caesar Example
+
+**Encryption Process:**
+
+- Plaintext: "ATTACK AT DAWN"
+- Shift: 3
+- Ciphertext: "DWWDFN DW GDZQ"
+
+**Decryption Process:**
+
+- Ciphertext: "DWWDFN DW GDZQ"
+- Shift: 3
+- Plaintext: "ATTACK AT DAWN"
+
+##### Caesar Pseudocode
+
+**Encryption**
+
+```
+FUNCTION encrypt_caesar(plaintext, shift):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+
+    FOR each character 'char' in 'plaintext':
+        IF char IS a letter:
+            char = UPPERCASE(char)
+            position = POSITION(char IN alphabet)
+            new_position = (position + shift) MOD 26
+            result += alphabet[new_position]
+        ELSE:
+            result += char
+
+    RETURN result
+
+```
+
+**Decryption**
+
+```
+FUNCTION decrypt_caesar(ciphertext, shift):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+
+    FOR each character 'char' in 'ciphertext':
+        IF char IS a letter:
+            char = UPPERCASE(char)
+            position = POSITION(char IN alphabet)
+            new_position = (position - shift + 26) MOD 26
+            result += alphabet[new_position]
+        ELSE:
+            result += char
+
+    RETURN result
+```
+
+##### Characteristics and Security
+
+**Simplicity:** The Caesar cipher is very easy to understand and implement, making it an excellent introductory example of encryption.
+
+**Weak Security:** It is vulnerable to brute force attacks since there are only 25 possible shifts (not counting the shift of 0, which leaves the text unchanged). Frequency analysis can also easily break the cipher because the letter frequencies in the ciphertext match those in the plaintext.
+
+**Requires Agreed Upon Key:** Like all Symmetric Encryptions, Caesar Cipher requires the sender and receiver to agree upon a key prior to the message being sent.
+
+#### Vigenère Cipher
+
+The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It employs a keyword to determine the shift applied to each letter of the plaintext, making it more secure than the Caesar cipher.
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCkGauRMs2A?si=Cfp7WfU4D1PE50xJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+##### How the Vigenère Cipher Works
+
+1. **Choose a Keyword:** A keyword is selected, and each letter of the keyword is used to create a different Caesar cipher shift.
+   - For example, if the keyword is "KEY", it corresponds to shifts of K=10, E=4, and Y=24.
+2. **Repeat the Keyword:** The keyword is repeated to match the length of the plaintext. 
+   - For example, if the plaintext is "ATTACKATDAWN" and the keyword is "KEY", the repeated keyword is "KEYKEYKEYKEY".
+3. **Encrypt the Plaintext:** Each letter of the plaintext is shifted according to the corresponding letter of the keyword. The shift is determined by converting the keyword letter into a number (A=0, B=1, ..., Z=25).
+4. **Decrypt the Cyphertext:** To decrypt the message, the same keyword is used. Each letter of the ciphertext is shifted back according to the corresponding letter of the keyword.
+
+##### Vigenère Example
+
+**Encryption process**
+
+- Plaintext: ATTACKATDAWN
+- Keyword:   KEYKEYKEYKEY
+- Encryption: 
+  - A (shift by K, 10 positions) -> K
+  - T (shift by E, 4 positions) -> X
+  - T (shift by Y, 24 positions) -> R
+  - A (shift by K, 10 positions) -> K
+  - C (shift by E, 4 positions) -> G
+  - K (shift by Y, 24 positions) -> I
+  - A (shift by K, 10 positions) -> K
+  - T (shift by E, 4 positions) -> X
+  - D (shift by Y, 24 positions) -> B
+  - A (shift by K, 10 positions) -> K
+  - W (shift by E, 4 positions) -> A
+  - N (shift by Y, 24 positions) -> L
+- Ciphertext: KXRGIKXBKAL
+
+**Decryption Process**
+
+- Ciphertext: KXRGIKXBKAL
+- Keyword:    KEYKEYKEYKEY
+- Decryption:
+  - K (shift back by K, 10 positions) -> A
+  - X (shift back by E, 4 positions) -> T
+  - R (shift back by Y, 24 positions) -> T
+  - K (shift back by K, 10 positions) -> A
+  - G (shift back by E, 4 positions) -> C
+  - I (shift back by Y, 24 positions) -> K
+  - K (shift back by K, 10 positions) -> A
+  - X (shift back by E, 4 positions) -> T
+  - B (shift back by Y, 24 positions) -> D
+  - K (shift back by K, 10 positions) -> A
+  - A (shift back by E, 4 positions) -> W
+  - L (shift back by Y, 24 positions) -> N
+- Plaintext: ATTACKATDAWN
+
+##### Vigenère Pseudocode
+
+**Encryption**
+
+```
+FUNCTION encrypt_vigenere(plaintext, keyword):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+    keyword_length = LENGTH(keyword)
+    
+    FOR i FROM 0 TO LENGTH(plaintext) - 1:
+        char = plaintext[i]
+        
+        IF char IS a letter:
+            char = UPPERCASE(char)
+            shift_char = UPPERCASE(keyword[i % keyword_length])
+            shift = POSITION(shift_char IN alphabet)
+            char_position = POSITION(char IN alphabet)
+            new_position = (char_position + shift) MOD 26
+            result += alphabet[new_position]
+        ELSE:
+            result += char
+
+    RETURN result
+```
+
+**Decryption**
+
+```
+FUNCTION decrypt_vigenere(ciphertext, keyword):
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    result = ""
+    keyword_length = LENGTH(keyword)
+    
+    FOR i FROM 0 TO LENGTH(ciphertext) - 1:
+        char = ciphertext[i]
+        
+        IF char IS a letter:
+            char = UPPERCASE(char)
+            shift_char = UPPERCASE(keyword[i % keyword_length])
+            shift = POSITION(shift_char IN alphabet)
+            char_position = POSITION(char IN alphabet)
+            new_position = (char_position - shift + 26) MOD 26
+            result += alphabet[new_position]
+        ELSE:
+            result += char
+
+    RETURN result
+```
+
+##### Characteristics and Security
+
+**Polyalphabetic Substitution**: The Vigenère cipher uses multiple Caesar ciphers, which makes frequency analysis attacks much more difficult compared to simple substitution ciphers.
+
+**Simple to Implement**: The method is straightforward to implement and understand.
+
+**Keyword Repetition**: If the keyword is significantly shorter than the plaintext, patterns may emerge, making the cipher vulnerable to Kasiski examination and other statistical attacks.
+
+**Keyword Guessing**: If the attacker guesses or determines the length of the keyword, the Vigenère cipher can be broken using methods like frequency analysis.
+
+**Requires Agreed Upon Key:** Like all Symmetric Encryptions, Vigenère Cipher requires the sender and receiver to agree upon a key prior to the message being sent.
+
+#### Gronsfeld Cipher
+
+The Gronsfeld cipher is a variant of the Vigenère cipher that uses a numeric key instead of a keyword to shift the letters of the plaintext. It shares many similarities with the Vigenère cipher but simplifies the key by restricting it to numeric digits, making it somewhat easier to use and remember.
+
+#### One-time Pad Encryption
+
+The one-time pad (OTP) encryption is a theoretically unbreakable encryption technique that involves a random key that is as long as the message being encrypted. It was first described by Frank Miller in 1882 and later formalized by Gilbert Vernam in 1917.
+
+##### How One-Time Pad Encryption Works
+
+1. Key Generation: Generate a truly random key that is the same length as the plaintext message. This key must be kept completely secret and used only once.
+2. Encryption: 
+   - Convert the plaintext message and the key into numerical form (e.g., using the ASCII values of characters).
+   - Perform bitwise XOR (exclusive OR) operation between the numerical representations of the plaintext and the key to produce the ciphertext.
+3. Decryption:
+   - Convert the ciphertext and the key into numerical form.
+   - Perform bitwise XOR operation between the numerical representations of the ciphertext and the key to retrieve the original plaintext.
+
+##### Characteristics and Security
+
+- **Perfect Security:** If the key is truly random, kept secret, and never reused, the one-time pad is theoretically unbreakable. This is because every possible plaintext of the same length as the ciphertext is equally likely.
+- **No Patterns:** Since the key is random and as long as the message, there are no patterns that an attacker can exploit.
+- **Key Distribution:** The key must be distributed securely to both the sender and the receiver, which can be impractical for large-scale use.
+- **Scalability:** The need for a key that is as long as the message makes it impractical for large amounts of data.
 
 ### Hashing
 
@@ -419,5 +649,5 @@ Protecting against malicious attacks involves a multi-layered approach that comb
 - Recognise and describe how data compression, encryption and hashing are used in the storage and transfer of data
 - Symbolise, analyse and evaluate Caesar, Polyalphabetic (e.g. Vigenere and Gronsfield), and one-time pad encryption algorithms
 - Symbolise and explain secure data transmission techniques and processes, including the use of encryption, decryption, authentication, hashing and checksums
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

@@ -188,5 +188,5 @@ Code portability is writing code that can run on different platforms and systems
 
 ```{admonition} Unit 1 subject matter covered:
 - Recognise, describe and use good programming practices, including dependability, efficiency, testing, debugging, error correction, coding conventions including commenting, consistent naming conventions, code simplicity and portability
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

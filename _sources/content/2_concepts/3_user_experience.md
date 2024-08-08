@@ -16,5 +16,5 @@ This might seem obvious, but the history of digital solutions is littered with e
 
 ```{admonition} Unit 1 subject matter covered:
 - Recognise and describe the meaning and importance of user experience
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

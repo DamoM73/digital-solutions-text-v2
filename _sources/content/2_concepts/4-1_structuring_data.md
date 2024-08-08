@@ -142,5 +142,5 @@ The tables below represent the same data in 3NF
 - Explain the difference between primary key and foreign key
 - Explain data principles including organisation, i.e. using appropriate naming conventions, data formats and structures
 - Explain relations (tables) including rows; columns; primary, secondary and foreign keys; nulls; and views within a database management system
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

@@ -4,5 +4,5 @@
 - Analyse and structure data and data stores to reduce redundancy and ensure completeness, consistency and integrity for use and storage
 - Determine appropriate data types, constraints, and primary and foreign keys
 - Evaluate and modify a database structure to third normal form (3NF)
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```

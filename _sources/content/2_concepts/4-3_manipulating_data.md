@@ -43,5 +43,5 @@ There are many different flavours of SQL. Most of these work by setting up an SQ
 ```{admonition} Unit 2 subject matter covered:
 - Recognise the elements needed for a data-driven solution, including programming requirements, e.g. SQL and algorithms
 - understand SQL syntax and use SQL statements to solve a problem
-{cite}`queenslandcurriculumassessmentauthority_2017_digital`
+{cite}`qcaa_2017_digital`
 ```
