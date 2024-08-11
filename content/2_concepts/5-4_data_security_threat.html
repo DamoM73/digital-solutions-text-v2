@@ -1,0 +1,1211 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Data Security - Threats &#8212; QCAA Digital Solutions Text</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'content/2_concepts/5-4_data_security_threat';</script>
+    <link rel="shortcut icon" href="../../_static/logo_favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Explore Phase" href="../3_explore/1_introduction.html" />
+    <link rel="prev" title="Data Security - Management" href="5-3_data_security.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="QCAA Digital Solutions Text - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="QCAA Digital Solutions Text - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    QCAA Digital Solutions
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../1_introduction/1_how_to_use_this_text.html">How to use this text</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../1_introduction/2_tools_used.html">Technologies Used</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Concepts</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_introduction.html">Core Concepts</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="2_programming.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="2-1_basic_features.html">Basic Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-2_good_practice.html">Good Practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-3_paradigms.html">Programming Paradigms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-4_pseudocode.html">Pseudocode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2-5_dev_env.html">Development Environment</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="3_user_experience.html">User Experience Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="3-1_useability_principles.html">Useability Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-2_visual_communication.html">Visual Communication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3-3_impacts.html">Digital Solution’s Impacts</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="4_dealing_with_data.html">Data Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="4-1_structuring_data.html">Structuring Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-2_data_principles.html">Data Principles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4-3_manipulating_data.html">Managing and Manipulating Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="5_data_transmission.html">Data Exchange</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="5-1_privacy.html">Privacy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-2_networking.html">Networking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-3_data_security.html">Data Security - Management</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Security - Threats</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Explore</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../3_explore/1_introduction.html">Explore Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/2_mind_map.html">Mind Map</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-1_mind_map_unit_1.html">Mind Map — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-2_mind_map_unit_2.html">Mind Map — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-3_mind_map_unit_3.html">Mind Map — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/2-4_mind_map_unit_4.html">Mind Map — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/3_user_insights.html">User Insights</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-1_user_insights_unit_1.html">User Insights — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-2_user_insights_unit_2.html">User Insights — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-3_user_insights_unit_3.html">User Insights — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/3-4_user_insights_unit_4.html">User Insights — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/4_use_case_diagram.html">Use Case Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-1_use_case_diagram_unit_1.html">Use Case Diagram — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-2_use_case_diagram_unit_2.html">Use Case Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-3_use_case_diagram_unit_3.html">Use Case Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/4-4_use_case_diagram_unit_4.html">Use Case Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../3_explore/5_success_criteria.html">Success Criteria</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-1_success_criteria_unit_1.html">Success Criteria — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-2_success_criteria_unit_2.html">Success Criteria — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-3_success_criteria_unit_3.html">Success Criteria — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../3_explore/5-4_success_criteria_unit_4.html">Success Criteria — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Develop</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../4_develop/1_introduction.html">Develop Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/2_ui_design.html">UI Design</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-1_ui_design_unit_1.html">UI Design — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-2_ui_design_unit_2.html">UI Design — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-3_ui_design_unit_3.html">UI Design — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/2-4_ui_design_unit_4.html">UI Design — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/3_class_diagram.html">Class Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-1_class_diagram_unit_1.html">Class Diagram — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-2_class_diagram_unit_2.html">Class Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-3_class_diagram_unit_3.html">Class Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/3-4_class_diagram_unit_4.html">Class Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/4_ipo_tables.html">IPO Tables</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-1_ipo_tables_unit_1.html">IPO Tables — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-2_ipo_tables_unit_2.html">IPO Tables — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-3_ipo_tables_unit_3.html">IPO Tables — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/4-4_ipo_tables_unit_4.html">IPO Tables — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/5_desk_check.html">Desk Check</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-1_desk_check_unit_1.html">Desk Check — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-2_desk_check_unit_2.html">Desk Check — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-3_desk_check_unit_3.html">Desk Check — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/5-4_desk_check_unit_4.html">Desk Check — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/6_data_requirements.html">Data Requirements</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-1_data_requirements_unit_1.html">Data Requirements → Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-2_data_requirements_unit_2.html">Data Requirements → Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-3_data_requirements_unit_3.html">Data Requirements → Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/6-4_data_requirements_unit_4.html">Data Requirements → Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/7_data_flow_diagram.html">Data Flow Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-2_data_flow_diagram_unit_2.html">Data Flow Diagram — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-3_data_flow_diagram_unit_3.html">Data Flow Diagram — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/7-4_data_flow_diagram_unit_4.html">Data Flow Diagram — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/8_erd_rs.html">ERD and Relational Schema</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-2_erd_rs_unit_2.html">ERD and Relational Schema — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-3_erd_rs_unit_3.html">ERD and Relational Schema — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/8-4_erd_rs_unit_4.html">ERD and Relational Schema — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/9_data_dictionary.html">Data Dictionary</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-2_data_dictionary_unit_2.html">Data Dictionary — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-3_data_dictionary_unit_3.html">Data Dictionary — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/9-4_data_dictionary_unit_4.html">Data Dictionary — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../4_develop/10_data_exchange_diagram.html">Data Exchange Diagram</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../4_develop/10-4_data_exchange_diagram_unit_4.html">Data Exchange Diagram — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Generate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../5_generate/1_introduction.html">Generate Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_generate/2_coding.html">Coding</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-1_coding_unit_1.html">Coding — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-2_coding_unit_2.html">Coding — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-3_coding_unit_3.html">Coding — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/2-4_coding_unit_4.html">Coding — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../5_generate/3_testing_table.html">Testing Table</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-1_testing_table_unit_1.html">Testing Table — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-2_testing_table_unit_2.html">Testing Table — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-3_testing_table_unit_3.html">Testing Table — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../5_generate/3-4_testing_table_unit_4.html">Testing Table — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Evaluate</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../6_evaluate/1_introduction.html">Evaluate Phase</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_evaluate/2_component_evaluation.html">Component Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/2-1_component_evaluation_unit_1.html">Component Evaluation — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/2-2_component_evaluation_unit_2.html">Component Evaluation — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/2-3_component_evaluation_unit_3.html">Component Evaluation — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/2-4_component_evaluation_unit_4.html">Component Evaluation — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_evaluate/3_solution_evaluation.html">Solution Evaluation</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/3-1_solution_evaluation_unit_1.html">Solution Evaluation — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/3-2_solution_evaluation_unit_2.html">Solution Evaluation — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/3-3_solution_evaluation_unit_3.html">Solution Evaluation — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/3-4_solution_evaluation_unit_4.html">Solution Evaluation — Unit 4</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../6_evaluate/4_impacts_assessment.html">Impacts Assessment</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/4-1_impacts_assessment_unit_1.html">Impacts Assessment — Unit 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/4-2_impacts_assessment_unit_2.html">Impacts Assessment — Unit 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/4-3_impacts_assessment_unit_3.html">Impacts Assessment — Unit 3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../6_evaluate/4-4_impacts_assessment_unit_4.html">Impacts Assessment — Unit 4</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Communication</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/1_introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/2_technical_language.html">Technical Language</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/3_conventions.html">Conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/4_diagrams.html">Diagrams</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/5_modes.html">Modes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../7_communication/6_presentations.html">Presentations</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../8_solutions/1_sql_exercises.html">SQL Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_solutions/2_encryption.html">Encryption Exercises</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">End material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">Index</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://damom73.github.io/digital-solutions-text-v2/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://damom73.github.io/digital-solutions-text-v2/intro.html/issues/new?title=Issue%20on%20page%20%2Fcontent/2_concepts/5-4_data_security_threat.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/content/2_concepts/5-4_data_security_threat.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Data Security - Threats</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#malicious-threats">Malicious Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malware">Malware</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#malware-example">Malware Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing">Phishing</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing-example">Phishing Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-mitm-attacks">Man-in-the-Middle (MitM) Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-attack-example">Man-in-the-Middle Attack Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ddos-example">DDoS example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threats">Insider Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threat-example">Insider Threat Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injections">SQL Injections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injection-example">SQL Injection Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-xss">Cross-Site Scripting (XSS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-example">Cross-Site Scripting Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threats-apts">Advanced Persistent Threats (APTs)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threat-example">Advanced Persistent Threat Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits">Zero-Day Exploits</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits-example">Zero-Day Exploits Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attacks">Supply Chain Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attack-example">Supply Chain Attack Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-malicious-threats">Non-malicious Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error">Human Error</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error-example">Human Error Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failures">Hardware Failures</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failure-example">Hardware Failure Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bugs">Software Bugs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bug-example">Software Bug Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages">Power Outages</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages-example">Power Outages Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters">Natural Disasters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters-example">Natural Disasters Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures">Network Failures</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures-example">Network Failures Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues">Data Synchronization Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues-example">Data Synchronization Issues Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups">Lack of Proper Backups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups-example">Lack of Proper Backups Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors">Environmental Factors</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors-example">Environmental Factors Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protecting-against-data-security-threats">Protecting Against Data Security Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-measures">Software Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-measures">Hardware measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-measures">Networking measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-measures">Policy measures</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="data-security-threats">
+<h1>Data Security - Threats<a class="headerlink" href="#data-security-threats" title="Permalink to this heading">#</a></h1>
+<p>Data security threats fall under two main categories</p>
+<ul class="simple">
+<li><p>malicious threats which involve intentional acts</p></li>
+<li><p>non-malicious threats which are unintentional actions, accidents, or natural events</p></li>
+</ul>
+<section id="malicious-threats">
+<h2>Malicious Threats<a class="headerlink" href="#malicious-threats" title="Permalink to this heading">#</a></h2>
+<p>Malicious data security threats are intentional attacks designed to compromise the confidentiality, integrity, or availability of data. There are numerous malicious threats to data security that organizations and individuals need to be aware of. Here are some of the most common threats:</p>
+<section id="malware">
+<h3>Malware<a class="headerlink" href="#malware" title="Permalink to this heading">#</a></h3>
+<p>Malware is malicious software designed to disrupt, damage, or gain unauthorized access to computer systems. This includes:</p>
+<ul class="simple">
+<li><p><strong>Viruses</strong></p>
+<ul>
+<li><p>designed to replicate themselves and spread from one computer to another</p></li>
+<li><p>often disrupting operations, corrupting or deleting data, and potentially causing significant damage to systems and networks</p></li>
+<li><p>spread by attaching itself to executable files or documents</p></li>
+</ul>
+</li>
+<li><p><strong>Worms</strong></p>
+<ul>
+<li><p>self-replicating malware</p></li>
+<li><p>spreads autonomously across networks, exploiting vulnerabilities without needing to attach itself to an existing program</p></li>
+<li><p>causes harm by consuming bandwidth, overloading systems, or delivering additional payloads such as ransomware.</p></li>
+</ul>
+</li>
+<li><p><strong>Trojans</strong></p>
+<ul>
+<li><p>disguises itself as a legitimate or benign application to deceive users into installing it</p></li>
+<li><p>allows attackers to gain unauthorized access to the user’s system to steal data, create backdoors, or perform other harmful actions once it is executed.</p></li>
+</ul>
+</li>
+<li><p><strong>Ransomware</strong></p>
+<ul>
+<li><p>designed to block access to a computer system or data</p></li>
+<li><p>typically encrypts files until a ransom is paid to the attacker to restore access</p></li>
+<li><p>often spreads through phishing emails, malicious downloads, or exploit kits</p></li>
+<li><p>can cause significant disruption to individuals and organizations by locking them out of their own data or systems</p></li>
+</ul>
+</li>
+<li><p><strong>Spyware</strong></p>
+<ul>
+<li><p>designed to secretly monitor and collect information about a user’s activities without their knowledge or consent</p></li>
+<li><p>data can include browsing habits, keystrokes, login credentials, and other sensitive information</p></li>
+<li><p>data is sent to the attacker for malicious purposes such as identity theft, financial fraud, or unauthorized access to systems and accounts.</p></li>
+</ul>
+</li>
+<li><p><strong>Adware</strong></p>
+<ul>
+<li><p>automatically displays or downloads advertising content, such as banners or pop-ups, on a user’s computer or mobile device, often without their consent or knowledge.</p></li>
+<li><p>while not always malicious, it can invade privacy by tracking user behaviour and gathering personal information for targeted advertising, and in some cases, it can serve as a conduit for more harmful malware.</p></li>
+</ul>
+</li>
+</ul>
+<section id="malware-example">
+<h4>Malware Example<a class="headerlink" href="#malware-example" title="Permalink to this heading">#</a></h4>
+<p>One of the most infamous malware attacks is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">WannaCry ransomware attack</a></strong>, which occurred in May 2017. WannaCry exploited a vulnerability in Microsoft Windows, known as EternalBlue, to spread rapidly across networks worldwide.</p>
+<p>The ransomware encrypted users’ files and demanded a ransom payment in Bitcoin to decrypt the data. WannaCry affected hundreds of thousands of computers in over 150 countries, impacting critical sectors such as healthcare, finance, and telecommunications.</p>
+<p>The National Health Service (NHS) in the United Kingdom was particularly hard hit, leading to the cancellation of appointments and surgeries. The attack highlighted the importance of timely software updates and robust cybersecurity measures to protect against such vulnerabilities​.</p>
+</section>
+</section>
+<section id="phishing">
+<h3>Phishing<a class="headerlink" href="#phishing" title="Permalink to this heading">#</a></h3>
+<p>Phishing is a technique where attackers attempt to obtain sensitive information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity in electronic communications.</p>
+<section id="phishing-example">
+<h4>Phishing Example<a class="headerlink" href="#phishing-example" title="Permalink to this heading">#</a></h4>
+<p>A notable example of a phishing attack is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Podesta_emails#:~:text=In%20March%202016%2C%20the%20personal,work%2Drelated%2C%20were%20hacked.">2016 attack on John Podesta</a></strong>, chairman of Hillary Clinton’s presidential campaign.</p>
+<p>Hackers sent a phishing email disguised as a security alert from Google, claiming that Podesta needed to change his password due to suspicious activity. The email contained a link to a fake login page that closely resembled the genuine Google login page. Podesta’s aide, believing the email to be legitimate, forwarded it to the campaign’s IT staff, who mistakenly identified the email as genuine and advised Podesta to change his password using the provided link. As a result, Podesta entered his credentials on the fake page, allowing hackers to gain access to his email account.</p>
+<p>This breach led to the exposure of thousands of emails, which were subsequently published by WikiLeaks, causing significant political and reputational damage during the 2016 U.S. presidential election.</p>
+</section>
+</section>
+<section id="man-in-the-middle-mitm-attacks">
+<h3>Man-in-the-Middle (MitM) Attacks<a class="headerlink" href="#man-in-the-middle-mitm-attacks" title="Permalink to this heading">#</a></h3>
+<p>MitM Attacks occurs when attackers intercept communication between two parties to steal or manipulate data. Common in unsecured Wi-Fi networks.</p>
+<section id="man-in-the-middle-attack-example">
+<h4>Man-in-the-Middle Attack Example<a class="headerlink" href="#man-in-the-middle-attack-example" title="Permalink to this heading">#</a></h4>
+<p>In 2015, Lenovo was found to have pre-installed a software called <a class="reference external" href="https://en.wikipedia.org/wiki/Superfish">Superfish</a> on some of its laptops.</p>
+<p>Superfish was an adware program that intercepted users’ web traffic to inject advertisements. It did this by installing its own self-signed root certificate authority, allowing it to intercept and decrypt HTTPS traffic between the user’s browser and websites, essentially performing a Man-in-the-Middle attack.</p>
+<p>This compromised the security of encrypted connections, making users vulnerable to further attacks and data theft by malicious entities exploiting the same root certificate.</p>
+</section>
+</section>
+<section id="denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">
+<h3>Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks<a class="headerlink" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks" title="Permalink to this heading">#</a></h3>
+<p>DoS and DDos are attacks aimed at making a network service unavailable to users by overwhelming it with a flood of illegitimate requests.</p>
+<section id="ddos-example">
+<h4>DDoS example<a class="headerlink" href="#ddos-example" title="Permalink to this heading">#</a></h4>
+<p>A notable example of a Distributed Denial of Service (DDoS) attack is the <a class="reference external" href="https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn">October 2016 attack on Dyn</a>, a company that manages DNS (Domain Name System) services.</p>
+<p>This attack involved a massive <a class="reference external" href="https://en.wikipedia.org/wiki/Botnet">botnet</a> called Mirai, which harnessed the power of numerous compromised IoT (Internet of Things) devices, including cameras and DVRs, to flood Dyn’s servers with traffic. The overwhelming volume of traffic disrupted Dyn’s DNS services, leading to widespread outages for major websites and online services such as Twitter, Reddit, Netflix, and Airbnb.</p>
+<p>The attack highlighted the vulnerabilities of IoT devices and the significant impact DDoS attacks can have on internet infrastructure​</p>
+</section>
+</section>
+<section id="insider-threats">
+<h3>Insider Threats<a class="headerlink" href="#insider-threats" title="Permalink to this heading">#</a></h3>
+<p>Insider threats are security risks originating from within the organization, often involving employees or contractors who have access to sensitive information.</p>
+<section id="insider-threat-example">
+<h4>Insider Threat Example<a class="headerlink" href="#insider-threat-example" title="Permalink to this heading">#</a></h4>
+<p>One of the most infamous examples of an insider threat is the case of <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Edward_Snowden">Edward Snowden</a></strong>.</p>
+<p>In 2013, Snowden, a former contractor for the National Security Agency (NSA), leaked classified documents to journalists, revealing extensive global surveillance programs operated by the NSA and its international partners. Snowden’s disclosures exposed the scale and scope of government surveillance on citizens and sparked a global debate about privacy and security.</p>
+<p>His actions had profound implications for national security and privacy, leading to significant legal and political repercussions​.</p>
+</section>
+</section>
+<section id="sql-injections">
+<h3>SQL Injections<a class="headerlink" href="#sql-injections" title="Permalink to this heading">#</a></h3>
+<p>SQL Injections are a type of attack where malicious SQL statements are inserted into an entry field for execution, allowing attackers to access or manipulate the database.</p>
+<section id="sql-injection-example">
+<h4>SQL Injection Example<a class="headerlink" href="#sql-injection-example" title="Permalink to this heading">#</a></h4>
+<p>A famous example of an SQL injection attack is the 2008 breach of <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Heartland_Payment_Systems">Heartland Payment Systems</a></strong>.</p>
+<p>Heartland, one of the largest payment processing companies in the United States, suffered a massive data breach due to an SQL injection vulnerability. Attackers exploited this vulnerability to install malware on Heartland’s network, allowing them to capture and exfiltrate over 130 million credit card numbers.</p>
+<p>This breach led to significant financial losses and legal repercussions for the company and highlighted the critical importance of securing web applications against SQL injection attacks.</p>
+</section>
+</section>
+<section id="cross-site-scripting-xss">
+<h3>Cross-Site Scripting (XSS)<a class="headerlink" href="#cross-site-scripting-xss" title="Permalink to this heading">#</a></h3>
+<p>XSS is an attack where malicious scripts are injected into otherwise benign and trusted websites, affecting users who visit the site.</p>
+<section id="cross-site-scripting-example">
+<h4>Cross-Site Scripting Example<a class="headerlink" href="#cross-site-scripting-example" title="Permalink to this heading">#</a></h4>
+<p>One of the most notable examples of a Cross-Site Scripting (XSS) attack occurred on MySpace in 2005, known as the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Samy_(computer_worm)">“Samy worm” attack</a></strong>.</p>
+<p>A user named Samy Kamkar created a worm that exploited an XSS vulnerability in MySpace’s site. The worm embedded a script in Samy’s profile page that, when visited by other users, would automatically add Samy to their friend list and display the phrase “but most of all, Samy is my hero” on their profile. Moreover, the script replicated itself to their profiles, leading to rapid and widespread propagation. Within 20 hours, over one million MySpace users were affected, making it one of the fastest spreading XSS worms in history.</p>
+<p>This incident highlighted the severe impact of XSS vulnerabilities and the importance of input validation and sanitization.</p>
+</section>
+</section>
+<section id="advanced-persistent-threats-apts">
+<h3>Advanced Persistent Threats (APTs)<a class="headerlink" href="#advanced-persistent-threats-apts" title="Permalink to this heading">#</a></h3>
+<p>APTs are long-term targeted attacks where an intruder gains access to a network and remains undetected for an extended period to steal data.</p>
+<section id="advanced-persistent-threat-example">
+<h4>Advanced Persistent Threat Example<a class="headerlink" href="#advanced-persistent-threat-example" title="Permalink to this heading">#</a></h4>
+<p>One of the most famous examples of an Advanced Persistent Threat (APT) is the <a class="reference external" href="https://en.wikipedia.org/wiki/Stuxnet">Stuxnet attack</a>, discovered in 2010.</p>
+<p>Stuxnet is a sophisticated malware believed to have been developed jointly by the United States and Israel to sabotage Iran’s nuclear program. The malware targeted Siemens PLCs (Programmable Logic Controllers) used in Iran’s Natanz uranium enrichment facility. It exploited multiple zero-day vulnerabilities and was capable of reprogramming the PLCs to cause the centrifuges to spin out of control while reporting normal operation to monitoring systems, effectively damaging the equipment and setting back Iran’s nuclear efforts.</p>
+<p>This attack highlighted the potential of cyber warfare and the risks posed by APTs to critical infrastructure.</p>
+</section>
+</section>
+<section id="zero-day-exploits">
+<h3>Zero-Day Exploits<a class="headerlink" href="#zero-day-exploits" title="Permalink to this heading">#</a></h3>
+<p>Zero-day Exploits are attacks that exploit previously unknown vulnerabilities in software before developers have a chance to issue patches.</p>
+<section id="zero-day-exploits-example">
+<h4>Zero-Day Exploits Example<a class="headerlink" href="#zero-day-exploits-example" title="Permalink to this heading">#</a></h4>
+<p>Both the Stuxnet worm and the WannaCry ransomware used zero-day exploits.</p>
+<p>WannaCry used the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/EternalBlue">EternalBlue</a></strong> to exploit a flaw in the SMBv1 (Server Message Block) protocol, allowing the malware to execute arbitrary code on the target machine without requiring user interaction. The exploit took advantage of the way SMB handled specially crafted packets, causing the system to execute the attacker’s code.</p>
+<p>Stuxnet used the following exploits:</p>
+<ul class="simple">
+<li><p><strong>LNK Vulnerability (CVE-2010-2568)</strong>: Stuxnet exploited a vulnerability in how Windows processes shortcut files (.LNK). Simply viewing an infected USB drive in Windows Explorer would trigger the execution of the malware.</p></li>
+<li><p><strong>Windows Print Spooler Vulnerability (CVE-2010-2729)</strong>: This vulnerability allowed remote code execution through the Windows Print Spooler service, enabling the malware to spread across networks.</p></li>
+<li><p><strong>Windows Task Scheduler Vulnerability (CVE-2010-3888)</strong>: Stuxnet exploited a vulnerability in the Windows Task Scheduler to elevate privileges and gain administrative rights on infected systems.</p></li>
+<li><p><strong>MS08-067 (CVE-2008-4250)</strong>: Although not a zero-day at the time of the Stuxnet attack, this older vulnerability was used to propagate across networked systems by exploiting a flaw in the Windows Server Service.</p></li>
+<li><p><strong>Win32k.sys Vulnerability (CVE-2010-2743)</strong>: This vulnerability in the Windows kernel allowed Stuxnet to execute arbitrary code with kernel-mode privileges, providing extensive control over the infected system.</p></li>
+</ul>
+</section>
+</section>
+<section id="supply-chain-attacks">
+<h3>Supply Chain Attacks<a class="headerlink" href="#supply-chain-attacks" title="Permalink to this heading">#</a></h3>
+<p>Supply chain attacks are a type of malicious data security threat where attackers compromise an organization by targeting its less secure elements in the supply network, such as software vendors, third-party services, or hardware suppliers, to infiltrate and harm the primary target</p>
+<section id="supply-chain-attack-example">
+<h4>Supply Chain Attack Example<a class="headerlink" href="#supply-chain-attack-example" title="Permalink to this heading">#</a></h4>
+<p>One of the most notorious examples of a supply chain attack is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach">2020 SolarWinds hack</a></strong>.</p>
+<p>In this attack, cybercriminals infiltrated the IT management company SolarWinds and inserted malicious code into their Orion software updates, which were then distributed to SolarWinds’ customers. This compromised update created a backdoor into the systems of approximately 18,000 organizations, including numerous U.S. government agencies and Fortune 500 companies. The attackers, believed to be associated with the Russian state-sponsored group APT29 (also known as Cozy Bear), used this access to conduct extensive espionage, gathering sensitive information from high-profile targets.</p>
+<p>This incident highlighted the vulnerabilities in software supply chains and the extensive impact such breaches can have on national security and corporate infrastructure</p>
+</section>
+</section>
+</section>
+<section id="non-malicious-threats">
+<h2>Non-malicious Threats<a class="headerlink" href="#non-malicious-threats" title="Permalink to this heading">#</a></h2>
+<p>Non-malicious threats to data security are risks that arise from unintentional actions, accidents, or natural events, rather than deliberate attacks. Here are some common non-malicious threats:</p>
+<section id="human-error">
+<h3>Human Error<a class="headerlink" href="#human-error" title="Permalink to this heading">#</a></h3>
+<p>Human error includes mistakes made by employees or users, such as accidentally deleting data, misconfiguring systems, or sending sensitive information to the wrong recipient.</p>
+<section id="human-error-example">
+<h4>Human Error Example<a class="headerlink" href="#human-error-example" title="Permalink to this heading">#</a></h4>
+<p>A famous example of a data security risk caused by human error is the <a class="reference external" href="https://en.wikipedia.org/wiki/2017_Equifax_data_breach#:~:text=Private%20records%20of%20147.9%20million,the%20public%20until%20September%202017.">2017 Equifax data breach</a>.</p>
+<p>In this incident, sensitive personal information of approximately 147 million people, including names, social security numbers, birth dates, addresses, and in some cases, driver’s license numbers and credit card information, was exposed. The breach was primarily attributed to the failure of Equifax to apply a critical security patch for a known vulnerability in the Apache Struts web application framework.</p>
+<p>Despite being alerted to the vulnerability and the availability of a patch two months prior to the breach, Equifax’s IT staff failed to update their systems, allowing attackers to exploit the flaw and gain access to sensitive data.</p>
+</section>
+</section>
+<section id="hardware-failures">
+<h3>Hardware Failures<a class="headerlink" href="#hardware-failures" title="Permalink to this heading">#</a></h3>
+<p>Hardware Failures refer to physical malfunctions of storage devices, servers, or other critical hardware components that can lead to data loss or downtime.</p>
+<section id="hardware-failure-example">
+<h4>Hardware Failure Example<a class="headerlink" href="#hardware-failure-example" title="Permalink to this heading">#</a></h4>
+<p>A significant example of hardware failure resulting in data loss is the <strong><a class="reference external" href="https://money.cnn.com/2011/04/21/technology/amazon_server_outage/index.htm">2011 outage experienced by the cloud service provider Amazon Web Services (AWS)</a></strong>.</p>
+<p>In April 2011, a failure in AWS’s Elastic Block Store (EBS) caused a cascading effect that led to extended downtime and data loss for numerous websites and services that relied on AWS. The incident began with a network configuration error during a routine maintenance operation, which resulted in a large number of EBS nodes becoming unreachable. As AWS engineers attempted to fix the problem, they inadvertently caused further issues that led to data corruption and loss.</p>
+<p>Many businesses experienced prolonged outages, and some permanently lost data due to the disruption.</p>
+</section>
+</section>
+<section id="software-bugs">
+<h3>Software Bugs<a class="headerlink" href="#software-bugs" title="Permalink to this heading">#</a></h3>
+<p>Flaws or vulnerabilities in software that can cause data corruption, loss, or unintended exposure of sensitive information.</p>
+<section id="software-bug-example">
+<h4>Software Bug Example<a class="headerlink" href="#software-bug-example" title="Permalink to this heading">#</a></h4>
+<p>In July 2023, a <strong><a class="reference external" href="https://www.wired.com/story/crowdstrike-outage-update-windows/">software update for the CrowdStrike Falcon sensor resulted in a widespread issue</a></strong>.</p>
+<p>The issue caused Blue Screen of Death (BSOD) errors on Windows systems, leading to significant IT disruptions. The flawed update caused system crashes and data loss across thousands of devices by corrupting system files and interrupting critical operations. This incident is attributed to a logic error in the sensor’s configuration file.</p>
+<p>This exemplifies how software bugs can lead to severe data loss and operational downtime, highlighting the necessity for rigorous testing and robust incident response protocols to mitigate such risks.</p>
+</section>
+</section>
+<section id="power-outages">
+<h3>Power Outages<a class="headerlink" href="#power-outages" title="Permalink to this heading">#</a></h3>
+<p>Sudden loss of power can disrupt operations, cause data corruption, and affect the availability of systems and services.</p>
+<section id="power-outages-example">
+<h4>Power Outages Example<a class="headerlink" href="#power-outages-example" title="Permalink to this heading">#</a></h4>
+<p>A notable example of data security being placed at risk due to power outages occurred in 2013 at the <strong><a class="reference external" href="https://www.bbc.com/news/technology-24443266">National Security Agency’s (NSA) massive data centre in Bluffdale</a></strong>, Utah.</p>
+<p>The facility experienced a series of power outages caused by electrical surges. These outages damaged critical infrastructure, including computers and cooling systems, leading to concerns over potential data loss and system reliability. The issues were attributed to electrical surges during equipment testing and installation phases, which caused significant delays in the facility’s operational readiness and raised questions about the robustness of the NSA’s data security measures during infrastructure failures.</p>
+</section>
+</section>
+<section id="natural-disasters">
+<h3>Natural Disasters<a class="headerlink" href="#natural-disasters" title="Permalink to this heading">#</a></h3>
+<p>Events such as floods, earthquakes, hurricanes, and fires that can physically damage data centres and IT infrastructure, leading to data loss or prolonged downtime.</p>
+<section id="natural-disasters-example">
+<h4>Natural Disasters Example<a class="headerlink" href="#natural-disasters-example" title="Permalink to this heading">#</a></h4>
+<p>A well-known example of data security being jeopardized due to natural disasters occurred during <strong><a class="reference external" href="https://abcnews.go.com/Technology/hurricane-sandy-takes-york-city-data-center-gawker/story?id=17601425">Hurricane Sandy in 2012</a></strong>.</p>
+<p>The hurricane caused extensive power outages across the north-eastern United States, including in New York City. This led to significant disruptions at data centres, including those managed by Datagram, which hosted websites like Gawker, BuzzFeed, and the Huffington Post. The power outages caused by the hurricane resulted in a loss of connectivity and server downtime, highlighting vulnerabilities in data centre infrastructure.</p>
+<p>Despite having backup generators, Datagram’s fuel pumps were located in a basement that flooded, rendering the backup power systems ineffective and resulting in prolonged outages and potential data loss risks.</p>
+</section>
+</section>
+<section id="network-failures">
+<h3>Network Failures<a class="headerlink" href="#network-failures" title="Permalink to this heading">#</a></h3>
+<p>Issues with network infrastructure, such as router failures or connectivity problems, that can disrupt access to data and services.</p>
+<section id="network-failures-example">
+<h4>Network Failures Example<a class="headerlink" href="#network-failures-example" title="Permalink to this heading">#</a></h4>
+<p>A significant example of network failures risking data security is the <strong><a class="reference external" href="https://www.theguardian.com/money/2012/jun/29/natwest-fiasco-what-happens-now">2008 outage at RBS (Royal Bank of Scotland), NatWest, and Ulster Bank</a></strong>.</p>
+<p>This incident occurred when a routine software update to the bank’s CA-7 batch processing system failed. The update corrupted the scheduling software, leading to a massive backlog of unprocessed transactions. As a result, millions of customers were unable to access their accounts, perform transactions, or receive salaries for several days.</p>
+<p>The network failure exposed vulnerabilities in the bank’s IT infrastructure and highlighted the critical importance of robust network management and backup systems in safeguarding financial data and ensuring continuity of banking operations.</p>
+</section>
+</section>
+<section id="data-synchronization-issues">
+<h3>Data Synchronization Issues<a class="headerlink" href="#data-synchronization-issues" title="Permalink to this heading">#</a></h3>
+<p>Problems with keeping data consistent across different systems or storage locations, which can lead to data discrepancies or loss.</p>
+<section id="data-synchronization-issues-example">
+<h4>Data Synchronization Issues Example<a class="headerlink" href="#data-synchronization-issues-example" title="Permalink to this heading">#</a></h4>
+<p>Another example of data synchronization issues risking data security is the <strong><a class="reference external" href="https://www.cpomagazine.com/cyber-security/second-data-breach-in-2020-for-t-mobile-exposed-customer-and-call-related-information-of-200000-subscribers/">T-Mobile data breach in 2020</a></strong>.</p>
+<p>The breach was attributed to issues in synchronizing customer data across different databases and systems. Attackers exploited these synchronization gaps, which resulted from complex data migration and integration processes within T-Mobile’s infrastructure. This allowed unauthorized access to sensitive information, including personal data of over 200,000 customers.</p>
+<p>The incident exposed vulnerabilities in how data was managed and synchronized, highlighting the risks associated with inconsistent data replication and integration in large-scale IT environments.</p>
+</section>
+</section>
+<section id="lack-of-proper-backups">
+<h3>Lack of Proper Backups<a class="headerlink" href="#lack-of-proper-backups" title="Permalink to this heading">#</a></h3>
+<p>Failure to regularly back up data or improper backup procedures can result in significant data loss in the event of a failure or disaster.</p>
+<section id="lack-of-proper-backups-example">
+<h4>Lack of Proper Backups Example<a class="headerlink" href="#lack-of-proper-backups-example" title="Permalink to this heading">#</a></h4>
+<p>A famous example of data loss due to a lack of proper backups occurred in <a class="reference external" href="https://www.breaches.cloud/incidents/codespaces/">2014 with the cloud storage provider, Code Spaces</a>.</p>
+<p>In 2014, Code Spaces suffered a devastating attack when an attacker gained access to their Amazon Web Services (AWS) control panel. The attacker demanded a ransom, and when Code Spaces attempted to regain control, the attacker systematically deleted data and backups, effectively wiping out their entire infrastructure.</p>
+<p>Code Spaces had not maintained offsite backups or a robust backup strategy, leading to the irreversible loss of customer data. The severity of the attack and the lack of adequate backups forced Code Spaces to shut down permanently.</p>
+</section>
+</section>
+<section id="environmental-factors">
+<h3>Environmental Factors<a class="headerlink" href="#environmental-factors" title="Permalink to this heading">#</a></h3>
+<p>Conditions such as high humidity, dust, or temperature extremes that can negatively impact hardware performance and reliability.</p>
+<section id="environmental-factors-example">
+<h4>Environmental Factors Example<a class="headerlink" href="#environmental-factors-example" title="Permalink to this heading">#</a></h4>
+<p>A notable example of data loss due to environmental conditions is the <strong><a class="reference external" href="https://www.reuters.com/article/world/millions-of-websites-offline-after-fire-at-french-cloud-services-firm-idUSKBN2B20NT/">2011 fire at the OVH data centre in Strasbourg, France</a></strong>.</p>
+<p>The fire was triggered by high humidity and electrical issues, leading to significant damage to the facility and its infrastructure. The incident resulted in the loss of customer data and disrupted services for many clients relying on OVH for hosting and cloud services.</p>
+<p>This event highlighted the critical importance of maintaining proper environmental controls, such as humidity and temperature regulation, and having robust disaster recovery plans to mitigate the impact of such incidents.</p>
+</section>
+</section>
+</section>
+<section id="protecting-against-data-security-threats">
+<h2>Protecting Against Data Security Threats<a class="headerlink" href="#protecting-against-data-security-threats" title="Permalink to this heading">#</a></h2>
+<p>Protecting against both malicious and non-malicious attacks involves a multi-layered approach that combines preventive measures, user education, and robust security practices:</p>
+<section id="software-measures">
+<h3>Software Measures<a class="headerlink" href="#software-measures" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Install and Maintain Antivirus Software</strong>: Use reputable antivirus and anti-malware programs to detect and remove malicious software. Ensure these programs are updated regularly to protect against the latest threats.</p></li>
+<li><p><strong>Regular Software Updates</strong>: Keep all software, including operating systems, browsers, and plugins, up to date to patch vulnerabilities that malware could exploit.</p></li>
+<li><p><strong>Use Firewalls</strong>: Implement network firewalls to block unauthorized access to your systems and monitor incoming and outgoing network traffic for suspicious activity.</p></li>
+<li><p><strong>Enable Email Filters</strong>: Use email filtering tools to detect and block phishing emails and attachments that may contain malware.</p></li>
+<li><p><strong>Use Intrusion Detection and Prevention Systems (IDPS)</strong>: Deploy IDPS to monitor network traffic for suspicious activity and potential intrusions, enabling prompt action to mitigate threats.</p></li>
+<li><p><strong>Behavioural Analytics</strong>: Implement tools that use machine learning to analyse user behaviour and detect anomalies that may indicate insider threats</p></li>
+<li><p><strong>Prepared Statements</strong>: Ensure that SQL queries are parameterized, which separates SQL code from data, making it impossible for an attacker to alter the query structure</p></li>
+<li><p><strong>Custom Error Messages</strong>: Avoid exposing detailed error messages to users. Customize error messages to prevent attackers from gaining insights into the database structure.</p></li>
+<li><p><strong>Whitelisting</strong>: Validate input against a list of allowed characters or patterns</p></li>
+<li><p><strong>Sanitize User Input</strong>: Ensure all user input is sanitized to remove or encode any potentially harmful characters before processing.</p></li>
+<li><p><strong>Encode Output</strong>: Encode all data before rendering it on the webpage to prevent the browser from interpreting it as executable code.</p></li>
+<li><p><strong>Use Secure Web Frameworks</strong>: Utilize frameworks that have built-in protections against XSS, such as Ruby on Rails, Django, and Angular.</p></li>
+<li><p><strong>Encrypt Sensitive Data</strong>: Ensure sensitive data is encrypted both at rest and in transit to protect it from unauthorized access.</p></li>
+<li><p><strong>Endpoint Security</strong>: Use advanced EPP/EDR solutions to monitor and respond to suspicious activities on endpoints, leveraging behavioural analysis to identify potential zero-day exploits.</p></li>
+<li><p><strong>Synchronous Replication</strong>: Use synchronous replication to ensure that data is written to multiple locations simultaneously, reducing the risk of discrepancies.</p></li>
+<li><p><strong>Automation Tools</strong>: Use automated data synchronization tools and processes to reduce the risk of human error and ensure consistent data updates across systems.</p></li>
+</ul>
+</section>
+<section id="hardware-measures">
+<h3>Hardware measures<a class="headerlink" href="#hardware-measures" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Disconnect Infected Devices</strong>: If a device is suspected to be infected with malware, disconnect it from the network immediately to prevent the spread to other systems.</p></li>
+<li><p><strong>RAID Configurations</strong>: Use RAID (Redundant Array of Independent Disks) to create copies of data across multiple disks, so if one disk fails, data remains accessible.</p></li>
+<li><p><strong>High Availability</strong>: Set up failover systems that automatically switch to a backup system in case of hardware failure, ensuring continuous data availability.</p></li>
+<li><p><strong>Battery Backup</strong>: Deploy UPS systems to provide immediate, short-term power during an outage, allowing time for safe shutdown or switching to backup generators.</p></li>
+<li><p><strong>Long-term Power</strong>: Install backup generators to supply power for extended periods during outages. Ensure they are regularly maintained and tested.</p></li>
+<li><p><strong>Proactive Monitoring</strong>: Implement environmental monitoring systems to detect and alert for power issues, temperature fluctuations, and other environmental factors that could lead to hardware failure.</p></li>
+<li><p><strong>Scheduled Maintenance</strong>: Perform regular network maintenance and updates to prevent failures due to outdated hardware or software. Ensure all network components are updated with the latest security patches.</p></li>
+</ul>
+</section>
+<section id="networking-measures">
+<h3>Networking measures<a class="headerlink" href="#networking-measures" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Email Authentication Protocols</strong>: Use email authentication protocols to prevent email spoofing and ensure the integrity of email communications​.</p></li>
+<li><p><strong>Cloud-based DDoS Protection</strong>: Services like Cloudflare, Akamai, and AWS Shield can absorb and mitigate DDoS traffic before it reaches your network.</p></li>
+<li><p><strong>Rate Limiting</strong>: Configure your web server to limit the number of requests a user can make within a certain timeframe, helping to reduce the impact of DDoS attacks.</p></li>
+<li><p><strong>Redundancy and Load Balancing</strong>: Distribute your infrastructure across multiple data centres and use load balancers to distribute traffic evenly, minimizing the risk of a single point of failure.</p></li>
+<li><p><strong>Scalable Bandwidth</strong>: Work with your ISP to ensure you have sufficient bandwidth to handle unexpected traffic spikes and consider burstable bandwidth options.</p></li>
+<li><p><strong>Traffic Analysis</strong>: Continuously monitor your network traffic to detect unusual patterns that may indicate an impending DDoS attack.</p></li>
+<li><p><strong>Network Segmentation</strong>: Implement network segmentation to limit the spread of an attack. Use firewalls and access controls to restrict access to critical systems and data.</p></li>
+<li><p><strong>Distributed Data Centres</strong>: Use geographically dispersed data centres to ensure that data and services remain available even if one location experiences a power outage.</p></li>
+<li><p><strong>Cloud Integration</strong>: Utilize cloud services for data storage and critical applications, leveraging the redundancy and high availability provided by major cloud providers.</p></li>
+<li><p><strong>Implement Redundancy</strong>: Ensure critical network components have backups. Use multiple ISPs, redundant routers, and switches to provide alternative paths for data if one fails.</p></li>
+</ul>
+</section>
+<section id="policy-measures">
+<h3>Policy measures<a class="headerlink" href="#policy-measures" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Educate Users</strong>: Train employees and users to recognize phishing attempts, suspicious links, and unsafe downloads. Encourage the practice of not clicking on unknown or untrusted links and attachments.</p></li>
+<li><p><strong>Implement Strong Passwords and Multi-Factor Authentication (MFA)</strong>: Use complex passwords and enable MFA to add an extra layer of security to accounts, making it harder for attackers to gain access.</p></li>
+<li><p><strong>Regular Backups</strong>: Perform regular backups of critical data and store them securely. This ensures data can be restored in case of a ransomware attack or other data loss incidents.</p></li>
+<li><p><strong>Restrict User Privileges</strong>: Limit user access to only the necessary systems and data required for their roles to minimize the impact of a potential malware infection.</p></li>
+<li><p><strong>Secure Browsing Practices</strong>: Encourage users to hover over links to check the actual URL before clicking and to directly type URLs into the browser instead of clicking on links in emails​. Ensure websites use HTTPS to provide a secure connection, and educate users to look for the padlock icon in the browser address bar​.</p></li>
+<li><p><strong>Incident Response Plan</strong>: Prepare a response strategy for dealing with phishing attacks, including steps for containing the breach, notifying affected parties, and recovering compromised accounts​.</p></li>
+<li><p><strong>Secure Wi-Fi Networks</strong>: Avoid using public Wi-Fi for sensitive transactions. Use VPNs to encrypt traffic when accessing the internet through untrusted networks.</p></li>
+<li><p><strong>User Activity Monitoring</strong>: Implement systems to monitor user activities and detect unusual or suspicious behaviour, such as excessive data downloads or access to unauthorized areas​.</p></li>
+<li><p><strong>Regular Audits</strong>: Conduct regular audits of access logs and employee activities to identify and investigate potential insider threats</p></li>
+<li><p><strong>Data Protection Policies</strong>: Develop and enforce comprehensive data protection policies that outline acceptable use of company resources and data</p></li>
+<li><p><strong>Data Loss Prevention (DLP)</strong>: Use DLP solutions to detect and prevent unauthorized access, transfer, or use of sensitive data</p></li>
+<li><p><strong>Employee Engagement</strong>: Promote a positive work environment and open communication to reduce grievances that may lead to insider threats</p></li>
+<li><p><strong>Anonymous Reporting Mechanisms</strong>: Provide channels for employees to report suspicious activities anonymously, encouraging vigilance without fear of retribution</p></li>
+<li><p><strong>Restrict Database Permissions</strong>: Ensure database accounts have the minimum necessary privileges. Avoid using administrative accounts for application connections.</p></li>
+<li><p><strong>Penetration Testing</strong>: Conduct regular security audits and penetration tests to identify and mitigate vulnerabilities.</p></li>
+<li><p><strong>Code Reviews</strong>: Perform thorough code reviews to ensure security best practices are followed.</p></li>
+<li><p><strong>Assess Vendors</strong>: Conduct thorough security assessments and audits of all third-party vendors and partners to ensure they follow robust security practices.</p></li>
+<li><p><strong>Monitor Supply Chain</strong>: Implement continuous monitoring of supply chain activities to detect unusual behaviours or anomalies</p></li>
+<li><p><strong>Reputable Sources</strong>: Only source software, hardware, and services from reputable and trusted suppliers with a proven track record of security.</p></li>
+<li><p><strong>Comprehensive Plan</strong>: Develop and test a disaster recovery plan that outlines procedures for data recovery and system restoration in the event of hardware failure.</p></li>
+<li><p><strong>Automated Testing</strong>: Implement comprehensive automated testing, including unit tests, integration tests, and end-to-end tests, to catch bugs early in the development process.</p></li>
+<li><p><strong>Manual Testing</strong>: Complement automated testing with thorough manual testing, particularly for complex or critical features.</p></li>
+<li><p><strong>Version Control Systems</strong>: Use version control systems (e.g., Git) to track changes and enable easy rollback to previous versions if a bug is introduced.</p></li>
+<li><p><strong>Consistency Checks</strong>: Perform regular data integrity and consistency checks on distributed databases (eg. Netflix) to identify and correct any synchronization issues promptly.</p></li>
+<li><p><strong>Conflict Detection and Resolution</strong>: Implement conflict detection and resolution mechanisms to handle discrepancies that arise during data synchronization of distributed databases.</p></li>
+</ul>
+<div class="admonition-unit-4-subject-matter-covered admonition">
+<p class="admonition-title">Unit 4 subject matter covered:</p>
+<ul class="simple">
+<li><p>Recognise and describe encryption and authentication strategies appropriate for securing data transmissions and their differences</p></li>
+<li><p>Recognise and describe features of symmetric (Data Encryption Standard — DES, Triple DES, AES — Advanced Encryption Standard, Blowfish and Twofish) and assymetric (RSA) encryption algorithms</p></li>
+<li><p>Recognise and describe how data compression, encryption and hashing are used in the storage and transfer of data</p></li>
+<li><p>Symbolise, analyse and evaluate Caesar, Polyalphabetic (e.g. Vigenere and Gronsfield), and one-time pad encryption algorithms</p></li>
+<li><p>Symbolise and explain secure data transmission techniques and processes, including the use of encryption, decryption, authentication, hashing and checksums
+<span id="id1">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./content/2_concepts"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5-3_data_security.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Data Security - Management</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../3_explore/1_introduction.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Explore Phase</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#malicious-threats">Malicious Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malware">Malware</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#malware-example">Malware Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing">Phishing</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing-example">Phishing Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-mitm-attacks">Man-in-the-Middle (MitM) Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-attack-example">Man-in-the-Middle Attack Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ddos-example">DDoS example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threats">Insider Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threat-example">Insider Threat Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injections">SQL Injections</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injection-example">SQL Injection Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-xss">Cross-Site Scripting (XSS)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-example">Cross-Site Scripting Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threats-apts">Advanced Persistent Threats (APTs)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threat-example">Advanced Persistent Threat Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits">Zero-Day Exploits</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits-example">Zero-Day Exploits Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attacks">Supply Chain Attacks</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attack-example">Supply Chain Attack Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#non-malicious-threats">Non-malicious Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error">Human Error</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error-example">Human Error Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failures">Hardware Failures</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failure-example">Hardware Failure Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bugs">Software Bugs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bug-example">Software Bug Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages">Power Outages</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages-example">Power Outages Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters">Natural Disasters</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters-example">Natural Disasters Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures">Network Failures</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures-example">Network Failures Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues">Data Synchronization Issues</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues-example">Data Synchronization Issues Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups">Lack of Proper Backups</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups-example">Lack of Proper Backups Example</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors">Environmental Factors</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors-example">Environmental Factors Example</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protecting-against-data-security-threats">Protecting Against Data Security Threats</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-measures">Software Measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-measures">Hardware measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-measures">Networking measures</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-measures">Policy measures</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Damien Murtagh
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+</p>
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

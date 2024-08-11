@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Data Security &#8212; QCAA Digital Solutions Text</title>
+    <title>Data Security - Management &#8212; QCAA Digital Solutions Text</title>
   
   
   
@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/logo_favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Explore Phase" href="../3_explore/1_introduction.html" />
+    <link rel="next" title="Data Security - Threats" href="5-4_data_security_threat.html" />
     <link rel="prev" title="Networking" href="5-2_networking.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -200,7 +200,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="5_data_transmission.html">Data Exchange</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="5-1_privacy.html">Privacy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="5-2_networking.html">Networking</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Security</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Data Security - Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5-4_data_security_threat.html">Data Security - Threats</a></li>
 </ul>
 </li>
 </ul>
@@ -352,6 +353,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Solutions</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../8_solutions/1_sql_exercises.html">SQL Exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../8_solutions/2_encryption.html">Encryption Exercises</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">End material</span></p>
 <ul class="nav bd-sidenav">
@@ -543,7 +545,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Data Security</h1>
+    <h1>Data Security - Management</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -553,138 +555,66 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-compression">Data Compression</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-data-compression-works">How Data Compression works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-data-compression-important">Why Data Compression important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-compression">Data Compression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-data-compression-works">How Data Compression works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-data-compression-important">Why Data Compression important</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryptions">Symmetric Encryptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciphers">Ciphers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-characteristics-and-security">Caesar Characteristics and Security</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Characteristics and Security</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-characteristics-and-security">Vigenère Characteristics and Security</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics and Security</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-hashing-works">How Hashing works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hashing-important">Why Hashing important</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threats-to-data-security">Threats to data security</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malicious-threats">Malicious Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#malware">Malware</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#malware-example">Malware Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing">Phishing</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing-example">Phishing Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-mitm-attacks">Man-in-the-Middle (MitM) Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-attack-example">Man-in-the-Middle Attack Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ddos-example">DDoS example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threats">Insider Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threat-example">Insider Threat Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injections">SQL Injections</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injection-example">SQL Injection Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-xss">Cross-Site Scripting (XSS)</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-example">Cross-Site Scripting Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threats-apts">Advanced Persistent Threats (APTs)</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threat-example">Advanced Persistent Threat Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits">Zero-Day Exploits</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits-example">Zero-Day Exploits Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attacks">Supply Chain Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attack-example">Supply Chain Attack Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryption">Symmetric Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryption-uses">Symmetric Encryption Uses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-ciphers">Block Ciphers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feistel-block-cipher">Feistel Block Cipher</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-encryption-standard-des">Data Encryption Standard (DES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-des-3des">Triple DES (3DES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-encryption-standard-aes">Advanced Encryption Standard (AES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blowfish">Blowfish</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#twofish">Twofish</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-malicious-threats">Non-malicious Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error">Human Error</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error-example">Human Error Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asymmetric-encryption">Asymmetric Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components-of-asymmetric-communication">Key Components of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-asymmetric-communication-works">How Asymmetric Communication Works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-asymmetric-communication">Advantages of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-asymmetric-communication">Disadvantages of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-asymmetric-communication">Applications of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-asymmetric-communication">Try Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsa">RSA</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failures">Hardware Failures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failure-example">Hardware Failure Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bugs">Software Bugs</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bug-example">Software Bug Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages">Power Outages</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages-example">Power Outages Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters">Natural Disasters</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters-example">Natural Disasters Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures">Network Failures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures-example">Network Failures Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues">Data Synchronization Issues</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues-example">Data Synchronization Issues Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups">Lack of Proper Backups</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups-example">Lack of Proper Backups Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors">Environmental Factors</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors-example">Environmental Factors Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protecting-against-data-security-threats">Protecting Against Data Security Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-measures">Software Measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-measures">Hardware measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-measures">Networking measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-measures">Policy measures</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-hashing-works">How Hashing works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hashing-important">Why Hashing important</a></li>
 </ul>
 </li>
 </ul>
@@ -698,29 +628,27 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="data-security">
-<h1>Data Security<a class="headerlink" href="#data-security" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="data-security-management">
+<h1>Data Security - Management<a class="headerlink" href="#data-security-management" title="Permalink to this heading">#</a></h1>
 <blockquote>
 <div><p>Data has never been more valuable. It is an increasingly important driver of growth in our modern economy. Whether it is data about individuals, businesses or government, data underpins how we communicate, conduct business, and receive services. At the same time it can be stolen, manipulated or used as a weapon by foreign adversaries and criminals <span id="id1">[<a class="reference internal" href="../bibliography.html#id38" title="Department of Home Affairs. Data security. 04 2023. URL: https://www.homeaffairs.gov.au/reports-and-publications/submissions-and-discussion-papers/data-security (visited on 2024-01-04).">of Home Affairs, 2023</a>]</span>.</p>
 </div></blockquote>
 <p>Data security is crucial because it safeguards sensitive information from unauthorized access, ensuring that personal, financial, and confidential data remains private and protected. In today’s digital age, where vast amounts of data are shared and stored online, the risk of data breaches and cyberattacks is significant. These breaches can result in identity theft, financial loss, reputational damage, and legal consequences.</p>
 <p>Data breachers far more common than most people believe. The Office of the Australian Information Commissioner, publishes regular <strong><a href="https://www.oaic.gov.au/privacy/notifiable-data-breaches/notifiable-data-breaches-publications" target="_blank">reports on breaches involving Australian organisations</strong></a>. Check the latest report to see the extent of data breaching occurring. Note that these are only the breaches that Australian Law requires organisations to report.</p>
 <p>Data security measures, including encryption, access controls, and regular security audits, help prevent such incidents and ensure that individuals and organizations can trust that their data is safe and confidential. It’s not only about protecting information but also about maintaining trust, compliance with regulations, and upholding the integrity of data in an increasingly interconnected world.</p>
-<section id="data-management">
-<h2>Data Management<a class="headerlink" href="#data-management" title="Permalink to this heading">#</a></h2>
 <p>The following techniques used to manage data effectively, ensuring it can be stored and transferred securely and efficiently.</p>
 <section id="data-compression">
-<h3>Data Compression<a class="headerlink" href="#data-compression" title="Permalink to this heading">#</a></h3>
+<h2>Data Compression<a class="headerlink" href="#data-compression" title="Permalink to this heading">#</a></h2>
 <p>Data compression is the process of reducing the size of a file or data set. This means the data takes up less space on storage devices and can be transmitted more quickly over networks.</p>
 <section id="how-data-compression-works">
-<h4>How Data Compression works<a class="headerlink" href="#how-data-compression-works" title="Permalink to this heading">#</a></h4>
+<h3>How Data Compression works<a class="headerlink" href="#how-data-compression-works" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Lossless Compression:</strong> This method reduces file size without losing any data. Think of it as packing your clothes tightly into a suitcase without leaving anything behind. When you unpack, everything is still there, just like it was before. Examples include ZIP files and PNG images.</p></li>
 <li><p><strong>Lossy Compression:</strong> This method reduces file size by removing some data that’s not crucial. It’s like packing your suitcase but deciding to leave behind some items you don’t really need. When you unpack, you still have most of your stuff, but some of the less important items are missing. Examples include MP3 audio files and JPEG images.</p></li>
 </ul>
 </section>
 <section id="why-data-compression-important">
-<h4>Why Data Compression important<a class="headerlink" href="#why-data-compression-important" title="Permalink to this heading">#</a></h4>
+<h3>Why Data Compression important<a class="headerlink" href="#why-data-compression-important" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Saves Storage Space:</strong> Smaller files mean you can store more data on your devices.</p></li>
 <li><p><strong>Faster Transfers:</strong> Smaller files can be sent over the internet or other networks more quickly.</p></li>
@@ -728,17 +656,17 @@ document.write(`
 </section>
 </section>
 <section id="encryption">
-<h3>Encryption<a class="headerlink" href="#encryption" title="Permalink to this heading">#</a></h3>
+<h2>Encryption<a class="headerlink" href="#encryption" title="Permalink to this heading">#</a></h2>
 <p>Encryption is the process of converting data into a coded format to prevent unauthorized access. It ensures that only authorized parties can read the information.</p>
 <section id="how-encryption-works">
-<h4>How Encryption works<a class="headerlink" href="#how-encryption-works" title="Permalink to this heading">#</a></h4>
+<h3>How Encryption works<a class="headerlink" href="#how-encryption-works" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Encryption:</strong> Imagine you write a message in English and then translate it into a secret code that only your friend knows how to read. Even if someone else gets hold of the coded message, they can’t understand it without the key to decode it.</p></li>
 <li><p><strong>Decryption:</strong> Your friend uses the key to translate the coded message back into English so they can read it.</p></li>
 </ul>
 </section>
 <section id="why-encryption-important">
-<h4>Why Encryption important<a class="headerlink" href="#why-encryption-important" title="Permalink to this heading">#</a></h4>
+<h3>Why Encryption important<a class="headerlink" href="#why-encryption-important" title="Permalink to this heading">#</a></h3>
 <p>Data encryption is necessary for several important reasons:</p>
 <ol class="arabic simple">
 <li><p><strong>Data Security</strong>: Encryption helps protect sensitive information from unauthorized access. It ensures that even if someone gains access to the data, they won’t be able to read or use it without the encryption key.</p></li>
@@ -751,21 +679,21 @@ document.write(`
 </ol>
 </section>
 <section id="types-of-encryption">
-<h4>Types of Encryption<a class="headerlink" href="#types-of-encryption" title="Permalink to this heading">#</a></h4>
+<h3>Types of Encryption<a class="headerlink" href="#types-of-encryption" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Symmetric Encryption:</strong> The same key is used for both encryption and decryption. It’s like having one key for a lock that both you and your friend have copies of.</p></li>
 <li><p><strong>Asymmetric Encryption:</strong> Uses two keys—a public key for encryption and a private key for decryption. It’s like having a lock with two keys: one for locking (encrypting) that everyone can use, and one for unlocking (decrypting) that only you have.</p></li>
 </ul>
 </section>
 </section>
-<section id="symmetric-encryptions">
-<h3>Symmetric Encryptions<a class="headerlink" href="#symmetric-encryptions" title="Permalink to this heading">#</a></h3>
+<section id="ciphers">
+<h2>Ciphers<a class="headerlink" href="#ciphers" title="Permalink to this heading">#</a></h2>
 <section id="caesar-cipher">
-<h4>Caesar cipher<a class="headerlink" href="#caesar-cipher" title="Permalink to this heading">#</a></h4>
+<h3>Caesar cipher<a class="headerlink" href="#caesar-cipher" title="Permalink to this heading">#</a></h3>
 <p>The Caesar cipher is one of the simplest and most well-known encryption techniques. It is a type of substitution cipher where each letter in the plaintext is shifted a fixed number of places down or up the alphabet. It is named after Julius Caesar, who reportedly used it to protect his private correspondence.</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/sMOZf4GN3oc?si=4T63pMsUZ5TGakaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <section id="how-the-caesar-cipher-works">
-<h5>How the Caesar Cipher Works<a class="headerlink" href="#how-the-caesar-cipher-works" title="Permalink to this heading">#</a></h5>
+<h4>How the Caesar Cipher Works<a class="headerlink" href="#how-the-caesar-cipher-works" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Choose a Shift Value:</strong> Decide on the number of positions each letter will be shifted. For example, with a shift of 3:</p>
 <ul class="simple">
@@ -788,7 +716,7 @@ document.write(`
 </ol>
 </section>
 <section id="caesar-example">
-<h5>Caesar Example<a class="headerlink" href="#caesar-example" title="Permalink to this heading">#</a></h5>
+<h4>Caesar Example<a class="headerlink" href="#caesar-example" title="Permalink to this heading">#</a></h4>
 <p><strong>Encryption Process:</strong></p>
 <ul class="simple">
 <li><p>Plaintext: “ATTACK AT DAWN”</p></li>
@@ -803,7 +731,7 @@ document.write(`
 </ul>
 </section>
 <section id="caesar-pseudocode">
-<h5>Caesar Pseudocode<a class="headerlink" href="#caesar-pseudocode" title="Permalink to this heading">#</a></h5>
+<h4>Caesar Pseudocode<a class="headerlink" href="#caesar-pseudocode" title="Permalink to this heading">#</a></h4>
 <p><strong>Encryption</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">encrypt_caesar</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
@@ -814,12 +742,11 @@ document.write(`
             <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
             <span class="n">position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
             <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">position</span> <span class="o">+</span> <span class="n">shift</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
         <span class="n">ELSE</span><span class="p">:</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">char</span>
 
     <span class="n">RETURN</span> <span class="n">result</span>
-
 </pre></div>
 </div>
 <p><strong>Decryption</strong></p>
@@ -832,27 +759,27 @@ document.write(`
             <span class="n">char</span> <span class="o">=</span> <span class="n">UPPERCASE</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
             <span class="n">position</span> <span class="o">=</span> <span class="n">POSITION</span><span class="p">(</span><span class="n">char</span> <span class="n">IN</span> <span class="n">alphabet</span><span class="p">)</span>
             <span class="n">new_position</span> <span class="o">=</span> <span class="p">(</span><span class="n">position</span> <span class="o">-</span> <span class="n">shift</span> <span class="o">+</span> <span class="mi">26</span><span class="p">)</span> <span class="n">MOD</span> <span class="mi">26</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">alphabet</span><span class="p">[</span><span class="n">new_position</span><span class="p">]</span>
         <span class="n">ELSE</span><span class="p">:</span>
-            <span class="n">result</span> <span class="o">+=</span> <span class="n">char</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">char</span>
 
     <span class="n">RETURN</span> <span class="n">result</span>
 </pre></div>
 </div>
 </section>
-<section id="characteristics-and-security">
-<h5>Characteristics and Security<a class="headerlink" href="#characteristics-and-security" title="Permalink to this heading">#</a></h5>
+<section id="caesar-characteristics-and-security">
+<h4>Caesar Characteristics and Security<a class="headerlink" href="#caesar-characteristics-and-security" title="Permalink to this heading">#</a></h4>
 <p><strong>Simplicity:</strong> The Caesar cipher is very easy to understand and implement, making it an excellent introductory example of encryption.</p>
 <p><strong>Weak Security:</strong> It is vulnerable to brute force attacks since there are only 25 possible shifts (not counting the shift of 0, which leaves the text unchanged). Frequency analysis can also easily break the cipher because the letter frequencies in the ciphertext match those in the plaintext.</p>
 <p><strong>Requires Agreed Upon Key:</strong> Like all Symmetric Encryptions, Caesar Cipher requires the sender and receiver to agree upon a key prior to the message being sent.</p>
 </section>
 </section>
 <section id="vigenere-cipher">
-<h4>Vigenère Cipher<a class="headerlink" href="#vigenere-cipher" title="Permalink to this heading">#</a></h4>
+<h3>Vigenère Cipher<a class="headerlink" href="#vigenere-cipher" title="Permalink to this heading">#</a></h3>
 <p>The Vigenère cipher is a method of encrypting alphabetic text by using a simple form of polyalphabetic substitution. It employs a keyword to determine the shift applied to each letter of the plaintext, making it more secure than the Caesar cipher.</p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RCkGauRMs2A?si=Cfp7WfU4D1PE50xJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <section id="how-the-vigenere-cipher-works">
-<h5>How the Vigenère Cipher Works<a class="headerlink" href="#how-the-vigenere-cipher-works" title="Permalink to this heading">#</a></h5>
+<h4>How the Vigenère Cipher Works<a class="headerlink" href="#how-the-vigenere-cipher-works" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Choose a Keyword:</strong> A keyword is selected, and each letter of the keyword is used to create a different Caesar cipher shift.</p>
 <ul class="simple">
@@ -869,7 +796,7 @@ document.write(`
 </ol>
 </section>
 <section id="vigenere-example">
-<h5>Vigenère Example<a class="headerlink" href="#vigenere-example" title="Permalink to this heading">#</a></h5>
+<h4>Vigenère Example<a class="headerlink" href="#vigenere-example" title="Permalink to this heading">#</a></h4>
 <p><strong>Encryption process</strong></p>
 <ul class="simple">
 <li><p>Plaintext: ATTACKATDAWN</p></li>
@@ -916,7 +843,7 @@ document.write(`
 </ul>
 </section>
 <section id="vigenere-pseudocode">
-<h5>Vigenère Pseudocode<a class="headerlink" href="#vigenere-pseudocode" title="Permalink to this heading">#</a></h5>
+<h4>Vigenère Pseudocode<a class="headerlink" href="#vigenere-pseudocode" title="Permalink to this heading">#</a></h4>
 <p><strong>Encryption</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FUNCTION</span> <span class="n">encrypt_vigenere</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
@@ -962,8 +889,8 @@ document.write(`
 </pre></div>
 </div>
 </section>
-<section id="id2">
-<h5>Characteristics and Security<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
+<section id="vigenere-characteristics-and-security">
+<h4>Vigenère Characteristics and Security<a class="headerlink" href="#vigenere-characteristics-and-security" title="Permalink to this heading">#</a></h4>
 <p><strong>Polyalphabetic Substitution</strong>: The Vigenère cipher uses multiple Caesar ciphers, which makes frequency analysis attacks much more difficult compared to simple substitution ciphers.</p>
 <p><strong>Simple to Implement</strong>: The method is straightforward to implement and understand.</p>
 <p><strong>Keyword Repetition</strong>: If the keyword is significantly shorter than the plaintext, patterns may emerge, making the cipher vulnerable to Kasiski examination and other statistical attacks.</p>
@@ -972,14 +899,15 @@ document.write(`
 </section>
 </section>
 <section id="gronsfeld-cipher">
-<h4>Gronsfeld Cipher<a class="headerlink" href="#gronsfeld-cipher" title="Permalink to this heading">#</a></h4>
+<h3>Gronsfeld Cipher<a class="headerlink" href="#gronsfeld-cipher" title="Permalink to this heading">#</a></h3>
 <p>The Gronsfeld cipher is a variant of the Vigenère cipher that uses a numeric key instead of a keyword to shift the letters of the plaintext. It shares many similarities with the Vigenère cipher but simplifies the key by restricting it to numeric digits, making it somewhat easier to use and remember.</p>
 </section>
 <section id="one-time-pad-encryption">
-<h4>One-time Pad Encryption<a class="headerlink" href="#one-time-pad-encryption" title="Permalink to this heading">#</a></h4>
+<h3>One-time Pad Encryption<a class="headerlink" href="#one-time-pad-encryption" title="Permalink to this heading">#</a></h3>
 <p>The one-time pad (OTP) encryption is a theoretically unbreakable encryption technique that involves a random key that is as long as the message being encrypted. It was first described by Frank Miller in 1882 and later formalized by Gilbert Vernam in 1917.</p>
+<p><img alt="one time pad" src="../../_images/one_time_pad.png" /></p>
 <section id="how-one-time-pad-encryption-works">
-<h5>How One-Time Pad Encryption Works<a class="headerlink" href="#how-one-time-pad-encryption-works" title="Permalink to this heading">#</a></h5>
+<h4>How One-Time Pad Encryption Works<a class="headerlink" href="#how-one-time-pad-encryption-works" title="Permalink to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p>Key Generation: Generate a truly random key that is the same length as the plaintext message. This key must be kept completely secret and used only once.</p></li>
 <li><p>Encryption:</p>
@@ -996,8 +924,8 @@ document.write(`
 </li>
 </ol>
 </section>
-<section id="id3">
-<h5>Characteristics and Security<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<section id="characteristics-and-security">
+<h4>Characteristics and Security<a class="headerlink" href="#characteristics-and-security" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Perfect Security:</strong> If the key is truly random, kept secret, and never reused, the one-time pad is theoretically unbreakable. This is because every possible plaintext of the same length as the ciphertext is equally likely.</p></li>
 <li><p><strong>No Patterns:</strong> Since the key is random and as long as the message, there are no patterns that an attacker can exploit.</p></li>
@@ -1007,353 +935,158 @@ document.write(`
 </section>
 </section>
 </section>
+<section id="symmetric-encryption">
+<h2>Symmetric Encryption<a class="headerlink" href="#symmetric-encryption" title="Permalink to this heading">#</a></h2>
+<p>Symmetric encryption is a type of encryption where only one key (a secret key) is used to both encrypt and decrypt electronic information. The entities communicating via symmetric encryption must exchange the key so that it can be used in the decryption process.</p>
+<p>By using symmetric encryption algorithms, data is converted to a form that cannot be understood by anyone who does not possess the secret key to decrypt it. Once the intended recipient who possesses the key has the message, the algorithm reverses its action so that the message is returned to its original and understandable form. The secret key that the sender and recipient both use could be a specific password/code or it can be random string of letters or numbers that have been generated by a secure random number generator.</p>
+<p>There are two types of symmetric encryption algorithms:</p>
+<ol class="arabic simple">
+<li><p>Block algorithms: Set lengths of bits are encrypted in blocks of electronic data with the use of a specific secret key. As the data is being encrypted, the system holds the data in its memory as it waits for complete blocks.</p></li>
+<li><p>Stream algorithms: Data is encrypted as it streams instead of being retained in the system’s memory.</p></li>
+</ol>
+<section id="symmetric-encryption-uses">
+<h3>Symmetric Encryption Uses<a class="headerlink" href="#symmetric-encryption-uses" title="Permalink to this heading">#</a></h3>
+<p>While symmetric encryption is an older method of encryption, it is faster and more efficient than asymmetric encryption. Symmetric cryptography is typically used for encrypting large amounts of data, e.g. for database encryption. In the case of a database, the secret key might only be available to the database itself to encrypt or decrypt.</p>
+<p>Some examples of where symmetric cryptography is used are:</p>
+<ul class="simple">
+<li><p>Payment applications, such as card transactions where personal identifying information needs to be protected to prevent identity theft or fraudulent charges</p></li>
+<li><p>Validations to confirm that the sender of a message is who they claim to be</p></li>
+<li><p>Random number generation or hashing</p></li>
+</ul>
+</section>
+<section id="block-ciphers">
+<h3>Block Ciphers<a class="headerlink" href="#block-ciphers" title="Permalink to this heading">#</a></h3>
+<p>A block cipher takes a block of plaintext bits and generates a block of ciphertext bits, generally of same size. The size of block is fixed in the given scheme. The choice of block size does not directly affect to the strength of encryption scheme. The strength of cipher depends up on the key length.</p>
+<section id="feistel-block-cipher">
+<h4>Feistel Block Cipher<a class="headerlink" href="#feistel-block-cipher" title="Permalink to this heading">#</a></h4>
+<p>A Feistel block cipher is not an encryption method in itself. It is a model or process that is used by many block ciphers to encode the plain text into a cipher text. A Feistel cipher requires a key and a set length portion of the plain text and occurs over a designated number of rounds.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FGhj3CGxl8I?si=PV9yQn8CPMTkwhJ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+<section id="data-encryption-standard-des">
+<h4>Data Encryption Standard (DES):<a class="headerlink" href="#data-encryption-standard-des" title="Permalink to this heading">#</a></h4>
+<p><strong>DES</strong> is a symmetric key algorithm developed in the 1970s by IBM and later adopted by the U.S. government as a standard. It uses a <strong>56-bit key</strong> to encrypt <strong>64-bit blocks</strong> of data. DES operates on data using <strong>16 rounds</strong> of Feistel network, which involves permutations, substitutions, and XOR operations.</p>
+<p>DES is now considered insecure for many applications due to its relatively short key length, which makes it vulnerable to brute-force attacks.</p>
+</section>
+<section id="triple-des-3des">
+<h4>Triple DES (3DES):<a class="headerlink" href="#triple-des-3des" title="Permalink to this heading">#</a></h4>
+<p><strong>Triple DES</strong> enhances the security of DES by applying the DES algorithm three times to each data block. It uses <strong>three 56-bit keys</strong>, effectively giving it a <strong>168-bit key length</strong>, though due to some weaknesses, its effective security is closer to 112 bits.</p>
+<p>Despite its increased security, 3DES is slower than other modern symmetric algorithms.</p>
+<p><img alt="3DES" src="../../_images/3DES.png" /></p>
+</section>
+<section id="advanced-encryption-standard-aes">
+<h4>Advanced Encryption Standard (AES):<a class="headerlink" href="#advanced-encryption-standard-aes" title="Permalink to this heading">#</a></h4>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/O4xNJsjtN6E?si=zBpv6D29654kyjDB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>AES is the current U.S. federal standard for encryption, replacing DES and 3DES. It supports key sizes of <strong>128</strong>, <strong>192</strong>, and <strong>256</strong> bits and operates on <strong>128-bit blocks</strong> of data. AES uses a substitution-permutation network with <strong>10, 12, or 14 rounds</strong> depending on the key size.</p>
+<p>AES is widely regarded as secure and is used globally in various applications.</p>
+</section>
+<section id="blowfish">
+<h4>Blowfish<a class="headerlink" href="#blowfish" title="Permalink to this heading">#</a></h4>
+<p>Blowfish is a symmetric key block cipher designed by Bruce Schneier in 1993. It has a variable key length from <strong>32</strong> bits to <strong>448 bits</strong>, making it highly flexible. Blowfish operates on <strong>64-bit blocks</strong> and is known for its speed and effectiveness in hardware applications. It uses a Feistel network with <strong>16 rounds</strong> of processing.</p>
+<p>While secure, Blowfish’s 64-bit block size is now considered a limitation for certain applications.</p>
+</section>
+<section id="twofish">
+<h4>Twofish<a class="headerlink" href="#twofish" title="Permalink to this heading">#</a></h4>
+<p>Twofish is a symmetric key block cipher, also designed by Bruce Schneier as a successor to Blowfish. It operates on <strong>128-bit blocks</strong> and supports key sizes up to <strong>256 bits</strong>. Twofish uses a Feistel network and is optimized for hardware and software performance.</p>
+<p>Twofish is known for its flexibility, speed, and security, making it a strong contender in the AES competition.</p>
+</section>
+</section>
+</section>
+<section id="asymmetric-encryption">
+<h2>Asymmetric Encryption<a class="headerlink" href="#asymmetric-encryption" title="Permalink to this heading">#</a></h2>
+<p>The biggest weakness of symmetric encryption is the need for key distribution. That is, there needs to be a secure way for all parties to agree upon the key that will be used for encryption and decryption. This is very effective, if you wish to encrypt data on your hard-drive, or in a database on your server. Unfortunately symmetric encryption is not practical when it comes to online communication, for this we need asymmetric encryption.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YEBfamv-_do?si=cdvcl_YkpOGGy3Co" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<p>Asymmetric communication refers to a method of communication in which the parties involved use different keys for encryption and decryption processes. This is a key feature of asymmetric encryption, also known as public-key cryptography.</p>
+<section id="key-components-of-asymmetric-communication">
+<h3>Key Components of Asymmetric Communication<a class="headerlink" href="#key-components-of-asymmetric-communication" title="Permalink to this heading">#</a></h3>
+<p>The <strong>public key</strong> is openly distributed and used to encrypt data. Anyone can use this key to encrypt a message intended for a specific recipient. For example, if Alice wants to send a secure message to Bob, she would use Bob’s public key to encrypt the message.</p>
+<p>The <strong>private key</strong> is kept secret and is used to decrypt data that has been encrypted with the corresponding public key. Continuing the example, Bob would use his private key to decrypt the message sent by Alice.</p>
+</section>
+<section id="how-asymmetric-communication-works">
+<h3>How Asymmetric Communication Works<a class="headerlink" href="#how-asymmetric-communication-works" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>The sender (Alice) and the receiver (Bob) agree and communicate the <strong>public parameters</strong> (prime modulus and a generator).</p></li>
+<li><p>Alice then chooses a <strong>private key</strong> and calculates a <strong>public key</strong>, which she share publicly with Bob.</p></li>
+<li><p>Bob selects his own <strong>private key</strong>, calculates a <strong>public key</strong>, and shares it publicly with Alice.</p></li>
+<li><p>Alice takes Bob’s <strong>public key</strong> and raises it to the power of her <strong>private key</strong> to compute a <strong>shared key</strong>.</p></li>
+<li><p>Bob does the same with Alice’s <strong>public key</strong> and his <strong>private key</strong> to also establish the <strong>shared key</strong>.</p></li>
+<li><p>Alice and Bob now have a <strong>shared key</strong> they can use for symmetrical encryption.</p></li>
+<li><p>With knowing Alice’s or Bob’s <strong>private keys</strong> Eve cannot derive the <strong>shared key</strong>.</p></li>
+</ol>
+</section>
+<section id="advantages-of-asymmetric-communication">
+<h3>Advantages of Asymmetric Communication<a class="headerlink" href="#advantages-of-asymmetric-communication" title="Permalink to this heading">#</a></h3>
+<p>Asymmetric communication <strong>enhances security</strong> because the private key is never shared and remains secure with the owner. Even if the public key is widely distributed, only the intended recipient can decrypt the message.</p>
+<p>Asymmetric encryption also <strong>simplifies key distribution</strong>. Unlike symmetric encryption, where the same key must be securely shared between parties, the public key can be freely distributed without compromising security.</p>
+</section>
+<section id="disadvantages-of-asymmetric-communication">
+<h3>Disadvantages of Asymmetric Communication<a class="headerlink" href="#disadvantages-of-asymmetric-communication" title="Permalink to this heading">#</a></h3>
+<p>Asymmetric encryption algorithms are generally <strong>slower</strong> than symmetric algorithms, making them less suitable for encrypting large amounts of data directly.</p>
+<p>The process of managing public and private keys and ensuring their integrity also adds <strong>complexity</strong> to the system.</p>
+</section>
+<section id="applications-of-asymmetric-communication">
+<h3>Applications of Asymmetric Communication<a class="headerlink" href="#applications-of-asymmetric-communication" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Email encryption services</strong> often use asymmetric encryption to ensure that only the intended recipient can read the email.</p></li>
+<li><p><strong>Secure websites</strong> use SSL/TLS protocols, which rely on asymmetric encryption to establish secure connections between a user’s browser and the web server.</p></li>
+<li><p><strong>Digital Signatures</strong> used in software distribution, digital contracts, and other scenarios where verifying the sender’s identity and ensuring the message’s integrity is crucial.</p></li>
+</ul>
+</section>
+<section id="try-asymmetric-communication">
+<h3>Try Asymmetric Communication<a class="headerlink" href="#try-asymmetric-communication" title="Permalink to this heading">#</a></h3>
+<p>Work in threes and take the roles of Alice, Bob and Eve.</p>
+<ol class="arabic simple">
+<li><p>Alice and Bob agree and publicly share a prime modulus</p></li>
+<li><p>Alice and Bob agree and publicly share a generator</p></li>
+<li><p>Alice and Bob both choose a private key</p></li>
+<li><p>Exchange of public keys</p>
+<ul class="simple">
+<li><p>Alice and bob perform the following calculation and share the results publically:</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">public_key</span> <span class="o">=</span> <span class="n">generator</span> <span class="o">**</span> <span class="n">private_key</span> <span class="o">%</span> <span class="n">prime_modulus</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Alice and Bob now work out the shared secret key</p>
+<ul class="simple">
+<li><p>Use the following calculations:</p></li>
+</ul>
+</li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># for Alice</span>
+<span class="n">shared_key</span> <span class="o">=</span> <span class="n">bob_pub_key</span> <span class="o">**</span> <span class="n">alice_private_key</span> <span class="o">%</span> <span class="n">prime_modulus</span>
+
+<span class="c1"># for Bob</span>
+<span class="n">shared_key</span> <span class="o">=</span> <span class="n">alice_pub_key</span> <span class="o">**</span> <span class="n">bob_private_key</span> <span class="o">%</span> <span class="n">prime_modulus</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="6">
+<li><p>Alice and Bob now use the shared key to send messages using Caesar cipher to each other, and Eve attempts to work out the message.</p></li>
+</ol>
+</section>
+<section id="rsa">
+<h3>RSA<a class="headerlink" href="#rsa" title="Permalink to this heading">#</a></h3>
+<p>RSA is one of the most widely used asymmetric encryption algorithms, developed by Ron Rivest, Adi Shamir, and Leonard Adleman in 1977. It relies on the mathematical difficulty of factoring large prime numbers.</p>
+<p>RSA uses two keys a public key for encryption and a private key for decryption. Key lengths typically range from <strong>2048 to 4096 bits</strong>, providing strong security. It is commonly used in secure data transmission, digital signatures, and key exchange protocols.</p>
+<p>RSA is computationally intensive and slower compared to symmetric algorithms, making it less suitable for encrypting large amounts of data directly.</p>
+</section>
+</section>
 <section id="hashing">
-<h3>Hashing<a class="headerlink" href="#hashing" title="Permalink to this heading">#</a></h3>
+<h2>Hashing<a class="headerlink" href="#hashing" title="Permalink to this heading">#</a></h2>
 <p>Hashing is the process of converting data into a fixed-size string of characters, which typically looks like a random sequence of letters and numbers. This is done using a specific algorithm.</p>
 <section id="how-hashing-works">
-<h4>How Hashing works<a class="headerlink" href="#how-hashing-works" title="Permalink to this heading">#</a></h4>
+<h3>How Hashing works<a class="headerlink" href="#how-hashing-works" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Think of hashing as creating a unique fingerprint for a set of data. Just like no two people have the same fingerprint, no two sets of data will have the same hash (in theory).</p></li>
 <li><p>Hash functions take an input (or ‘message’) and return a fixed-size string of bytes. The output is typically a “digest” that represents the input data.</p></li>
 </ul>
 </section>
 <section id="why-hashing-important">
-<h4>Why Hashing important<a class="headerlink" href="#why-hashing-important" title="Permalink to this heading">#</a></h4>
+<h3>Why Hashing important<a class="headerlink" href="#why-hashing-important" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Data Integrity:</strong> Hashes are used to ensure data hasn’t been altered. For example, when you download a file, a hash can be created for that file. After downloading, you can check the hash to make sure the file wasn’t corrupted or tampered with during transfer.</p></li>
 <li><p><strong>Password Storage:</strong> Instead of storing actual passwords, systems store hashes of passwords. When you log in, your password is hashed and compared to the stored hash. This way, even if someone accesses the password database, they can’t easily recover the actual passwords.</p></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="threats-to-data-security">
-<h2>Threats to data security<a class="headerlink" href="#threats-to-data-security" title="Permalink to this heading">#</a></h2>
-<section id="malicious-threats">
-<h3>Malicious Threats<a class="headerlink" href="#malicious-threats" title="Permalink to this heading">#</a></h3>
-<p>Malicious data security threats are intentional acts by attackers designed to compromise the confidentiality, integrity, or availability of data. There are numerous malicious threats to data security that organizations and individuals need to be aware of. Here are some of the most common threats:</p>
-<section id="malware">
-<h4>Malware<a class="headerlink" href="#malware" title="Permalink to this heading">#</a></h4>
-<p>Malware is malicious software designed to disrupt, damage, or gain unauthorized access to computer systems. This includes:</p>
-<ul class="simple">
-<li><p><strong>Viruses</strong></p>
-<ul>
-<li><p>designed to replicate themselves and spread from one computer to another</p></li>
-<li><p>often disrupting operations, corrupting or deleting data, and potentially causing significant damage to systems and networks</p></li>
-<li><p>spread by attaching itself to executable files or documents</p></li>
-</ul>
-</li>
-<li><p><strong>Worms</strong></p>
-<ul>
-<li><p>self-replicating malware</p></li>
-<li><p>spreads autonomously across networks, exploiting vulnerabilities without needing to attach itself to an existing program</p></li>
-<li><p>causes harm by consuming bandwidth, overloading systems, or delivering additional payloads such as ransomware.</p></li>
-</ul>
-</li>
-<li><p><strong>Trojans</strong></p>
-<ul>
-<li><p>disguises itself as a legitimate or benign application to deceive users into installing it</p></li>
-<li><p>allows attackers to gain unauthorized access to the user’s system to steal data, create backdoors, or perform other harmful actions once it is executed.</p></li>
-</ul>
-</li>
-<li><p><strong>Ransomware</strong></p>
-<ul>
-<li><p>designed to block access to a computer system or data</p></li>
-<li><p>typically encrypts files until a ransom is paid to the attacker to restore access</p></li>
-<li><p>often spreads through phishing emails, malicious downloads, or exploit kits</p></li>
-<li><p>can cause significant disruption to individuals and organizations by locking them out of their own data or systems</p></li>
-</ul>
-</li>
-<li><p><strong>Spyware</strong></p>
-<ul>
-<li><p>designed to secretly monitor and collect information about a user’s activities without their knowledge or consent</p></li>
-<li><p>data can include browsing habits, keystrokes, login credentials, and other sensitive information</p></li>
-<li><p>data is sent to the attacker for malicious purposes such as identity theft, financial fraud, or unauthorized access to systems and accounts.</p></li>
-</ul>
-</li>
-<li><p><strong>Adware</strong></p>
-<ul>
-<li><p>automatically displays or downloads advertising content, such as banners or pop-ups, on a user’s computer or mobile device, often without their consent or knowledge.</p></li>
-<li><p>while not always malicious, it can invade privacy by tracking user behaviour and gathering personal information for targeted advertising, and in some cases, it can serve as a conduit for more harmful malware.</p></li>
-</ul>
-</li>
-</ul>
-<section id="malware-example">
-<h5>Malware Example<a class="headerlink" href="#malware-example" title="Permalink to this heading">#</a></h5>
-<p>One of the most infamous malware attacks is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">WannaCry ransomware attack</a></strong>, which occurred in May 2017. WannaCry exploited a vulnerability in Microsoft Windows, known as EternalBlue, to spread rapidly across networks worldwide.</p>
-<p>The ransomware encrypted users’ files and demanded a ransom payment in Bitcoin to decrypt the data. WannaCry affected hundreds of thousands of computers in over 150 countries, impacting critical sectors such as healthcare, finance, and telecommunications.</p>
-<p>The National Health Service (NHS) in the United Kingdom was particularly hard hit, leading to the cancellation of appointments and surgeries. The attack highlighted the importance of timely software updates and robust cybersecurity measures to protect against such vulnerabilities​.</p>
-</section>
-</section>
-<section id="phishing">
-<h4>Phishing<a class="headerlink" href="#phishing" title="Permalink to this heading">#</a></h4>
-<p>Phishing is a technique where attackers attempt to obtain sensitive information such as usernames, passwords, and credit card details by masquerading as a trustworthy entity in electronic communications.</p>
-<section id="phishing-example">
-<h5>Phishing Example<a class="headerlink" href="#phishing-example" title="Permalink to this heading">#</a></h5>
-<p>A notable example of a phishing attack is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Podesta_emails#:~:text=In%20March%202016%2C%20the%20personal,work%2Drelated%2C%20were%20hacked.">2016 attack on John Podesta</a></strong>, chairman of Hillary Clinton’s presidential campaign.</p>
-<p>Hackers sent a phishing email disguised as a security alert from Google, claiming that Podesta needed to change his password due to suspicious activity. The email contained a link to a fake login page that closely resembled the genuine Google login page. Podesta’s aide, believing the email to be legitimate, forwarded it to the campaign’s IT staff, who mistakenly identified the email as genuine and advised Podesta to change his password using the provided link. As a result, Podesta entered his credentials on the fake page, allowing hackers to gain access to his email account.</p>
-<p>This breach led to the exposure of thousands of emails, which were subsequently published by WikiLeaks, causing significant political and reputational damage during the 2016 U.S. presidential election.</p>
-</section>
-</section>
-<section id="man-in-the-middle-mitm-attacks">
-<h4>Man-in-the-Middle (MitM) Attacks<a class="headerlink" href="#man-in-the-middle-mitm-attacks" title="Permalink to this heading">#</a></h4>
-<p>MitM Attacks occurs when attackers intercept communication between two parties to steal or manipulate data. Common in unsecured Wi-Fi networks.</p>
-<section id="man-in-the-middle-attack-example">
-<h5>Man-in-the-Middle Attack Example<a class="headerlink" href="#man-in-the-middle-attack-example" title="Permalink to this heading">#</a></h5>
-<p>In 2015, Lenovo was found to have pre-installed a software called <a class="reference external" href="https://en.wikipedia.org/wiki/Superfish">Superfish</a> on some of its laptops.</p>
-<p>Superfish was an adware program that intercepted users’ web traffic to inject advertisements. It did this by installing its own self-signed root certificate authority, allowing it to intercept and decrypt HTTPS traffic between the user’s browser and websites, essentially performing a Man-in-the-Middle attack.</p>
-<p>This compromised the security of encrypted connections, making users vulnerable to further attacks and data theft by malicious entities exploiting the same root certificate.</p>
-</section>
-</section>
-<section id="denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">
-<h4>Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks<a class="headerlink" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks" title="Permalink to this heading">#</a></h4>
-<p>DoS and DDos are attacks aimed at making a network service unavailable to users by overwhelming it with a flood of illegitimate requests.</p>
-<section id="ddos-example">
-<h5>DDoS example<a class="headerlink" href="#ddos-example" title="Permalink to this heading">#</a></h5>
-<p>A notable example of a Distributed Denial of Service (DDoS) attack is the <a class="reference external" href="https://en.wikipedia.org/wiki/DDoS_attacks_on_Dyn">October 2016 attack on Dyn</a>, a company that manages DNS (Domain Name System) services.</p>
-<p>This attack involved a massive <a class="reference external" href="https://en.wikipedia.org/wiki/Botnet">botnet</a> called Mirai, which harnessed the power of numerous compromised IoT (Internet of Things) devices, including cameras and DVRs, to flood Dyn’s servers with traffic. The overwhelming volume of traffic disrupted Dyn’s DNS services, leading to widespread outages for major websites and online services such as Twitter, Reddit, Netflix, and Airbnb.</p>
-<p>The attack highlighted the vulnerabilities of IoT devices and the significant impact DDoS attacks can have on internet infrastructure​</p>
-</section>
-</section>
-<section id="insider-threats">
-<h4>Insider Threats<a class="headerlink" href="#insider-threats" title="Permalink to this heading">#</a></h4>
-<p>Insider threats are security risks originating from within the organization, often involving employees or contractors who have access to sensitive information.</p>
-<section id="insider-threat-example">
-<h5>Insider Threat Example<a class="headerlink" href="#insider-threat-example" title="Permalink to this heading">#</a></h5>
-<p>One of the most infamous examples of an insider threat is the case of <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Edward_Snowden">Edward Snowden</a></strong>.</p>
-<p>In 2013, Snowden, a former contractor for the National Security Agency (NSA), leaked classified documents to journalists, revealing extensive global surveillance programs operated by the NSA and its international partners. Snowden’s disclosures exposed the scale and scope of government surveillance on citizens and sparked a global debate about privacy and security.</p>
-<p>His actions had profound implications for national security and privacy, leading to significant legal and political repercussions​.</p>
-</section>
-</section>
-<section id="sql-injections">
-<h4>SQL Injections<a class="headerlink" href="#sql-injections" title="Permalink to this heading">#</a></h4>
-<p>SQL Injections are a type of attack where malicious SQL statements are inserted into an entry field for execution, allowing attackers to access or manipulate the database.</p>
-<section id="sql-injection-example">
-<h5>SQL Injection Example<a class="headerlink" href="#sql-injection-example" title="Permalink to this heading">#</a></h5>
-<p>A famous example of an SQL injection attack is the 2008 breach of <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Heartland_Payment_Systems">Heartland Payment Systems</a></strong>.</p>
-<p>Heartland, one of the largest payment processing companies in the United States, suffered a massive data breach due to an SQL injection vulnerability. Attackers exploited this vulnerability to install malware on Heartland’s network, allowing them to capture and exfiltrate over 130 million credit card numbers.</p>
-<p>This breach led to significant financial losses and legal repercussions for the company and highlighted the critical importance of securing web applications against SQL injection attacks.</p>
-</section>
-</section>
-<section id="cross-site-scripting-xss">
-<h4>Cross-Site Scripting (XSS)<a class="headerlink" href="#cross-site-scripting-xss" title="Permalink to this heading">#</a></h4>
-<p>XSS is an attack where malicious scripts are injected into otherwise benign and trusted websites, affecting users who visit the site.</p>
-<section id="cross-site-scripting-example">
-<h5>Cross-Site Scripting Example<a class="headerlink" href="#cross-site-scripting-example" title="Permalink to this heading">#</a></h5>
-<p>One of the most notable examples of a Cross-Site Scripting (XSS) attack occurred on MySpace in 2005, known as the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/Samy_(computer_worm)">“Samy worm” attack</a></strong>.</p>
-<p>A user named Samy Kamkar created a worm that exploited an XSS vulnerability in MySpace’s site. The worm embedded a script in Samy’s profile page that, when visited by other users, would automatically add Samy to their friend list and display the phrase “but most of all, Samy is my hero” on their profile. Moreover, the script replicated itself to their profiles, leading to rapid and widespread propagation. Within 20 hours, over one million MySpace users were affected, making it one of the fastest spreading XSS worms in history.</p>
-<p>This incident highlighted the severe impact of XSS vulnerabilities and the importance of input validation and sanitization.</p>
-</section>
-</section>
-<section id="advanced-persistent-threats-apts">
-<h4>Advanced Persistent Threats (APTs)<a class="headerlink" href="#advanced-persistent-threats-apts" title="Permalink to this heading">#</a></h4>
-<p>APTs are long-term targeted attacks where an intruder gains access to a network and remains undetected for an extended period to steal data.</p>
-<section id="advanced-persistent-threat-example">
-<h5>Advanced Persistent Threat Example<a class="headerlink" href="#advanced-persistent-threat-example" title="Permalink to this heading">#</a></h5>
-<p>One of the most famous examples of an Advanced Persistent Threat (APT) is the <a class="reference external" href="https://en.wikipedia.org/wiki/Stuxnet">Stuxnet attack</a>, discovered in 2010.</p>
-<p>Stuxnet is a sophisticated malware believed to have been developed jointly by the United States and Israel to sabotage Iran’s nuclear program. The malware targeted Siemens PLCs (Programmable Logic Controllers) used in Iran’s Natanz uranium enrichment facility. It exploited multiple zero-day vulnerabilities and was capable of reprogramming the PLCs to cause the centrifuges to spin out of control while reporting normal operation to monitoring systems, effectively damaging the equipment and setting back Iran’s nuclear efforts.</p>
-<p>This attack highlighted the potential of cyber warfare and the risks posed by APTs to critical infrastructure.</p>
-</section>
-</section>
-<section id="zero-day-exploits">
-<h4>Zero-Day Exploits<a class="headerlink" href="#zero-day-exploits" title="Permalink to this heading">#</a></h4>
-<p>Zero-day Exploits are attacks that exploit previously unknown vulnerabilities in software before developers have a chance to issue patches.</p>
-<section id="zero-day-exploits-example">
-<h5>Zero-Day Exploits Example<a class="headerlink" href="#zero-day-exploits-example" title="Permalink to this heading">#</a></h5>
-<p>Both the Stuxnet worm and the WannaCry ransomware used zero-day exploits.</p>
-<p>WannaCry used the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/EternalBlue">EternalBlue</a></strong> to exploit a flaw in the SMBv1 (Server Message Block) protocol, allowing the malware to execute arbitrary code on the target machine without requiring user interaction. The exploit took advantage of the way SMB handled specially crafted packets, causing the system to execute the attacker’s code.</p>
-<p>Stuxnet used the following exploits:</p>
-<ul class="simple">
-<li><p><strong>LNK Vulnerability (CVE-2010-2568)</strong>: Stuxnet exploited a vulnerability in how Windows processes shortcut files (.LNK). Simply viewing an infected USB drive in Windows Explorer would trigger the execution of the malware.</p></li>
-<li><p><strong>Windows Print Spooler Vulnerability (CVE-2010-2729)</strong>: This vulnerability allowed remote code execution through the Windows Print Spooler service, enabling the malware to spread across networks.</p></li>
-<li><p><strong>Windows Task Scheduler Vulnerability (CVE-2010-3888)</strong>: Stuxnet exploited a vulnerability in the Windows Task Scheduler to elevate privileges and gain administrative rights on infected systems.</p></li>
-<li><p><strong>MS08-067 (CVE-2008-4250)</strong>: Although not a zero-day at the time of the Stuxnet attack, this older vulnerability was used to propagate across networked systems by exploiting a flaw in the Windows Server Service.</p></li>
-<li><p><strong>Win32k.sys Vulnerability (CVE-2010-2743)</strong>: This vulnerability in the Windows kernel allowed Stuxnet to execute arbitrary code with kernel-mode privileges, providing extensive control over the infected system.</p></li>
-</ul>
-</section>
-</section>
-<section id="supply-chain-attacks">
-<h4>Supply Chain Attacks<a class="headerlink" href="#supply-chain-attacks" title="Permalink to this heading">#</a></h4>
-<p>Supply chain attacks are a type of malicious data security threat where attackers compromise an organization by targeting its less secure elements in the supply network, such as software vendors, third-party services, or hardware suppliers, to infiltrate and harm the primary target</p>
-<section id="supply-chain-attack-example">
-<h5>Supply Chain Attack Example<a class="headerlink" href="#supply-chain-attack-example" title="Permalink to this heading">#</a></h5>
-<p>One of the most notorious examples of a supply chain attack is the <strong><a class="reference external" href="https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach">2020 SolarWinds hack</a></strong>.</p>
-<p>In this attack, cybercriminals infiltrated the IT management company SolarWinds and inserted malicious code into their Orion software updates, which were then distributed to SolarWinds’ customers. This compromised update created a backdoor into the systems of approximately 18,000 organizations, including numerous U.S. government agencies and Fortune 500 companies. The attackers, believed to be associated with the Russian state-sponsored group APT29 (also known as Cozy Bear), used this access to conduct extensive espionage, gathering sensitive information from high-profile targets.</p>
-<p>This incident highlighted the vulnerabilities in software supply chains and the extensive impact such breaches can have on national security and corporate infrastructure</p>
-</section>
-</section>
-</section>
-<section id="non-malicious-threats">
-<h3>Non-malicious Threats<a class="headerlink" href="#non-malicious-threats" title="Permalink to this heading">#</a></h3>
-<p>Non-malicious threats to data security are risks that arise from unintentional actions, accidents, or natural events, rather than deliberate attacks. Here are some common non-malicious threats:</p>
-<section id="human-error">
-<h4>Human Error<a class="headerlink" href="#human-error" title="Permalink to this heading">#</a></h4>
-<p>Human error includes mistakes made by employees or users, such as accidentally deleting data, misconfiguring systems, or sending sensitive information to the wrong recipient.</p>
-<section id="human-error-example">
-<h5>Human Error Example<a class="headerlink" href="#human-error-example" title="Permalink to this heading">#</a></h5>
-<p>A famous example of a data security risk caused by human error is the <a class="reference external" href="https://en.wikipedia.org/wiki/2017_Equifax_data_breach#:~:text=Private%20records%20of%20147.9%20million,the%20public%20until%20September%202017.">2017 Equifax data breach</a>.</p>
-<p>In this incident, sensitive personal information of approximately 147 million people, including names, social security numbers, birth dates, addresses, and in some cases, driver’s license numbers and credit card information, was exposed. The breach was primarily attributed to the failure of Equifax to apply a critical security patch for a known vulnerability in the Apache Struts web application framework.</p>
-<p>Despite being alerted to the vulnerability and the availability of a patch two months prior to the breach, Equifax’s IT staff failed to update their systems, allowing attackers to exploit the flaw and gain access to sensitive data.</p>
-</section>
-</section>
-<section id="hardware-failures">
-<h4>Hardware Failures<a class="headerlink" href="#hardware-failures" title="Permalink to this heading">#</a></h4>
-<p>Hardware Failures refer to physical malfunctions of storage devices, servers, or other critical hardware components that can lead to data loss or downtime.</p>
-<section id="hardware-failure-example">
-<h5>Hardware Failure Example<a class="headerlink" href="#hardware-failure-example" title="Permalink to this heading">#</a></h5>
-<p>A significant example of hardware failure resulting in data loss is the <strong><a class="reference external" href="https://money.cnn.com/2011/04/21/technology/amazon_server_outage/index.htm">2011 outage experienced by the cloud service provider Amazon Web Services (AWS)</a></strong>.</p>
-<p>In April 2011, a failure in AWS’s Elastic Block Store (EBS) caused a cascading effect that led to extended downtime and data loss for numerous websites and services that relied on AWS. The incident began with a network configuration error during a routine maintenance operation, which resulted in a large number of EBS nodes becoming unreachable. As AWS engineers attempted to fix the problem, they inadvertently caused further issues that led to data corruption and loss.</p>
-<p>Many businesses experienced prolonged outages, and some permanently lost data due to the disruption.</p>
-</section>
-</section>
-<section id="software-bugs">
-<h4>Software Bugs<a class="headerlink" href="#software-bugs" title="Permalink to this heading">#</a></h4>
-<p>Flaws or vulnerabilities in software that can cause data corruption, loss, or unintended exposure of sensitive information.</p>
-<section id="software-bug-example">
-<h5>Software Bug Example<a class="headerlink" href="#software-bug-example" title="Permalink to this heading">#</a></h5>
-<p>In July 2023, a <strong><a class="reference external" href="https://www.wired.com/story/crowdstrike-outage-update-windows/">software update for the CrowdStrike Falcon sensor resulted in a widespread issue</a></strong>.</p>
-<p>The issue caused Blue Screen of Death (BSOD) errors on Windows systems, leading to significant IT disruptions. The flawed update caused system crashes and data loss across thousands of devices by corrupting system files and interrupting critical operations. This incident is attributed to a logic error in the sensor’s configuration file.</p>
-<p>This exemplifies how software bugs can lead to severe data loss and operational downtime, highlighting the necessity for rigorous testing and robust incident response protocols to mitigate such risks.</p>
-</section>
-</section>
-<section id="power-outages">
-<h4>Power Outages<a class="headerlink" href="#power-outages" title="Permalink to this heading">#</a></h4>
-<p>Sudden loss of power can disrupt operations, cause data corruption, and affect the availability of systems and services.</p>
-<section id="power-outages-example">
-<h5>Power Outages Example<a class="headerlink" href="#power-outages-example" title="Permalink to this heading">#</a></h5>
-<p>A notable example of data security being placed at risk due to power outages occurred in 2013 at the <strong><a class="reference external" href="https://www.bbc.com/news/technology-24443266">National Security Agency’s (NSA) massive data centre in Bluffdale</a></strong>, Utah.</p>
-<p>The facility experienced a series of power outages caused by electrical surges. These outages damaged critical infrastructure, including computers and cooling systems, leading to concerns over potential data loss and system reliability. The issues were attributed to electrical surges during equipment testing and installation phases, which caused significant delays in the facility’s operational readiness and raised questions about the robustness of the NSA’s data security measures during infrastructure failures.</p>
-</section>
-</section>
-<section id="natural-disasters">
-<h4>Natural Disasters<a class="headerlink" href="#natural-disasters" title="Permalink to this heading">#</a></h4>
-<p>Events such as floods, earthquakes, hurricanes, and fires that can physically damage data centres and IT infrastructure, leading to data loss or prolonged downtime.</p>
-<section id="natural-disasters-example">
-<h5>Natural Disasters Example<a class="headerlink" href="#natural-disasters-example" title="Permalink to this heading">#</a></h5>
-<p>A well-known example of data security being jeopardized due to natural disasters occurred during <strong><a class="reference external" href="https://abcnews.go.com/Technology/hurricane-sandy-takes-york-city-data-center-gawker/story?id=17601425">Hurricane Sandy in 2012</a></strong>.</p>
-<p>The hurricane caused extensive power outages across the north-eastern United States, including in New York City. This led to significant disruptions at data centres, including those managed by Datagram, which hosted websites like Gawker, BuzzFeed, and the Huffington Post. The power outages caused by the hurricane resulted in a loss of connectivity and server downtime, highlighting vulnerabilities in data centre infrastructure.</p>
-<p>Despite having backup generators, Datagram’s fuel pumps were located in a basement that flooded, rendering the backup power systems ineffective and resulting in prolonged outages and potential data loss risks.</p>
-</section>
-</section>
-<section id="network-failures">
-<h4>Network Failures<a class="headerlink" href="#network-failures" title="Permalink to this heading">#</a></h4>
-<p>Issues with network infrastructure, such as router failures or connectivity problems, that can disrupt access to data and services.</p>
-<section id="network-failures-example">
-<h5>Network Failures Example<a class="headerlink" href="#network-failures-example" title="Permalink to this heading">#</a></h5>
-<p>A significant example of network failures risking data security is the <strong><a class="reference external" href="https://www.theguardian.com/money/2012/jun/29/natwest-fiasco-what-happens-now">2008 outage at RBS (Royal Bank of Scotland), NatWest, and Ulster Bank</a></strong>.</p>
-<p>This incident occurred when a routine software update to the bank’s CA-7 batch processing system failed. The update corrupted the scheduling software, leading to a massive backlog of unprocessed transactions. As a result, millions of customers were unable to access their accounts, perform transactions, or receive salaries for several days.</p>
-<p>The network failure exposed vulnerabilities in the bank’s IT infrastructure and highlighted the critical importance of robust network management and backup systems in safeguarding financial data and ensuring continuity of banking operations.</p>
-</section>
-</section>
-<section id="data-synchronization-issues">
-<h4>Data Synchronization Issues<a class="headerlink" href="#data-synchronization-issues" title="Permalink to this heading">#</a></h4>
-<p>Problems with keeping data consistent across different systems or storage locations, which can lead to data discrepancies or loss.</p>
-<section id="data-synchronization-issues-example">
-<h5>Data Synchronization Issues Example<a class="headerlink" href="#data-synchronization-issues-example" title="Permalink to this heading">#</a></h5>
-<p>Another example of data synchronization issues risking data security is the <strong><a class="reference external" href="https://www.cpomagazine.com/cyber-security/second-data-breach-in-2020-for-t-mobile-exposed-customer-and-call-related-information-of-200000-subscribers/">T-Mobile data breach in 2020</a></strong>.</p>
-<p>The breach was attributed to issues in synchronizing customer data across different databases and systems. Attackers exploited these synchronization gaps, which resulted from complex data migration and integration processes within T-Mobile’s infrastructure. This allowed unauthorized access to sensitive information, including personal data of over 200,000 customers.</p>
-<p>The incident exposed vulnerabilities in how data was managed and synchronized, highlighting the risks associated with inconsistent data replication and integration in large-scale IT environments.</p>
-</section>
-</section>
-<section id="lack-of-proper-backups">
-<h4>Lack of Proper Backups<a class="headerlink" href="#lack-of-proper-backups" title="Permalink to this heading">#</a></h4>
-<p>Failure to regularly back up data or improper backup procedures can result in significant data loss in the event of a failure or disaster.</p>
-<section id="lack-of-proper-backups-example">
-<h5>Lack of Proper Backups Example<a class="headerlink" href="#lack-of-proper-backups-example" title="Permalink to this heading">#</a></h5>
-<p>A famous example of data loss due to a lack of proper backups occurred in <a class="reference external" href="https://www.breaches.cloud/incidents/codespaces/">2014 with the cloud storage provider, Code Spaces</a>.</p>
-<p>In 2014, Code Spaces suffered a devastating attack when an attacker gained access to their Amazon Web Services (AWS) control panel. The attacker demanded a ransom, and when Code Spaces attempted to regain control, the attacker systematically deleted data and backups, effectively wiping out their entire infrastructure.</p>
-<p>Code Spaces had not maintained offsite backups or a robust backup strategy, leading to the irreversible loss of customer data. The severity of the attack and the lack of adequate backups forced Code Spaces to shut down permanently.</p>
-</section>
-</section>
-<section id="environmental-factors">
-<h4>Environmental Factors<a class="headerlink" href="#environmental-factors" title="Permalink to this heading">#</a></h4>
-<p>Conditions such as high humidity, dust, or temperature extremes that can negatively impact hardware performance and reliability.</p>
-<section id="environmental-factors-example">
-<h5>Environmental Factors Example<a class="headerlink" href="#environmental-factors-example" title="Permalink to this heading">#</a></h5>
-<p>A notable example of data loss due to environmental conditions is the <strong><a class="reference external" href="https://www.reuters.com/article/world/millions-of-websites-offline-after-fire-at-french-cloud-services-firm-idUSKBN2B20NT/">2011 fire at the OVH data centre in Strasbourg, France</a></strong>.</p>
-<p>The fire was triggered by high humidity and electrical issues, leading to significant damage to the facility and its infrastructure. The incident resulted in the loss of customer data and disrupted services for many clients relying on OVH for hosting and cloud services.</p>
-<p>This event highlighted the critical importance of maintaining proper environmental controls, such as humidity and temperature regulation, and having robust disaster recovery plans to mitigate the impact of such incidents.</p>
-</section>
-</section>
-</section>
-<section id="protecting-against-data-security-threats">
-<h3>Protecting Against Data Security Threats<a class="headerlink" href="#protecting-against-data-security-threats" title="Permalink to this heading">#</a></h3>
-<p>Protecting against malicious attacks involves a multi-layered approach that combines preventive measures, user education, and robust security practices:</p>
-<section id="software-measures">
-<h4>Software Measures<a class="headerlink" href="#software-measures" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Install and Maintain Antivirus Software</strong>: Use reputable antivirus and anti-malware programs to detect and remove malicious software. Ensure these programs are updated regularly to protect against the latest threats.</p></li>
-<li><p><strong>Regular Software Updates</strong>: Keep all software, including operating systems, browsers, and plugins, up to date to patch vulnerabilities that malware could exploit.</p></li>
-<li><p><strong>Use Firewalls</strong>: Implement network firewalls to block unauthorized access to your systems and monitor incoming and outgoing network traffic for suspicious activity.</p></li>
-<li><p><strong>Enable Email Filters</strong>: Use email filtering tools to detect and block phishing emails and attachments that may contain malware.</p></li>
-<li><p><strong>Use Intrusion Detection and Prevention Systems (IDPS)</strong>: Deploy IDPS to monitor network traffic for suspicious activity and potential intrusions, enabling prompt action to mitigate threats.</p></li>
-<li><p><strong>Behavioural Analytics</strong>: Implement tools that use machine learning to analyse user behaviour and detect anomalies that may indicate insider threats</p></li>
-<li><p><strong>Prepared Statements</strong>: Ensure that SQL queries are parameterized, which separates SQL code from data, making it impossible for an attacker to alter the query structure</p></li>
-<li><p><strong>Custom Error Messages</strong>: Avoid exposing detailed error messages to users. Customize error messages to prevent attackers from gaining insights into the database structure.</p></li>
-<li><p><strong>Whitelisting</strong>: Validate input against a list of allowed characters or patterns</p></li>
-<li><p><strong>Sanitize User Input</strong>: Ensure all user input is sanitized to remove or encode any potentially harmful characters before processing.</p></li>
-<li><p><strong>Encode Output</strong>: Encode all data before rendering it on the webpage to prevent the browser from interpreting it as executable code.</p></li>
-<li><p><strong>Use Secure Web Frameworks</strong>: Utilize frameworks that have built-in protections against XSS, such as Ruby on Rails, Django, and Angular.</p></li>
-<li><p><strong>Encrypt Sensitive Data</strong>: Ensure sensitive data is encrypted both at rest and in transit to protect it from unauthorized access.</p></li>
-<li><p><strong>Endpoint Security</strong>: Use advanced EPP/EDR solutions to monitor and respond to suspicious activities on endpoints, leveraging behavioural analysis to identify potential zero-day exploits.</p></li>
-<li><p><strong>Synchronous Replication</strong>: Use synchronous replication to ensure that data is written to multiple locations simultaneously, reducing the risk of discrepancies.</p></li>
-<li><p><strong>Automation Tools</strong>: Use automated data synchronization tools and processes to reduce the risk of human error and ensure consistent data updates across systems.</p></li>
-</ul>
-</section>
-<section id="hardware-measures">
-<h4>Hardware measures<a class="headerlink" href="#hardware-measures" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Disconnect Infected Devices</strong>: If a device is suspected to be infected with malware, disconnect it from the network immediately to prevent the spread to other systems.</p></li>
-<li><p><strong>RAID Configurations</strong>: Use RAID (Redundant Array of Independent Disks) to create copies of data across multiple disks, so if one disk fails, data remains accessible.</p></li>
-<li><p><strong>High Availability</strong>: Set up failover systems that automatically switch to a backup system in case of hardware failure, ensuring continuous data availability.</p></li>
-<li><p><strong>Battery Backup</strong>: Deploy UPS systems to provide immediate, short-term power during an outage, allowing time for safe shutdown or switching to backup generators.</p></li>
-<li><p><strong>Long-term Power</strong>: Install backup generators to supply power for extended periods during outages. Ensure they are regularly maintained and tested.</p></li>
-<li><p><strong>Proactive Monitoring</strong>: Implement environmental monitoring systems to detect and alert for power issues, temperature fluctuations, and other environmental factors that could lead to hardware failure.</p></li>
-<li><p><strong>Scheduled Maintenance</strong>: Perform regular network maintenance and updates to prevent failures due to outdated hardware or software. Ensure all network components are updated with the latest security patches.</p></li>
-</ul>
-</section>
-<section id="networking-measures">
-<h4>Networking measures<a class="headerlink" href="#networking-measures" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Email Authentication Protocols</strong>: Use email authentication protocols to prevent email spoofing and ensure the integrity of email communications​.</p></li>
-<li><p><strong>Cloud-based DDoS Protection</strong>: Services like Cloudflare, Akamai, and AWS Shield can absorb and mitigate DDoS traffic before it reaches your network.</p></li>
-<li><p><strong>Rate Limiting</strong>: Configure your web server to limit the number of requests a user can make within a certain timeframe, helping to reduce the impact of DDoS attacks.</p></li>
-<li><p><strong>Redundancy and Load Balancing</strong>: Distribute your infrastructure across multiple data centres and use load balancers to distribute traffic evenly, minimizing the risk of a single point of failure.</p></li>
-<li><p><strong>Scalable Bandwidth</strong>: Work with your ISP to ensure you have sufficient bandwidth to handle unexpected traffic spikes and consider burstable bandwidth options.</p></li>
-<li><p><strong>Traffic Analysis</strong>: Continuously monitor your network traffic to detect unusual patterns that may indicate an impending DDoS attack.</p></li>
-<li><p><strong>Network Segmentation</strong>: Implement network segmentation to limit the spread of an attack. Use firewalls and access controls to restrict access to critical systems and data.</p></li>
-<li><p><strong>Distributed Data Centres</strong>: Use geographically dispersed data centres to ensure that data and services remain available even if one location experiences a power outage.</p></li>
-<li><p><strong>Cloud Integration</strong>: Utilize cloud services for data storage and critical applications, leveraging the redundancy and high availability provided by major cloud providers.</p></li>
-<li><p><strong>Implement Redundancy</strong>: Ensure critical network components have backups. Use multiple ISPs, redundant routers, and switches to provide alternative paths for data if one fails.</p></li>
-</ul>
-</section>
-<section id="policy-measures">
-<h4>Policy measures<a class="headerlink" href="#policy-measures" title="Permalink to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Educate Users</strong>: Train employees and users to recognize phishing attempts, suspicious links, and unsafe downloads. Encourage the practice of not clicking on unknown or untrusted links and attachments.</p></li>
-<li><p><strong>Implement Strong Passwords and Multi-Factor Authentication (MFA)</strong>: Use complex passwords and enable MFA to add an extra layer of security to accounts, making it harder for attackers to gain access.</p></li>
-<li><p><strong>Regular Backups</strong>: Perform regular backups of critical data and store them securely. This ensures data can be restored in case of a ransomware attack or other data loss incidents.</p></li>
-<li><p><strong>Restrict User Privileges</strong>: Limit user access to only the necessary systems and data required for their roles to minimize the impact of a potential malware infection.</p></li>
-<li><p><strong>Secure Browsing Practices</strong>: Encourage users to hover over links to check the actual URL before clicking and to directly type URLs into the browser instead of clicking on links in emails​. Ensure websites use HTTPS to provide a secure connection, and educate users to look for the padlock icon in the browser address bar​.</p></li>
-<li><p><strong>Incident Response Plan</strong>: Prepare a response strategy for dealing with phishing attacks, including steps for containing the breach, notifying affected parties, and recovering compromised accounts​.</p></li>
-<li><p><strong>Secure Wi-Fi Networks</strong>: Avoid using public Wi-Fi for sensitive transactions. Use VPNs to encrypt traffic when accessing the internet through untrusted networks.</p></li>
-<li><p><strong>User Activity Monitoring</strong>: Implement systems to monitor user activities and detect unusual or suspicious behaviour, such as excessive data downloads or access to unauthorized areas​.</p></li>
-<li><p><strong>Regular Audits</strong>: Conduct regular audits of access logs and employee activities to identify and investigate potential insider threats</p></li>
-<li><p><strong>Data Protection Policies</strong>: Develop and enforce comprehensive data protection policies that outline acceptable use of company resources and data</p></li>
-<li><p><strong>Data Loss Prevention (DLP)</strong>: Use DLP solutions to detect and prevent unauthorized access, transfer, or use of sensitive data</p></li>
-<li><p><strong>Employee Engagement</strong>: Promote a positive work environment and open communication to reduce grievances that may lead to insider threats</p></li>
-<li><p><strong>Anonymous Reporting Mechanisms</strong>: Provide channels for employees to report suspicious activities anonymously, encouraging vigilance without fear of retribution</p></li>
-<li><p><strong>Restrict Database Permissions</strong>: Ensure database accounts have the minimum necessary privileges. Avoid using administrative accounts for application connections.</p></li>
-<li><p><strong>Penetration Testing</strong>: Conduct regular security audits and penetration tests to identify and mitigate vulnerabilities.</p></li>
-<li><p><strong>Code Reviews</strong>: Perform thorough code reviews to ensure security best practices are followed.</p></li>
-<li><p><strong>Assess Vendors</strong>: Conduct thorough security assessments and audits of all third-party vendors and partners to ensure they follow robust security practices.</p></li>
-<li><p><strong>Monitor Supply Chain</strong>: Implement continuous monitoring of supply chain activities to detect unusual behaviours or anomalies</p></li>
-<li><p><strong>Reputable Sources</strong>: Only source software, hardware, and services from reputable and trusted suppliers with a proven track record of security.</p></li>
-<li><p><strong>Comprehensive Plan</strong>: Develop and test a disaster recovery plan that outlines procedures for data recovery and system restoration in the event of hardware failure.</p></li>
-<li><p><strong>Automated Testing</strong>: Implement comprehensive automated testing, including unit tests, integration tests, and end-to-end tests, to catch bugs early in the development process.</p></li>
-<li><p><strong>Manual Testing</strong>: Complement automated testing with thorough manual testing, particularly for complex or critical features.</p></li>
-<li><p><strong>Version Control Systems</strong>: Use version control systems (e.g., Git) to track changes and enable easy rollback to previous versions if a bug is introduced.</p></li>
-<li><p><strong>Consistency Checks</strong>: Perform regular data integrity and consistency checks to identify and correct any synchronization issues promptly.</p></li>
-<li><p><strong>Conflict Detection and Resolution</strong>: Implement conflict detection and resolution mechanisms to handle discrepancies that arise during data synchronization processes.</p></li>
 </ul>
 <div class="admonition-unit-4-subject-matter-covered admonition">
 <p class="admonition-title">Unit 4 subject matter covered:</p>
@@ -1363,10 +1096,9 @@ document.write(`
 <li><p>Recognise and describe how data compression, encryption and hashing are used in the storage and transfer of data</p></li>
 <li><p>Symbolise, analyse and evaluate Caesar, Polyalphabetic (e.g. Vigenere and Gronsfield), and one-time pad encryption algorithms</p></li>
 <li><p>Symbolise and explain secure data transmission techniques and processes, including the use of encryption, decryption, authentication, hashing and checksums
-<span id="id4">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
+<span id="id2">[<a class="reference internal" href="../bibliography.html#id6" title="QCAA. Digital Solutions General Senior Syllabus 2019. The State of Queensland (Queensland Curriculum &amp; Assessment Authority), 2017. URL: https://www.qcaa.qld.edu.au/downloads/senior-qce/syllabuses/snr_digital_solutions_19_syll.pdf (visited on 2022-06-03).">QCAA, 2017</a>]</span></p></li>
 </ul>
 </div>
-</section>
 </section>
 </section>
 </section>
@@ -1411,11 +1143,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../3_explore/1_introduction.html"
+       href="5-4_data_security_threat.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Explore Phase</p>
+        <p class="prev-next-title">Data Security - Threats</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1434,138 +1166,66 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-management">Data Management</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-compression">Data Compression</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-data-compression-works">How Data Compression works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-data-compression-important">Why Data Compression important</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-compression">Data Compression</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-data-compression-works">How Data Compression works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-data-compression-important">Why Data Compression important</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#encryption">Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-encryption-works">How Encryption works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-encryption-important">Why Encryption important</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#types-of-encryption">Types of Encryption</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryptions">Symmetric Encryptions</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ciphers">Ciphers</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-cipher">Caesar cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-caesar-cipher-works">How the Caesar Cipher Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-example">Caesar Example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-pseudocode">Caesar Pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#caesar-characteristics-and-security">Caesar Characteristics and Security</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Characteristics and Security</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-cipher">Vigenère Cipher</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-the-vigenere-cipher-works">How the Vigenère Cipher Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-example">Vigenère Example</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-pseudocode">Vigenère Pseudocode</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#vigenere-characteristics-and-security">Vigenère Characteristics and Security</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Characteristics and Security</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-hashing-works">How Hashing works</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hashing-important">Why Hashing important</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gronsfeld-cipher">Gronsfeld Cipher</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-time-pad-encryption">One-time Pad Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#how-one-time-pad-encryption-works">How One-Time Pad Encryption Works</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#characteristics-and-security">Characteristics and Security</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#threats-to-data-security">Threats to data security</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#malicious-threats">Malicious Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#malware">Malware</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#malware-example">Malware Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing">Phishing</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#phishing-example">Phishing Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-mitm-attacks">Man-in-the-Middle (MitM) Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#man-in-the-middle-attack-example">Man-in-the-Middle Attack Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#denial-of-service-dos-and-distributed-denial-of-service-ddos-attacks">Denial of Service (DoS) and Distributed Denial of Service (DDoS) Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#ddos-example">DDoS example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threats">Insider Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#insider-threat-example">Insider Threat Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injections">SQL Injections</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#sql-injection-example">SQL Injection Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-xss">Cross-Site Scripting (XSS)</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#cross-site-scripting-example">Cross-Site Scripting Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threats-apts">Advanced Persistent Threats (APTs)</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-persistent-threat-example">Advanced Persistent Threat Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits">Zero-Day Exploits</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#zero-day-exploits-example">Zero-Day Exploits Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attacks">Supply Chain Attacks</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#supply-chain-attack-example">Supply Chain Attack Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryption">Symmetric Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetric-encryption-uses">Symmetric Encryption Uses</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#block-ciphers">Block Ciphers</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#feistel-block-cipher">Feistel Block Cipher</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-encryption-standard-des">Data Encryption Standard (DES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#triple-des-3des">Triple DES (3DES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-encryption-standard-aes">Advanced Encryption Standard (AES):</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#blowfish">Blowfish</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#twofish">Twofish</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-malicious-threats">Non-malicious Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error">Human Error</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#human-error-example">Human Error Example</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asymmetric-encryption">Asymmetric Encryption</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-components-of-asymmetric-communication">Key Components of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-asymmetric-communication-works">How Asymmetric Communication Works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-asymmetric-communication">Advantages of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disadvantages-of-asymmetric-communication">Disadvantages of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-of-asymmetric-communication">Applications of Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#try-asymmetric-communication">Try Asymmetric Communication</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rsa">RSA</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failures">Hardware Failures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-failure-example">Hardware Failure Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bugs">Software Bugs</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#software-bug-example">Software Bug Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages">Power Outages</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#power-outages-example">Power Outages Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters">Natural Disasters</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#natural-disasters-example">Natural Disasters Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures">Network Failures</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#network-failures-example">Network Failures Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues">Data Synchronization Issues</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#data-synchronization-issues-example">Data Synchronization Issues Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups">Lack of Proper Backups</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#lack-of-proper-backups-example">Lack of Proper Backups Example</a></li>
-</ul>
-</li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors">Environmental Factors</a><ul class="nav section-nav flex-column">
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-factors-example">Environmental Factors Example</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protecting-against-data-security-threats">Protecting Against Data Security Threats</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#software-measures">Software Measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hardware-measures">Hardware measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#networking-measures">Networking measures</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#policy-measures">Policy measures</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hashing">Hashing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-hashing-works">How Hashing works</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hashing-important">Why Hashing important</a></li>
 </ul>
 </li>
 </ul>
