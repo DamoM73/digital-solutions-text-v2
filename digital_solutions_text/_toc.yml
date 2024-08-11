@@ -38,6 +38,7 @@ parts:
       - file: content/2_concepts/5-1_privacy
       - file: content/2_concepts/5-2_networking
       - file: content/2_concepts/5-3_data_security
+      - file: content/2_concepts/5-4_data_security_threat
       
   - caption: Explore
     chapters:
@@ -187,6 +188,7 @@ parts:
   - caption: Solutions
     chapters:
     - file: content/8_solutions/1_sql_exercises
+    - file: content/8_solutions/2_encryption
 
   - caption: End material
     chapters:
