@@ -260,13 +260,13 @@ The one-time pad (OTP) encryption is a theoretically unbreakable encryption tech
 
 ![one time pad](./assets/one_time_pad.png)
 
-#### How One-Time Pad Encryption Works
+#### How OTP Encryption Works
 
-1. Key Generation: Generate a truly random key that is the same length as the plaintext message. This key must be kept completely secret and used only once.
-2. Encryption: 
+1. **Key Generation:** Generate a truly random key that is the same length as the plaintext message. This key must be kept completely secret and used only once.
+2. **Encryption:**
    - Convert the plaintext message and the key into numerical form (e.g., using the ASCII values of characters).
    - Perform bitwise XOR (exclusive OR) operation between the numerical representations of the plaintext and the key to produce the ciphertext.
-3. Decryption:
+3. **Decryption:**
    - Convert the ciphertext and the key into numerical form.
    - Perform bitwise XOR operation between the numerical representations of the ciphertext and the key to retrieve the original plaintext.
 
@@ -285,18 +285,18 @@ By using symmetric encryption algorithms, data is converted to a form that canno
 
 There are two types of symmetric encryption algorithms:
 
-  1. Block algorithms: Set lengths of bits are encrypted in blocks of electronic data with the use of a specific secret key. As the data is being encrypted, the system holds the data in its memory as it waits for complete blocks.
-  2. Stream algorithms: Data is encrypted as it streams instead of being retained in the system’s memory.
+  1. **Block algorithms:** Set lengths of bits are encrypted in blocks of electronic data with the use of a specific secret key. As the data is being encrypted, the system holds the data in its memory as it waits for complete blocks.
+  2. **Stream algorithms:** Data is encrypted as it streams instead of being retained in the system’s memory.
 
 ### Symmetric Encryption Uses
 
-While symmetric encryption is an older method of encryption, it is faster and more efficient than asymmetric encryption. Symmetric cryptography is typically used for encrypting large amounts of data, e.g. for database encryption. In the case of a database, the secret key might only be available to the database itself to encrypt or decrypt.
+While symmetric encryption is an older method of encryption, it is **faster and more efficient** than asymmetric encryption. Symmetric cryptography is typically used for encrypting large amounts of data, e.g. for database encryption. In the case of a database, the secret key might only be available to the database itself to encrypt or decrypt.
 
 Some examples of where symmetric cryptography is used are:
 
-- Payment applications, such as card transactions where personal identifying information needs to be protected to prevent identity theft or fraudulent charges
-- Validations to confirm that the sender of a message is who they claim to be
-- Random number generation or hashing
+- **Payment applications**, such as card transactions where personal identifying information needs to be protected to prevent identity theft or fraudulent charges
+- **Validations** to confirm that the sender of a message is who they claim to be
+- **Random number generation** or hashing
 
 ### Block Ciphers
 
