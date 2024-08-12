@@ -392,13 +392,14 @@ Work in threes and take the roles of Alice, Bob and Eve.
 2. Alice and Bob agree and publicly share a generator
 3. Alice and Bob both choose a private key
 4. Exchange of public keys
-     - Alice and bob perform the following calculation and share the results publically:
+     - Alice and Bob perform the following calculation (in Python) and share the results publicly:
 
 ``` python
 public_key = generator ** private_key % prime_modulus
 ```
+
 5. Alice and Bob now work out the shared secret key
-     - Use the following calculations:
+     - Use the following calculations (in Python):
 
 ``` python
 # for Alice
