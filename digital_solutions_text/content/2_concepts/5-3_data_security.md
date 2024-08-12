@@ -364,7 +364,7 @@ The **private key** is kept secret and is used to decrypt data that has been enc
 4. Alice takes Bob’s **public key** and raises it to the power of her **private key** to compute a **shared key**.
 5. Bob does the same with Alice’s **public key** and his **private key** to also establish the **shared key**.
 6. Alice and Bob now have a **shared key** they can use for symmetrical encryption.
-7. With knowing Alice's or Bob's **private keys** Eve cannot derive the **shared key**.
+7. Without knowing Alice's or Bob's **private keys** Eve cannot derive the **shared key**.
 
 ### Advantages of Asymmetric Communication
 
