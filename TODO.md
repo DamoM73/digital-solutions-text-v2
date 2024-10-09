@@ -134,3 +134,4 @@
 ## Corrections
 
 Fixed DFD Level 0
+Doc strings and types
