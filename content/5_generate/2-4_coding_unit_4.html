@@ -592,10 +592,10 @@ document.write(`
 <p>To compress a file in Python, you can use the <code class="docutils literal notranslate"><span class="pre">zipfile</span></code> module, which provides tools for creating, reading, writing, and extracting ZIP files. Here’s a simple example to demonstrate how to compress a file using this module:</p>
 <section id="compressing-a-file">
 <h3>Compressing a File<a class="headerlink" href="#compressing-a-file" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">def</span> <span class="nf">compress_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compress_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
         <span class="n">zipf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
 
@@ -612,9 +612,9 @@ document.write(`
 <section id="compressing-multiple-files">
 <h3>Compressing Multiple Files<a class="headerlink" href="#compressing-multiple-files" title="Permalink to this heading">#</a></h3>
 <p>If you want to compress multiple files into a single ZIP archive, you can modify the function to accept a list of files:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
 
-<span class="k">def</span> <span class="nf">compress_files</span><span class="p">(</span><span class="n">file_paths</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compress_files</span><span class="p">(</span><span class="n">file_paths</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="n">file_paths</span><span class="p">:</span>
             <span class="n">zipf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">file_path</span><span class="p">))</span>
@@ -631,10 +631,10 @@ document.write(`
 <section id="compressing-a-directory">
 <h3>Compressing a Directory<a class="headerlink" href="#compressing-a-directory" title="Permalink to this heading">#</a></h3>
 <p>To compress all files in a directory, you can walk through the directory and add each file to the ZIP archive:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">zipfile</span>
-<span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
-<span class="k">def</span> <span class="nf">compress_directory</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compress_directory</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZipFile</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">zipfile</span><span class="o">.</span><span class="n">ZIP_DEFLATED</span><span class="p">)</span> <span class="k">as</span> <span class="n">zipf</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">directory_path</span><span class="p">):</span>
             <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
@@ -665,20 +665,20 @@ document.write(`
 <section id="encrypting-a-file">
 <h3>Encrypting a File<a class="headerlink" href="#encrypting-a-file" title="Permalink to this heading">#</a></h3>
 <p>Here’s a Python script that demonstrates how to encrypt a file using the <code class="docutils literal notranslate"><span class="pre">cryptography</span></code> library:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cryptography.fernet</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fernet</span>
 
 <span class="c1"># Generate a key for encryption</span>
-<span class="k">def</span> <span class="nf">generate_key</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_key</span><span class="p">():</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">Fernet</span><span class="o">.</span><span class="n">generate_key</span><span class="p">()</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">key_file</span><span class="p">:</span>
         <span class="n">key_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <span class="c1"># Load the encryption key</span>
-<span class="k">def</span> <span class="nf">load_key</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_key</span><span class="p">():</span>
     <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="c1"># Encrypt a file</span>
-<span class="k">def</span> <span class="nf">encrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">encrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">load_key</span><span class="p">()</span>
     <span class="n">fernet</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
@@ -708,14 +708,14 @@ document.write(`
 <section id="decrypting-a-file">
 <h3>Decrypting a File<a class="headerlink" href="#decrypting-a-file" title="Permalink to this heading">#</a></h3>
 <p>To decrypt the file, you can use the following script:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">cryptography.fernet</span><span class="w"> </span><span class="kn">import</span> <span class="n">Fernet</span>
 
 <span class="c1"># Load the encryption key</span>
-<span class="k">def</span> <span class="nf">load_key</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_key</span><span class="p">():</span>
     <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;secret.key&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="c1"># Decrypt a file</span>
-<span class="k">def</span> <span class="nf">decrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">decrypt_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
     <span class="n">key</span> <span class="o">=</span> <span class="n">load_key</span><span class="p">()</span>
     <span class="n">fernet</span> <span class="o">=</span> <span class="n">Fernet</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
@@ -754,9 +754,9 @@ document.write(`
 <section id="hashing-a-file">
 <h3>Hashing a File<a class="headerlink" href="#hashing-a-file" title="Permalink to this heading">#</a></h3>
 <p>Here’s a Python script that demonstrates how to hash a file using SHA-256:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 
-<span class="k">def</span> <span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
     <span class="c1"># Create a SHA-256 hash object</span>
     <span class="n">sha256_hash</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">()</span>
     
@@ -788,9 +788,9 @@ document.write(`
 <section id="hashing-with-other-algorithms">
 <h3>Hashing with Other Algorithms<a class="headerlink" href="#hashing-with-other-algorithms" title="Permalink to this heading">#</a></h3>
 <p>You can easily switch to other hash algorithms provided by <code class="docutils literal notranslate"><span class="pre">hashlib</span></code> (e.g., MD5, SHA-1) by replacing <code class="docutils literal notranslate"><span class="pre">hashlib.sha256()</span></code> with the desired hash function:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">hashlib</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
 
-<span class="k">def</span> <span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">hash_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;sha256&#39;</span><span class="p">):</span>
     <span class="c1"># Create a hash object based on the chosen algorithm</span>
     <span class="n">hash_obj</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">algorithm</span><span class="p">)</span>
     

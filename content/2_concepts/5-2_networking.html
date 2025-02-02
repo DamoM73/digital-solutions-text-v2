@@ -1043,7 +1043,7 @@ document.write(`
 <section id="parsing-json">
 <h4>Parsing JSON<a class="headerlink" href="#parsing-json" title="Permalink to this heading">#</a></h4>
 <p>In Python use the <code class="docutils literal notranslate"><span class="pre">json</span></code> module to parse JSON strings and convert objects to JSON strings.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 
 <span class="n">json_string</span> <span class="o">=</span> <span class="s1">&#39;{&quot;name&quot;: &quot;John Doe&quot;, &quot;age&quot;: 30}&#39;</span>
 <span class="n">python_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">json_string</span><span class="p">)</span>
@@ -1217,7 +1217,7 @@ document.write(`
 <section id="parsing-xml">
 <h4>Parsing XML<a class="headerlink" href="#parsing-xml" title="Permalink to this heading">#</a></h4>
 <p>Python can parse XML using libraries like <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
 
 <span class="n">xml_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;&lt;student&gt;</span>
 <span class="s2">                &lt;id&gt;12345&lt;/id&gt;</span>
@@ -1383,7 +1383,7 @@ document.write(`
 <p>Parsing CSV and TSV files in Python can be done efficiently using the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module for both formats. Below are examples demonstrating how to parse each type of file.</p>
 <section id="parsing-a-csv-file">
 <h5>Parsing a CSV File<a class="headerlink" href="#parsing-a-csv-file" title="Permalink to this heading">#</a></h5>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.csv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">csv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
@@ -1395,7 +1395,7 @@ document.write(`
 </section>
 <section id="parsing-a-tsv-file">
 <h5>Parsing a TSV File<a class="headerlink" href="#parsing-a-tsv-file" title="Permalink to this heading">#</a></h5>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
 
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;data.tsv&#39;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
     <span class="n">tsv_reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>

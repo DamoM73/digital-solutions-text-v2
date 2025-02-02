@@ -582,7 +582,7 @@ document.write(`
 <h2>Caesar Cipher<a class="headerlink" href="#caesar-cipher" title="Permalink to this heading">#</a></h2>
 <section id="caesar-encryption">
 <h3>Caesar Encryption<a class="headerlink" href="#caesar-encryption" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encrypt_caesar</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">encrypt_caesar</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
@@ -601,7 +601,7 @@ document.write(`
 <section id="caesar-decryption">
 <h3>Caesar Decryption<a class="headerlink" href="#caesar-decryption" title="Permalink to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
-<span class="k">def</span> <span class="nf">decrypt_caesar</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">decrypt_caesar</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">shift</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
     <span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
 
@@ -622,7 +622,7 @@ document.write(`
 <h2>Vigenère<a class="headerlink" href="#vigenere" title="Permalink to this heading">#</a></h2>
 <section id="vigenere-encryption">
 <h3>Vigenère Encryption<a class="headerlink" href="#vigenere-encryption" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">encrypt_vigenere</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">encrypt_vigenere</span><span class="p">(</span><span class="n">plaintext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
     <span class="n">plaintext</span> <span class="o">=</span> <span class="n">plaintext</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
     <span class="n">keyword</span> <span class="o">=</span> <span class="n">keyword</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
@@ -648,7 +648,7 @@ document.write(`
 </section>
 <section id="vigenere-decryption">
 <h3>Vigenère Decryption<a class="headerlink" href="#vigenere-decryption" title="Permalink to this heading">#</a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">decrypt_vigenere</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">decrypt_vigenere</span><span class="p">(</span><span class="n">ciphertext</span><span class="p">,</span> <span class="n">keyword</span><span class="p">):</span>
     <span class="n">alphabet</span> <span class="o">=</span> <span class="s2">&quot;ABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>
     <span class="n">ciphertext</span> <span class="o">=</span> <span class="n">ciphertext</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
     <span class="n">keyword</span> <span class="o">=</span> <span class="n">keyword</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
