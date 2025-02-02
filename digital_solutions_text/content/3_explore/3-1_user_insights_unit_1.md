@@ -66,7 +66,7 @@ Components of a persona:
   - devices
   - o/s
 - solutions interactions
-  - tasks the want to complete with the solution
+  - tasks the user wants to complete with the solution
   - challenges they have in completing tasks
   - pain points &mdash; what makes things difficult
 - accessibility needs
