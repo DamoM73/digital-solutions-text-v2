@@ -118,6 +118,19 @@ We will decompose the Log in process in the **Student Subject Database** example
 
 ![DFD Step 5](./assets/dfd_step_5.png)
 
+### Step 6: Checking
+
+Now that the diagram is complete, check it against the DFD rules. You should be answering **yes** to all the following questions:
+
+- Does each process have at least one data flow in and one data flow out?
+- Does every data flow connect to at least one process?
+- Does every entity connect to at least one process via a dataflow?
+- Do all data flows only flow in one direction?
+- Do all data flow labels describe information (nouns)?
+- Are all processes numbered by their level?
+- Do all process labels describe actions (verbs)?
+- Do all data sources and data store labels describe things (nouns)? 
+
 ### Record in project
 
 All levels of your final DFD will be included in your project documentation.
