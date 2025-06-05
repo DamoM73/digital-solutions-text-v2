@@ -241,12 +241,6 @@ REST is an architectural style for designing networked applications. It relies o
      }
      ```
 
-#### Summary
-
-RESTful APIs allow for a standardized way of interacting with web services using HTTP methods. The stateless nature and use of standard HTTP protocols make REST a scalable and simple way to design networked applications. Understanding REST is crucial for developing efficient and interoperable web services.
-
-Feel free to ask if you need more detailed examples or have specific questions about implementing RESTful services in your curriculum!
-
 ### JSON
 
 JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write, and easy for machines to parse and generate. It's widely used in web applications to send and receive data between a server and a client.
@@ -293,7 +287,7 @@ JSON data is represented as key-value (called dictionaries in Python) pairs orga
      ```
 
 3. **Values**:
-   - Can be strings, numbers, objects, arrays, booleans (`true` or `false`), or `null`.
+   - Can be strings, numbers, objects, arrays, Booleans (`true` or `false`), or `null`.
    - Strings are enclosed in double quotes.
    - Numbers can be integers or floating-point.
    - Example:
