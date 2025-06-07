@@ -539,8 +539,6 @@ print(root.find('name').text)  # Output: John Doe
 2. **Parsing Overhead**:
    - XML parsing can be computationally intensive, especially for large documents.
 
-XML remains a robust and flexible choice for many applications, particularly those requiring a formal structure and extensive metadata. If you need further details or examples, feel free to ask!
-
 ### CSV & TSV
 
 CSV (Comma-Separated Values) and TSV (Tab-Separated Values) are both formats used for storing and exchanging tabular data in a plain text format. In a CSV file, each line corresponds to a row of data, and each value in the row is separated by a comma. TSV is similar to CSV, but instead of commas, tabs are used to separate values.
