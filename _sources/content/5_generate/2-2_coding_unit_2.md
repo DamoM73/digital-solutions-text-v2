@@ -125,14 +125,14 @@ Complete:
 
 Using the Movies database
 
-- List all the movies names in alphabetical order
-- What is the 5 oldest movie in stock?
-- Display the movies in chronological order, and then alphabetical order within each year.
+- List all the movies names in ascedning alphabetical order
+- What are the 5 newest movie in stock?
+- Display the movies and their year of realse in chronological order, and then alphabetical order within each year.
 
 Using the School Database
 
 - List the name of the grade 6 students in alphabetical order
-- What is the top three results in percentage
+- What is the student number for the top three results in percentage?
 - List all the boys' birthdays in order, then all the girls' birthdays in order, with their names
 
 ### GROUP BY and HAVING
